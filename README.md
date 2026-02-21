@@ -52,7 +52,7 @@ The core differentiator of this repo. We classify everything along two axes:
 
 > Side-by-side comparison of frontier models. Every score links to its source. "Agent" = the evaluation setup (base model, agentic scaffold, or specialized variant).
 
-| | Model | Agent | Date | CTF (Pro) | [Cybench](https://cybench.github.io/) | [CVE-Bench](benchmarks/security-by-ai/offensive/) | Cyber Range | [HTB](https://www.hackthebox.com/) | Vuln Discovery | [WMDP-Cyber](https://www.wmdp.ai/) |
+| | Model | Agent | Date | CTF (Pro) | [Cybench](https://cybench.github.io/) | [CVE-Bench](benchmarks/security-by-ai/offensive/) | Cyber Range | [HTB](https://www.hackthebox.com/) | [CyberGym](https://red.anthropic.com/2025/ai-for-cyber-defenders/) / Vuln | [WMDP-Cyber](https://www.wmdp.ai/) |
 |---|---|---|---|---|---|---|---|---|---|---|
 | **OpenAI** | GPT-5.3-Codex | Codex | 2026.02 | [All passed](https://cdn.openai.com/pdf/23eca107-a9b1-4d2c-b156-7deb4fbc697c/GPT-5-3-Codex-System-Card-02.pdf) | — | — | [All except 3](https://cdn.openai.com/pdf/23eca107-a9b1-4d2c-b156-7deb4fbc697c/GPT-5-3-Codex-System-Card-02.pdf) | — | — | — |
 | | GPT-5.2-Codex | Codex | 2025.12 | — | — | [87%](https://cdn.openai.com/pdf/ac7c37ae-7f4c-4442-b741-2eabdeaf77e0/oai_5_2_Codex.pdf) | — | — | — | — |
@@ -64,7 +64,7 @@ The core differentiator of this repo. We classify everything along two axes:
 | **Anthropic** | Claude Opus 4.6 | Base | 2026.02 | — | — | — | — | — | [500+ zero-days](https://anthropic.com/claude-opus-4-6-system-card) | — |
 | | Claude Sonnet 4.6 | Base | 2026.02 | — | — | — | — | — | [0% prompt inj.](https://anthropic.com/claude-sonnet-4-6-system-card) | — |
 | | Claude Opus 4.5 | Base | 2025.11 | — | — | — | [1st auto solve](https://www.anthropic.com/claude-opus-4-5-system-card) | — | — | — |
-| | Claude Sonnet 4.5 | Base | 2025.09 | — | [76.5%](https://www.anthropic.com/claude-sonnet-4-5-system-card) | — | [2/5 Equifax](https://www.anthropic.com/claude-sonnet-4-5-system-card) | — | [28.9% CyberGym](https://red.anthropic.com/2025/ai-for-cyber-defenders/) | — |
+| | Claude Sonnet 4.5 | Base | 2025.09 | — | [76.5%](https://www.anthropic.com/claude-sonnet-4-5-system-card) | — | [2/5 Equifax](https://www.anthropic.com/claude-sonnet-4-5-system-card) | — | [28.9%](https://red.anthropic.com/2025/ai-for-cyber-defenders/) | — |
 | | Claude Opus 4.1 | Base | 2025.08 | — | [ASL-3](https://www.anthropic.com/claude-opus-4-1-system-card) | — | — | — | — | — |
 | | Claude Opus 4 | Base | 2025.05 | [11/11,1/2,0/2](https://www.anthropic.com/claude-4-system-card) | — | — | — | — | — | — |
 | | Claude Sonnet 4 | Base | 2025.05 | [10/11,1/2,0/2](https://www.anthropic.com/claude-4-system-card) | — | — | — | — | — | — |
