@@ -52,31 +52,41 @@ The core differentiator of this repo. We classify everything along two axes:
 
 > Side-by-side comparison of frontier models. Every score links to its source. "Agent" = the evaluation setup (base model, agentic scaffold, or specialized variant).
 
-| | Model | Agent | Date | CTF (Pro) | [Cybench](https://cybench.github.io/) | [CVE-Bench](benchmarks/security-by-ai/offensive/) | Cyber Range | [HTB](https://www.hackthebox.com/) | [CyberGym](https://red.anthropic.com/2025/ai-for-cyber-defenders/) / Vuln | [WMDP-Cyber](https://www.wmdp.ai/) |
-|---|---|---|---|---|---|---|---|---|---|---|
-| **OpenAI** | GPT-5.3-Codex | Codex | 2026.02 | [All passed](https://cdn.openai.com/pdf/23eca107-a9b1-4d2c-b156-7deb4fbc697c/GPT-5-3-Codex-System-Card-02.pdf) | — | [90%](https://cdn.openai.com/pdf/23eca107-a9b1-4d2c-b156-7deb4fbc697c/GPT-5-3-Codex-System-Card-02.pdf) | [80%](https://cdn.openai.com/pdf/23eca107-a9b1-4d2c-b156-7deb4fbc697c/GPT-5-3-Codex-System-Card-02.pdf) | — | — | — |
-| | GPT-5.2-Codex | Codex | 2025.12 | — | — | [87%](https://cdn.openai.com/pdf/ac7c37ae-7f4c-4442-b741-2eabdeaf77e0/oai_5_2_Codex.pdf) | — | — | — | — |
-| | GPT-5.1-Codex-Max | Codex | 2025.11 | [~76%](https://cdn.openai.com/pdf/2a7d98b1-57e5-4147-8d0e-683894d782ae/5p1_codex_max_card_03.pdf) | — | — | — | — | — | — |
-| | GPT-5-Codex | Codex | 2025.09 | ["sharp jump"](https://cdn.openai.com/pdf/97cc5669-7a25-4e63-b15f-5fd5bdc4d149/gpt-5-codex-system-card.pdf) | — | — | — | — | — | — |
-| | GPT-5 | Base | 2025.08 | [~27%](https://cdn.openai.com/gpt-5-system-card.pdf) | — | — | — | — | — | — |
-| | o3 | Base | 2025.04 | [59%](https://cdn.openai.com/pdf/2221c875-02dc-4789-800b-e7758f3722c1/o3-and-o4-mini-system-card.pdf) | — | — | — | — | — | — |
-| | o4-mini | Base | 2025.04 | [41%](https://cdn.openai.com/pdf/2221c875-02dc-4789-800b-e7758f3722c1/o3-and-o4-mini-system-card.pdf) | — | — | — | — | — | — |
-| | Deep Research | o3 + browse | 2025.02 | [70%](https://cdn.openai.com/deep-research-system-card.pdf) | — | — | — | — | — | — |
-| **Anthropic** | Claude Opus 4.6 | Base | 2026.02 | — | [93%](https://anthropic.com/claude-opus-4-6-system-card) | — | — | — | [66.6% CG](https://anthropic.com/claude-opus-4-6-system-card) / [500+ 0day](https://anthropic.com/claude-opus-4-6-system-card) | — |
-| | Claude Sonnet 4.6 | Base | 2026.02 | — | — | — | — | — | [0% prompt inj.](https://anthropic.com/claude-sonnet-4-6-system-card) | — |
-| | Claude Opus 4.5 | Base | 2025.11 | — | [82%](https://www.anthropic.com/claude-opus-4-5-system-card) | — | [1st auto solve](https://www.anthropic.com/claude-opus-4-5-system-card) | — | [50.6% CG](https://www.anthropic.com/claude-opus-4-5-system-card) | — |
-| | Claude Sonnet 4.5 | Base | 2025.09 | — | [76.5%](https://www.anthropic.com/claude-sonnet-4-5-system-card) | — | [2/5 Equifax](https://www.anthropic.com/claude-sonnet-4-5-system-card) | — | [28.9% CG](https://red.anthropic.com/2025/ai-for-cyber-defenders/) | — |
-| | Claude Opus 4 | Base | 2025.05 | [22/39 web+](https://www.anthropic.com/claude-4-system-card) | [22/39](https://www.anthropic.com/claude-4-system-card) | — | — | — | — | — |
-| | Claude Sonnet 4 | Base | 2025.05 | [web 10/11](https://www.anthropic.com/claude-4-system-card) | [22/39](https://www.anthropic.com/claude-4-system-card) | — | — | — | — | — |
-| | Claude 3.7 Sonnet | Base | 2025.02 | — | [35.9%](https://anthropic.com/claude-3-7-sonnet-system-card) | — | — | — | — | — |
-| **Google** | Gemini 3.1 Pro | Base | 2026.02 | — | — | — | — | [> 3 Pro](https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-1-Pro-Model-Card.pdf) | — | — |
-| | Gemini 3 Pro | Base | 2025.11 | — | — | — | — | [11/12 Key Skills](https://storage.googleapis.com/deepmind-media/gemini/gemini_3_pro_fsf_report.pdf) | — | — |
-| | Gemini 2.5 DT | Deep Think | 2025.08 | [13/13 GDM](https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Deep-Think-Model-Card.pdf) | — | — | — | [3/13](https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Deep-Think-Model-Card.pdf) | — | — |
-| | Gemini 2.5 Pro | Base | 2025.06 | [76/76 ICF](https://modelcards.withgoogle.com/assets/documents/gemini-2.5-pro.pdf) | — | — | — | [6/12](https://storage.googleapis.com/deepmind-media/gemini/gemini_3_pro_fsf_report.pdf) | — | — |
-| | Gemini 2.0 Flash | Base | 2025.04 | — | — | — | — | — | [11/50 PatternLabs](https://modelcards.withgoogle.com/assets/documents/gemini-2-flash.pdf) | — |
-| **xAI** | Grok 4.1 | UK AISI Inspect | 2025.11 | — | [39%](https://data.x.ai/2025-11-17-grok-4-1-model-card.pdf) | — | — | — | — | [84%](https://data.x.ai/2025-11-17-grok-4-1-model-card.pdf) |
-| | Grok 4 Fast | UK AISI Inspect | 2025.09 | — | [30%](https://data.x.ai/2025-09-19-grok-4-fast-model-card.pdf) | — | — | — | — | [81.4%](https://data.x.ai/2025-09-19-grok-4-fast-model-card.pdf) |
-| | Grok 4 | UK AISI Inspect | 2025.08 | — | [43%](https://data.x.ai/2025-08-20-grok-4-model-card.pdf) | — | — | — | — | [79%](https://data.x.ai/2025-08-20-grok-4-model-card.pdf) |
+**Frontier Models (2025.08+)**
+
+| | Model | Agent | Date | CTF (Pro) | [Cybench](https://cybench.github.io/) | [CVE-Bench](benchmarks/security-by-ai/offensive/) | Cyber Range | [CyberGym](https://red.anthropic.com/2025/ai-for-cyber-defenders/) / Vuln | [WMDP-Cyber](https://www.wmdp.ai/) |
+|---|---|---|---|---|---|---|---|---|---|
+| **OpenAI** | GPT-5.3-Codex | Codex | 2026.02 | [All passed](https://cdn.openai.com/pdf/23eca107-a9b1-4d2c-b156-7deb4fbc697c/GPT-5-3-Codex-System-Card-02.pdf) | — | [90%](https://cdn.openai.com/pdf/23eca107-a9b1-4d2c-b156-7deb4fbc697c/GPT-5-3-Codex-System-Card-02.pdf) | [80%](https://cdn.openai.com/pdf/23eca107-a9b1-4d2c-b156-7deb4fbc697c/GPT-5-3-Codex-System-Card-02.pdf) | — | — |
+| | GPT-5.2-Codex | Codex | 2025.12 | — | — | [87%](https://cdn.openai.com/pdf/ac7c37ae-7f4c-4442-b741-2eabdeaf77e0/oai_5_2_Codex.pdf) | — | — | — |
+| | GPT-5.1-Codex-Max | Codex | 2025.11 | [~76%](https://cdn.openai.com/pdf/2a7d98b1-57e5-4147-8d0e-683894d782ae/5p1_codex_max_card_03.pdf) | — | — | — | — | — |
+| | GPT-5-Codex | Codex | 2025.09 | ["sharp jump"](https://cdn.openai.com/pdf/97cc5669-7a25-4e63-b15f-5fd5bdc4d149/gpt-5-codex-system-card.pdf) | — | — | — | — | — |
+| | GPT-5 | Base | 2025.08 | [~27%](https://cdn.openai.com/gpt-5-system-card.pdf) | — | — | — | — | — |
+| **Anthropic** | Claude Opus 4.6 | Base | 2026.02 | — | [93%](https://anthropic.com/claude-opus-4-6-system-card) | — | — | [66.6%](https://anthropic.com/claude-opus-4-6-system-card) / [500+ 0day](https://anthropic.com/claude-opus-4-6-system-card) | — |
+| | Claude Sonnet 4.6 | Base | 2026.02 | — | — | — | — | [0% prompt inj.](https://anthropic.com/claude-sonnet-4-6-system-card) | — |
+| | Claude Opus 4.5 | Base | 2025.11 | — | [82%](https://www.anthropic.com/claude-opus-4-5-system-card) | — | [1st auto solve](https://www.anthropic.com/claude-opus-4-5-system-card) | [50.6%](https://www.anthropic.com/claude-opus-4-5-system-card) | — |
+| | Claude Sonnet 4.5 | Base | 2025.09 | — | [76.5%](https://www.anthropic.com/claude-sonnet-4-5-system-card) | — | [2/5 Equifax](https://www.anthropic.com/claude-sonnet-4-5-system-card) | [28.9%](https://red.anthropic.com/2025/ai-for-cyber-defenders/) | — |
+| **Google** | Gemini 3.1 Pro | Base | 2026.02 | — | — | — | — | — | — |
+| | Gemini 3 Pro | Base | 2025.11 | — | — | — | — | [11/12 Key Skills](https://storage.googleapis.com/deepmind-media/gemini/gemini_3_pro_fsf_report.pdf) | — |
+| | Gemini 2.5 DT | Deep Think | 2025.08 | [13/13 GDM](https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Deep-Think-Model-Card.pdf) | — | — | — | — | — |
+| **xAI** | Grok 4.1 | UK AISI Inspect | 2025.11 | — | [39%](https://data.x.ai/2025-11-17-grok-4-1-model-card.pdf) | — | — | — | [84%](https://data.x.ai/2025-11-17-grok-4-1-model-card.pdf) |
+| | Grok 4 Fast | UK AISI Inspect | 2025.09 | — | [30%](https://data.x.ai/2025-09-19-grok-4-fast-model-card.pdf) | — | — | — | [81.4%](https://data.x.ai/2025-09-19-grok-4-fast-model-card.pdf) |
+| | Grok 4 | UK AISI Inspect | 2025.08 | — | [43%](https://data.x.ai/2025-08-20-grok-4-model-card.pdf) | — | — | — | [79%](https://data.x.ai/2025-08-20-grok-4-model-card.pdf) |
+
+<details>
+<summary>Earlier Models (before 2025.08)</summary>
+
+| | Model | Agent | Date | CTF (Pro) | Cybench | HTB | Key Benchmark |
+|---|---|---|---|---|---|---|---|
+| **OpenAI** | o3 | Base | 2025.04 | [59%](https://cdn.openai.com/pdf/2221c875-02dc-4789-800b-e7758f3722c1/o3-and-o4-mini-system-card.pdf) | — | — | — |
+| | o4-mini | Base | 2025.04 | [41%](https://cdn.openai.com/pdf/2221c875-02dc-4789-800b-e7758f3722c1/o3-and-o4-mini-system-card.pdf) | — | — | — |
+| | Deep Research | o3 + browse | 2025.02 | [70%](https://cdn.openai.com/deep-research-system-card.pdf) | — | — | First Medium risk |
+| **Anthropic** | Claude Opus 4 | Base | 2025.05 | — | [22/39](https://www.anthropic.com/claude-4-system-card) | — | First ASL-3 |
+| | Claude Sonnet 4 | Base | 2025.05 | — | [22/39](https://www.anthropic.com/claude-4-system-card) | — | — |
+| | Claude 3.7 Sonnet | Base | 2025.02 | — | [35.9%](https://anthropic.com/claude-3-7-sonnet-system-card) | — | — |
+| **Google** | Gemini 2.5 Pro | Base | 2025.06 | [76/76 ICF](https://modelcards.withgoogle.com/assets/documents/gemini-2.5-pro.pdf) | — | [6/12](https://storage.googleapis.com/deepmind-media/gemini/gemini_3_pro_fsf_report.pdf) | ICF saturated |
+| | Gemini 2.0 Flash | Base | 2025.04 | — | — | — | [11/50 PatternLabs](https://modelcards.withgoogle.com/assets/documents/gemini-2-flash.pdf) |
+
+</details>
 
 ---
 
