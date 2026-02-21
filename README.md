@@ -61,7 +61,6 @@ The core differentiator of this repo. We classify everything along two axes:
 | | GPT-5 | Base | 2025.08 | [~27%](https://cdn.openai.com/gpt-5-system-card.pdf) | — | — | — | — | — | — |
 | | o3 | Base | 2025.04 | [~58%](https://cdn.openai.com/pdf/2221c875-02dc-4789-800b-e7758f3722c1/o3-and-o4-mini-system-card.pdf) | — | — | — | — | — | — |
 | | Deep Research | o3 + browse | 2025.02 | [70%](https://cdn.openai.com/deep-research-system-card.pdf) | — | — | — | — | — | — |
-| | o3-mini | Base | 2025.01 | — | — | — | — | — | — | — |
 | **Anthropic** | Claude Opus 4.6 | Base | 2026.02 | — | — | — | — | — | [500+ zero-days](https://anthropic.com/claude-opus-4-6-system-card) | — |
 | | Claude Sonnet 4.6 | Base | 2026.02 | — | — | — | — | — | [0% prompt inj.](https://anthropic.com/claude-sonnet-4-6-system-card) | — |
 | | Claude Opus 4.5 | Base | 2025.11 | — | — | — | [1st auto solve](https://www.anthropic.com/claude-opus-4-5-system-card) | — | — | — |
@@ -74,7 +73,7 @@ The core differentiator of this repo. We classify everything along two axes:
 | | Gemini 3 Pro | Base | 2025.11 | — | — | — | — | [11/12](https://storage.googleapis.com/deepmind-media/gemini/gemini_3_pro_fsf_report.pdf) | — | — |
 | | Gemini 2.5 DT | Deep Think | 2025.08 | [13/13 GDM](https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Deep-Think-Model-Card.pdf) | — | — | — | [3/13](https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Deep-Think-Model-Card.pdf) | — | — |
 | | Gemini 2.5 Pro | Base | 2025.06 | [76/76 ICF](https://modelcards.withgoogle.com/assets/documents/gemini-2.5-pro.pdf) | — | — | — | [6/12](https://storage.googleapis.com/deepmind-media/gemini/gemini_3_pro_fsf_report.pdf) | — | — |
-| | Gemini 2.0 Flash | Base | 2025.04 | — | — | — | — | — | — | — |
+| | Gemini 2.0 Flash | Base | 2025.04 | — | — | — | — | — | [11/50 PatternLabs](https://modelcards.withgoogle.com/assets/documents/gemini-2-flash.pdf) | — |
 | **xAI** | Grok 4.1 | UK AISI Inspect | 2025.11 | — | [< experts](https://data.x.ai/2025-11-17-grok-4-1-model-card.pdf) | — | — | — | — | [87% (Bio)](https://data.x.ai/2025-11-17-grok-4-1-model-card.pdf) |
 | | Grok 4 Fast | UK AISI Inspect | 2025.09 | — | — | — | — | — | — | [81.4%](https://data.x.ai/2025-09-19-grok-4-fast-model-card.pdf) |
 | | Grok 4 | UK AISI Inspect | 2025.08 | — | [< human](https://data.x.ai/2025-08-20-grok-4-model-card.pdf) | — | — | — | — | [79%](https://data.x.ai/2025-08-20-grok-4-model-card.pdf) |
@@ -194,6 +193,10 @@ Each company has its own framework for evaluating cybersecurity risk:
 | Claude Opus 4 | Anthropic | Custom CTF | 11/11 easy, 1/2 med, 0/2 hard | 2025.05 | [System Card](https://www.anthropic.com/claude-4-system-card) |
 | Claude Sonnet 4 | Anthropic | Custom CTF | 10/11 easy, 1/2 med, 0/2 hard | 2025.05 | [System Card](https://www.anthropic.com/claude-4-system-card) |
 | Claude Sonnet 4.5 | Anthropic | Cybench (40 tasks) | 76.5% | 2025.09 | [System Card](https://www.anthropic.com/claude-sonnet-4-5-system-card) |
+| Gemini 2.0 Flash | Google | Pattern Labs External CTFs | 11/50 | 2025.04 | [Model Card](https://modelcards.withgoogle.com/assets/documents/gemini-2-flash.pdf) |
+| Gemini 2.5 Pro | Google | InterCode-CTF | 76/76 (saturated) | 2025.06 | [Model Card](https://modelcards.withgoogle.com/assets/documents/gemini-2.5-pro.pdf) |
+| Gemini 2.5 Pro | Google | Hack the Box (Hard) | 6/12 | 2025.06 | [FSF Report](https://storage.googleapis.com/deepmind-media/gemini/gemini_3_pro_fsf_report.pdf) |
+| Gemini 2.5 Deep Think | Google | InterCode-CTF | 73/76 | 2025.08 | [Model Card](https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Deep-Think-Model-Card.pdf) |
 | Gemini 2.5 Deep Think | Google | In-house CTF (Medium, 13) | 13/13 | 2025.08 | [Model Card](https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Deep-Think-Model-Card.pdf) |
 | Gemini 2.5 Deep Think | Google | Hack the Box (Hard) | 3/13 | 2025.08 | [Model Card](https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Deep-Think-Model-Card.pdf) |
 | Gemini 3 Pro | Google | Hack the Box (Hard) | 11/12 | 2025.11 | [FSF Report](https://storage.googleapis.com/deepmind-media/gemini/gemini_3_pro_fsf_report.pdf) |
