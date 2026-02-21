@@ -53,17 +53,17 @@ The core differentiator of this repo. We classify everything along two axes:
 
 > Side-by-side comparison of frontier models across key cybersecurity benchmarks. Sources in [detailed tables](#reported-performance-numbers) below.
 
-| Model | Company | Date | CTF | [Cybench](https://cybench.github.io/) | [CVE-Bench](#cve--vulnerability-benchmarks) | Cyber Range | [HTB](https://www.hackthebox.com/) | Vuln Discovery |
+| | Model | Date | CTF | [Cybench](https://cybench.github.io/) | [CVE-Bench](#cve--vulnerability-benchmarks) | Cyber Range | [HTB](https://www.hackthebox.com/) | Vuln Discovery |
 |---|---|---|---|---|---|---|---|---|
-| **GPT-5.3-Codex** | OpenAI | 2026.02 | All passed | — | — | All except 3 | — | — |
-| **Claude Opus 4.6** | Anthropic | 2026.02 | — | — | — | — | — | 500+ zero-days |
-| **GPT-5.2-Codex** | OpenAI | 2025.12 | — | — | 87% | — | — | — |
-| **Gemini 3 Pro** | Google | 2025.11 | — | — | — | — | 11/12 | — |
-| **GPT-5.1-Codex-Max** | OpenAI | 2025.11 | ~76% | — | — | 37% | — | — |
-| **Claude Sonnet 4.5** | Anthropic | 2025.09 | — | 76.5% | — | 2/5 Equifax | — | 28.9% [CyberGym](https://red.anthropic.com/2025/ai-for-cyber-defenders/) |
-| **Gemini 2.5 Deep Think** | Google | 2025.08 | 13/13 GDM | — | — | — | 3/13 | — |
-| **o3** | OpenAI | 2025.04 | ~58% | — | — | — | — | — |
-| **Claude 3.7 Sonnet** | Anthropic | 2025.02 | — | 35.9% | — | — | — | — |
+| **OpenAI** | GPT-5.3-Codex | 2026.02 | All passed | — | — | All except 3 | — | — |
+| | GPT-5.2-Codex | 2025.12 | — | — | 87% | — | — | — |
+| | GPT-5.1-Codex-Max | 2025.11 | ~76% | — | — | 37% | — | — |
+| | o3 | 2025.04 | ~58% | — | — | — | — | — |
+| **Anthropic** | Claude Opus 4.6 | 2026.02 | — | — | — | — | — | 500+ zero-days |
+| | Claude Sonnet 4.5 | 2025.09 | — | 76.5% | — | 2/5 Equifax | — | 28.9% [CyberGym](https://red.anthropic.com/2025/ai-for-cyber-defenders/) |
+| | Claude 3.7 Sonnet | 2025.02 | — | 35.9% | — | — | — | — |
+| **Google** | Gemini 3 Pro | 2025.11 | — | — | — | — | 11/12 | — |
+| | Gemini 2.5 Deep Think | 2025.08 | 13/13 GDM | — | — | — | 3/13 | — |
 
 > Models with no cybersecurity benchmarks reported (GPT-4.5, Grok series, Gemini Flash variants) are omitted.
 
