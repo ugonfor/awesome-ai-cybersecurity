@@ -95,11 +95,17 @@ Key finding: **virtually no overlap in quantitative benchmarks across companies*
 
 ## TODO
 
-- [ ] Fill in individual benchmark entries (benchmarks/ directory)
-- [ ] Research and add cybersecurity AI agents (agents/ directory)
-- [ ] Research and add evaluation tools/frameworks (tools/ directory)
-- [ ] Verify all URLs in raw-data/ are live (link checking)
-- [ ] Add academic benchmarks not used by the 4 companies (CyberSecEval, SecBench, CyberMetric, HarmBench, etc.)
+- [x] Fill in individual benchmark entries (benchmarks/ directory)
+- [x] Research and add cybersecurity AI agents (agents/ directory)
+- [x] Research and add evaluation tools/frameworks (tools/ directory)
+- [x] Verify all URLs in raw-data/ are live (link checking)
+- [x] Add academic benchmarks not used by the 4 companies (CyberSecEval, SecBench, CyberMetric, HarmBench, etc.)
+
+### Link Check Results (Feb 2026)
+
+- 125 unique URLs checked; 88 working, 13 redirected (all OK), 24 return HTTP 403
+- **Genuinely broken (2)**: Google Cloud Storage preview model cards (`gemini-2.5-flash-preview.pdf`, `gemini-2.5-pro-preview.pdf`) — superseded by final versions
+- **Bot-blocked, not broken (22)**: All `openai.com/index/...` and `x.ai/...` URLs return 403 to curl but work in browsers; each has a working PDF alternative
 
 ## Style Guide
 

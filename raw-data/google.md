@@ -81,14 +81,14 @@ Google evaluates cybersecurity under the **Frontier Safety Framework (FSF)** wit
 ### 8. Gemini 2.5 Pro Preview Model Card
 
 - **Date**: April 16, 2025
-- **URL**: https://storage.googleapis.com/model-cards/documents/gemini-2.5-pro-preview.pdf
+- **URL**: https://storage.googleapis.com/model-cards/documents/gemini-2.5-pro-preview.pdf *(link removed by Google; superseded by final model card)*
 - **Models**: Gemini 2.5 Pro Preview
 - **Benchmarks**: FSF (InterCode-CTF, in-house CTF, HTB). CCL alert threshold reached.
 
 ### 9. Gemini 2.5 Flash Preview Model Card
 
 - **Date**: June 6, 2025
-- **URL**: https://storage.googleapis.com/model-cards/documents/gemini-2.5-flash-preview.pdf
+- **URL**: https://storage.googleapis.com/model-cards/documents/gemini-2.5-flash-preview.pdf *(link removed by Google; superseded by final model card)*
 - **Models**: Gemini 2.5 Flash Preview
 
 ### 10. Gemini 2.5 Flash Model Card
