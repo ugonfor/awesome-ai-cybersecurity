@@ -23,7 +23,8 @@
 | **[Cybench](https://cybench.github.io/)** | — | ✅ | — | ✅ | BY-AI / Offensive | 40 professional CTF tasks from 4 competitions (xAI spells it "CyBench" — same benchmark) |
 | **CyberGym** | — | ✅ | — | — | BY-AI / Offensive | Real-world vuln detection in open-source software |
 | **CVE-Bench** | ✅ | — | — | — | BY-AI / Offensive | Exploit real-world web app CVEs (pass@1) |
-| **Cyber Range** | ✅ | ✅ | — | — | BY-AI / Offensive | Multi-machine network attack scenarios |
+| **OpenAI Cyber Range** | ✅ | — | — | — | BY-AI / Offensive | 15 multi-machine network attack scenarios (internal) |
+| **CMU Cyber Ranges / Incalmo** | — | ✅ | — | — | BY-AI / Offensive | ~50-host networks + Equifax breach simulation |
 | **InterCode-CTF** | — | — | ✅ | — | BY-AI / Offensive | 76 easy CTF challenges (saturated) |
 | **In-house CTF (GDM)** | — | — | ✅ | — | BY-AI / Offensive | 13 medium challenges (open-sourced via UK AISI Inspect) |
 | **Hack the Box** | — | ✅ | ✅ | — | BY-AI / Offensive | Professional-level CTF challenges |
@@ -169,14 +170,14 @@
 |---|---|
 | **Used by 4 companies** | Harmful Request Refusal (each with internal version) |
 | **Used by 3 companies** | Expert Red Teaming (OpenAI, Anthropic, Google), Prompt Injection Eval (OpenAI, Anthropic, Google) |
-| **Used by 2 companies** | Cyber Range (OpenAI, Anthropic), Jailbreak Robustness (OpenAI, Anthropic) |
+| **Used by 2 companies** | Cybench (Anthropic, xAI), Hack the Box (Anthropic, Google), Jailbreak Robustness (OpenAI, Anthropic) |
 | **Used by 1 company** | CVE-Bench (OpenAI only), CyberGym (Anthropic only), InterCode-CTF (Google only), WMDP-Cyber (xAI only), AgentHarm (xAI only), CTI-MCQ/RCM (Google/Sec-Gemini only) |
 
 ### Key Insight: Almost No Shared Quantitative Benchmarks
 
 Despite all 4 companies evaluating cybersecurity, **there is virtually no overlap in quantitative benchmarks**. Each company has developed or adopted its own unique set:
 
-- **OpenAI**: CTF (custom) + CVE-Bench + Cyber Range
+- **OpenAI**: CTF (custom) + CVE-Bench + OpenAI Cyber Range
 - **Anthropic**: Cybench + CyberGym + CMU Cyber Range + real CTF competitions
 - **Google**: InterCode-CTF + In-house CTF + HTB + Key Skills + Pattern Labs
 - **xAI**: Cybench (spelled "CyBench") + WMDP-Cyber + AgentHarm + AgentDojo
