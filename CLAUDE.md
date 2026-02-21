@@ -8,59 +8,52 @@
 - Scope: Benchmarks, Agents/Tools (NO papers-only entries — papers are linked as references within entries)
 - Target companies/models: OpenAI, Anthropic (Claude), Google (Gemini), xAI (Grok) and beyond
 
-## Core Taxonomy: The "OF / BY / FROM" Framework
+## How to Behave
 
-The key differentiator of this repo. The AI cybersecurity space conflates red team, blue team, safety, and security. We cut through the confusion with two axes:
+### Taxonomy Rules (MUST follow)
 
-### Axis 1: Whose security?
+Everything in this repo is classified by two axes. **Never create content that violates this structure.**
 
-| Category | Meaning | Example |
-|----------|---------|---------|
-| **Security OF AI** | Protecting the AI model itself | Jailbreak defense, prompt injection robustness |
-| **Security BY AI** | AI performing cybersecurity tasks | CTF solving, vulnerability analysis, SOC automation |
-| **Security FROM AI** | Assessing risks posed by AI | Malware generation capability, exploit writing risk |
+**Axis 1 — OF / BY / FROM:**
+- **Security OF AI** = Protecting the AI model (jailbreak, prompt injection, robustness)
+- **Security BY AI** = AI performing cybersecurity tasks (CTF, pentest, SOC, threat intel)
+- **Security FROM AI** = Assessing risks posed by AI (misuse, deception, alignment)
 
-### Axis 2: Offensive vs Defensive
+**Axis 2 — Offensive / Defensive / Evaluation:**
+- **Offensive** = Red team, attack simulation, vulnerability discovery
+- **Defensive** = Blue team, detection, incident response
+- **Evaluation** = Pure capability measurement
 
-| Category | Meaning |
-|----------|---------|
-| **Offensive (Red Team)** | Attack simulation, vulnerability discovery |
-| **Defensive (Blue Team)** | Detection, analysis, incident response |
-| **Evaluation** | Pure capability measurement (no attack/defense distinction) |
+When adding new entries:
+- ALL agents go under **Security BY AI** (they perform cybersecurity tasks). Use Axis 2 (Offensive/Defensive) for sub-classification.
+- Tools are classified by which axis they test: Garak → OF AI, CTF platforms → BY AI, Inspect → cross-taxonomy.
+- Some benchmarks are genuinely dual-use (e.g., WMDP, Zero-day Discovery). List in both directories but add a cross-reference note.
 
-## Repo Structure
+### Factual Accuracy Rules
 
-```
-awesome-ai-cybersecurity/
-├── README.md                      # Main awesome list (cross-comparison, benchmark mapping, performance numbers)
-├── CLAUDE.md                      # This file (project guidelines for AI assistants)
-│
-├── raw-data/                      # Collected vendor documentation analysis
-│   ├── openai.md                  # 19 documents: GPT-4 → GPT-5.3-Codex
-│   ├── anthropic.md               # 24 documents: Claude 2 → Claude Opus 4.6
-│   ├── google.md                  # 25+ documents: Gemini 1.0 → Gemini 3.1 Pro
-│   ├── xai.md                     # 9 documents: Grok-1 → Grok 4.1
-│   └── cross-comparison.md        # Detailed cross-comparison (superset of README tables)
-│
-├── benchmarks/                    # Individual benchmark entries
-│   ├── security-of-ai/            # Jailbreak, prompt injection, adversarial robustness
-│   ├── security-by-ai/            # CTF, pentest, code audit, detection benchmarks
-│   │   ├── offensive/
-│   │   ├── defensive/
-│   │   └── knowledge/
-│   └── security-from-ai/          # Misuse risk, dual-use, WMDP-style
-│
-├── agents/                        # Cybersecurity AI agents
-│   ├── offensive/                 # Pentest agents, CTF solvers, exploit generators
-│   ├── defensive/                 # SOC agents, detection/analysis agents
-│   └── multi-purpose/
-│
-└── tools/                         # Evaluation frameworks, platforms
-```
+- **Verify creator attribution** before writing. Common pitfalls we've hit:
+  - Cybench → Stanford University (NOT UC Berkeley/UIUC/UChicago)
+  - CyberGym → UC Berkeley RDI (NOT Anthropic — they use it but didn't create it)
+  - MASK → CAIS, arxiv:2503.03750 (NOT UC Berkeley, NOT 2406.11663)
+  - MakeMeSay → OpenAI / Google DeepMind (NOT Redwood Research)
+  - CTI-MCQ/CTI-RCM → Rochester IT's CTI-Bench project (NOT Google — Sec-Gemini uses it)
+  - AgentHarm → EPFL, Gray Swan, UK AISI, Oxford, CMU (full attribution, not just "UK AISI")
+  - Cybench and CyBench are the SAME benchmark. xAI just capitalizes differently.
+- **Cross-check numbers** across README, raw-data/, benchmarks/, and cross-comparison.md. The same score must be identical everywhere.
+- **87% WMDP for Grok 4.1 is WMDP-Bio**, not WMDP-Cyber. Don't conflate them.
 
-## Entry Format Convention
+### README Structure Rules
 
-Every benchmark/agent/tool entry should follow this format:
+- **Leaderboards come first** in Cross-Comparison (most valuable to users)
+- **Group models by company** (OpenAI / Anthropic / Google), not by date
+- **Dense reference tables** (Benchmark Mapping, Timeline, Performance Numbers) should be collapsible (`<details>`)
+- **Agents section**: Show top 5 picks per category, rest in collapsible list
+- **Tools section**: Organize by taxonomy (OF AI tools / BY AI platforms / cross-taxonomy frameworks)
+- **Don't repeat** information that's already in Cross-Comparison tables in the Benchmarks section — just link to it
+
+### Entry Format
+
+Every benchmark/agent/tool entry in subdirectories should follow:
 
 ```markdown
 ### [Name](link)
@@ -73,44 +66,52 @@ Every benchmark/agent/tool entry should follow this format:
 - **Summary**: One-line description
 ```
 
-## Key Decisions
-
-- **No standalone paper entries**: Papers are referenced within benchmark/agent/tool entries, not listed separately
-- **Agents & tools ARE in scope**: Custom cybersec AI agents (PentestGPT, etc.), not just benchmarks
-- **Commercial tools (Claude Code, Codex) are OUT of scope**: Focus on cybersec-specific agents
-- **Taxonomy-first approach**: The OF/BY/FROM classification is the repo's core value proposition
-- **Cross-comparison lives in README**: The benchmark mapping and performance numbers are the README's centerpiece
-- **Raw data in raw-data/**: Detailed per-vendor analysis with all source URLs preserved
-
-## Data Collection Status
-
-All 4 vendor sources have been collected and analyzed (as of Feb 2026):
-
-- **OpenAI**: 19 system cards/reports mined. Key benchmarks: Custom CTF, CVE-Bench, Cyber Range
-- **Anthropic**: 24 documents mined. Key benchmarks: Cybench, CyberGym, CMU Cyber Ranges, real CTF competitions
-- **Google**: 25+ documents mined. Key benchmarks: InterCode-CTF, In-house CTF, Hack the Box, Key Skills, Pattern Labs
-- **xAI**: 9 documents mined. Key benchmarks: CyBench, WMDP-Cyber, AgentHarm, AgentDojo
-
-Key finding: **virtually no overlap in quantitative benchmarks across companies**.
-
-## TODO
-
-- [x] Fill in individual benchmark entries (benchmarks/ directory)
-- [x] Research and add cybersecurity AI agents (agents/ directory)
-- [x] Research and add evaluation tools/frameworks (tools/ directory)
-- [x] Verify all URLs in raw-data/ are live (link checking)
-- [x] Add academic benchmarks not used by the 4 companies (CyberSecEval, SecBench, CyberMetric, HarmBench, etc.)
-
-### Link Check Results (Feb 2026)
-
-- 125 unique URLs checked; 88 working, 13 redirected (all OK), 24 return HTTP 403
-- **Genuinely broken (2)**: Google Cloud Storage preview model cards (`gemini-2.5-flash-preview.pdf`, `gemini-2.5-pro-preview.pdf`) — superseded by final versions
-- **Bot-blocked, not broken (22)**: All `openai.com/index/...` and `x.ai/...` URLs return 403 to curl but work in browsers; each has a working PDF alternative
-
-## Style Guide
+### Style Rules
 
 - Keep descriptions concise — one-liners preferred
 - Always include official links (no dead links)
-- Use the taxonomy categories consistently
 - All performance numbers must include source URL
 - Use ✅ / — in comparison tables for readability
+- All text must be in English (no Korean)
+- Git author must be `ugonfor <ugonfor@gmail.com>` (never hyogon.ryu)
+
+### What NOT to Do
+
+- **No standalone paper entries** — papers are referenced within benchmark/agent/tool entries
+- **No general-purpose coding agents** (Claude Code, Codex) — focus on cybersec-specific agents
+- **No entries without links** — every name must have an official URL
+- **Don't guess arxiv IDs** — verify against the actual paper
+- **Don't assume who created a benchmark** — check the paper's author affiliations, not who uses it
+
+## Repo Structure
+
+```
+awesome-ai-cybersecurity/
+├── README.md                      # Main awesome list (leaderboards, cross-comparison, curated lists)
+├── CLAUDE.md                      # This file (behavioral guidelines)
+├── raw-data/                      # Vendor documentation analysis (source of truth for numbers)
+│   ├── openai.md                  # 19 documents: GPT-4 → GPT-5.3-Codex
+│   ├── anthropic.md               # 24 documents: Claude 2 → Claude Opus 4.6
+│   ├── google.md                  # 25+ documents: Gemini 1.0 → Gemini 3.1 Pro
+│   ├── xai.md                     # 9 documents: Grok-1 → Grok 4.1
+│   └── cross-comparison.md        # Detailed cross-comparison (superset of README tables)
+├── benchmarks/                    # Individual benchmark entries (70+)
+│   ├── security-of-ai/            # Jailbreak, prompt injection, adversarial robustness
+│   ├── security-by-ai/            # CTF, pentest, code audit, detection benchmarks
+│   │   ├── offensive/
+│   │   ├── defensive/
+│   │   └── knowledge/
+│   └── security-from-ai/          # Misuse risk, dual-use, WMDP-style
+├── agents/                        # Cybersecurity AI agents (39)
+│   ├── offensive/                 # Pentest agents, CTF solvers, exploit generators
+│   ├── defensive/                 # SOC agents, detection/analysis agents
+│   └── multi-purpose/
+└── tools/                         # Evaluation frameworks, platforms (20)
+```
+
+## Data Status (Feb 2026)
+
+- 4 vendor sources collected (77 documents total)
+- 70+ benchmarks, 39 agents, 20 tools documented
+- 125 URLs verified (2 genuinely broken Google preview links, 22 bot-blocked but browser-accessible)
+- Key finding: **virtually no overlap in quantitative benchmarks across companies**
