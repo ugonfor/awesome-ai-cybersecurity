@@ -42,7 +42,7 @@ awesome-ai-cybersecurity/
 │   ├── xai.md                     # 9 documents: Grok-1 → Grok 4.1
 │   └── cross-comparison.md        # Detailed cross-comparison (superset of README tables)
 │
-├── benchmarks/                    # (TODO) Individual benchmark entries
+├── benchmarks/                    # Individual benchmark entries
 │   ├── security-of-ai/            # Jailbreak, prompt injection, adversarial robustness
 │   ├── security-by-ai/            # CTF, pentest, code audit, detection benchmarks
 │   │   ├── offensive/
@@ -50,12 +50,12 @@ awesome-ai-cybersecurity/
 │   │   └── knowledge/
 │   └── security-from-ai/          # Misuse risk, dual-use, WMDP-style
 │
-├── agents/                        # (TODO) Cybersecurity AI agents
+├── agents/                        # Cybersecurity AI agents
 │   ├── offensive/                 # Pentest agents, CTF solvers, exploit generators
 │   ├── defensive/                 # SOC agents, detection/analysis agents
 │   └── multi-purpose/
 │
-└── tools/                         # (TODO) Evaluation frameworks, platforms
+└── tools/                         # Evaluation frameworks, platforms
 ```
 
 ## Entry Format Convention

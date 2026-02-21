@@ -137,7 +137,7 @@ Each company has its own framework for evaluating cybersecurity risk:
 
 | Model | Company | Date | CTF | Cybench | CVE-Bench | Cyber Range | HTB | Vuln Discovery |
 |---|---|---|---|---|---|---|---|---|
-| **GPT-5.3-Codex** | OpenAI | 2026.02 | All passed | — | — | All-3 scenarios | — | — |
+| **GPT-5.3-Codex** | OpenAI | 2026.02 | All passed | — | — | All except 3 | — | — |
 | **Claude Opus 4.6** | Anthropic | 2026.02 | — | — | — | — | — | 500+ zero-days |
 | **GPT-5.2-Codex** | OpenAI | 2025.12 | — | — | 87% | — | — | — |
 | **Gemini 3 Pro** | Google | 2025.11 | — | — | — | — | 11/12 | — |
@@ -275,13 +275,13 @@ Each company has its own framework for evaluating cybersecurity risk:
 
 ## Benchmarks
 
-> 50+ benchmarks across three categories. Vendor-specific benchmarks are mapped in [Cross-Comparison](#benchmark-mapping) above.
+> 70+ benchmarks across three categories. Vendor-specific benchmarks are mapped in [Cross-Comparison](#benchmark-mapping) above.
 
 | Category | Scope | Vendor | Academic | Full List |
 |---|---|:---:|:---:|---|
 | **Security OF AI** | Jailbreak, prompt injection, adversarial robustness | 6 | 14 | [`benchmarks/security-of-ai/`](benchmarks/security-of-ai/) |
-| **Security BY AI** | CTF, pentest, vuln detection, threat intel knowledge | 14 | 18 | [`benchmarks/security-by-ai/`](benchmarks/security-by-ai/) |
-| **Security FROM AI** | Misuse risk, dual-use, deception, alignment | 4 | 3 | [`benchmarks/security-from-ai/`](benchmarks/security-from-ai/) |
+| **Security BY AI** | CTF, pentest, vuln detection, threat intel knowledge | 19 | 18 | [`benchmarks/security-by-ai/`](benchmarks/security-by-ai/) |
+| **Security FROM AI** | Misuse risk, dual-use, deception, alignment | 10 | 3 | [`benchmarks/security-from-ai/`](benchmarks/security-from-ai/) |
 
 **Notable academic benchmarks** (not used by the 4 major vendors):
 
@@ -298,7 +298,7 @@ Each company has its own framework for evaluating cybersecurity risk:
 
 ## Agents — Security BY AI
 
-> AI performing cybersecurity tasks (Axis 1: BY AI). Classified by Axis 2: Offensive / Defensive. 38 agents total — full details in [`agents/`](agents/).
+> AI performing cybersecurity tasks (Axis 1: BY AI). Classified by Axis 2: Offensive / Defensive. 39 agents total — full details in [`agents/`](agents/).
 
 ### Offensive — Top Picks
 
@@ -373,7 +373,7 @@ Each company has its own framework for evaluating cybersecurity risk:
 
 ## Tools
 
-> 25 tools and platforms. Full details in [`tools/`](tools/).
+> 20 tools and platforms. Full details in [`tools/`](tools/).
 
 **Evaluation Frameworks** (cross-taxonomy):
 
