@@ -54,12 +54,13 @@ The core differentiator of this repo. We classify everything along two axes:
 
 | | Model | Agent | Date | CTF (Pro) | [Cybench](https://cybench.github.io/) | [CVE-Bench](benchmarks/security-by-ai/offensive/) | Cyber Range | [HTB](https://www.hackthebox.com/) | [CyberGym](https://red.anthropic.com/2025/ai-for-cyber-defenders/) / Vuln | [WMDP-Cyber](https://www.wmdp.ai/) |
 |---|---|---|---|---|---|---|---|---|---|---|
-| **OpenAI** | GPT-5.3-Codex | Codex | 2026.02 | [All passed](https://cdn.openai.com/pdf/23eca107-a9b1-4d2c-b156-7deb4fbc697c/GPT-5-3-Codex-System-Card-02.pdf) | — | — | [All except 3](https://cdn.openai.com/pdf/23eca107-a9b1-4d2c-b156-7deb4fbc697c/GPT-5-3-Codex-System-Card-02.pdf) | — | — | — |
+| **OpenAI** | GPT-5.3-Codex | Codex | 2026.02 | [All passed](https://cdn.openai.com/pdf/23eca107-a9b1-4d2c-b156-7deb4fbc697c/GPT-5-3-Codex-System-Card-02.pdf) | — | [90%](https://cdn.openai.com/pdf/23eca107-a9b1-4d2c-b156-7deb4fbc697c/GPT-5-3-Codex-System-Card-02.pdf) | [80%](https://cdn.openai.com/pdf/23eca107-a9b1-4d2c-b156-7deb4fbc697c/GPT-5-3-Codex-System-Card-02.pdf) | — | — | — |
 | | GPT-5.2-Codex | Codex | 2025.12 | — | — | [87%](https://cdn.openai.com/pdf/ac7c37ae-7f4c-4442-b741-2eabdeaf77e0/oai_5_2_Codex.pdf) | — | — | — | — |
-| | GPT-5.1-Codex-Max | Codex | 2025.11 | [~76%](https://cdn.openai.com/pdf/2a7d98b1-57e5-4147-8d0e-683894d782ae/5p1_codex_max_card_03.pdf) | — | — | [37%](https://cdn.openai.com/pdf/2a7d98b1-57e5-4147-8d0e-683894d782ae/5p1_codex_max_card_03.pdf) | — | — | — |
+| | GPT-5.1-Codex-Max | Codex | 2025.11 | [~76%](https://cdn.openai.com/pdf/2a7d98b1-57e5-4147-8d0e-683894d782ae/5p1_codex_max_card_03.pdf) | — | — | — | — | — | — |
 | | GPT-5-Codex | Codex | 2025.09 | ["sharp jump"](https://cdn.openai.com/pdf/97cc5669-7a25-4e63-b15f-5fd5bdc4d149/gpt-5-codex-system-card.pdf) | — | — | — | — | — | — |
 | | GPT-5 | Base | 2025.08 | [~27%](https://cdn.openai.com/gpt-5-system-card.pdf) | — | — | — | — | — | — |
-| | o3 | Base | 2025.04 | [~58%](https://cdn.openai.com/pdf/2221c875-02dc-4789-800b-e7758f3722c1/o3-and-o4-mini-system-card.pdf) | — | — | — | — | — | — |
+| | o3 | Base | 2025.04 | [59%](https://cdn.openai.com/pdf/2221c875-02dc-4789-800b-e7758f3722c1/o3-and-o4-mini-system-card.pdf) | — | — | — | — | — | — |
+| | o4-mini | Base | 2025.04 | [41%](https://cdn.openai.com/pdf/2221c875-02dc-4789-800b-e7758f3722c1/o3-and-o4-mini-system-card.pdf) | — | — | — | — | — | — |
 | | Deep Research | o3 + browse | 2025.02 | [70%](https://cdn.openai.com/deep-research-system-card.pdf) | — | — | — | — | — | — |
 | **Anthropic** | Claude Opus 4.6 | Base | 2026.02 | — | — | — | — | — | [500+ zero-days](https://anthropic.com/claude-opus-4-6-system-card) | — |
 | | Claude Sonnet 4.6 | Base | 2026.02 | — | — | — | — | — | [0% prompt inj.](https://anthropic.com/claude-sonnet-4-6-system-card) | — |
@@ -184,7 +185,8 @@ Each company has its own framework for evaluating cybersecurity risk:
 | o3-mini | OpenAI | Custom CTF (HS/Coll) | 61% / 21% | 2025.01 | [System Card](https://cdn.openai.com/o3-mini-system-card-feb10.pdf) |
 | Deep Research (no browse) | OpenAI | Custom CTF (HS/Coll/Pro) | 82% / 55% / 47% | 2025.02 | [System Card](https://cdn.openai.com/deep-research-system-card.pdf) |
 | Deep Research (w/ browse) | OpenAI | Custom CTF (HS/Coll/Pro) | 92% / 91% / 70% | 2025.02 | [System Card](https://cdn.openai.com/deep-research-system-card.pdf) |
-| o3 | OpenAI | Custom CTF (Professional) | ~58% | 2025.04 | [System Card](https://cdn.openai.com/pdf/2221c875-02dc-4789-800b-e7758f3722c1/o3-and-o4-mini-system-card.pdf) |
+| o3 | OpenAI | Custom CTF (HS/Coll/Pro) | 89% / 68% / 59% | 2025.04 | [System Card](https://cdn.openai.com/pdf/2221c875-02dc-4789-800b-e7758f3722c1/o3-and-o4-mini-system-card.pdf) |
+| o4-mini | OpenAI | Custom CTF (HS/Coll/Pro) | 80% / 55% / 41% | 2025.04 | [System Card](https://cdn.openai.com/pdf/2221c875-02dc-4789-800b-e7758f3722c1/o3-and-o4-mini-system-card.pdf) |
 | GPT-5 | OpenAI | Custom CTF (Professional, pass@12) | ~27% | 2025.08 | [System Card](https://cdn.openai.com/gpt-5-system-card.pdf) |
 | GPT-5-Codex | OpenAI | Custom CTF + CVE-Bench + Cyber Range | "Sharp jump" | 2025.09 | [Addendum](https://cdn.openai.com/pdf/97cc5669-7a25-4e63-b15f-5fd5bdc4d149/gpt-5-codex-system-card.pdf) |
 | GPT-5.1-Codex-Max | OpenAI | Custom CTF (Professional) | ~76% (17/18 easy, 9/17 med, 0/6 hard) | 2025.11 | [System Card](https://cdn.openai.com/pdf/2a7d98b1-57e5-4147-8d0e-683894d782ae/5p1_codex_max_card_03.pdf) |
@@ -206,6 +208,7 @@ Each company has its own framework for evaluating cybersecurity risk:
 
 | Model | Company | Benchmark | Score | Date | Source |
 |---|---|---|---|---|---|
+| GPT-5.3-Codex | OpenAI | CVE-Bench (pass@1, 34/40) | 90% | 2026.02 | [System Card](https://cdn.openai.com/pdf/23eca107-a9b1-4d2c-b156-7deb4fbc697c/GPT-5-3-Codex-System-Card-02.pdf) |
 | GPT-5.2-Codex | OpenAI | CVE-Bench (pass@1) | 87% | 2025.12 | [Addendum](https://cdn.openai.com/pdf/ac7c37ae-7f4c-4442-b741-2eabdeaf77e0/oai_5_2_Codex.pdf) |
 | Claude Sonnet 4.5 | Anthropic | CyberGym ($2 cost) | 28.9% | 2025.09 | [Frontier Red Team](https://red.anthropic.com/2025/ai-for-cyber-defenders/) |
 | Claude Sonnet 4.5 | Anthropic | CyberGym (30 trials) | 66.7% vuln reproduction, 33%+ new vuln discovery | 2025.09 | [Frontier Red Team](https://red.anthropic.com/2025/ai-for-cyber-defenders/) |
@@ -215,8 +218,9 @@ Each company has its own framework for evaluating cybersecurity risk:
 
 | Model | Company | Benchmark | Score | Date | Source |
 |---|---|---|---|---|---|
-| GPT-5.1-Codex-Max | OpenAI | Cyber Range (Network/Vuln/Evasion) | 37% / 41% / 43% | 2025.11 | [System Card](https://cdn.openai.com/pdf/2a7d98b1-57e5-4147-8d0e-683894d782ae/5p1_codex_max_card_03.pdf) |
-| GPT-5.3-Codex | OpenAI | Cyber Range | All except 3 (EDR, CA/DNS, Leaked Token) | 2026.02 | [System Card](https://cdn.openai.com/pdf/23eca107-a9b1-4d2c-b156-7deb4fbc697c/GPT-5-3-Codex-System-Card-02.pdf) |
+| GPT-5.3-Codex | OpenAI | Cyber Range (15 scenarios) | 80% (12/15 pass) | 2026.02 | [System Card](https://cdn.openai.com/pdf/23eca107-a9b1-4d2c-b156-7deb4fbc697c/GPT-5-3-Codex-System-Card-02.pdf) |
+| GPT-5.3-Codex | OpenAI | Irregular External (Net/Vuln/Evasion) | 86% / 72% / 53% | 2026.02 | [System Card](https://cdn.openai.com/pdf/23eca107-a9b1-4d2c-b156-7deb4fbc697c/GPT-5-3-Codex-System-Card-02.pdf) |
+| GPT-5.1-Codex-Max | OpenAI | Irregular External (Net/Vuln/Evasion) | 37% / 41% / 43% | 2025.11 | [System Card](https://cdn.openai.com/pdf/2a7d98b1-57e5-4147-8d0e-683894d782ae/5p1_codex_max_card_03.pdf) |
 | Claude Sonnet 4.5 | Anthropic | Equifax Simulation | 2/5 autonomous | 2025.09 | [System Card](https://www.anthropic.com/claude-sonnet-4-5-system-card) |
 
 #### Real-World Competitions / Investigations

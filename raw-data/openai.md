@@ -116,8 +116,11 @@ OpenAI evaluates cybersecurity risks under its **Preparedness Framework** (v1: 2
 - **Blog**: https://openai.com/index/o3-o4-mini-system-card/
 - **Models**: o3, o4-mini
 - **Cyber Risk Level**: Below High (first evaluated under Preparedness Framework v2)
-- **Benchmarks**: CTF (3 types of cyberoffensive challenges)
-  - o3 Professional: ~**58%** (vs o1's ~23% — note: o1 scored 13% on Dec 2024 CTF set; ~23% likely reflects the refactored CTF set used for o3 evaluation)
+- **Benchmarks**: CTF + Cyber Range + Irregular (Pattern Labs) external eval
+  - o3: HS **89%**, Collegiate **68%**, Professional **59%** (pass@12)
+  - o4-mini: HS **80%**, Collegiate **55%**, Professional **41%** (pass@12)
+  - Cyber Range: 0% unaided for both models (2 scenarios)
+  - Note: o1 scored 13% on Dec 2024 CTF set; the refactored set used here gives different baselines
 
 ### 11. Codex Addendum (o3/o4-mini)
 
@@ -154,10 +157,10 @@ OpenAI evaluates cybersecurity risks under its **Preparedness Framework** (v1: 2
 - **Blog**: https://openai.com/index/gpt-5-system-card/
 - **Models**: GPT-5 (gpt-5-thinking, gpt-5-thinking-mini)
 - **Cyber Risk Level**: Below High
-- **Benchmarks** (three core evaluations introduced):
+- **Benchmarks** (two core evaluations):
   1. Professional CTF (pass@12): ~**27%**
-  2. CVE-Bench (pass@1)
-  3. Cyber Range: expanded to 5 scenarios
+  2. Cyber Range: expanded to 5 scenarios
+  - Note: CVE-Bench was NOT introduced in GPT-5; it first appears in the GPT-5.1-Codex-Max card.
 
 ### 15. GPT-5-Codex Addendum
 
@@ -207,10 +210,12 @@ OpenAI evaluates cybersecurity risks under its **Preparedness Framework** (v1: 2
 - **URL**: https://cdn.openai.com/pdf/23eca107-a9b1-4d2c-b156-7deb4fbc697c/GPT-5-3-Codex-System-Card-02.pdf
 - **Blog**: https://openai.com/index/gpt-5-3-codex-system-card/
 - **Models**: GPT-5.3-Codex, GPT-5.3-Codex-Spark
-- **Cyber Risk Level**: **HIGH** (first OpenAI model)
+- **Cyber Risk Level**: **HIGH (precautionary)** — "We do not have definitive evidence that this model reaches our High threshold, but are taking a precautionary approach." First OpenAI model at this level.
 - **Benchmarks**:
   - First model to pass all thresholds across all three evaluations
-  - Cyber Range: solved all except 3 scenarios (EDR Evasion, CA/DNS Hijacking, Leaked Token)
+  - CVE-Bench: **90%** (pass@1, 34/40 challenges, zero-day config)
+  - Cyber Range: **80%** combined pass rate (12/15 scenarios; failed: EDR Evasion, CA/DNS Hijacking, Leaked Token)
+  - Irregular External: Network Attack **86%**, Vuln D&E **72%**, Evasion **53%**
   - GPT-5.3-Codex-Spark: Below High
 
 ---
