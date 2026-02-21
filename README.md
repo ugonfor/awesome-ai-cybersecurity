@@ -11,7 +11,6 @@ The AI cybersecurity space is fragmented: OpenAI, Anthropic, Google, and xAI eac
 - [Taxonomy](#taxonomy)
 - [Cross-Comparison](#cross-comparison)
   - [Model Cyber Capability Leaderboard](#model-cyber-capability-leaderboard)
-  - [Agent Performance Leaderboard](#agent-performance-leaderboard)
   - [Risk Frameworks](#risk-frameworks)
   - [Benchmark Mapping](#benchmark-mapping) (collapsible)
   - [Timeline](#timeline) (collapsible)
@@ -51,35 +50,26 @@ The core differentiator of this repo. We classify everything along two axes:
 
 ### Model Cyber Capability Leaderboard
 
-> Side-by-side comparison of frontier models across key cybersecurity benchmarks. Sources in [detailed tables](#reported-performance-numbers) below.
+> Side-by-side comparison of frontier models. Every score links to its source. "Agent" = the evaluation setup (base model, agentic scaffold, or specialized variant).
 
-| | Model | Date | CTF | [Cybench](https://cybench.github.io/) | [CVE-Bench](#cve--vulnerability-benchmarks) | Cyber Range | [HTB](https://www.hackthebox.com/) | Vuln Discovery |
-|---|---|---|---|---|---|---|---|---|
-| **OpenAI** | GPT-5.3-Codex | 2026.02 | All passed | — | — | All except 3 | — | — |
-| | GPT-5.2-Codex | 2025.12 | — | — | 87% | — | — | — |
-| | GPT-5.1-Codex-Max | 2025.11 | ~76% | — | — | 37% | — | — |
-| | o3 | 2025.04 | ~58% | — | — | — | — | — |
-| **Anthropic** | Claude Opus 4.6 | 2026.02 | — | — | — | — | — | 500+ zero-days |
-| | Claude Sonnet 4.5 | 2025.09 | — | 76.5% | — | 2/5 Equifax | — | 28.9% [CyberGym](https://red.anthropic.com/2025/ai-for-cyber-defenders/) |
-| | Claude 3.7 Sonnet | 2025.02 | — | 35.9% | — | — | — | — |
-| **Google** | Gemini 3 Pro | 2025.11 | — | — | — | — | 11/12 | — |
-| | Gemini 2.5 Deep Think | 2025.08 | 13/13 GDM | — | — | — | 3/13 | — |
-
-> Models with no cybersecurity benchmarks reported (GPT-4.5, Grok series, Gemini Flash variants) are omitted.
-
-### Agent Performance Leaderboard
-
-> Performance of cybersecurity AI agents on real-world tasks and benchmarks.
-
-| Agent | Benchmark | Score | vs Human | Category |
-|---|---|---|---|---|
-| **[XBOW](https://xbow.com/)** | [HackerOne](https://www.hackerone.com/) bug bounty | #1 leaderboard (1,060 reports) | Outperformed all humans | BY AI > Offensive |
-| **[ARTEMIS](https://github.com/Stanford-Trinity/ARTEMIS)** | Enterprise pentest (8K hosts) | 2nd/11, 9 vulns found | Beat 9/10 humans, 1/3 cost | BY AI > Offensive |
-| **[D-CIPHER](https://github.com/NYU-LLM-CTF/nyuctf_agents)** | [NYU CTF](https://github.com/NYU-LLM-CTF/NYU_CTF_Bench) / [Cybench](https://cybench.github.io/) / [HTB](https://www.hackthebox.com/) | 22% / 22.5% / 44% | — | BY AI > Offensive |
-| **[Big Sleep](https://projectzero.google/2024/10/from-naptime-to-big-sleep.html)** | Real-world vuln discovery | First AI zero-day (SQLite) | Novel capability | BY AI > Defensive |
-| **[Project Ire](https://www.microsoft.com/en-us/research/blog/project-ire-autonomously-identifies-malware-at-scale/)** | Malware reverse engineering | Precision 0.98, recall 0.83 | First AI malware conviction | BY AI > Defensive |
-| **[Security Copilot](https://www.microsoft.com/en-us/security/business/ai-machine-learning/microsoft-copilot-security)** | Phishing triage | 77% accuracy improvement | 40+ hrs/week saved | BY AI > Defensive |
-| **[CAI](https://github.com/aliasrobotics/cai)** | CTF benchmarks | 3,600x human speed | — | BY AI > Offensive |
+| | Model | Agent | Date | CTF (Pro) | [Cybench](https://cybench.github.io/) | [CVE-Bench](benchmarks/security-by-ai/offensive/) | Cyber Range | [HTB](https://www.hackthebox.com/) | Vuln Discovery | [WMDP-Cyber](https://www.wmdp.ai/) |
+|---|---|---|---|---|---|---|---|---|---|---|
+| **OpenAI** | GPT-5.3-Codex | Codex | 2026.02 | [All passed](https://cdn.openai.com/pdf/23eca107-a9b1-4d2c-b156-7deb4fbc697c/GPT-5-3-Codex-System-Card-02.pdf) | — | — | [All except 3](https://cdn.openai.com/pdf/23eca107-a9b1-4d2c-b156-7deb4fbc697c/GPT-5-3-Codex-System-Card-02.pdf) | — | — | — |
+| | GPT-5.2-Codex | Codex | 2025.12 | — | — | [87%](https://cdn.openai.com/pdf/ac7c37ae-7f4c-4442-b741-2eabdeaf77e0/oai_5_2_Codex.pdf) | — | — | — | — |
+| | GPT-5.1-Codex-Max | Codex | 2025.11 | [~76%](https://cdn.openai.com/pdf/2a7d98b1-57e5-4147-8d0e-683894d782ae/5p1_codex_max_card_03.pdf) | — | — | [37%](https://cdn.openai.com/pdf/2a7d98b1-57e5-4147-8d0e-683894d782ae/5p1_codex_max_card_03.pdf) | — | — | — |
+| | GPT-5 | Base | 2025.08 | [~27%](https://cdn.openai.com/gpt-5-system-card.pdf) | — | — | — | — | — | — |
+| | o3 | Base | 2025.04 | [~58%](https://cdn.openai.com/pdf/2221c875-02dc-4789-800b-e7758f3722c1/o3-and-o4-mini-system-card.pdf) | — | — | — | — | — | — |
+| | Deep Research | o3 + browse | 2025.02 | [70%](https://cdn.openai.com/deep-research-system-card.pdf) | — | — | — | — | — | — |
+| **Anthropic** | Claude Opus 4.6 | Base | 2026.02 | — | — | — | — | — | [500+ zero-days](https://anthropic.com/claude-opus-4-6-system-card) | — |
+| | Claude Sonnet 4.6 | Base | 2026.02 | — | — | — | — | — | [0% prompt inj.](https://anthropic.com/claude-sonnet-4-6-system-card) | — |
+| | Claude Sonnet 4.5 | Base | 2025.09 | — | [76.5%](https://www.anthropic.com/claude-sonnet-4-5-system-card) | — | [2/5 Equifax](https://www.anthropic.com/claude-sonnet-4-5-system-card) | — | [28.9% CyberGym](https://red.anthropic.com/2025/ai-for-cyber-defenders/) | — |
+| | Claude 3.7 Sonnet | Base | 2025.02 | — | [35.9%](https://anthropic.com/claude-3-7-sonnet-system-card) | — | — | — | — | — |
+| **Google** | Gemini 3.1 Pro | Base | 2026.02 | — | — | — | — | [> 3 Pro](https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-1-Pro-Model-Card.pdf) | — | — |
+| | Gemini 3 Pro | Base | 2025.11 | — | — | — | — | [11/12](https://storage.googleapis.com/deepmind-media/gemini/gemini_3_pro_fsf_report.pdf) | — | — |
+| | Gemini 2.5 DT | Deep Think | 2025.08 | [13/13 GDM](https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Deep-Think-Model-Card.pdf) | — | — | — | [3/13](https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Deep-Think-Model-Card.pdf) | — | — |
+| **xAI** | Grok 4.1 | UK AISI Inspect | 2025.11 | — | [< experts](https://data.x.ai/2025-11-17-grok-4-1-model-card.pdf) | — | — | — | — | [87% (Bio)](https://data.x.ai/2025-11-17-grok-4-1-model-card.pdf) |
+| | Grok 4 Fast | UK AISI Inspect | 2025.09 | — | — | — | — | — | — | [81.4%](https://data.x.ai/2025-09-19-grok-4-fast-model-card.pdf) |
+| | Grok 4 | UK AISI Inspect | 2025.08 | — | [< human](https://data.x.ai/2025-08-20-grok-4-model-card.pdf) | — | — | — | — | [79%](https://data.x.ai/2025-08-20-grok-4-model-card.pdf) |
 
 ---
 
@@ -310,6 +300,18 @@ Each company has its own framework for evaluating cybersecurity risk:
 ## Agents — Security BY AI
 
 > AI performing cybersecurity tasks (Axis 1: BY AI). Classified by Axis 2: Offensive / Defensive. 39 agents total — full details in [`agents/`](agents/).
+
+### Agent Performance Leaderboard
+
+| Agent | Benchmark | Score | vs Human | Source |
+|---|---|---|---|---|
+| **[XBOW](https://xbow.com/)** | [HackerOne](https://www.hackerone.com/) bug bounty | #1 leaderboard (1,060 reports) | Outperformed all humans | [Blog](https://xbow.com/blog/top-1-how-xbow-did-it) |
+| **[ARTEMIS](https://github.com/Stanford-Trinity/ARTEMIS)** | Enterprise pentest (8K hosts) | 2nd/11, 9 vulns found | Beat 9/10 humans, 1/3 cost | [Paper](https://arxiv.org/abs/2512.09882) |
+| **[D-CIPHER](https://github.com/NYU-LLM-CTF/nyuctf_agents)** | [NYU CTF](https://github.com/NYU-LLM-CTF/NYU_CTF_Bench) / [Cybench](https://cybench.github.io/) / [HTB](https://www.hackthebox.com/) | 22% / 22.5% / 44% | — | [Paper](https://arxiv.org/abs/2502.10931) |
+| **[Big Sleep](https://projectzero.google/2024/10/from-naptime-to-big-sleep.html)** | Real-world vuln discovery | First AI zero-day (SQLite) | Novel capability | [Blog](https://projectzero.google/2024/10/from-naptime-to-big-sleep.html) |
+| **[Project Ire](https://www.microsoft.com/en-us/research/blog/project-ire-autonomously-identifies-malware-at-scale/)** | Malware RE | Precision 0.98, recall 0.83 | First AI malware conviction | [Blog](https://www.microsoft.com/en-us/research/blog/project-ire-autonomously-identifies-malware-at-scale/) |
+| **[Security Copilot](https://www.microsoft.com/en-us/security/business/ai-machine-learning/microsoft-copilot-security)** | Phishing triage | 77% accuracy improvement | 40+ hrs/week saved | [Microsoft](https://www.microsoft.com/en-us/security/business/ai-machine-learning/microsoft-copilot-security) |
+| **[CAI](https://github.com/aliasrobotics/cai)** | CTF benchmarks | 3,600x human speed | — | [Paper](https://arxiv.org/abs/2504.06017) |
 
 ### Offensive — Top Picks
 
