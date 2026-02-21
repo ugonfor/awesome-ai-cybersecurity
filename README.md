@@ -114,7 +114,8 @@ Each company has its own framework for evaluating cybersecurity risk:
 | **[Cybench](https://cybench.github.io/)** | — | ✅ | — | ✅ | 40 professional CTF tasks from 4 competitions (xAI spells it "CyBench") |
 | **[CyberGym](https://red.anthropic.com/2025/ai-for-cyber-defenders/)** | — | ✅ | — | — | Real-world vuln detection in open-source software |
 | **CVE-Bench** | ✅ | — | — | — | Exploit real-world web app CVEs (pass@1) |
-| **Cyber Range** | ✅ | ✅ | — | — | Multi-machine network attack scenarios |
+| **OpenAI Cyber Range** | ✅ | — | — | — | 15 multi-machine network attack scenarios (internal) |
+| **CMU Cyber Ranges / Incalmo** | — | ✅ | — | — | ~50-host network simulations + Equifax breach simulation |
 | **[InterCode-CTF](https://arxiv.org/abs/2306.14898)** | — | — | ✅ | — | 76 easy CTF challenges (largely saturated) |
 | **[In-house CTF (GDM)](https://github.com/google-deepmind/dangerous-capability-evaluations)** | — | — | ✅ | — | 13 medium challenges (open-sourced via UK AISI Inspect) |
 | **Hack the Box** | — | ✅ | ✅ | — | Professional-level CTF challenges |
@@ -170,8 +171,8 @@ Each company has its own framework for evaluating cybersecurity risk:
 |---|---|
 | **4 companies** | Harmful Request Refusal (each with internal version) |
 | **3 companies** | Expert Red Teaming, Prompt Injection Eval |
-| **2 companies** | Cybench (Anthropic + xAI), Hack the Box (Anthropic + Google), Cyber Range, Jailbreak Robustness |
-| **1 company only** | CVE-Bench, CyberGym, InterCode-CTF, WMDP-Cyber, AgentHarm, CTI-MCQ/RCM |
+| **2 companies** | Cybench (Anthropic + xAI), Hack the Box (Anthropic + Google), Jailbreak Robustness |
+| **1 company only** | OpenAI Cyber Range, CMU Cyber Ranges/Incalmo, CVE-Bench, CyberGym, InterCode-CTF, WMDP-Cyber, AgentHarm, CTI-MCQ/RCM |
 
 </details>
 
