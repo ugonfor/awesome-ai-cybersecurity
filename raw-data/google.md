@@ -156,7 +156,8 @@ Google evaluates cybersecurity under the **Frontier Safety Framework (FSF)** wit
 - **Benchmarks** (most detailed standalone cyber eval):
   - InterCode-CTF: saturated
   - In-house CTF: significantly stronger than 2.5
-  - HTB: **11/12** (vs 2.5's 6/12)
+  - Key Skills v1 hard: **11/12** (vs 2.5 DT's 6/12). Note: InterCode-CTF, In-house CTF, and HTB were **retired** for Gemini 3 Pro.
+  - Key Skills v2 (end-to-end attack): **0/13**
   - Key Skills: almost all hard challenges completed
   - New realistic multi-stage attack scenarios
   - MITRE ATT&CK and Unified Kill Chain aligned

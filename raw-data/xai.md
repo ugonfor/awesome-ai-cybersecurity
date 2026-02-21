@@ -60,8 +60,8 @@ xAI evaluates cybersecurity under its **Risk Management Framework** with three e
 - **Models**: Grok 4 Web, Grok 4 API
 - **Benchmarks**:
   - WMDP-Cyber: **79%**
-  - CyBench: 40 CTF challenges (unguided, UK AISI Inspect framework)
-  - AgentHarm, AgentDojo, MASK (0.43), MakeMeSay, Sycophancy (0.07)
+  - CyBench: **43%** unguided success rate, 40 CTF challenges (UK AISI Inspect framework)
+  - AgentHarm (**0.14**), AgentDojo (**0.02**), MASK (0.43), MakeMeSay (**0.12**), Sycophancy (0.07)
   - Internal harmful request datasets (6 languages)
   - UK AISI third-party testing: below human professional in realistic cyber
 
@@ -72,8 +72,9 @@ xAI evaluates cybersecurity under its **Risk Management Framework** with three e
 - **Models**: Grok 4 Fast
 - **Benchmarks**:
   - WMDP-Cyber: **81.4%**
-  - CyBench, AgentHarm (8-10%), AgentDojo (0-3% attack success)
-  - MASK, MakeMeSay, Sycophancy
+  - CyBench: **30%** unguided success rate
+  - AgentHarm (0.08/0.10), AgentDojo (0.00/0.03 attack success)
+  - MASK (0.47/0.63), MakeMeSay (0.12), Sycophancy (0.10/0.13)
 
 ### 7. Grok Code Fast 1 Model Card
 
@@ -89,10 +90,10 @@ xAI evaluates cybersecurity under its **Risk Management Framework** with three e
 - **URL**: https://data.x.ai/2025-11-17-grok-4-1-model-card.pdf
 - **Models**: Grok 4.1 Thinking, Grok 4.1 Non-Thinking
 - **Benchmarks**:
-  - WMDP-Cyber, WMDP-Bio (**87%**)
-  - CyBench: substantially below human experts
-  - AgentHarm: below **0.14** in agentic scenarios
-  - AgentDojo, MASK (0.49/0.46), MakeMeSay (0% as attacker), Sycophancy (0.19/0.23)
+  - WMDP-Cyber: **84%**, WMDP-Bio: **87%**
+  - CyBench: **39%** unguided success rate (substantially below human experts; slight regression from Grok 4's 43%)
+  - AgentHarm: **0.14** (T) / **0.04** (NT)
+  - AgentDojo: **0.05** (T) / **0.01** (NT), MASK (0.49/0.46), MakeMeSay (0% as attacker), Sycophancy (0.19/0.23)
   - VCT (0.60), BioLP-Bench (0.47), ProtocolQA (0.76), FigQA (0.29), CloningScenarios (0.45)
   - Input filter eval: 0.03 FN biology, 0.00 FN chemistry
 
