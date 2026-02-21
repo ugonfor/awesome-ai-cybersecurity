@@ -80,7 +80,7 @@ The core differentiator of this repo. We classify everything along two axes:
 | **Anthropic** | Claude Opus 4 | Base | 2025.05 | — | [22/39](https://www.anthropic.com/claude-4-system-card) | — | First ASL-3 |
 | | Claude Sonnet 4 | Base | 2025.05 | — | [22/39](https://www.anthropic.com/claude-4-system-card) | — | — |
 | | Claude 3.7 Sonnet | Base | 2025.02 | — | [35.9%](https://anthropic.com/claude-3-7-sonnet-system-card) | — | — |
-| **Google** | Gemini 2.5 Pro | Base | 2025.06 | [73-76/76 ICF](https://modelcards.withgoogle.com/assets/documents/gemini-2.5-pro.pdf) | — | [6/12 KS](https://storage.googleapis.com/deepmind-media/gemini/gemini_3_pro_fsf_report.pdf) | ICF saturated |
+| **Google** | Gemini 2.5 Pro | Base | 2025.06 | [73-76/76 ICF](https://modelcards.withgoogle.com/assets/documents/gemini-2.5-pro.pdf) | — | — | ICF saturated |
 | | Gemini 2.0 Flash | Base | 2025.04 | — | — | — | [11/50 PatternLabs](https://modelcards.withgoogle.com/assets/documents/gemini-2-flash.pdf) |
 
 </details>
@@ -207,7 +207,6 @@ Each company has its own framework for evaluating cybersecurity risk:
 | Claude Opus 4.6 | Anthropic | Cybench (37 tasks) | 93% pass@1, ~100% pass@30 (saturated) | 2026.02 | [System Card](https://anthropic.com/claude-opus-4-6-system-card) |
 | Gemini 2.0 Flash | Google | Pattern Labs External CTFs | 11/50 | 2025.04 | [Model Card](https://modelcards.withgoogle.com/assets/documents/gemini-2-flash.pdf) |
 | Gemini 2.5 Pro | Google | InterCode-CTF | 76/76 (saturated) | 2025.06 | [Model Card](https://modelcards.withgoogle.com/assets/documents/gemini-2.5-pro.pdf) |
-| Gemini 2.5 Pro | Google | Hack the Box (Hard) | 6/12 | 2025.06 | [FSF Report](https://storage.googleapis.com/deepmind-media/gemini/gemini_3_pro_fsf_report.pdf) |
 | Gemini 2.5 Deep Think | Google | InterCode-CTF | 73/76 | 2025.08 | [Model Card](https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Deep-Think-Model-Card.pdf) |
 | Gemini 2.5 Deep Think | Google | In-house CTF (Medium, 13) | 13/13 | 2025.08 | [Model Card](https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Deep-Think-Model-Card.pdf) |
 | Gemini 2.5 Deep Think | Google | Hack the Box (Hard) | 3/13 | 2025.08 | [Model Card](https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Deep-Think-Model-Card.pdf) |
@@ -325,7 +324,7 @@ Each company has its own framework for evaluating cybersecurity risk:
 | Category | Scope | Vendor | Academic | Full List |
 |---|---|:---:|:---:|---|
 | **Security OF AI** | Jailbreak, prompt injection, adversarial robustness | 6 | 14 | [`benchmarks/security-of-ai/`](benchmarks/security-of-ai/) |
-| **Security BY AI** | CTF, pentest, vuln detection, threat intel knowledge | 19 | 10 | [`benchmarks/security-by-ai/`](benchmarks/security-by-ai/) |
+| **Security BY AI** | CTF, pentest, vuln detection, threat intel knowledge | 19 | 18 | [`benchmarks/security-by-ai/`](benchmarks/security-by-ai/) |
 | **Security FROM AI** | Misuse risk, dual-use, deception, alignment | 10 | 2 | [`benchmarks/security-from-ai/`](benchmarks/security-from-ai/) |
 
 **Notable academic benchmarks** (not used by the 4 major vendors):
@@ -402,10 +401,11 @@ Each company has its own framework for evaluating cybersecurity risk:
 | **[Cortex XSIAM](https://www.paloaltonetworks.com/cortex/cortex-xsiam)** | Trained on 1.2B playbooks, 98% MTTR reduction — Palo Alto |
 
 <details>
-<summary>8 more defensive agents</summary>
+<summary>9 more defensive agents</summary>
 
 | Agent | Created by |
 |---|---|
+| [Arctic Wolf Cipher](https://arcticwolf.com/resources/press-releases/arctic-wolf-introduces-an-ai-security-assistant-built-on-the-arctic-wolf-aurora-platform/) | Arctic Wolf (with Anthropic) |
 | [Google TI Agentic](https://gtidocs.virustotal.com/docs/agentic-platform) | Google (Mandiant + VirusTotal) |
 | [Sec-Gemini v1](https://security.googleblog.com/2025/04/google-launches-sec-gemini-v1-new.html) | Google |
 | [OpenAI Aardvark](https://openai.com/index/strengthening-cyber-resilience/) | OpenAI |
