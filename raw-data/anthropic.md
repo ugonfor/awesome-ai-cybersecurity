@@ -115,7 +115,11 @@ Anthropic evaluates cybersecurity under the **Responsible Scaling Policy (RSP)**
 - **Benchmarks**:
   - PicoCTF 2025: 297th/10,460 teams (top 3%), 32/41 challenges
   - HackTheBox AI vs Human: 30th/161 overall, 4th/8 AI teams, 19/20 challenges
-  - WRCCDC: 6th/9 teams
+  - WRCCDC Regional: 6th/9 teams
+  - WRCCDC Qualifier: 10th/28 teams
+  - PlaidCTF: 0 challenges solved (advanced difficulty)
+  - DEF CON CTF Qualifier: 0 challenges solved
+  - Airbnb Competition: 15/30 challenges, 39th/~180 teams
 
 ### 13. AI for Cyber Defenders (Frontier Red Team)
 
