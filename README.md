@@ -170,7 +170,7 @@ Each company has its own framework for evaluating cybersecurity risk:
 |---|---|
 | **4 companies** | Harmful Request Refusal (each with internal version) |
 | **3 companies** | Expert Red Teaming, Prompt Injection Eval |
-| **2 companies** | Cybench (Anthropic + xAI), Cyber Range, Jailbreak Robustness |
+| **2 companies** | Cybench (Anthropic + xAI), Hack the Box (Anthropic + Google), Cyber Range, Jailbreak Robustness |
 | **1 company only** | CVE-Bench, CyberGym, InterCode-CTF, WMDP-Cyber, AgentHarm, CTI-MCQ/RCM |
 
 </details>
