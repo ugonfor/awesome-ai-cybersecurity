@@ -100,7 +100,8 @@
 | Gemini 2.5 Deep Think | Google | In-house CTF (Medium, 13 tasks) | 13/13 | 2025.08 | [Gemini 2.5 Deep Think Model Card](https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Deep-Think-Model-Card.pdf) |
 | Gemini 2.5 Deep Think | Google | Hack the Box (Hard) | 3/13 | 2025.08 | [Gemini 2.5 Deep Think Model Card](https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Deep-Think-Model-Card.pdf) |
 | Gemini 2.0 Flash | Google | Pattern Labs External CTF (50 tasks) | 11/50 | 2025.04 | [Gemini 2.0 Flash Model Card](https://modelcards.withgoogle.com/assets/documents/gemini-2-flash.pdf) |
-| Gemini 3 Pro | Google | Hack the Box (Hard) | 11/12 | 2025.11 | [Gemini 3 Pro FSF Report](https://storage.googleapis.com/deepmind-media/gemini/gemini_3_pro_fsf_report.pdf) |
+| Gemini 3 Pro | Google | Key Skills v1 (Hard) | 11/12 | 2025.11 | [Gemini 3 Pro FSF Report](https://storage.googleapis.com/deepmind-media/gemini/gemini_3_pro_fsf_report.pdf) |
+| Gemini 3 Pro | Google | Key Skills v2 (End-to-end) | 0/13 | 2025.11 | [Gemini 3 Pro FSF Report](https://storage.googleapis.com/deepmind-media/gemini/gemini_3_pro_fsf_report.pdf) |
 
 ### CVE / Vulnerability Benchmarks
 
