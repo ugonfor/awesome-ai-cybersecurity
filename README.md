@@ -18,7 +18,7 @@ The AI cybersecurity space is fragmented: OpenAI, Anthropic, Google, and xAI eac
   - [Security OF AI](#security-of-ai)
   - [Security BY AI](#security-by-ai)
   - [Security FROM AI](#security-from-ai)
-- [Agents](#agents)
+- [Agents — Security BY AI](#agents--security-by-ai)
 - [Tools](#tools)
 - [Vendor Documentation](#vendor-documentation)
 
@@ -131,7 +131,44 @@ Each company has its own framework for evaluating cybersecurity risk:
 | **2 companies** | Cybench (Anthropic + xAI), Cyber Range, Jailbreak Robustness |
 | **1 company only** | CVE-Bench, CyberGym, InterCode-CTF, WMDP-Cyber, AgentHarm, CTI-MCQ/RCM |
 
+### Model Cyber Capability Leaderboard
+
+> Side-by-side comparison of frontier models across key cybersecurity benchmarks (Security BY AI). Each cell links to the source in the detailed tables below.
+
+| Model | Company | Date | CTF | Cybench | CVE-Bench | Cyber Range | HTB | Vuln Discovery |
+|---|---|---|---|---|---|---|---|---|
+| **GPT-5.3-Codex** | OpenAI | 2026.02 | All passed | — | — | All-3 scenarios | — | — |
+| **Claude Opus 4.6** | Anthropic | 2026.02 | — | — | — | — | — | 500+ zero-days |
+| **GPT-5.2-Codex** | OpenAI | 2025.12 | — | — | 87% | — | — | — |
+| **Gemini 3 Pro** | Google | 2025.11 | — | — | — | — | 11/12 | — |
+| **GPT-5.1-Codex-Max** | OpenAI | 2025.11 | ~76% | — | — | 37% | — | — |
+| **Claude Sonnet 4.5** | Anthropic | 2025.09 | — | 76.5% | — | 2/5 Equifax | — | 28.9% CyberGym |
+| **Gemini 2.5 Deep Think** | Google | 2025.08 | 13/13 GDM | — | — | — | 3/13 | — |
+| **o3** | OpenAI | 2025.04 | ~58% | — | — | — | — | — |
+| **Claude 3.7 Sonnet** | Anthropic | 2025.02 | — | 35.9% | — | — | — | — |
+
+> Models with no cybersecurity benchmarks reported (GPT-4.5, Grok series, Gemini Flash variants) are omitted.
+
+### Agent Performance Leaderboard
+
+> Performance of cybersecurity AI agents on real-world tasks and benchmarks.
+
+| Agent | Benchmark | Score | vs Human | Category |
+|---|---|---|---|---|
+| **[XBOW](https://xbow.com/)** | HackerOne bug bounty | #1 leaderboard (1,060 reports) | Outperformed all humans | BY AI > Offensive |
+| **[ARTEMIS](https://github.com/Stanford-Trinity/ARTEMIS)** | Enterprise pentest (8K hosts) | 2nd/11, 9 vulns found | Beat 9/10 humans, 1/3 cost | BY AI > Offensive |
+| **[D-CIPHER](https://github.com/NYU-LLM-CTF/nyuctf_agents)** | NYU CTF / Cybench / HTB | 22% / 22.5% / 44% | — | BY AI > Offensive |
+| **[Big Sleep](https://projectzero.google/2024/10/from-naptime-to-big-sleep.html)** | Real-world vuln discovery | First AI zero-day (SQLite) | Novel capability | BY AI > Defensive |
+| **[Project Ire](https://www.microsoft.com/en-us/research/blog/project-ire-autonomously-identifies-malware-at-scale/)** | Malware reverse engineering | Precision 0.98, recall 0.83 | First AI malware conviction | BY AI > Defensive |
+| **[Security Copilot](https://www.microsoft.com/en-us/security/business/ai-machine-learning/microsoft-copilot-security)** | Phishing triage | 77% accuracy improvement | 40+ hrs/week saved | BY AI > Defensive |
+| **[CAI](https://github.com/aliasrobotics/cai)** | CTF benchmarks | 3,600x human speed | — | BY AI > Offensive |
+
+---
+
 ### Reported Performance Numbers
+
+<details>
+<summary>Detailed benchmark-by-benchmark results with sources</summary>
 
 #### CTF Performance
 
@@ -204,6 +241,8 @@ Each company has its own framework for evaluating cybersecurity risk:
 | Grok 4 | xAI | MASK (deception) | 0.43 | 2025.08 | [Model Card](https://data.x.ai/2025-08-20-grok-4-model-card.pdf) |
 | Grok 4 | xAI | Sycophancy | 0.07 | 2025.08 | [Model Card](https://data.x.ai/2025-08-20-grok-4-model-card.pdf) |
 
+</details>
+
 ### Documentation Maturity
 
 | | OpenAI | Anthropic | Google | xAI |
@@ -257,9 +296,9 @@ Each company has its own framework for evaluating cybersecurity risk:
 
 ---
 
-## Agents
+## Agents — Security BY AI
 
-> 38 cybersecurity AI agents. Full details in [`agents/`](agents/).
+> AI performing cybersecurity tasks (Axis 1: BY AI). Classified by Axis 2: Offensive / Defensive. 38 agents total — full details in [`agents/`](agents/).
 
 ### Offensive — Top Picks
 
@@ -334,36 +373,48 @@ Each company has its own framework for evaluating cybersecurity risk:
 
 ## Tools
 
-> 25 evaluation tools and platforms. Full details in [`tools/`](tools/).
+> 25 tools and platforms. Full details in [`tools/`](tools/).
 
-| Tool | Category | Created by | Summary |
-|---|---|---|---|
-| **[Inspect AI](https://github.com/UKGovernmentBEIS/inspect_ai)** | Eval Framework | UK AISI | Python framework for reproducible LLM evaluations |
-| **[Inspect Cyber](https://inspect.cyber.aisi.org.uk/)** | Eval Framework | UK AISI | Agentic cyber eval with CTF/cyber range YAML configs |
-| **[PurpleLlama / CyberSecEval](https://github.com/meta-llama/PurpleLlama)** | Benchmark Suite | Meta | Insecure code gen, SOC eval, auto-patching (v1-v4) |
-| **[Garak](https://github.com/NVIDIA/garak)** | Red Team | NVIDIA | LLM vulnerability scanner (prompt injection, jailbreak) |
-| **[Promptfoo](https://github.com/promptfoo/promptfoo)** | Red Team | Open source | LLM red teaming CLI with OWASP Top 10 + CI/CD |
-| **[HarmBench](https://github.com/centerforaisafety/HarmBench)** | Red Team | CAIS | Standardized: 18 attacks vs 33 LLMs |
-| **[JailbreakBench](https://github.com/JailbreakBench/jailbreakbench)** | Red Team | Multi-institution | 100 behaviors + attack/defense leaderboard |
-| **[Hack The Box](https://www.hackthebox.com/)** | CTF Platform | HTB | AI Range (Dec 2025) for agent benchmarking |
-| **[picoCTF](https://picoctf.org/)** | CTF Platform | CMU CyLab | 800,000+ users |
-| **[CyberBattleSim](https://github.com/microsoft/CyberBattleSim)** | Simulation | Microsoft Research | OpenAI Gym for RL attack/defense |
+**Evaluation Frameworks** (cross-taxonomy):
+
+| Tool | Created by | Summary |
+|---|---|---|
+| **[Inspect AI](https://github.com/UKGovernmentBEIS/inspect_ai)** | UK AISI | Python framework for reproducible LLM evaluations with sandboxing |
+| **[Inspect Cyber](https://inspect.cyber.aisi.org.uk/)** | UK AISI | Agentic cyber eval with CTF/cyber range YAML configs |
+| **[Vivaria](https://github.com/METR/vivaria)** | METR | Agent evaluation platform (transitioning to Inspect) |
+| **[lm-evaluation-harness](https://github.com/EleutherAI/lm-evaluation-harness)** | EleutherAI | Unified LLM eval (includes WMDP-Cyber) |
+
+**Security OF AI** — Testing model robustness:
+
+| Tool | Created by | Summary |
+|---|---|---|
+| **[Garak](https://github.com/NVIDIA/garak)** | NVIDIA | LLM vulnerability scanner (prompt injection, jailbreak, data leakage) |
+| **[Promptfoo](https://github.com/promptfoo/promptfoo)** | Open source | LLM red teaming CLI with OWASP Top 10 + CI/CD |
+| **[HarmBench](https://github.com/centerforaisafety/HarmBench)** | CAIS | Standardized: 18 attacks vs 33 LLMs |
+| **[JailbreakBench](https://github.com/JailbreakBench/jailbreakbench)** | Multi-institution | 100 behaviors + attack/defense leaderboard |
+| **[StrongREJECT](https://github.com/dsbowen/strong_reject)** | UC Berkeley / GDM | Jailbreak eval with SOTA human agreement |
+
+**Security BY AI** — Cybersecurity task platforms:
+
+| Tool | Created by | Summary |
+|---|---|---|
+| **[PurpleLlama / CyberSecEval](https://github.com/meta-llama/PurpleLlama)** | Meta | Insecure code gen, SOC eval, auto-patching (v1-v4) |
+| **[Hack The Box](https://www.hackthebox.com/)** | HTB | AI Range (Dec 2025) for autonomous agent benchmarking |
+| **[picoCTF](https://picoctf.org/)** | CMU CyLab | 800,000+ users; Claude ranked top 3% in 2025 |
+| **[CTFd](https://github.com/CTFd/CTFd)** | CTFd LLC | Most widely used CTF hosting framework |
+| **[CyberBattleSim](https://github.com/microsoft/CyberBattleSim)** | Microsoft Research | OpenAI Gym for RL attack/defense simulation |
+| **[ControlArena](https://control-arena.aisi.org.uk/)** | UK AISI + Redwood | AI control experiments for misalignment prevention |
 
 <details>
-<summary>15 more tools</summary>
+<summary>More tools (benchmark suites, eval collections)</summary>
 
-| Tool | Category | Created by |
+| Tool | Taxonomy | Created by |
 |---|---|---|
-| [Inspect Evals](https://github.com/UKGovernmentBEIS/inspect_evals) | Eval Framework | UK AISI + community |
-| [Vivaria](https://github.com/METR/vivaria) | Eval Framework | METR |
-| [Dangerous Capability Evals](https://github.com/google-deepmind/dangerous-capability-evaluations) | Eval Framework | Google DeepMind |
-| [lm-evaluation-harness](https://github.com/EleutherAI/lm-evaluation-harness) | Eval Framework | EleutherAI |
-| [CAIBench](https://arxiv.org/abs/2510.24317) | Benchmark Suite | Alias Robotics |
-| [ExCyTIn-Bench](https://github.com/microsoft/SecRL) | Benchmark Suite | Microsoft |
-| [eyeballvul](https://github.com/timothee-chauvin/eyeballvul) | Benchmark Suite | METR-affiliated |
-| [StrongREJECT](https://github.com/dsbowen/strong_reject) | Red Team | UC Berkeley / GDM |
-| [CTFd](https://github.com/CTFd/CTFd) | CTF Platform | CTFd LLC |
-| [ControlArena](https://control-arena.aisi.org.uk/) | Simulation | UK AISI + Redwood |
+| [Inspect Evals](https://github.com/UKGovernmentBEIS/inspect_evals) | Cross-taxonomy | UK AISI + community |
+| [Dangerous Capability Evals](https://github.com/google-deepmind/dangerous-capability-evaluations) | FROM AI | Google DeepMind |
+| [CAIBench](https://arxiv.org/abs/2510.24317) | BY AI | Alias Robotics |
+| [ExCyTIn-Bench](https://github.com/microsoft/SecRL) | BY AI > Defensive | Microsoft |
+| [eyeballvul](https://github.com/timothee-chauvin/eyeballvul) | BY AI > Offensive | METR-affiliated |
 
 </details>
 
