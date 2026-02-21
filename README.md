@@ -13,8 +13,8 @@ The AI cybersecurity space is fragmented: OpenAI, Anthropic, Google, and xAI eac
   - [Model Cyber Capability Leaderboard](#model-cyber-capability-leaderboard)
   - [Agent Performance Leaderboard](#agent-performance-leaderboard)
   - [Risk Frameworks](#risk-frameworks)
-  - [Benchmark Mapping](#benchmark-mapping)
-  - [Timeline](#timeline)
+  - [Benchmark Mapping](#benchmark-mapping) (collapsible)
+  - [Timeline](#timeline) (collapsible)
 - [Benchmarks](#benchmarks)
   - [Security OF AI](#security-of-ai)
   - [Security BY AI](#security-by-ai)
@@ -99,6 +99,9 @@ Each company has its own framework for evaluating cybersecurity risk:
 
 > **Key Insight: There is virtually no overlap in quantitative benchmarks across companies.**
 
+<details>
+<summary>Which company uses which benchmark? (click to expand)</summary>
+
 #### Security BY AI — Offensive (Cyber Capability)
 
 | Benchmark | OpenAI | Anthropic | Google | xAI | Description |
@@ -165,6 +168,8 @@ Each company has its own framework for evaluating cybersecurity risk:
 | **3 companies** | Expert Red Teaming, Prompt Injection Eval |
 | **2 companies** | Cybench (Anthropic + xAI), Cyber Range, Jailbreak Robustness |
 | **1 company only** | CVE-Bench, CyberGym, InterCode-CTF, WMDP-Cyber, AgentHarm, CTI-MCQ/RCM |
+
+</details>
 
 ### Reported Performance Numbers
 
@@ -244,6 +249,9 @@ Each company has its own framework for evaluating cybersecurity risk:
 
 </details>
 
+<details>
+<summary>Documentation Maturity & Timeline</summary>
+
 ### Documentation Maturity
 
 | | OpenAI | Anthropic | Google | xAI |
@@ -271,6 +279,8 @@ Each company has its own framework for evaluating cybersecurity risk:
 | 2025.08 | GPT-5: Below High | — | Gemini 2.5 DT: CCL alert | Grok 4: below human pro |
 | 2025.11 | GPT-5.1: Below High | Opus 4.5: ASL-3 | Gemini 3 Pro: CCL alert | Grok 4.1: below human pro |
 | 2026.02 | GPT-5.3: **HIGH** | Opus 4.6: ASL-3 | Gemini 3.1 Pro: CCL alert | — |
+
+</details>
 
 ---
 
