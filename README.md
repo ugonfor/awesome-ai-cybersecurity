@@ -253,7 +253,7 @@ Each company has its own framework for evaluating cybersecurity risk:
 | [NYU CTF Bench](https://github.com/NYU-LLM-CTF/NYU_CTF_Bench) | BY AI — CTF | 200 challenges, 6 categories | NeurIPS 2024 |
 | [SecBench](https://github.com/secbench-git/SecBench) | BY AI — Knowledge | 47,910 questions, 9 domains | — |
 | [PrimeVul](https://github.com/DLVulDet/PrimeVul) | BY AI — Vuln Detection | 7K vuln + 229K benign functions | ICSE 2025 |
-| [DecodingTrust](https://github.com/AI-secure/DecodingTrust) | OF AI — Trust | 8 dimensions | NeurIPS 2023 Best Paper |
+| [DecodingTrust](https://github.com/AI-secure/DecodingTrust) | OF AI — Trust | 8 dimensions | NeurIPS 2023 Outstanding (D&B Track) |
 
 ---
 
