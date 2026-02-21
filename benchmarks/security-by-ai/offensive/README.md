@@ -6,7 +6,7 @@
 
 ### [Cybench](https://cybench.github.io/)
 - **Category**: Security BY AI > Offensive > CTF
-- **Created by**: UC Berkeley, UIUC, University of Chicago
+- **Created by**: Stanford University
 - **Used by**: Anthropic, xAI (spells it "CyBench"), UK AISI, US AISI
 - **Scale**: 40 professional-level CTF tasks from 4 competitions (HackTheBox, SekaiCTF, Glacier, HKCert)
 - **Dataset**: Open
@@ -24,10 +24,10 @@
 
 ### [CyberGym](https://red.anthropic.com/2025/ai-for-cyber-defenders/)
 - **Category**: Security BY AI > Offensive > Vulnerability Discovery
-- **Created by**: Anthropic (Frontier Red Team)
+- **Created by**: UC Berkeley (Center for Responsible, Decentralized Intelligence)
 - **Used by**: Anthropic
-- **Scale**: 1,507 known CVEs in real open-source software
-- **Dataset**: Closed
+- **Scale**: 1,507 vulnerabilities across 188 open-source projects
+- **Dataset**: Open
 - **Summary**: Real-world vulnerability detection benchmark using actual CVEs in open-source codebases, measuring AI's ability to find and reproduce vulnerabilities.
 - **Results**:
   | Model | Score | Date | Source |

@@ -75,7 +75,7 @@ Each company has its own framework for evaluating cybersecurity risk:
 | **Cyber Range** | ✅ | ✅ | — | — | Multi-machine network attack scenarios |
 | **[InterCode-CTF](https://arxiv.org/abs/2306.14898)** | — | — | ✅ | — | 76 easy CTF challenges (largely saturated) |
 | **[In-house CTF (GDM)](https://github.com/google-deepmind/dangerous-capability-evaluations)** | — | — | ✅ | — | 13 medium challenges (open-sourced via UK AISI Inspect) |
-| **Hack the Box** | — | — | ✅ | — | Professional-level CTF challenges |
+| **Hack the Box** | — | ✅ | ✅ | — | Professional-level CTF challenges |
 | **Key Skills Benchmark** | — | — | ✅ | — | Recon, tool dev, OPSEC (MITRE ATT&CK aligned) |
 | **Pattern Labs External CTFs** | — | — | ✅ | — | 50 non-public challenges (anti-contamination) |
 | **PicoCTF / HTB / WRCCDC** | — | ✅ | — | — | Real competitive CTF events |
@@ -115,7 +115,7 @@ Each company has its own framework for evaluating cybersecurity risk:
 
 | Benchmark | OpenAI | Anthropic | Google | xAI | Description |
 |---|:---:|:---:|:---:|:---:|---|
-| **[MASK](https://arxiv.org/abs/2406.11663)** | — | — | — | ✅ | Deception measurement under pressure |
+| **[MASK](https://arxiv.org/abs/2503.03750)** | — | — | — | ✅ | Deception measurement under pressure |
 | **MakeMeSay** | — | — | — | ✅ | Persuasion / manipulation eval |
 | **Sycophancy Eval** | — | — | — | ✅ | Ignoring own judgment for user agreement |
 | **Stealth Eval** | — | — | ✅ | — | Ability to circumvent oversight |
@@ -149,7 +149,6 @@ Each company has its own framework for evaluating cybersecurity risk:
 | Claude 3.7 Sonnet | Anthropic | Cybench (40 tasks) | 35.9% | 2025.02 | [System Card](https://anthropic.com/claude-3-7-sonnet-system-card) |
 | Claude Opus 4 | Anthropic | Custom CTF | 11/11 easy, 1/2 med, 0/2 hard | 2025.05 | [System Card](https://www.anthropic.com/claude-4-system-card) |
 | Claude Sonnet 4.5 | Anthropic | Cybench (40 tasks) | 76.5% | 2025.09 | [System Card](https://www.anthropic.com/claude-sonnet-4-5-system-card) |
-| Claude Opus 4.6 | Anthropic | 40 cyber investigations | 38/40 best (blind-ranked) | 2026.02 | [System Card](https://anthropic.com/claude-opus-4-6-system-card) |
 | Gemini 2.5 Deep Think | Google | In-house CTF (Medium, 13) | 13/13 | 2025.08 | [Model Card](https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Deep-Think-Model-Card.pdf) |
 | Gemini 2.5 Deep Think | Google | Hack the Box (Hard) | 3/13 | 2025.08 | [Model Card](https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Deep-Think-Model-Card.pdf) |
 | Gemini 3 Pro | Google | Hack the Box (Hard) | 11/12 | 2025.11 | [FSF Report](https://storage.googleapis.com/deepmind-media/gemini/gemini_3_pro_fsf_report.pdf) |
@@ -170,8 +169,14 @@ Each company has its own framework for evaluating cybersecurity risk:
 | GPT-5.1-Codex-Max | OpenAI | Cyber Range — Network Attack | 37% | 2025.11 | [System Card](https://cdn.openai.com/pdf/2a7d98b1-57e5-4147-8d0e-683894d782ae/5p1_codex_max_card_03.pdf) |
 | GPT-5.3-Codex | OpenAI | Cyber Range | All except 3 scenarios | 2026.02 | [System Card](https://cdn.openai.com/pdf/23eca107-a9b1-4d2c-b156-7deb4fbc697c/GPT-5-3-Codex-System-Card-02.pdf) |
 | Claude Sonnet 4.5 | Anthropic | Equifax Simulation | 2/5 autonomous | 2025.09 | [System Card](https://www.anthropic.com/claude-sonnet-4-5-system-card) |
+
+#### Real-World Competitions / Investigations
+
+| Model | Company | Benchmark | Score | Date | Source |
+|---|---|---|---|---|---|
 | Claude | Anthropic | PicoCTF 2025 | Top 3% (297th/10,460) | 2025 | [Cyber Competitions](https://red.anthropic.com/2025/cyber-competitions/) |
 | Claude | Anthropic | HackTheBox AI vs Human | 30th/161, 19/20 solved | 2025 | [Cyber Competitions](https://red.anthropic.com/2025/cyber-competitions/) |
+| Claude Opus 4.6 | Anthropic | 40 cyber investigations | 38/40 best (blind-ranked) | 2026.02 | [System Card](https://anthropic.com/claude-opus-4-6-system-card) |
 
 #### Cybersecurity Knowledge
 

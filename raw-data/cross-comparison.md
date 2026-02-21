@@ -26,7 +26,7 @@
 | **Cyber Range** | ✅ | ✅ | — | — | BY-AI / Offensive | Multi-machine network attack scenarios |
 | **InterCode-CTF** | — | — | ✅ | — | BY-AI / Offensive | 76 easy CTF challenges (saturated) |
 | **In-house CTF (GDM)** | — | — | ✅ | — | BY-AI / Offensive | 13 medium challenges (open-sourced via UK AISI Inspect) |
-| **Hack the Box** | — | — | ✅ | — | BY-AI / Offensive | Professional-level CTF challenges |
+| **Hack the Box** | — | ✅ | ✅ | — | BY-AI / Offensive | Professional-level CTF challenges |
 | **Key Skills Benchmark** | — | — | ✅ | — | BY-AI / Offensive | Recon, tool dev, OPSEC (MITRE ATT&CK aligned) |
 | **Pattern Labs External CTFs** | — | — | ✅ | — | BY-AI / Offensive | 50 non-public challenges (anti-contamination) |
 | **PicoCTF / HTB / WRCCDC** | — | ✅ | — | — | BY-AI / Offensive | Real competitive CTF events |
@@ -39,8 +39,8 @@
 |---|:---:|:---:|:---:|:---:|---|---|
 | **WMDP-Cyber** | — | — | — | ✅ | BY-AI / Knowledge | Cyber killchain MC questions |
 | **MC Cybersecurity Knowledge** | ✅ | — | — | — | BY-AI / Knowledge | OpenAI internal MC eval |
-| **CTI-MCQ** | — | — | ✅ | — | BY-AI / Knowledge | Threat intelligence knowledge (Sec-Gemini) |
-| **CTI-RCM** | — | — | ✅ | — | BY-AI / Knowledge | Root cause → CWE mapping (Sec-Gemini) |
+| **CTI-MCQ** | — | — | ✅ | — | BY-AI / Knowledge | Threat intelligence knowledge (from [CTI-Bench](https://github.com/xashru/cti-bench), used by Sec-Gemini) |
+| **CTI-RCM** | — | — | ✅ | — | BY-AI / Knowledge | Root cause → CWE mapping (from [CTI-Bench](https://github.com/xashru/cti-bench), used by Sec-Gemini) |
 
 ### Security OF AI — Jailbreak / Prompt Injection / Robustness
 
@@ -166,7 +166,7 @@
 
 | Status | Benchmarks |
 |---|---|
-| **Used by 4 companies** | Harmful Request Refusal (각자 내부 버전) |
+| **Used by 4 companies** | Harmful Request Refusal (each with internal version) |
 | **Used by 3 companies** | Expert Red Teaming (OpenAI, Anthropic, Google), Prompt Injection Eval (OpenAI, Anthropic, Google) |
 | **Used by 2 companies** | Cyber Range (OpenAI, Anthropic), Jailbreak Robustness (OpenAI, Anthropic) |
 | **Used by 1 company** | CVE-Bench (OpenAI only), CyberGym (Anthropic only), InterCode-CTF (Google only), WMDP-Cyber (xAI only), AgentHarm (xAI only), CTI-MCQ/RCM (Google/Sec-Gemini only) |

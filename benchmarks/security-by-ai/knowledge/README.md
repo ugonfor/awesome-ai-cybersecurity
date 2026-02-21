@@ -17,7 +17,7 @@
   |---|---|---|---|
   | Grok 4 | 79% | 2025.08 | [Model Card](https://data.x.ai/2025-08-20-grok-4-model-card.pdf) |
   | Grok 4 Fast | 81.4% | 2025.09 | [Model Card](https://data.x.ai/2025-09-19-grok-4-fast-model-card.pdf) |
-  | Grok 4.1 | 87% (WMDP-Cyber + Bio) | 2025.11 | [Model Card](https://data.x.ai/2025-11-17-grok-4-1-model-card.pdf) |
+  | Grok 4.1 | 87% (WMDP-Bio; WMDP-Cyber score not separately reported) | 2025.11 | [Model Card](https://data.x.ai/2025-11-17-grok-4-1-model-card.pdf) |
 
 ---
 
@@ -38,7 +38,7 @@
 
 ### CTI-MCQ (Sec-Gemini)
 - **Category**: Security BY AI > Knowledge > Threat Intelligence
-- **Created by**: Google
+- **Created by**: Rochester Institute of Technology ([CTI-Bench](https://github.com/xashru/cti-bench) project)
 - **Used by**: Google (Sec-Gemini)
 - **Scale**: Threat intelligence multiple-choice questions
 - **Dataset**: Closed
@@ -53,7 +53,7 @@
 
 ### CTI-RCM (Sec-Gemini)
 - **Category**: Security BY AI > Knowledge > Vulnerability Classification
-- **Created by**: Google
+- **Created by**: Rochester Institute of Technology ([CTI-Bench](https://github.com/xashru/cti-bench) project)
 - **Used by**: Google (Sec-Gemini)
 - **Scale**: Root cause to CWE mapping tasks
 - **Dataset**: Closed

@@ -117,7 +117,7 @@ OpenAI evaluates cybersecurity risks under its **Preparedness Framework** (v1: 2
 - **Models**: o3, o4-mini
 - **Cyber Risk Level**: Below High (first evaluated under Preparedness Framework v2)
 - **Benchmarks**: CTF (3 types of cyberoffensive challenges)
-  - o3 Professional: ~**58%** (vs o1's ~23%)
+  - o3 Professional: ~**58%** (vs o1's ~23% — note: o1 scored 13% on Dec 2024 CTF set; ~23% likely reflects the refactored CTF set used for o3 evaluation)
 
 ### 11. Codex Addendum (o3/o4-mini)
 

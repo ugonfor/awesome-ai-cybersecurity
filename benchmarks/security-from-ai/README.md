@@ -8,12 +8,12 @@
 
 ### [AgentHarm](https://arxiv.org/abs/2410.09024)
 - **Category**: Security FROM AI > Misuse > Agentic
-- **Created by**: UK AISI, Gray Swan AI
+- **Created by**: EPFL, Gray Swan AI, UK AI Safety Institute, University of Oxford, CMU
 - **Used by**: xAI
-- **Scale**: Malicious agentic task suite (fraud, cybercrime, harassment scenarios)
-- **Dataset**: Open
+- **Scale**: 110 malicious agent tasks (440 with augmentations) across 11 harm categories
+- **Dataset**: Open ([HuggingFace](https://huggingface.co/datasets/ai-safety-institute/AgentHarm))
 - **Reference**: [AgentHarm: A Benchmark for Measuring Harmfulness of LLM Agents](https://arxiv.org/abs/2410.09024)
-- **Summary**: Measures completion rate of harmful agentic tasks including fraud, cybercrime, and harassment scenarios.
+- **Summary**: Agent misuse benchmark; LLMs are surprisingly compliant with malicious agent requests without jailbreaking. ICLR 2025.
 - **Results**:
   | Model | Completion Rate | Date | Source |
   |---|---|---|---|
@@ -58,13 +58,13 @@
 
 ## Behavioral / Alignment
 
-### [MASK](https://arxiv.org/abs/2406.11663)
+### [MASK](https://arxiv.org/abs/2503.03750)
 - **Category**: Security FROM AI > Behavioral > Deception
-- **Created by**: UC Berkeley
+- **Created by**: Center for AI Safety (CAIS)
 - **Used by**: xAI
 - **Scale**: Multi-scenario deception measurement
-- **Dataset**: Open
-- **Reference**: [MASK: Model-Agnostic Deception Benchmark](https://arxiv.org/abs/2406.11663)
+- **Dataset**: Open ([GitHub](https://github.com/centerforaisafety/mask))
+- **Reference**: [The MASK Benchmark: Disentangling Honesty From Accuracy in AI Systems](https://arxiv.org/abs/2503.03750)
 - **Summary**: Measures whether models faithfully report their beliefs or engage in deceptive behavior under pressure.
 - **Results**:
   | Model | Score | Date | Source |
@@ -76,7 +76,7 @@
 
 ### MakeMeSay
 - **Category**: Security FROM AI > Behavioral > Persuasion
-- **Created by**: Redwood Research
+- **Created by**: OpenAI (adapted from Google DeepMind methodology)
 - **Used by**: xAI
 - **Scale**: Attacker-defender persuasion game
 - **Dataset**: Open
@@ -142,16 +142,7 @@
 
 ---
 
-### [AgentHarm](https://arxiv.org/abs/2410.09024)
-- **Category**: Security FROM AI > Misuse > Agentic
-- **Created by**: EPFL, Gray Swan AI, UK AI Safety Institute, University of Oxford, CMU
-- **Used by**: xAI (in official evals)
-- **Scale**: 110 explicitly malicious agent tasks (440 with augmentations) across 11 harm categories (fraud, cybercrime, harassment, etc.)
-- **Dataset**: Open ([HuggingFace](https://huggingface.co/datasets/ai-safety-institute/AgentHarm))
-- **Reference**: [AgentHarm: A Benchmark for Measuring Harmfulness of LLM Agents](https://arxiv.org/abs/2410.09024)
-- **Summary**: Agent misuse benchmark; shows leading LLMs are surprisingly compliant with malicious agent requests without jailbreaking, and simple universal jailbreak templates enable coherent malicious multi-step behavior. ICLR 2025.
-
----
+*AgentHarm is listed in the vendor section above.*
 
 ### [CyberSecEval (Purple Llama) — Misuse Risk Components](https://github.com/meta-llama/PurpleLlama)
 - **Category**: Security FROM AI > Misuse > Code Generation / Cyberattack Compliance

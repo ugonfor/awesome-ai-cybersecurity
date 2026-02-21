@@ -110,9 +110,9 @@
 
 ---
 
-### [StrongREJECT](https://github.com/alexandrasouly/strongreject)
+### [StrongREJECT](https://github.com/dsbowen/strong_reject)
 - **Category**: Security OF AI > Jailbreak > Evaluation Metric
-- **Created by**: UC Berkeley (Center for Human-Compatible AI)
+- **Created by**: UC Berkeley, Google DeepMind
 - **Used by**: Academic community
 - **Scale**: 313 forbidden prompts across 6 categories (illegal goods, non-violent crimes, hate/discrimination, disinformation, violence, sexual content)
 - **Dataset**: Open
