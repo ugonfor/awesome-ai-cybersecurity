@@ -41,6 +41,13 @@ The core differentiator of this repo. We classify everything along two axes:
 | **Defensive (Blue Team)** | Detection, analysis, incident response |
 | **Evaluation** | Pure capability measurement |
 
+**Key terms:**
+- **pass@k** — Success rate when the model gets k attempts per task. pass@1 = must succeed on first try; pass@30 = at least 1 success in 30 tries. Higher k inflates scores.
+- **CTF** — Capture The Flag, competitive cybersecurity challenges (web exploit, reverse engineering, cryptography, binary exploitation).
+- **ASL** — AI Safety Level (Anthropic). ASL-3 = model can meaningfully assist expert-level exploit development.
+- **CCL** — Critical Capability Level (Google). Cyber Uplift L1 = 10x cost reduction for high-impact attacks.
+- **HIGH** — OpenAI risk level. Can automate end-to-end operations against hardened targets or discover zero-days.
+
 ---
 
 ## Cross-Comparison
@@ -50,6 +57,11 @@ The core differentiator of this repo. We classify everything along two axes:
 #### Self-Reported (from each company's own system cards)
 
 > Scores published by the model developer. Agent = evaluation setup described in the system card.
+>
+> **Important caveats:**
+> - **Cross-company comparison is not meaningful.** Each company uses different benchmarks, agent setups, and evaluation protocols. Scores in the same column across companies are NOT directly comparable.
+> - **pass@k varies.** Unless noted, Cybench scores use different pass@k thresholds per model (e.g., Claude Sonnet 4.5 = pass@10, Opus 4.5 = pass@1, Grok models = unguided). Higher k inflates scores.
+> - **"CTF (Pro)" is NOT a shared benchmark.** Each company has its own proprietary CTF set with different challenges and difficulty calibrations.
 
 | | Model | Agent Setup | Date | CTF (Pro) | [Cybench](https://cybench.github.io/) | [CVE-Bench](benchmarks/security-by-ai/offensive/) | Cyber Range | [CyberGym](https://red.anthropic.com/2025/ai-for-cyber-defenders/) | [WMDP-Cyber](https://www.wmdp.ai/) |
 |---|---|---|---|---|---|---|---|---|---|
@@ -57,10 +69,10 @@ The core differentiator of this repo. We classify everything along two axes:
 | | GPT-5.2-Codex | Codex CLI + Linux | 2025.12 | — | — | [87%](https://cdn.openai.com/pdf/ac7c37ae-7f4c-4442-b741-2eabdeaf77e0/oai_5_2_Codex.pdf) | — | — | — |
 | | GPT-5.1-Codex-Max | Codex CLI + Linux | 2025.11 | [~76%](https://cdn.openai.com/pdf/2a7d98b1-57e5-4147-8d0e-683894d782ae/5p1_codex_max_card_03.pdf) | — | — | — | — | — |
 | | GPT-5 | Linux + tool harness | 2025.08 | [~27%](https://cdn.openai.com/gpt-5-system-card.pdf) | — | — | — | — | — |
-| **Anthropic** | Claude Opus 4.6 | Terminal Tool + Kali | 2026.02 | — | [93%](https://anthropic.com/claude-opus-4-6-system-card) | — | — | [66.6%](https://anthropic.com/claude-opus-4-6-system-card) | — |
+| **Anthropic** | Claude Opus 4.6 | Terminal Tool + Kali | 2026.02 | — | [93% p@1](https://anthropic.com/claude-opus-4-6-system-card) | — | — | [66.6% p@1](https://anthropic.com/claude-opus-4-6-system-card) | — |
 | | Claude Sonnet 4.6 | Terminal Tool + Kali | 2026.02 | — | — | — | — | — | — |
-| | Claude Opus 4.5 | Terminal Tool + Kali | 2025.11 | — | [82%](https://www.anthropic.com/claude-opus-4-5-system-card) | — | — | [50.6%](https://www.anthropic.com/claude-opus-4-5-system-card) | — |
-| | Claude Sonnet 4.5 | Terminal Tool + Kali | 2025.09 | — | [76.5%](https://www.anthropic.com/claude-sonnet-4-5-system-card) | — | — | [28.9%](https://red.anthropic.com/2025/ai-for-cyber-defenders/) | — |
+| | Claude Opus 4.5 | Terminal Tool + Kali | 2025.11 | — | [82% p@1](https://www.anthropic.com/claude-opus-4-5-system-card) | — | — | [50.6% p@1](https://www.anthropic.com/claude-opus-4-5-system-card) | — |
+| | Claude Sonnet 4.5 | Terminal Tool + Kali | 2025.09 | — | [76.5% p@10](https://www.anthropic.com/claude-sonnet-4-5-system-card) | — | — | [28.9% p@1](https://red.anthropic.com/2025/ai-for-cyber-defenders/) | — |
 | **Google** | Gemini 3 Pro | Custom controller | 2025.11 | — | — | — | — | — | — |
 | | Gemini 2.5 DT | Deep Think + Bash/PS | 2025.08 | [13/13 GDM](https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Deep-Think-Model-Card.pdf) | — | — | — | — | — |
 | **xAI** | Grok 4.1 | UK AISI Inspect | 2025.11 | — | [39%](https://data.x.ai/2025-11-17-grok-4-1-model-card.pdf) | — | — | — | [84%](https://data.x.ai/2025-11-17-grok-4-1-model-card.pdf) |
@@ -81,8 +93,7 @@ The core differentiator of this repo. We classify everything along two axes:
 | Claude | Competition | WRCCDC Regional | 6th/9 teams | [Cyber Competitions](https://red.anthropic.com/2025/cyber-competitions/) |
 | Claude | Competition | PlaidCTF | 0 challenges solved | [Cyber Competitions](https://red.anthropic.com/2025/cyber-competitions/) |
 | Claude | Competition | DEF CON CTF Qualifier | 0 challenges solved | [Cyber Competitions](https://red.anthropic.com/2025/cyber-competitions/) |
-| Claude Opus 4.6 | CAISI | OSS vulnerability audit | Found novel bugs (closed + open source) | [System Card](https://anthropic.com/claude-opus-4-6-system-card) |
-| Claude Opus 4.6 | Anthropic FRT | 500+ zero-day discovery | 500+ novel vulns in pre-release | [System Card](https://anthropic.com/claude-opus-4-6-system-card) |
+| Claude Opus 4.6 | [CAISI](https://www.nist.gov/artificial-intelligence/us-ai-safety-institute) | OSS vulnerability audit | Found novel bugs (closed + open source) | [System Card](https://anthropic.com/claude-opus-4-6-system-card) |
 
 <details>
 <summary>Earlier Models (before 2025.08) — self-reported</summary>
@@ -233,7 +244,7 @@ Each company has its own framework for evaluating cybersecurity risk:
 
 | Model | Company | Benchmark | Score | Date | Source |
 |---|---|---|---|---|---|
-| GPT-5.3-Codex | OpenAI | CVE-Bench (pass@1, 34/40) | 90% | 2026.02 | [System Card](https://cdn.openai.com/pdf/23eca107-a9b1-4d2c-b156-7deb4fbc697c/GPT-5-3-Codex-System-Card-02.pdf) |
+| GPT-5.3-Codex | OpenAI | CVE-Bench (pass@1, 34 challenges evaluated of 40 total) | 90% | 2026.02 | [System Card](https://cdn.openai.com/pdf/23eca107-a9b1-4d2c-b156-7deb4fbc697c/GPT-5-3-Codex-System-Card-02.pdf) |
 | GPT-5.2-Codex | OpenAI | CVE-Bench (pass@1) | 87% | 2025.12 | [Addendum](https://cdn.openai.com/pdf/ac7c37ae-7f4c-4442-b741-2eabdeaf77e0/oai_5_2_Codex.pdf) |
 | Claude Sonnet 4.5 | Anthropic | CyberGym ($2 cost) | 28.9% | 2025.09 | [Frontier Red Team](https://red.anthropic.com/2025/ai-for-cyber-defenders/) |
 | Claude Sonnet 4.5 | Anthropic | CyberGym (30 trials) | 66.7% vuln reproduction, 33%+ new vuln discovery | 2025.09 | [Frontier Red Team](https://red.anthropic.com/2025/ai-for-cyber-defenders/) |
