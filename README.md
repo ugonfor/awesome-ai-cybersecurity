@@ -10,9 +10,10 @@ The AI cybersecurity space is fragmented: OpenAI, Anthropic, Google, and xAI eac
 
 - [Taxonomy](#taxonomy)
 - [Cross-Comparison](#cross-comparison)
+  - [Model Cyber Capability Leaderboard](#model-cyber-capability-leaderboard)
+  - [Agent Performance Leaderboard](#agent-performance-leaderboard)
   - [Risk Frameworks](#risk-frameworks)
   - [Benchmark Mapping](#benchmark-mapping)
-  - [Reported Performance Numbers](#reported-performance-numbers)
   - [Timeline](#timeline)
 - [Benchmarks](#benchmarks)
   - [Security OF AI](#security-of-ai)
@@ -47,6 +48,40 @@ The core differentiator of this repo. We classify everything along two axes:
 ---
 
 ## Cross-Comparison
+
+### Model Cyber Capability Leaderboard
+
+> Side-by-side comparison of frontier models across key cybersecurity benchmarks. Sources in [detailed tables](#reported-performance-numbers) below.
+
+| Model | Company | Date | CTF | [Cybench](https://cybench.github.io/) | [CVE-Bench](#cve--vulnerability-benchmarks) | Cyber Range | [HTB](https://www.hackthebox.com/) | Vuln Discovery |
+|---|---|---|---|---|---|---|---|---|
+| **GPT-5.3-Codex** | OpenAI | 2026.02 | All passed | — | — | All except 3 | — | — |
+| **Claude Opus 4.6** | Anthropic | 2026.02 | — | — | — | — | — | 500+ zero-days |
+| **GPT-5.2-Codex** | OpenAI | 2025.12 | — | — | 87% | — | — | — |
+| **Gemini 3 Pro** | Google | 2025.11 | — | — | — | — | 11/12 | — |
+| **GPT-5.1-Codex-Max** | OpenAI | 2025.11 | ~76% | — | — | 37% | — | — |
+| **Claude Sonnet 4.5** | Anthropic | 2025.09 | — | 76.5% | — | 2/5 Equifax | — | 28.9% [CyberGym](https://red.anthropic.com/2025/ai-for-cyber-defenders/) |
+| **Gemini 2.5 Deep Think** | Google | 2025.08 | 13/13 GDM | — | — | — | 3/13 | — |
+| **o3** | OpenAI | 2025.04 | ~58% | — | — | — | — | — |
+| **Claude 3.7 Sonnet** | Anthropic | 2025.02 | — | 35.9% | — | — | — | — |
+
+> Models with no cybersecurity benchmarks reported (GPT-4.5, Grok series, Gemini Flash variants) are omitted.
+
+### Agent Performance Leaderboard
+
+> Performance of cybersecurity AI agents on real-world tasks and benchmarks.
+
+| Agent | Benchmark | Score | vs Human | Category |
+|---|---|---|---|---|
+| **[XBOW](https://xbow.com/)** | [HackerOne](https://www.hackerone.com/) bug bounty | #1 leaderboard (1,060 reports) | Outperformed all humans | BY AI > Offensive |
+| **[ARTEMIS](https://github.com/Stanford-Trinity/ARTEMIS)** | Enterprise pentest (8K hosts) | 2nd/11, 9 vulns found | Beat 9/10 humans, 1/3 cost | BY AI > Offensive |
+| **[D-CIPHER](https://github.com/NYU-LLM-CTF/nyuctf_agents)** | [NYU CTF](https://github.com/NYU-LLM-CTF/NYU_CTF_Bench) / [Cybench](https://cybench.github.io/) / [HTB](https://www.hackthebox.com/) | 22% / 22.5% / 44% | — | BY AI > Offensive |
+| **[Big Sleep](https://projectzero.google/2024/10/from-naptime-to-big-sleep.html)** | Real-world vuln discovery | First AI zero-day (SQLite) | Novel capability | BY AI > Defensive |
+| **[Project Ire](https://www.microsoft.com/en-us/research/blog/project-ire-autonomously-identifies-malware-at-scale/)** | Malware reverse engineering | Precision 0.98, recall 0.83 | First AI malware conviction | BY AI > Defensive |
+| **[Security Copilot](https://www.microsoft.com/en-us/security/business/ai-machine-learning/microsoft-copilot-security)** | Phishing triage | 77% accuracy improvement | 40+ hrs/week saved | BY AI > Defensive |
+| **[CAI](https://github.com/aliasrobotics/cai)** | CTF benchmarks | 3,600x human speed | — | BY AI > Offensive |
+
+---
 
 ### Risk Frameworks
 
@@ -130,40 +165,6 @@ Each company has its own framework for evaluating cybersecurity risk:
 | **3 companies** | Expert Red Teaming, Prompt Injection Eval |
 | **2 companies** | Cybench (Anthropic + xAI), Cyber Range, Jailbreak Robustness |
 | **1 company only** | CVE-Bench, CyberGym, InterCode-CTF, WMDP-Cyber, AgentHarm, CTI-MCQ/RCM |
-
-### Model Cyber Capability Leaderboard
-
-> Side-by-side comparison of frontier models across key cybersecurity benchmarks (Security BY AI). Each cell links to the source in the detailed tables below.
-
-| Model | Company | Date | CTF | Cybench | CVE-Bench | Cyber Range | HTB | Vuln Discovery |
-|---|---|---|---|---|---|---|---|---|
-| **GPT-5.3-Codex** | OpenAI | 2026.02 | All passed | — | — | All except 3 | — | — |
-| **Claude Opus 4.6** | Anthropic | 2026.02 | — | — | — | — | — | 500+ zero-days |
-| **GPT-5.2-Codex** | OpenAI | 2025.12 | — | — | 87% | — | — | — |
-| **Gemini 3 Pro** | Google | 2025.11 | — | — | — | — | 11/12 | — |
-| **GPT-5.1-Codex-Max** | OpenAI | 2025.11 | ~76% | — | — | 37% | — | — |
-| **Claude Sonnet 4.5** | Anthropic | 2025.09 | — | 76.5% | — | 2/5 Equifax | — | 28.9% CyberGym |
-| **Gemini 2.5 Deep Think** | Google | 2025.08 | 13/13 GDM | — | — | — | 3/13 | — |
-| **o3** | OpenAI | 2025.04 | ~58% | — | — | — | — | — |
-| **Claude 3.7 Sonnet** | Anthropic | 2025.02 | — | 35.9% | — | — | — | — |
-
-> Models with no cybersecurity benchmarks reported (GPT-4.5, Grok series, Gemini Flash variants) are omitted.
-
-### Agent Performance Leaderboard
-
-> Performance of cybersecurity AI agents on real-world tasks and benchmarks.
-
-| Agent | Benchmark | Score | vs Human | Category |
-|---|---|---|---|---|
-| **[XBOW](https://xbow.com/)** | HackerOne bug bounty | #1 leaderboard (1,060 reports) | Outperformed all humans | BY AI > Offensive |
-| **[ARTEMIS](https://github.com/Stanford-Trinity/ARTEMIS)** | Enterprise pentest (8K hosts) | 2nd/11, 9 vulns found | Beat 9/10 humans, 1/3 cost | BY AI > Offensive |
-| **[D-CIPHER](https://github.com/NYU-LLM-CTF/nyuctf_agents)** | NYU CTF / Cybench / HTB | 22% / 22.5% / 44% | — | BY AI > Offensive |
-| **[Big Sleep](https://projectzero.google/2024/10/from-naptime-to-big-sleep.html)** | Real-world vuln discovery | First AI zero-day (SQLite) | Novel capability | BY AI > Defensive |
-| **[Project Ire](https://www.microsoft.com/en-us/research/blog/project-ire-autonomously-identifies-malware-at-scale/)** | Malware reverse engineering | Precision 0.98, recall 0.83 | First AI malware conviction | BY AI > Defensive |
-| **[Security Copilot](https://www.microsoft.com/en-us/security/business/ai-machine-learning/microsoft-copilot-security)** | Phishing triage | 77% accuracy improvement | 40+ hrs/week saved | BY AI > Defensive |
-| **[CAI](https://github.com/aliasrobotics/cai)** | CTF benchmarks | 3,600x human speed | — | BY AI > Offensive |
-
----
 
 ### Reported Performance Numbers
 
