@@ -70,7 +70,6 @@ The core differentiator of this repo. We classify everything along two axes:
 | | GPT-5.1-Codex-Max | Codex CLI + Linux | 2025.11 | [~76%](https://cdn.openai.com/pdf/2a7d98b1-57e5-4147-8d0e-683894d782ae/5p1_codex_max_card_03.pdf) | — | — | — | — | — |
 | | GPT-5 | Linux + tool harness | 2025.08 | [~27%](https://cdn.openai.com/gpt-5-system-card.pdf) | — | — | — | — | — |
 | **Anthropic** | Claude Opus 4.6 | Terminal Tool + Kali | 2026.02 | — | [93% p@1](https://anthropic.com/claude-opus-4-6-system-card) | — | — | [66.6% p@1](https://anthropic.com/claude-opus-4-6-system-card) | — |
-| | Claude Sonnet 4.6 | Terminal Tool + Kali | 2026.02 | — | — | — | — | — | — |
 | | Claude Opus 4.5 | Terminal Tool + Kali | 2025.11 | — | [82% p@1](https://www.anthropic.com/claude-opus-4-5-system-card) | — | — | [50.6% p@1](https://www.anthropic.com/claude-opus-4-5-system-card) | — |
 | | Claude Sonnet 4.5 | Terminal Tool + Kali | 2025.09 | — | [76.5% p@10](https://www.anthropic.com/claude-sonnet-4-5-system-card) | — | — | [28.9% p@1](https://red.anthropic.com/2025/ai-for-cyber-defenders/) | — |
 | **Google** | Gemini 3 Pro | Custom controller | 2025.11 | — | — | — | — | — | — |
@@ -122,7 +121,7 @@ Each company has its own framework for evaluating cybersecurity risk:
 | **Framework** | [Preparedness Framework v2](https://cdn.openai.com/pdf/18a02b5d-6b67-4cec-ab64-68cdfbddebcd/preparedness-framework-v2.pdf) | [RSP v2.2](https://www.anthropic.com/responsible-scaling-policy) | [FSF v3.0](https://storage.googleapis.com/deepmind-media/DeepMind.com/Blog/strengthening-our-frontier-safety-framework/frontier-safety-framework_3.pdf) | [Risk Management Framework](https://data.x.ai/2025-08-20-xai-risk-management-framework.pdf) |
 | **Risk Levels** | Low → Medium → High → Critical | ASL-1 → ASL-2 → ASL-3 → ASL-4 | CCL alert → CCL reached | Abuse / Propensities / Dual-use |
 | **Cyber Threshold** | High: automate end-to-end ops against hardened targets OR zero-day discovery | ASL-3: ≥1/5 success in ≥2/6 expert exploit dev classes | Cyber Uplift L1: ≥10x cost reduction for high-impact attacks | Not explicitly defined |
-| **First Crossed** | GPT-5.3-Codex (Feb 2026) — **HIGH** | Claude Opus 4 (May 2025) — **ASL-3** | None (alert only) | None |
+| **First Crossed** | GPT-5.3-Codex (Feb 2026) — **HIGH (precautionary)** | Claude Opus 4 (May 2025) — **ASL-3** | None (alert only) | None |
 | **Third-party** | US/UK AISI | US/UK AISI, METR | — | UK AISI |
 
 ### Benchmark Mapping
@@ -149,7 +148,6 @@ Each company has its own framework for evaluating cybersecurity risk:
 | **Pattern Labs External CTFs** | — | — | ✅ | — | 50 non-public challenges (anti-contamination) |
 | **PicoCTF / HTB / WRCCDC** | — | ✅ | — | — | Real competitive CTF events |
 | **Equifax Simulation** | — | ✅ | — | — | High-fidelity breach simulation |
-| **CMU Cyber Ranges** | — | ✅ | — | — | ~50-host network simulations |
 
 #### Security BY AI — Knowledge
 
@@ -338,7 +336,7 @@ Each company has its own framework for evaluating cybersecurity risk:
 | 2025.05 | — | Opus 4: **ASL-3** | — | — |
 | 2025.08 | GPT-5: Below High | — | Gemini 2.5 DT: CCL alert | Grok 4: below human pro |
 | 2025.11 | GPT-5.1: Below High | Opus 4.5: ASL-3 | Gemini 3 Pro: CCL alert | Grok 4.1: below human pro |
-| 2026.02 | GPT-5.3: **HIGH** | Opus 4.6: ASL-3 | Gemini 3.1 Pro: CCL alert | — |
+| 2026.02 | GPT-5.3: **HIGH (precautionary)** | Opus 4.6: ASL-3 | Gemini 3.1 Pro: CCL alert | — |
 
 </details>
 
