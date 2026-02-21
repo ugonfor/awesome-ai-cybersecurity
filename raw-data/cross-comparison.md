@@ -20,8 +20,7 @@
 | Benchmark | OpenAI | Anthropic | Google | xAI | Category | Description |
 |---|:---:|:---:|:---:|:---:|---|---|
 | **CTF (internal/custom)** | ✅ | ✅ | ✅ | — | BY-AI / Offensive | Each company's proprietary CTF challenge sets |
-| **Cybench** | — | ✅ | — | — | BY-AI / Offensive | 40 professional CTF tasks from 4 competitions |
-| **CyBench** | — | — | — | ✅ | BY-AI / Offensive | 40 CTF challenges (UK AISI Inspect framework). Note: different from Cybench |
+| **[Cybench](https://cybench.github.io/)** | — | ✅ | — | ✅ | BY-AI / Offensive | 40 professional CTF tasks from 4 competitions (xAI spells it "CyBench" — same benchmark) |
 | **CyberGym** | — | ✅ | — | — | BY-AI / Offensive | Real-world vuln detection in open-source software |
 | **CVE-Bench** | ✅ | — | — | — | BY-AI / Offensive | Exploit real-world web app CVEs (pass@1) |
 | **Cyber Range** | ✅ | ✅ | — | — | BY-AI / Offensive | Multi-machine network attack scenarios |
@@ -170,7 +169,7 @@
 | **Used by 4 companies** | Harmful Request Refusal (각자 내부 버전) |
 | **Used by 3 companies** | Expert Red Teaming (OpenAI, Anthropic, Google), Prompt Injection Eval (OpenAI, Anthropic, Google) |
 | **Used by 2 companies** | Cyber Range (OpenAI, Anthropic), Jailbreak Robustness (OpenAI, Anthropic) |
-| **Used by 1 company** | CVE-Bench (OpenAI only), CyberGym (Anthropic only), InterCode-CTF (Google only), WMDP-Cyber (xAI only), AgentHarm (xAI only), CTI-MCQ/RCM (Google/Sec-Gemini only), Cybench (Anthropic only), CyBench (xAI only) |
+| **Used by 1 company** | CVE-Bench (OpenAI only), CyberGym (Anthropic only), InterCode-CTF (Google only), WMDP-Cyber (xAI only), AgentHarm (xAI only), CTI-MCQ/RCM (Google/Sec-Gemini only) |
 
 ### Key Insight: Almost No Shared Quantitative Benchmarks
 
@@ -179,7 +178,7 @@ Despite all 4 companies evaluating cybersecurity, **there is virtually no overla
 - **OpenAI**: CTF (custom) + CVE-Bench + Cyber Range
 - **Anthropic**: Cybench + CyberGym + CMU Cyber Range + real CTF competitions
 - **Google**: InterCode-CTF + In-house CTF + HTB + Key Skills + Pattern Labs
-- **xAI**: CyBench + WMDP-Cyber + AgentHarm + AgentDojo
+- **xAI**: Cybench (spelled "CyBench") + WMDP-Cyber + AgentHarm + AgentDojo
 
 This makes **direct cross-company comparison nearly impossible** — which is exactly the problem this awesome repo aims to solve.
 

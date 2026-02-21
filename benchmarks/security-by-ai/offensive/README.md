@@ -7,29 +7,16 @@
 ### [Cybench](https://cybench.github.io/)
 - **Category**: Security BY AI > Offensive > CTF
 - **Created by**: UC Berkeley, UIUC, University of Chicago
-- **Used by**: Anthropic, UK AISI
-- **Scale**: 40 professional-level CTF tasks from 4 competitions
+- **Used by**: Anthropic, xAI (spells it "CyBench"), UK AISI, US AISI
+- **Scale**: 40 professional-level CTF tasks from 4 competitions (HackTheBox, SekaiCTF, Glacier, HKCert)
 - **Dataset**: Open
 - **Reference**: [Cybench: A Framework for Evaluating Cybersecurity Capabilities and Risks of Language Models](https://arxiv.org/abs/2408.08926)
-- **Summary**: Professional CTF benchmark covering pwn, crypto, web, reverse engineering, and forensics from real competitions.
+- **Summary**: Professional CTF benchmark covering pwn, crypto, web, reverse engineering, forensics, and misc. Evaluated via UK AISI Inspect framework. Used in US/UK AISI joint pre-deployment tests on Claude 3.5 Sonnet and OpenAI o1.
 - **Results**:
   | Model | Score | Date | Source |
   |---|---|---|---|
   | Claude 3.7 Sonnet | 35.9% | 2025.02 | [System Card](https://anthropic.com/claude-3-7-sonnet-system-card) |
   | Claude Sonnet 4.5 | 76.5% | 2025.09 | [System Card](https://www.anthropic.com/claude-sonnet-4-5-system-card) |
-
----
-
-### [CyBench (UK AISI)](https://cybench.github.io/)
-- **Category**: Security BY AI > Offensive > CTF
-- **Created by**: UK AISI (via Inspect framework)
-- **Used by**: xAI
-- **Scale**: 40 CTF challenges (crypto, web, RE, forensics, misc, exploitation)
-- **Dataset**: Open (via UK AISI Inspect)
-- **Summary**: CTF evaluation suite used by UK AISI for third-party AI safety testing. Note: different codebase from UC Berkeley's Cybench despite similar name.
-- **Results**:
-  | Model | Score | Date | Source |
-  |---|---|---|---|
   | Grok 4 | Below human professional | 2025.08 | [Model Card](https://data.x.ai/2025-08-20-grok-4-model-card.pdf) |
   | Grok 4.1 | Substantially below human experts | 2025.11 | [Model Card](https://data.x.ai/2025-11-17-grok-4-1-model-card.pdf) |
 

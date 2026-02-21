@@ -69,8 +69,7 @@ Each company has its own framework for evaluating cybersecurity risk:
 | Benchmark | OpenAI | Anthropic | Google | xAI | Description |
 |---|:---:|:---:|:---:|:---:|---|
 | **CTF (internal/custom)** | ✅ | ✅ | ✅ | — | Each company's proprietary CTF challenge sets |
-| **[Cybench](https://cybench.github.io/)** | — | ✅ | — | — | 40 professional CTF tasks from 4 competitions |
-| **[CyBench](https://cybench.github.io/)** | — | — | — | ✅ | 40 CTF challenges (UK AISI Inspect). Note: different from Cybench |
+| **[Cybench](https://cybench.github.io/)** | — | ✅ | — | ✅ | 40 professional CTF tasks from 4 competitions (xAI spells it "CyBench") |
 | **[CyberGym](https://red.anthropic.com/2025/ai-for-cyber-defenders/)** | — | ✅ | — | — | Real-world vuln detection in open-source software |
 | **CVE-Bench** | ✅ | — | — | — | Exploit real-world web app CVEs (pass@1) |
 | **Cyber Range** | ✅ | ✅ | — | — | Multi-machine network attack scenarios |
@@ -129,8 +128,8 @@ Each company has its own framework for evaluating cybersecurity risk:
 |---|---|
 | **4 companies** | Harmful Request Refusal (each with internal version) |
 | **3 companies** | Expert Red Teaming, Prompt Injection Eval |
-| **2 companies** | Cyber Range, Jailbreak Robustness |
-| **1 company only** | CVE-Bench, CyberGym, InterCode-CTF, WMDP-Cyber, AgentHarm, CTI-MCQ/RCM, Cybench, CyBench |
+| **2 companies** | Cybench (Anthropic + xAI), Cyber Range, Jailbreak Robustness |
+| **1 company only** | CVE-Bench, CyberGym, InterCode-CTF, WMDP-Cyber, AgentHarm, CTI-MCQ/RCM |
 
 ### Reported Performance Numbers
 
@@ -232,202 +231,136 @@ Each company has its own framework for evaluating cybersecurity risk:
 
 ## Benchmarks
 
-Detailed entries with performance data are in [`benchmarks/`](benchmarks/).
+> 50+ benchmarks across three categories. Vendor-specific benchmarks are mapped in [Cross-Comparison](#benchmark-mapping) above.
 
-### Security OF AI
+| Category | Scope | Vendor | Academic | Full List |
+|---|---|:---:|:---:|---|
+| **Security OF AI** | Jailbreak, prompt injection, adversarial robustness | 6 | 14 | [`benchmarks/security-of-ai/`](benchmarks/security-of-ai/) |
+| **Security BY AI** | CTF, pentest, vuln detection, threat intel knowledge | 14 | 18 | [`benchmarks/security-by-ai/`](benchmarks/security-by-ai/) |
+| **Security FROM AI** | Misuse risk, dual-use, deception, alignment | 4 | 3 | [`benchmarks/security-from-ai/`](benchmarks/security-from-ai/) |
 
-> Protecting the AI model itself from attacks.
+**Notable academic benchmarks** (not used by the 4 major vendors):
 
-**Vendor Benchmarks:**
-- **Prompt Injection Eval** — Robustness to prompt injection attacks (OpenAI, Anthropic, Google)
-- **[TAP](https://arxiv.org/abs/2312.02119)** — Tree of Attacks with Pruning jailbreak method (Google)
-- **[AgentDojo](https://arxiv.org/abs/2406.13352)** — Prompt injection in agentic settings (xAI)
-- **Jailbreak Robustness** — Universal jailbreak resistance testing (OpenAI, Anthropic)
-- **[Automated Red Teaming (ART)](https://arxiv.org/abs/2505.14534)** — Continuous adversarial evaluation (Google)
-- **Expert Red Teaming** — External expert adversarial testing (OpenAI, Anthropic, Google)
-
-**Academic Benchmarks:**
-- **[HarmBench](https://github.com/centerforaisafety/HarmBench)** — 510 behaviors, 18 attack methods, 33 LLMs (CAIS)
-- **[JailbreakBench](https://github.com/JailbreakBench/jailbreakbench)** — 100 misuse behaviors with leaderboard (UPenn, ETH Zurich)
-- **[StrongREJECT](https://github.com/alexandrasouly/strongreject)** — 313 forbidden prompts with rubric-based scoring (UC Berkeley)
-- **[AdvBench / GCG](https://github.com/llm-attacks/llm-attacks)** — 520 harmful behaviors + gradient-based attack (CMU, Google DeepMind)
-- **[PAIR](https://github.com/patrickrchao/JailbreakingLLMs)** — Black-box jailbreak in <20 queries (UPenn)
-- **[AutoDAN](https://github.com/SheltonLiu-N/AutoDAN)** — Genetic algorithm stealthy jailbreaks (UW-Madison)
-- **[SafetyBench](https://github.com/thu-coai/SafetyBench)** — 11,435 MCQs, 7 categories, EN/ZH (Tsinghua)
-- **[SALAD-Bench](https://github.com/OpenSafetyLab/SALAD-BENCH)** — 21,000 questions, 66 categories (Peking U)
-- **[TrustLLM](https://github.com/HowieHwong/TrustLLM)** — 30+ datasets, 6 trust dimensions (UIUC, Stanford, UCB)
-- **[DecodingTrust](https://github.com/AI-secure/DecodingTrust)** — 8 trustworthiness dimensions (NeurIPS 2023 Outstanding Paper)
-- **[CyberSecEval v1-v4](https://github.com/meta-llama/PurpleLlama)** — Insecure code gen, cyberattack compliance (Meta)
-
-> Full details: [`benchmarks/security-of-ai/`](benchmarks/security-of-ai/)
-
-### Security BY AI
-
-> AI performing cybersecurity tasks.
-
-**Offensive (CTF / Exploit / Pentest):**
-- **[Cybench](https://cybench.github.io/)** — 40 professional CTF tasks (Anthropic)
-- **[CyBench](https://cybench.github.io/)** — 40 CTF challenges via UK AISI Inspect (xAI)
-- **[CyberGym](https://red.anthropic.com/2025/ai-for-cyber-defenders/)** — 1,507 CVEs in real OSS (Anthropic)
-- **CVE-Bench** — Real-world web app CVE exploitation (OpenAI)
-- **Cyber Range** — Multi-machine network attack scenarios (OpenAI, Anthropic)
-- **[InterCode-CTF](https://arxiv.org/abs/2306.14898)** — 76 easy CTF challenges, saturated (Google)
-- **[In-house CTF (GDM)](https://github.com/google-deepmind/dangerous-capability-evaluations)** — 13 medium challenges, open-sourced (Google)
-- **Hack the Box** — Professional-level challenges (Google, Anthropic)
-- **[NYU CTF Bench](https://github.com/NYU-LLM-CTF/NYU_CTF_Bench)** — 200 challenges, 6 categories (NYU)
-- **[PrimeVul](https://github.com/DLVulDet/PrimeVul)** — 7K vulnerable + 229K benign functions, 140+ CWEs
-- **[DiverseVul](https://github.com/wagner-group/diversevul)** — 18,945 vulnerable functions, 150 CWEs (UC Berkeley)
-- **[SecLLMHolmes](https://github.com/ai4cloudops/SecLLMHolmes)** — GPT-4 achieves only 13% on real-world vuln detection (BU, IBM)
-
-**Knowledge:**
-- **[WMDP-Cyber](https://www.wmdp.ai/)** — Cyber killchain MC questions (xAI)
-- **[SecBench](https://github.com/secbench-git/SecBench)** — 44,823 MCQs + 3,087 SAQs, 9 domains, EN/ZH
-- **[CyberMetric](https://github.com/cybermetric/CyberMetric)** — 10,000 questions, 9 domains
-- **[CTI-Bench](https://github.com/xashru/cti-bench)** — Threat intelligence tasks (RIT, NeurIPS 2024 Spotlight)
-- **[SecQA](https://huggingface.co/datasets/zefang-liu/secqa)** — 242 concise cybersecurity MCQs
-- **[CS-Eval](https://github.com/CS-EVAL/CS-Eval)** — 42 subcategories, 3 cognitive levels
-
-**Defensive:**
-- **Cybersecurity Investigation Benchmark** — 40 investigations, blind-ranked (Anthropic)
-- **[CyberSOCEval](https://meta-llama.github.io/PurpleLlama/CyberSecEval/)** — SOC automation with CrowdStrike (Meta)
-- **[AutoPatchBench](https://meta-llama.github.io/PurpleLlama/CyberSecEval/)** — Automated security patching (Meta)
-
-> Full details: [`benchmarks/security-by-ai/`](benchmarks/security-by-ai/)
-
-### Security FROM AI
-
-> Assessing risks posed by AI to cybersecurity.
-
-**Misuse / Dual-use:**
-- **[AgentHarm](https://arxiv.org/abs/2410.09024)** — 110 malicious agent tasks (xAI, ICLR 2025)
-- **Malware Benchmark** — Synthetic malware-related tasks (OpenAI)
-- **Harmful Request Refusal** — Refusal rate on violative prompts (all 4 companies)
-- **Zero-day Discovery Eval** — Model auditing OSS for novel vulns (Anthropic)
-- **[CyberSecEval (Misuse)](https://github.com/meta-llama/PurpleLlama)** — 52% avg cyberattack compliance rate (Meta)
-- **[WMDP](https://github.com/centerforaisafety/wmdp)** — 3,668 MCQs measuring hazardous knowledge (CAIS, ICML 2024)
-
-**Behavioral / Alignment:**
-- **[MASK](https://arxiv.org/abs/2406.11663)** — Deception measurement (xAI)
-- **MakeMeSay** — Persuasion / manipulation eval (xAI)
-- **Sycophancy Eval** — Ignoring own judgment for user agreement (xAI)
-- **[Stealth / Situational Awareness](https://arxiv.org/abs/2505.01420)** — Oversight evasion + self-reasoning (Google)
-- **[Sabotage Risk](https://alignment.anthropic.com/2025/sabotage-risk-report/)** — 9 sabotage pathways (Anthropic, METR-reviewed)
-
-> Full details: [`benchmarks/security-from-ai/`](benchmarks/security-from-ai/)
+| Benchmark | Category | Scale | Venue |
+|---|---|---|---|
+| [HarmBench](https://github.com/centerforaisafety/HarmBench) | OF AI — Jailbreak | 510 behaviors, 18 attacks, 33 LLMs | ICML 2024 |
+| [CyberSecEval v1-v4](https://github.com/meta-llama/PurpleLlama) | OF AI — Secure Code | ~1,000+ test cases | Meta |
+| [NYU CTF Bench](https://github.com/NYU-LLM-CTF/NYU_CTF_Bench) | BY AI — CTF | 200 challenges, 6 categories | NeurIPS 2024 |
+| [SecBench](https://github.com/secbench-git/SecBench) | BY AI — Knowledge | 47,910 questions, 9 domains | — |
+| [PrimeVul](https://github.com/DLVulDet/PrimeVul) | BY AI — Vuln Detection | 7K vuln + 229K benign functions | ICSE 2025 |
+| [DecodingTrust](https://github.com/AI-secure/DecodingTrust) | OF AI — Trust | 8 dimensions | NeurIPS 2023 Best Paper |
 
 ---
 
 ## Agents
 
-> Cybersecurity AI agents (NOT general-purpose coding agents like Claude Code or Codex).
+> 38 cybersecurity AI agents. Full details in [`agents/`](agents/).
 
-### Offensive (21 agents)
+### Offensive — Top Picks
 
-| Agent | Created by | Open Source | Summary |
-|---|---|:---:|---|
-| **[PentestGPT](https://github.com/GreyDGL/PentestGPT)** | NTU | Yes | LLM-powered pentest assistant (USENIX Security 2024) |
-| **[ARTEMIS](https://github.com/Stanford-Trinity/ARTEMIS)** | Stanford / Gray Swan | Yes | Multi-agent pentest; 2nd in live enterprise test, beat 9/10 humans |
-| **[CAI](https://github.com/aliasrobotics/cai)** | Alias Robotics | Yes | 300+ models, 3,600x over human pentesters on CTF benchmarks |
-| **[XBOW](https://xbow.com/)** | XBOW | No | #1 on HackerOne leaderboard 2025; found vulns in Amazon, Disney, PayPal |
-| **[D-CIPHER](https://github.com/NYU-LLM-CTF/nyuctf_agents)** | NYU | Yes | SOTA on NYU CTF (22.0%), Cybench (22.5%), HackTheBox (44.0%) |
-| **[AutoPentester](https://github.com/YasodGinige/AutoPentester)** | Univ. Sydney | Yes | 27% better subtask completion, 39.5% more vuln coverage than PentestGPT |
-| **[SWE-agent / EnIGMA](https://github.com/SWE-agent/SWE-agent)** | Princeton/NYU/TAU | Yes | 3.3x improvement on NYU CTF dataset (ICML 2025) |
-| **[PentAGI](https://github.com/vxcontrol/pentagi)** | VXControl | Yes | 20+ built-in tools, sandboxed Docker, Neo4j knowledge graph |
-| **[CRAKEN](https://github.com/NYU-LLM-CTF/nyuctf_agents_craken)** | NYU | Yes | Knowledge-based CTF agent; 25-30% more ATT&CK techniques |
-| **[Reaper](https://github.com/ghostsecurity/reaper)** | Ghost Security | Yes | Agentic AI AppSec testing framework (Go, Apache 2.0) |
-| **[Strix](https://github.com/usestrix/strix)** | usestrix | Yes | AI hackers with PoC validation, CI/CD via GitHub Actions |
-| **[hackingBuddyGPT](https://github.com/ipa-lab/hackingBuddyGPT)** | TU Wien | Yes | LLM hacking research framework in 50 lines of code |
-| **[PentestAgent](https://github.com/GH05TCREW/pentestagent)** | GH05TCREW | Yes | Black-box testing with attack playbooks, MCP extensibility |
-| **[HackerGPT](https://github.com/Hacker-GPT/HackerGPT-2.0)** | Community | Yes | Ethical hacking assistant with Mixtral/Llama |
-| **[ReaperAI](https://github.com/tac01337/ReaperAI)** | tac01337 | Yes | GPT-4 + RAG autonomous vuln exploitation on HTB |
-| **[AutoAttacker](https://arxiv.org/abs/2403.01038)** | UC researchers | No | 14 attack types with RAG-augmented Metasploit |
-| **[KryptoPilot](https://arxiv.org/abs/2601.09129)** | Academic | — | 100% InterCode-CTF, 56-60% NYU-CTF crypto |
-| **[Penligent](https://penligent.ai/)** | Penligent | No | Multi-agent pentest with 120K+ CVE knowledge graph |
-| **[TARS](https://github.com/osgil-defense/TARS)** | Osgil Defense | Yes | Orchestrator for Nmap, ZAP, RustScan, Nettacker |
-| **[Auto-Pentest-GPT](https://github.com/Armur-Ai/Auto-Pentest-GPT-AI)** | Armur AI | Yes | Fine-tuned Mistral-7B with Kali Linux commands |
-| **[CIPHER](https://www.researchgate.net/publication/385337738)** | Academic | — | LLM fine-tuned on 300+ pentesting writeups |
+| Agent | Why it matters |
+|---|---|
+| **[XBOW](https://xbow.com/)** | #1 on HackerOne leaderboard 2025 — found vulns in Amazon, Disney, PayPal |
+| **[ARTEMIS](https://github.com/Stanford-Trinity/ARTEMIS)** | Beat 9/10 human pentesters in live enterprise test at 1/3 the cost |
+| **[D-CIPHER](https://github.com/NYU-LLM-CTF/nyuctf_agents)** | SOTA on NYU CTF (22%), Cybench (22.5%), HackTheBox (44%) |
+| **[PentestGPT](https://github.com/GreyDGL/PentestGPT)** | First LLM pentest agent — USENIX Security 2024 |
+| **[CAI](https://github.com/aliasrobotics/cai)** | Open-source, 300+ models, 3,600x over human pentesters |
 
-### Defensive (13 agents)
+<details>
+<summary>16 more offensive agents</summary>
 
-| Agent | Created by | Open Source | Summary |
-|---|---|:---:|---|
-| **[Microsoft Security Copilot](https://www.microsoft.com/en-us/security/business/ai-machine-learning/microsoft-copilot-security)** | Microsoft | No | 37+ agents; Phishing Triage improves accuracy 77% |
-| **[Charlotte AI](https://www.crowdstrike.com/en-us/platform/charlotte-ai/)** | CrowdStrike | No | >98% triage accuracy, Agentic SOAR, FedRAMP High |
-| **[Cortex XSIAM / AgentiX](https://www.paloaltonetworks.com/cortex/cortex-xsiam)** | Palo Alto Networks | No | Trained on 1.2B playbooks; 98% MTTR reduction |
-| **[Google TI Agentic](https://gtidocs.virustotal.com/docs/agentic-platform)** | Google | No | Mandiant + VirusTotal data; GA for Enterprise |
-| **[Sec-Gemini v1](https://security.googleblog.com/2025/04/google-launches-sec-gemini-v1-new.html)** | Google | No | Specialized CTI model; +11% on CTI-MCQ |
-| **[Big Sleep](https://projectzero.google/2024/10/from-naptime-to-big-sleep.html)** | Google P0 + DeepMind | No | First AI-discovered real-world zero-day (SQLite) |
-| **[OpenAI Aardvark](https://openai.com/index/strengthening-cyber-resilience/)** | OpenAI | No | Agentic security researcher (private beta) |
-| **[Project Ire](https://www.microsoft.com/en-us/research/blog/project-ire-autonomously-identifies-malware-at-scale/)** | Microsoft Research | No | Autonomous malware RE; precision 0.98; Black Hat 2025 |
-| **[Dropzone AI](https://www.dropzone.ai)** | Dropzone AI | No | AI SOC analyst; 3-10 min vs 30-40 min manual |
-| **[Exaforce](https://www.exaforce.com)** | Exaforce | No | Full-lifecycle AI SOC; $75M Series A (Khosla) |
-| **[Radiant Security](https://radiantsecurity.ai)** | Radiant Security | No | Agentic triage/investigation/response with root cause |
-| **[Simbian AI](https://simbian.ai)** | Simbian | No | 4 autonomous agents; #1 AI SOC ARR |
-| **[Joe Reverser](https://www.joesecurity.org/joe-reverser)** | Joe Security | No | Agentic malware/phishing analyst with MITRE ATT&CK |
+| Agent | Created by | Open Source |
+|---|---|:---:|
+| [AutoPentester](https://github.com/YasodGinige/AutoPentester) | Univ. Sydney | Yes |
+| [SWE-agent / EnIGMA](https://github.com/SWE-agent/SWE-agent) | Princeton/NYU/TAU | Yes |
+| [PentAGI](https://github.com/vxcontrol/pentagi) | VXControl | Yes |
+| [CRAKEN](https://github.com/NYU-LLM-CTF/nyuctf_agents_craken) | NYU | Yes |
+| [Reaper](https://github.com/ghostsecurity/reaper) | Ghost Security | Yes |
+| [Strix](https://github.com/usestrix/strix) | usestrix | Yes |
+| [hackingBuddyGPT](https://github.com/ipa-lab/hackingBuddyGPT) | TU Wien | Yes |
+| [PentestAgent](https://github.com/GH05TCREW/pentestagent) | GH05TCREW | Yes |
+| [HackerGPT](https://github.com/Hacker-GPT/HackerGPT-2.0) | Community | Yes |
+| [ReaperAI](https://github.com/tac01337/ReaperAI) | tac01337 | Yes |
+| [AutoAttacker](https://arxiv.org/abs/2403.01038) | UC researchers | No |
+| [KryptoPilot](https://arxiv.org/abs/2601.09129) | Academic | — |
+| [Penligent](https://penligent.ai/) | Penligent | No |
+| [TARS](https://github.com/osgil-defense/TARS) | Osgil Defense | Yes |
+| [Auto-Pentest-GPT](https://github.com/Armur-Ai/Auto-Pentest-GPT-AI) | Armur AI | Yes |
+| [CIPHER](https://www.researchgate.net/publication/385337738) | Academic | — |
 
-### Multi-Purpose (4 agents)
+</details>
 
-| Agent | Created by | Open Source | Summary |
-|---|---|:---:|---|
-| **[Fabric](https://github.com/danielmiessler/fabric)** | Daniel Miessler | Yes | 200+ prompt patterns for cybersecurity tasks |
-| **[Floki / Dapr Agents](https://github.com/Cyb3rWard0g/floki)** | Cyb3rWard0g | Yes | Multi-agent framework; donated to CNCF Dapr project |
-| **[BurpGPT](https://github.com/aress31/burpgpt)** | aress31 | Yes | Burp Suite + LLM passive scanning extension |
-| **[Burp AI Agent](https://github.com/six2dez/burp-ai-agent)** | six2dez | Yes | 7 AI backends, 53+ MCP tools, 62 vuln classes |
+### Defensive — Top Picks
 
-> Full details: [`agents/`](agents/)
+| Agent | Why it matters |
+|---|---|
+| **[Big Sleep](https://projectzero.google/2024/10/from-naptime-to-big-sleep.html)** | First AI-discovered real-world zero-day (SQLite) — Google P0 + DeepMind |
+| **[Microsoft Security Copilot](https://www.microsoft.com/en-us/security/business/ai-machine-learning/microsoft-copilot-security)** | 37+ agents, Phishing Triage improves accuracy 77% |
+| **[Project Ire](https://www.microsoft.com/en-us/research/blog/project-ire-autonomously-identifies-malware-at-scale/)** | Autonomous malware RE, precision 0.98 — Black Hat 2025 |
+| **[Charlotte AI](https://www.crowdstrike.com/en-us/platform/charlotte-ai/)** | >98% triage accuracy, Agentic SOAR — CrowdStrike |
+| **[Cortex XSIAM](https://www.paloaltonetworks.com/cortex/cortex-xsiam)** | Trained on 1.2B playbooks, 98% MTTR reduction — Palo Alto |
+
+<details>
+<summary>8 more defensive agents</summary>
+
+| Agent | Created by |
+|---|---|
+| [Google TI Agentic](https://gtidocs.virustotal.com/docs/agentic-platform) | Google (Mandiant + VirusTotal) |
+| [Sec-Gemini v1](https://security.googleblog.com/2025/04/google-launches-sec-gemini-v1-new.html) | Google |
+| [OpenAI Aardvark](https://openai.com/index/strengthening-cyber-resilience/) | OpenAI |
+| [Dropzone AI](https://www.dropzone.ai) | Dropzone AI |
+| [Exaforce](https://www.exaforce.com) | Exaforce |
+| [Radiant Security](https://radiantsecurity.ai) | Radiant Security |
+| [Simbian AI](https://simbian.ai) | Simbian |
+| [Joe Reverser](https://www.joesecurity.org/joe-reverser) | Joe Security |
+
+</details>
+
+### Multi-Purpose
+
+| Agent | Summary |
+|---|---|
+| **[Fabric](https://github.com/danielmiessler/fabric)** | 200+ prompt patterns for threat modeling, vuln analysis |
+| **[Floki / Dapr Agents](https://github.com/Cyb3rWard0g/floki)** | Multi-agent framework, donated to CNCF |
+| **[BurpGPT](https://github.com/aress31/burpgpt)** | Burp Suite + LLM passive scanning |
+| **[Burp AI Agent](https://github.com/six2dez/burp-ai-agent)** | 53+ MCP tools, 62 vuln classes |
 
 ---
 
 ## Tools
 
-> Evaluation frameworks, platforms, and tools for running cybersecurity AI benchmarks.
+> 25 evaluation tools and platforms. Full details in [`tools/`](tools/).
 
-### Evaluation Frameworks
+| Tool | Category | Created by | Summary |
+|---|---|---|---|
+| **[Inspect AI](https://github.com/UKGovernmentBEIS/inspect_ai)** | Eval Framework | UK AISI | Python framework for reproducible LLM evaluations |
+| **[Inspect Cyber](https://inspect.cyber.aisi.org.uk/)** | Eval Framework | UK AISI | Agentic cyber eval with CTF/cyber range YAML configs |
+| **[PurpleLlama / CyberSecEval](https://github.com/meta-llama/PurpleLlama)** | Benchmark Suite | Meta | Insecure code gen, SOC eval, auto-patching (v1-v4) |
+| **[Garak](https://github.com/NVIDIA/garak)** | Red Team | NVIDIA | LLM vulnerability scanner (prompt injection, jailbreak) |
+| **[Promptfoo](https://github.com/promptfoo/promptfoo)** | Red Team | Open source | LLM red teaming CLI with OWASP Top 10 + CI/CD |
+| **[HarmBench](https://github.com/centerforaisafety/HarmBench)** | Red Team | CAIS | Standardized: 18 attacks vs 33 LLMs |
+| **[JailbreakBench](https://github.com/JailbreakBench/jailbreakbench)** | Red Team | Multi-institution | 100 behaviors + attack/defense leaderboard |
+| **[Hack The Box](https://www.hackthebox.com/)** | CTF Platform | HTB | AI Range (Dec 2025) for agent benchmarking |
+| **[picoCTF](https://picoctf.org/)** | CTF Platform | CMU CyLab | 800,000+ users |
+| **[CyberBattleSim](https://github.com/microsoft/CyberBattleSim)** | Simulation | Microsoft Research | OpenAI Gym for RL attack/defense |
 
-| Tool | Created by | Open Source | Summary |
-|---|---|:---:|---|
-| **[Inspect AI](https://github.com/UKGovernmentBEIS/inspect_ai)** | UK AISI | Yes | Python framework for reproducible LLM evaluations with sandboxing |
-| **[Inspect Cyber](https://inspect.cyber.aisi.org.uk/)** | UK AISI | Yes | Specialized cyber eval extension with CTF/cyber range YAML configs |
-| **[Inspect Evals](https://github.com/UKGovernmentBEIS/inspect_evals)** | UK AISI + community | Yes | Collection of cyber evals (Cybench, WMDP, AgentHarm, etc.) |
-| **[Vivaria](https://github.com/METR/vivaria)** | METR | Yes | Agent evaluation platform (transitioning to Inspect) |
-| **[Dangerous Capability Evals](https://github.com/google-deepmind/dangerous-capability-evaluations)** | Google DeepMind | Partial | Frontier model evaluation with CCL thresholds |
-| **[lm-evaluation-harness](https://github.com/EleutherAI/lm-evaluation-harness)** | EleutherAI | Yes | Unified LLM eval framework (includes WMDP-Cyber) |
+<details>
+<summary>15 more tools</summary>
 
-### Benchmark Suites
+| Tool | Category | Created by |
+|---|---|---|
+| [Inspect Evals](https://github.com/UKGovernmentBEIS/inspect_evals) | Eval Framework | UK AISI + community |
+| [Vivaria](https://github.com/METR/vivaria) | Eval Framework | METR |
+| [Dangerous Capability Evals](https://github.com/google-deepmind/dangerous-capability-evaluations) | Eval Framework | Google DeepMind |
+| [lm-evaluation-harness](https://github.com/EleutherAI/lm-evaluation-harness) | Eval Framework | EleutherAI |
+| [CAIBench](https://arxiv.org/abs/2510.24317) | Benchmark Suite | Alias Robotics |
+| [ExCyTIn-Bench](https://github.com/microsoft/SecRL) | Benchmark Suite | Microsoft |
+| [eyeballvul](https://github.com/timothee-chauvin/eyeballvul) | Benchmark Suite | METR-affiliated |
+| [StrongREJECT](https://github.com/dsbowen/strong_reject) | Red Team | UC Berkeley / GDM |
+| [CTFd](https://github.com/CTFd/CTFd) | CTF Platform | CTFd LLC |
+| [ControlArena](https://control-arena.aisi.org.uk/) | Simulation | UK AISI + Redwood |
 
-| Tool | Created by | Open Source | Summary |
-|---|---|:---:|---|
-| **[PurpleLlama / CyberSecEval](https://github.com/meta-llama/PurpleLlama)** | Meta | Yes | Insecure code gen, cyberattack compliance, SOC eval, auto-patching (v1-v4) |
-| **[CAIBench](https://arxiv.org/abs/2510.24317)** | Alias Robotics | Yes | Meta-benchmark: 5 categories, 10,000+ instances |
-| **[ExCyTIn-Bench](https://github.com/microsoft/SecRL)** | Microsoft | Yes | SOC threat investigation with 589 Q&A pairs from Sentinel |
-| **[eyeballvul](https://github.com/timothee-chauvin/eyeballvul)** | METR-affiliated | Yes | 24,000+ real vulnerabilities, updated weekly |
-
-### Red Team / Adversarial Testing
-
-| Tool | Created by | Open Source | Summary |
-|---|---|:---:|---|
-| **[HarmBench](https://github.com/centerforaisafety/HarmBench)** | CAIS | Yes | Standardized red teaming: 18 attacks vs 33 LLMs |
-| **[StrongREJECT](https://github.com/dsbowen/strong_reject)** | UC Berkeley / GDM | Yes | Jailbreak eval with SOTA human agreement |
-| **[JailbreakBench](https://github.com/JailbreakBench/jailbreakbench)** | Multi-institution | Yes | 100 behaviors + attack/defense leaderboard |
-| **[Garak](https://github.com/NVIDIA/garak)** | NVIDIA | Yes | LLM vulnerability scanner (prompt injection, jailbreak, data leakage) |
-| **[Promptfoo](https://github.com/promptfoo/promptfoo)** | Open source | Yes | LLM red teaming CLI with OWASP Top 10 + CI/CD |
-
-### CTF Platforms
-
-| Platform | Created by | Open Source | Summary |
-|---|---|:---:|---|
-| **[CTFd](https://github.com/CTFd/CTFd)** | CTFd LLC | Yes | Most widely used CTF hosting framework |
-| **[picoCTF](https://picoctf.org/)** | CMU CyLab | Free | 800,000+ users; Claude ranked top 3% in 2025 |
-| **[Hack The Box](https://www.hackthebox.com/)** | HTB | No | AI Range (Dec 2025) for autonomous agent benchmarking |
-
-### Simulation Environments
-
-| Tool | Created by | Open Source | Summary |
-|---|---|:---:|---|
-| **[CyberBattleSim](https://github.com/microsoft/CyberBattleSim)** | Microsoft Research | Yes | OpenAI Gym environment for RL attack/defense |
-| **[ControlArena](https://control-arena.aisi.org.uk/)** | UK AISI + Redwood | Yes | AI control experiments for misalignment prevention |
-
-> Full details: [`tools/`](tools/)
+</details>
 
 ---
 

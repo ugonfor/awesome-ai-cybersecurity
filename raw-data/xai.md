@@ -9,7 +9,7 @@ xAI evaluates cybersecurity under its **Risk Management Framework** with three e
 | Benchmark | Description |
 |---|---|
 | **WMDP-Cyber** | Cyber killchain MC questions (recon, weaponization, exploitation, post-exploitation) |
-| **CyBench** | 40 professional CTF challenges (crypto, web, RE, forensics, misc, exploitation) |
+| **CyBench (= Cybench)** | 40 professional CTF challenges (same as [Cybench](https://cybench.github.io/), [arxiv:2408.08926](https://arxiv.org/abs/2408.08926); xAI uses alternate capitalization) |
 | **AgentHarm** | Completion rate of malicious agentic tasks (fraud, cybercrime, harassment) |
 | **AgentDojo** | Robustness to prompt injection in agentic settings |
 | **MASK** | Deception measurement (faithfully reporting beliefs under pressure) |
