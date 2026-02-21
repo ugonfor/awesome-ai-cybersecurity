@@ -62,13 +62,12 @@ The core differentiator of this repo. We classify everything along two axes:
 | | o3 | Base | 2025.04 | [59%](https://cdn.openai.com/pdf/2221c875-02dc-4789-800b-e7758f3722c1/o3-and-o4-mini-system-card.pdf) | — | — | — | — | — | — |
 | | o4-mini | Base | 2025.04 | [41%](https://cdn.openai.com/pdf/2221c875-02dc-4789-800b-e7758f3722c1/o3-and-o4-mini-system-card.pdf) | — | — | — | — | — | — |
 | | Deep Research | o3 + browse | 2025.02 | [70%](https://cdn.openai.com/deep-research-system-card.pdf) | — | — | — | — | — | — |
-| **Anthropic** | Claude Opus 4.6 | Base | 2026.02 | — | — | — | — | — | [500+ zero-days](https://anthropic.com/claude-opus-4-6-system-card) | — |
+| **Anthropic** | Claude Opus 4.6 | Base | 2026.02 | — | [93%](https://anthropic.com/claude-opus-4-6-system-card) | — | — | — | [66.6% CG](https://anthropic.com/claude-opus-4-6-system-card) / [500+ 0day](https://anthropic.com/claude-opus-4-6-system-card) | — |
 | | Claude Sonnet 4.6 | Base | 2026.02 | — | — | — | — | — | [0% prompt inj.](https://anthropic.com/claude-sonnet-4-6-system-card) | — |
-| | Claude Opus 4.5 | Base | 2025.11 | — | — | — | [1st auto solve](https://www.anthropic.com/claude-opus-4-5-system-card) | — | — | — |
-| | Claude Sonnet 4.5 | Base | 2025.09 | — | [76.5%](https://www.anthropic.com/claude-sonnet-4-5-system-card) | — | [2/5 Equifax](https://www.anthropic.com/claude-sonnet-4-5-system-card) | — | [28.9%](https://red.anthropic.com/2025/ai-for-cyber-defenders/) | — |
-| | Claude Opus 4.1 | Base | 2025.08 | — | [ASL-3](https://www.anthropic.com/claude-opus-4-1-system-card) | — | — | — | — | — |
-| | Claude Opus 4 | Base | 2025.05 | [11/11,1/2,0/2](https://www.anthropic.com/claude-4-system-card) | — | — | — | — | — | — |
-| | Claude Sonnet 4 | Base | 2025.05 | [10/11,1/2,0/2](https://www.anthropic.com/claude-4-system-card) | — | — | — | — | — | — |
+| | Claude Opus 4.5 | Base | 2025.11 | — | [82%](https://www.anthropic.com/claude-opus-4-5-system-card) | — | [1st auto solve](https://www.anthropic.com/claude-opus-4-5-system-card) | — | [50.6% CG](https://www.anthropic.com/claude-opus-4-5-system-card) | — |
+| | Claude Sonnet 4.5 | Base | 2025.09 | — | [76.5%](https://www.anthropic.com/claude-sonnet-4-5-system-card) | — | [2/5 Equifax](https://www.anthropic.com/claude-sonnet-4-5-system-card) | — | [28.9% CG](https://red.anthropic.com/2025/ai-for-cyber-defenders/) | — |
+| | Claude Opus 4 | Base | 2025.05 | [22/39 web+](https://www.anthropic.com/claude-4-system-card) | [22/39](https://www.anthropic.com/claude-4-system-card) | — | — | — | — | — |
+| | Claude Sonnet 4 | Base | 2025.05 | [web 10/11](https://www.anthropic.com/claude-4-system-card) | [22/39](https://www.anthropic.com/claude-4-system-card) | — | — | — | — | — |
 | | Claude 3.7 Sonnet | Base | 2025.02 | — | [35.9%](https://anthropic.com/claude-3-7-sonnet-system-card) | — | — | — | — | — |
 | **Google** | Gemini 3.1 Pro | Base | 2026.02 | — | — | — | — | [> 3 Pro](https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-1-Pro-Model-Card.pdf) | — | — |
 | | Gemini 3 Pro | Base | 2025.11 | — | — | — | — | [11/12 Key Skills](https://storage.googleapis.com/deepmind-media/gemini/gemini_3_pro_fsf_report.pdf) | — | — |
@@ -193,8 +192,12 @@ Each company has its own framework for evaluating cybersecurity risk:
 | GPT-5.3-Codex | OpenAI | Custom CTF (Professional) | All passed | 2026.02 | [System Card](https://cdn.openai.com/pdf/23eca107-a9b1-4d2c-b156-7deb4fbc697c/GPT-5-3-Codex-System-Card-02.pdf) |
 | Claude 3.7 Sonnet | Anthropic | Cybench (40 tasks) | 35.9% | 2025.02 | [System Card](https://anthropic.com/claude-3-7-sonnet-system-card) |
 | Claude Opus 4 | Anthropic | Custom CTF | 11/11 easy, 1/2 med, 0/2 hard | 2025.05 | [System Card](https://www.anthropic.com/claude-4-system-card) |
-| Claude Sonnet 4 | Anthropic | Custom CTF | 10/11 easy, 1/2 med, 0/2 hard | 2025.05 | [System Card](https://www.anthropic.com/claude-4-system-card) |
-| Claude Sonnet 4.5 | Anthropic | Cybench (40 tasks) | 76.5% | 2025.09 | [System Card](https://www.anthropic.com/claude-sonnet-4-5-system-card) |
+| Claude Opus 4 | Anthropic | Cybench (39 tasks) | 22/39 | 2025.05 | [System Card](https://www.anthropic.com/claude-4-system-card) |
+| Claude Sonnet 4 | Anthropic | Custom CTF (Web) | 10/11 easy, 1/2 med, 0/2 hard | 2025.05 | [System Card](https://www.anthropic.com/claude-4-system-card) |
+| Claude Sonnet 4 | Anthropic | Cybench (39 tasks) | 22/39 | 2025.05 | [System Card](https://www.anthropic.com/claude-4-system-card) |
+| Claude Sonnet 4.5 | Anthropic | Cybench (37 tasks) | 76.5% pass@10, >80% pass@30 | 2025.09 | [System Card](https://www.anthropic.com/claude-sonnet-4-5-system-card) |
+| Claude Opus 4.5 | Anthropic | Cybench | 82% pass@1 | 2025.11 | [System Card](https://www.anthropic.com/claude-opus-4-5-system-card) |
+| Claude Opus 4.6 | Anthropic | Cybench (37 tasks) | 93% pass@1, ~100% pass@30 (saturated) | 2026.02 | [System Card](https://anthropic.com/claude-opus-4-6-system-card) |
 | Gemini 2.0 Flash | Google | Pattern Labs External CTFs | 11/50 | 2025.04 | [Model Card](https://modelcards.withgoogle.com/assets/documents/gemini-2-flash.pdf) |
 | Gemini 2.5 Pro | Google | InterCode-CTF | 76/76 (saturated) | 2025.06 | [Model Card](https://modelcards.withgoogle.com/assets/documents/gemini-2.5-pro.pdf) |
 | Gemini 2.5 Pro | Google | Hack the Box (Hard) | 6/12 | 2025.06 | [FSF Report](https://storage.googleapis.com/deepmind-media/gemini/gemini_3_pro_fsf_report.pdf) |
@@ -212,6 +215,8 @@ Each company has its own framework for evaluating cybersecurity risk:
 | GPT-5.2-Codex | OpenAI | CVE-Bench (pass@1) | 87% | 2025.12 | [Addendum](https://cdn.openai.com/pdf/ac7c37ae-7f4c-4442-b741-2eabdeaf77e0/oai_5_2_Codex.pdf) |
 | Claude Sonnet 4.5 | Anthropic | CyberGym ($2 cost) | 28.9% | 2025.09 | [Frontier Red Team](https://red.anthropic.com/2025/ai-for-cyber-defenders/) |
 | Claude Sonnet 4.5 | Anthropic | CyberGym (30 trials) | 66.7% vuln reproduction, 33%+ new vuln discovery | 2025.09 | [Frontier Red Team](https://red.anthropic.com/2025/ai-for-cyber-defenders/) |
+| Claude Opus 4.5 | Anthropic | CyberGym (pass@1) | 50.63% | 2025.11 | [System Card](https://www.anthropic.com/claude-opus-4-5-system-card) |
+| Claude Opus 4.6 | Anthropic | CyberGym (pass@1) | 66.6% | 2026.02 | [System Card](https://anthropic.com/claude-opus-4-6-system-card) |
 | Claude Opus 4.6 | Anthropic | Zero-day discovery | 500+ novel vulns | 2026.02 | [System Card](https://anthropic.com/claude-opus-4-6-system-card) |
 
 #### Cyber Range / End-to-End Attack
@@ -229,7 +234,11 @@ Each company has its own framework for evaluating cybersecurity risk:
 |---|---|---|---|---|---|
 | Claude | Anthropic | PicoCTF 2025 | Top 3% (297th/10,460), 32/41 challenges | 2025 | [Cyber Competitions](https://red.anthropic.com/2025/cyber-competitions/) |
 | Claude | Anthropic | HackTheBox AI vs Human | 30th/161, 4th/8 AI teams, 19/20 solved | 2025 | [Cyber Competitions](https://red.anthropic.com/2025/cyber-competitions/) |
-| Claude | Anthropic | WRCCDC | 6th/9 teams | 2025 | [Cyber Competitions](https://red.anthropic.com/2025/cyber-competitions/) |
+| Claude | Anthropic | WRCCDC Regional | 6th/9 teams | 2025 | [Cyber Competitions](https://red.anthropic.com/2025/cyber-competitions/) |
+| Claude | Anthropic | WRCCDC Qualifier | 10th/28 teams | 2025 | [Cyber Competitions](https://red.anthropic.com/2025/cyber-competitions/) |
+| Claude | Anthropic | PlaidCTF | 0 challenges solved | 2025 | [Cyber Competitions](https://red.anthropic.com/2025/cyber-competitions/) |
+| Claude | Anthropic | DEF CON CTF Qualifier | 0 challenges solved | 2025 | [Cyber Competitions](https://red.anthropic.com/2025/cyber-competitions/) |
+| Claude | Anthropic | Airbnb Competition | 15/30, 39th/~180 teams | 2025 | [Cyber Competitions](https://red.anthropic.com/2025/cyber-competitions/) |
 | Claude Opus 4.6 | Anthropic | 40 cyber investigations | 38/40 best (blind-ranked) | 2026.02 | [System Card](https://anthropic.com/claude-opus-4-6-system-card) |
 
 #### Cybersecurity Knowledge
