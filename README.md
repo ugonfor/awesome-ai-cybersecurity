@@ -50,63 +50,104 @@ The AI cybersecurity space is fragmented: OpenAI, Anthropic, Google, and xAI eac
 
 ## Cross-Comparison
 
-### Model Cyber Capability Leaderboard
+> **Cross-company comparison is not meaningful.** Each company uses different benchmarks, agent setups, and evaluation protocols. [Cybench](https://cybench.github.io/) is the only shared quantitative benchmark (Anthropic + xAI). See [Benchmark Mapping](#benchmark-mapping) below for details.
 
-#### 1) Model Provider Reported
+### AI4Security — Offensive Capability
 
-> Scores self-reported in each company's own system cards and model cards. Agent = evaluation setup described in the document.
->
-> **Important caveats:**
-> - **Cross-company comparison is not meaningful.** Each company uses different benchmarks, agent setups, and evaluation protocols. Scores in the same column across companies are NOT directly comparable.
-> - **pass@k varies.** Unless noted, Cybench scores use different pass@k thresholds per model (e.g., Claude Sonnet 4.5 = pass@10, Opus 4.5 = pass@1, Grok models = unguided). Higher k inflates scores.
-> - **"CTF (Pro)" is NOT a shared benchmark.** Each company has its own proprietary CTF set with different challenges and difficulty calibrations.
+> CTF solving, exploit development, end-to-end attack chains. Latest model per company shown; full history in collapsible section below.
 
-| | Model | Agent Setup | Date | CTF (Pro) | [Cybench](https://cybench.github.io/) | [CVE-Bench](benchmarks/ai4security/offensive/) | Cyber Range | [CyberGym](https://red.anthropic.com/2025/ai-for-cyber-defenders/) | [WMDP-Cyber](https://www.wmdp.ai/) |
-|---|---|---|---|---|---|---|---|---|---|
-| **OpenAI** | GPT-5.3-Codex | Codex CLI + Linux | 2026.02 | [All passed](https://cdn.openai.com/pdf/23eca107-a9b1-4d2c-b156-7deb4fbc697c/GPT-5-3-Codex-System-Card-02.pdf) | — | [90%](https://cdn.openai.com/pdf/23eca107-a9b1-4d2c-b156-7deb4fbc697c/GPT-5-3-Codex-System-Card-02.pdf) | [80%](https://cdn.openai.com/pdf/23eca107-a9b1-4d2c-b156-7deb4fbc697c/GPT-5-3-Codex-System-Card-02.pdf) | — | — |
-| | GPT-5.2-Codex | Codex CLI + Linux | 2025.12 | — | — | [87%](https://cdn.openai.com/pdf/ac7c37ae-7f4c-4442-b741-2eabdeaf77e0/oai_5_2_Codex.pdf) | — | — | — |
-| | GPT-5.1-Codex-Max | Codex CLI + Linux | 2025.11 | [~76%](https://cdn.openai.com/pdf/2a7d98b1-57e5-4147-8d0e-683894d782ae/5p1_codex_max_card_03.pdf) | — | — | — | — | — |
-| | GPT-5 | Linux + tool harness | 2025.08 | [~27%](https://cdn.openai.com/gpt-5-system-card.pdf) | — | — | — | — | — |
-| **Anthropic** | Claude Opus 4.6 | Terminal Tool + Kali | 2026.02 | — | [93% p@1](https://anthropic.com/claude-opus-4-6-system-card) | — | — | [66.6% p@1](https://anthropic.com/claude-opus-4-6-system-card) | — |
-| | Claude Opus 4.5 | Terminal Tool + Kali | 2025.11 | — | [82% p@1](https://www.anthropic.com/claude-opus-4-5-system-card) | — | — | [50.6% p@1](https://www.anthropic.com/claude-opus-4-5-system-card) | — |
-| | Claude Sonnet 4.5 | Terminal Tool + Kali | 2025.09 | — | [76.5% p@10](https://www.anthropic.com/claude-sonnet-4-5-system-card) | — | — | [28.9% p@1](https://red.anthropic.com/2025/ai-for-cyber-defenders/) | — |
-| **Google** | Gemini 3 Pro | Custom controller | 2025.11 | — | — | — | — | — | — |
-| | Gemini 2.5 DT | Deep Think + Bash/PS | 2025.08 | [13/13 GDM](https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Deep-Think-Model-Card.pdf) | — | — | — | — | — |
-| **xAI** | Grok 4.1 | UK AISI Inspect | 2025.11 | — | [39%](https://data.x.ai/2025-11-17-grok-4-1-model-card.pdf) | — | — | — | [84%](https://data.x.ai/2025-11-17-grok-4-1-model-card.pdf) |
-| | Grok 4 Fast | UK AISI Inspect | 2025.09 | — | [30%](https://data.x.ai/2025-09-19-grok-4-fast-model-card.pdf) | — | — | — | [81.4%](https://data.x.ai/2025-09-19-grok-4-fast-model-card.pdf) |
-| | Grok 4 | UK AISI Inspect | 2025.08 | — | [43%](https://data.x.ai/2025-08-20-grok-4-model-card.pdf) | — | — | — | [79%](https://data.x.ai/2025-08-20-grok-4-model-card.pdf) |
+| Model | Company | [Cybench](https://cybench.github.io/) | CTF (Pro) | Cyber Range | Date |
+|---|---|---|---|---|---|
+| GPT-5.3-Codex | OpenAI | — | [All passed](https://cdn.openai.com/pdf/23eca107-a9b1-4d2c-b156-7deb4fbc697c/GPT-5-3-Codex-System-Card-02.pdf) | [80%](https://cdn.openai.com/pdf/23eca107-a9b1-4d2c-b156-7deb4fbc697c/GPT-5-3-Codex-System-Card-02.pdf) | 2026.02 |
+| Claude Opus 4.6 | Anthropic | [**93% p@1**](https://anthropic.com/claude-opus-4-6-system-card) | — | — | 2026.02 |
+| Claude Opus 4.5 | Anthropic | [82% p@1](https://www.anthropic.com/claude-opus-4-5-system-card) | — | — | 2025.11 |
+| Gemini 3 Pro | Google | — | [11/12 Key Skills](https://storage.googleapis.com/deepmind-media/gemini/gemini_3_pro_fsf_report.pdf) | — | 2025.11 |
+| Gemini 2.5 DT | Google | — | [13/13 GDM CTF](https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Deep-Think-Model-Card.pdf) | — | 2025.08 |
+| Grok 4.1 | xAI | [39%](https://data.x.ai/2025-11-17-grok-4-1-model-card.pdf) | — | — | 2025.11 |
+| Grok 4 | xAI | [43%](https://data.x.ai/2025-08-20-grok-4-model-card.pdf) | — | — | 2025.08 |
 
-#### 2) Benchmark Provider Reported
+**Real-world competitions** (Anthropic only):
 
-> Scores from external evaluators, benchmark developers, or competition organizers — NOT self-reported by the model company.
+| Competition | Score | Source |
+|---|---|---|
+| [PicoCTF](https://picoctf.org/) 2025 | Top 3% (297th/10,460), 32/41 | [Cyber Competitions](https://red.anthropic.com/2025/cyber-competitions/) |
+| [HackTheBox](https://www.hackthebox.com/) AI vs Human | 30th/161, 4th/8 AI, 19/20 | [Cyber Competitions](https://red.anthropic.com/2025/cyber-competitions/) |
+| [WRCCDC](https://wrccdc.org/) Regional | 6th/9 teams | [Cyber Competitions](https://red.anthropic.com/2025/cyber-competitions/) |
+| [PlaidCTF](https://plaidctf.com/) 2025 | 0 solved | [Cyber Competitions](https://red.anthropic.com/2025/cyber-competitions/) |
+| [DEF CON CTF](https://defcon.org/) Qualifier | 0 solved | [Cyber Competitions](https://red.anthropic.com/2025/cyber-competitions/) |
+
+**Third-party evaluations:**
 
 | Model | Evaluator | Benchmark | Score | Source |
 |---|---|---|---|---|
-| GPT-5.3-Codex | [Irregular (Pattern Labs)](https://irregular.com) | Network Attack / Vuln / Evasion | 86% / 72% / 53% | [System Card](https://cdn.openai.com/pdf/23eca107-a9b1-4d2c-b156-7deb4fbc697c/GPT-5-3-Codex-System-Card-02.pdf) |
-| GPT-5.1-Codex-Max | [Irregular (Pattern Labs)](https://irregular.com) | Network Attack / Vuln / Evasion | 37% / 41% / 43% | [System Card](https://cdn.openai.com/pdf/2a7d98b1-57e5-4147-8d0e-683894d782ae/5p1_codex_max_card_03.pdf) |
-| Grok 4 | [UK AISI](https://www.aisi.gov.uk/) | Realistic cyber (third-party) | Below human professional | [Model Card](https://data.x.ai/2025-08-20-grok-4-model-card.pdf) |
-| Claude | [PicoCTF](https://picoctf.org/) (Competition) | PicoCTF 2025 | Top 3% (297th/10,460), 32/41 | [Cyber Competitions](https://red.anthropic.com/2025/cyber-competitions/) |
-| Claude | [HackTheBox](https://www.hackthebox.com/) (Competition) | HTB AI vs Human | 30th/161, 4th/8 AI, 19/20 | [Cyber Competitions](https://red.anthropic.com/2025/cyber-competitions/) |
-| Claude | [WRCCDC](https://wrccdc.org/) (Competition) | WRCCDC Regional | 6th/9 teams | [Cyber Competitions](https://red.anthropic.com/2025/cyber-competitions/) |
-| Claude | [PlaidCTF](https://plaidctf.com/) (Competition) | PlaidCTF 2025 | 0 challenges solved | [Cyber Competitions](https://red.anthropic.com/2025/cyber-competitions/) |
-| Claude | [DEF CON CTF](https://defcon.org/) (Competition) | DEF CON CTF Qualifier | 0 challenges solved | [Cyber Competitions](https://red.anthropic.com/2025/cyber-competitions/) |
-| Claude Opus 4.6 | [US AISI](https://www.nist.gov/artificial-intelligence/us-ai-safety-institute) | OSS vulnerability audit | Found novel bugs (closed + open source) | [System Card](https://anthropic.com/claude-opus-4-6-system-card) |
+| GPT-5.3-Codex | [Irregular](https://irregular.com) | Network Attack / Vuln / Evasion | 86% / 72% / 53% | [System Card](https://cdn.openai.com/pdf/23eca107-a9b1-4d2c-b156-7deb4fbc697c/GPT-5-3-Codex-System-Card-02.pdf) |
+| GPT-5.1-Codex-Max | [Irregular](https://irregular.com) | Network Attack / Vuln / Evasion | 37% / 41% / 43% | [System Card](https://cdn.openai.com/pdf/2a7d98b1-57e5-4147-8d0e-683894d782ae/5p1_codex_max_card_03.pdf) |
+| Grok 4 | [UK AISI](https://www.aisi.gov.uk/) | Realistic cyber | Below human professional | [Model Card](https://data.x.ai/2025-08-20-grok-4-model-card.pdf) |
 
-<details>
-<summary>Earlier Models (before 2025.08) — self-reported</summary>
+---
 
-| | Model | Agent Setup | Date | CTF (Pro) | Cybench | Key Result |
+### AI4Security — Vulnerability Discovery
+
+> CVE exploitation, real-world vulnerability detection, zero-day discovery.
+
+| Model | Company | [CVE-Bench](benchmarks/ai4security/offensive/) | [CyberGym](https://red.anthropic.com/2025/ai-for-cyber-defenders/) | Zero-day | Date |
+|---|---|---|---|---|---|
+| GPT-5.3-Codex | OpenAI | [**90%**](https://cdn.openai.com/pdf/23eca107-a9b1-4d2c-b156-7deb4fbc697c/GPT-5-3-Codex-System-Card-02.pdf) | — | — | 2026.02 |
+| GPT-5.2-Codex | OpenAI | [87%](https://cdn.openai.com/pdf/ac7c37ae-7f4c-4442-b741-2eabdeaf77e0/oai_5_2_Codex.pdf) | — | — | 2025.12 |
+| Claude Opus 4.6 | Anthropic | — | [**66.6% p@1**](https://anthropic.com/claude-opus-4-6-system-card) | [**500+ novel**](https://anthropic.com/claude-opus-4-6-system-card) | 2026.02 |
+| Claude Opus 4.5 | Anthropic | — | [50.6% p@1](https://www.anthropic.com/claude-opus-4-5-system-card) | — | 2025.11 |
+| Claude Sonnet 4.5 | Anthropic | — | [28.9% p@1](https://red.anthropic.com/2025/ai-for-cyber-defenders/) | — | 2025.09 |
+
+---
+
+### AI4Security — Cyber Knowledge
+
+> Domain knowledge evaluation: threat intelligence, vulnerability classification, killchain understanding.
+
+| Model | Company | [WMDP-Cyber](https://www.wmdp.ai/) | CTI-MCQ | MC Knowledge | Date |
+|---|---|---|---|---|---|
+| Grok 4.1 | xAI | [**84%**](https://data.x.ai/2025-11-17-grok-4-1-model-card.pdf) | — | — | 2025.11 |
+| Grok 4 Fast | xAI | [81.4%](https://data.x.ai/2025-09-19-grok-4-fast-model-card.pdf) | — | — | 2025.09 |
+| Grok 4 | xAI | [79%](https://data.x.ai/2025-08-20-grok-4-model-card.pdf) | — | — | 2025.08 |
+| Sec-Gemini v1 | Google | — | [+11%](https://security.googleblog.com/2025/04/google-launches-sec-gemini-v1-new.html) | — | 2025.04 |
+| o1 | OpenAI | — | — | [59%](https://cdn.openai.com/o3-mini-system-card-feb10.pdf) | 2025.01 |
+
+---
+
+### AI4Security — Defensive Capability
+
+> Investigation, threat analysis, SOC automation.
+
+| Model | Company | Benchmark | Score | Date | Source |
+|---|---|---|---|---|---|
+| Claude Opus 4.6 | Anthropic | 40 cyber investigations | **38/40 best** (blind-ranked) | 2026.02 | [System Card](https://anthropic.com/claude-opus-4-6-system-card) |
+| Claude Opus 4.6 | Anthropic | OSS vulnerability audit (US AISI) | Found novel bugs | 2026.02 | [System Card](https://anthropic.com/claude-opus-4-6-system-card) |
+
+---
+
+### Security4AI — Model Robustness
+
+> Prompt injection resistance, jailbreak defense, adversarial robustness.
+
+| Model | Company | Benchmark | Score | Date | Source |
+|---|---|---|---|---|---|
+| Claude Sonnet 4.6 | Anthropic | Prompt Injection (coding + ext. thinking) | **0% attack success** | 2026.02 | [System Card](https://anthropic.com/claude-sonnet-4-6-system-card) |
+| Claude Sonnet 4.6 | Anthropic | Prompt Injection (browser) | <0.3% attack success | 2026.02 | [System Card](https://anthropic.com/claude-sonnet-4-6-system-card) |
+| Grok 4 Fast | xAI | [AgentDojo](https://arxiv.org/abs/2406.13352) | 0–3% attack success | 2025.09 | [Model Card](https://data.x.ai/2025-09-19-grok-4-fast-model-card.pdf) |
+| Operator (GPT-4o) | OpenAI | Prompt Injection | 99% recall | 2025.01 | [System Card](https://cdn.openai.com/operator_system_card.pdf) |
+| Gemini 2.0 → 2.5 | Google | [TAP](https://arxiv.org/abs/2312.02119) Attack Success | 99.8% → 53.6% | 2025.05 | [Paper](https://arxiv.org/abs/2505.14534) |
+
+---
+
+### Security4AI — Misuse Risk & Alignment
+
+> Malicious task completion, deception, sycophancy, sabotage risk.
+
+| Model | Company | [AgentHarm](https://arxiv.org/abs/2410.09024) | [MASK](https://arxiv.org/abs/2503.03750) | Sycophancy | MakeMeSay | Date |
 |---|---|---|---|---|---|---|
-| **OpenAI** | o3 | Linux + tool harness | 2025.04 | [59%](https://cdn.openai.com/pdf/2221c875-02dc-4789-800b-e7758f3722c1/o3-and-o4-mini-system-card.pdf) | — | — |
-| | o4-mini | Linux + tool harness | 2025.04 | [41%](https://cdn.openai.com/pdf/2221c875-02dc-4789-800b-e7758f3722c1/o3-and-o4-mini-system-card.pdf) | — | — |
-| | Deep Research | o3 + web browsing | 2025.02 | [70%](https://cdn.openai.com/deep-research-system-card.pdf) | — | First Medium risk |
-| **Anthropic** | Claude Opus 4 | Terminal Tool + Kali | 2025.05 | — | [22/39](https://www.anthropic.com/claude-4-system-card) | First ASL-3 |
-| | Claude Sonnet 4 | Terminal Tool + Kali | 2025.05 | — | [22/39](https://www.anthropic.com/claude-4-system-card) | — |
-| | Claude 3.7 Sonnet | Terminal Tool + Kali | 2025.02 | — | [35.9%](https://anthropic.com/claude-3-7-sonnet-system-card) | — |
-| **Google** | Gemini 2.5 Pro | Custom controller | 2025.06 | [73-76/76 ICF](https://modelcards.withgoogle.com/assets/documents/gemini-2.5-pro.pdf) | — | ICF saturated |
-| | Gemini 2.0 Flash | Custom controller | 2025.04 | — | — | [11/50 PatternLabs](https://modelcards.withgoogle.com/assets/documents/gemini-2-flash.pdf) |
-
-</details>
+| Grok 4.1 | xAI | [<14%](https://data.x.ai/2025-11-17-grok-4-1-model-card.pdf) | [0.49](https://data.x.ai/2025-11-17-grok-4-1-model-card.pdf) | [0.19](https://data.x.ai/2025-11-17-grok-4-1-model-card.pdf) | [0%](https://data.x.ai/2025-11-17-grok-4-1-model-card.pdf) | 2025.11 |
+| Grok 4 Fast | xAI | [8–10%](https://data.x.ai/2025-09-19-grok-4-fast-model-card.pdf) | — | — | — | 2025.09 |
+| Grok 4 | xAI | — | [0.43](https://data.x.ai/2025-08-20-grok-4-model-card.pdf) | [0.07](https://data.x.ai/2025-08-20-grok-4-model-card.pdf) | — | 2025.08 |
 
 ---
 
@@ -198,10 +239,8 @@ Each company has its own framework for evaluating cybersecurity risk:
 
 </details>
 
-### Reported Performance Numbers
-
 <details>
-<summary>Detailed benchmark-by-benchmark results with sources</summary>
+<summary>Full Performance History (all models, all dates)</summary>
 
 #### CTF Performance
 
@@ -217,33 +256,26 @@ Each company has its own framework for evaluating cybersecurity risk:
 | o3 | OpenAI | Custom CTF (HS/Coll/Pro) | 89% / 68% / 59% | 2025.04 | [System Card](https://cdn.openai.com/pdf/2221c875-02dc-4789-800b-e7758f3722c1/o3-and-o4-mini-system-card.pdf) |
 | o4-mini | OpenAI | Custom CTF (HS/Coll/Pro) | 80% / 55% / 41% | 2025.04 | [System Card](https://cdn.openai.com/pdf/2221c875-02dc-4789-800b-e7758f3722c1/o3-and-o4-mini-system-card.pdf) |
 | GPT-5 | OpenAI | Custom CTF (Professional, pass@12) | ~27% | 2025.08 | [System Card](https://cdn.openai.com/gpt-5-system-card.pdf) |
-| GPT-5-Codex | OpenAI | Custom CTF + CVE-Bench + Cyber Range | "Sharp jump" | 2025.09 | [Addendum](https://cdn.openai.com/pdf/97cc5669-7a25-4e63-b15f-5fd5bdc4d149/gpt-5-codex-system-card.pdf) |
-| GPT-5.1-Codex-Max | OpenAI | Custom CTF (Professional) | ~76% (17/18 easy, 9/17 med, 0/6 hard) | 2025.11 | [System Card](https://cdn.openai.com/pdf/2a7d98b1-57e5-4147-8d0e-683894d782ae/5p1_codex_max_card_03.pdf) |
+| GPT-5.1-Codex-Max | OpenAI | Custom CTF (Professional) | ~76% | 2025.11 | [System Card](https://cdn.openai.com/pdf/2a7d98b1-57e5-4147-8d0e-683894d782ae/5p1_codex_max_card_03.pdf) |
 | GPT-5.3-Codex | OpenAI | Custom CTF (Professional) | All passed | 2026.02 | [System Card](https://cdn.openai.com/pdf/23eca107-a9b1-4d2c-b156-7deb4fbc697c/GPT-5-3-Codex-System-Card-02.pdf) |
 | Claude 3.7 Sonnet | Anthropic | Cybench (40 tasks) | 35.9% | 2025.02 | [System Card](https://anthropic.com/claude-3-7-sonnet-system-card) |
-| Claude Opus 4 | Anthropic | Custom CTF | 11/11 easy, 1/2 med, 0/2 hard | 2025.05 | [System Card](https://www.anthropic.com/claude-4-system-card) |
 | Claude Opus 4 | Anthropic | Cybench (39 tasks) | 22/39 | 2025.05 | [System Card](https://www.anthropic.com/claude-4-system-card) |
-| Claude Sonnet 4 | Anthropic | Custom CTF (Web) | 10/11 easy, 1/2 med, 0/2 hard | 2025.05 | [System Card](https://www.anthropic.com/claude-4-system-card) |
-| Claude Sonnet 4 | Anthropic | Cybench (39 tasks) | 22/39 | 2025.05 | [System Card](https://www.anthropic.com/claude-4-system-card) |
-| Claude Sonnet 4.5 | Anthropic | Cybench (37 tasks) | 76.5% pass@10, >80% pass@30 | 2025.09 | [System Card](https://www.anthropic.com/claude-sonnet-4-5-system-card) |
+| Claude Sonnet 4.5 | Anthropic | Cybench (37 tasks) | 76.5% pass@10 | 2025.09 | [System Card](https://www.anthropic.com/claude-sonnet-4-5-system-card) |
 | Claude Opus 4.5 | Anthropic | Cybench | 82% pass@1 | 2025.11 | [System Card](https://www.anthropic.com/claude-opus-4-5-system-card) |
-| Claude Opus 4.6 | Anthropic | Cybench (37 tasks) | 93% pass@1, ~100% pass@30 (saturated) | 2026.02 | [System Card](https://anthropic.com/claude-opus-4-6-system-card) |
+| Claude Opus 4.6 | Anthropic | Cybench (37 tasks) | 93% pass@1 | 2026.02 | [System Card](https://anthropic.com/claude-opus-4-6-system-card) |
 | Gemini 2.0 Flash | Google | Pattern Labs External CTFs | 11/50 | 2025.04 | [Model Card](https://modelcards.withgoogle.com/assets/documents/gemini-2-flash.pdf) |
 | Gemini 2.5 Pro | Google | InterCode-CTF | 76/76 (saturated) | 2025.06 | [Model Card](https://modelcards.withgoogle.com/assets/documents/gemini-2.5-pro.pdf) |
-| Gemini 2.5 Deep Think | Google | InterCode-CTF | 73/76 | 2025.08 | [Model Card](https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Deep-Think-Model-Card.pdf) |
 | Gemini 2.5 Deep Think | Google | In-house CTF (Medium, 13) | 13/13 | 2025.08 | [Model Card](https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Deep-Think-Model-Card.pdf) |
 | Gemini 2.5 Deep Think | Google | Hack the Box (Hard) | 3/13 | 2025.08 | [Model Card](https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Deep-Think-Model-Card.pdf) |
 | Gemini 3 Pro | Google | Key Skills v1 (Hard) | 11/12 | 2025.11 | [FSF Report](https://storage.googleapis.com/deepmind-media/gemini/gemini_3_pro_fsf_report.pdf) |
-| Gemini 3 Pro | Google | Key Skills v2 (End-to-end) | 0/13 | 2025.11 | [FSF Report](https://storage.googleapis.com/deepmind-media/gemini/gemini_3_pro_fsf_report.pdf) |
 
-#### CVE / Vulnerability Benchmarks
+#### CVE / Vulnerability Discovery
 
 | Model | Company | Benchmark | Score | Date | Source |
 |---|---|---|---|---|---|
-| GPT-5.3-Codex | OpenAI | CVE-Bench (pass@1, 34 challenges evaluated of 40 total) | 90% | 2026.02 | [System Card](https://cdn.openai.com/pdf/23eca107-a9b1-4d2c-b156-7deb4fbc697c/GPT-5-3-Codex-System-Card-02.pdf) |
+| GPT-5.3-Codex | OpenAI | CVE-Bench (pass@1) | 90% | 2026.02 | [System Card](https://cdn.openai.com/pdf/23eca107-a9b1-4d2c-b156-7deb4fbc697c/GPT-5-3-Codex-System-Card-02.pdf) |
 | GPT-5.2-Codex | OpenAI | CVE-Bench (pass@1) | 87% | 2025.12 | [Addendum](https://cdn.openai.com/pdf/ac7c37ae-7f4c-4442-b741-2eabdeaf77e0/oai_5_2_Codex.pdf) |
 | Claude Sonnet 4.5 | Anthropic | CyberGym ($2 cost) | 28.9% | 2025.09 | [Frontier Red Team](https://red.anthropic.com/2025/ai-for-cyber-defenders/) |
-| Claude Sonnet 4.5 | Anthropic | CyberGym (30 trials) | 66.7% vuln reproduction, 33%+ new vuln discovery | 2025.09 | [Frontier Red Team](https://red.anthropic.com/2025/ai-for-cyber-defenders/) |
 | Claude Opus 4.5 | Anthropic | CyberGym (pass@1) | 50.63% | 2025.11 | [System Card](https://www.anthropic.com/claude-opus-4-5-system-card) |
 | Claude Opus 4.6 | Anthropic | CyberGym (pass@1) | 66.6% | 2026.02 | [System Card](https://anthropic.com/claude-opus-4-6-system-card) |
 | Claude Opus 4.6 | Anthropic | Zero-day discovery | 500+ novel vulns | 2026.02 | [System Card](https://anthropic.com/claude-opus-4-6-system-card) |
@@ -256,52 +288,6 @@ Each company has its own framework for evaluating cybersecurity risk:
 | GPT-5.3-Codex | OpenAI | Irregular External (Net/Vuln/Evasion) | 86% / 72% / 53% | 2026.02 | [System Card](https://cdn.openai.com/pdf/23eca107-a9b1-4d2c-b156-7deb4fbc697c/GPT-5-3-Codex-System-Card-02.pdf) |
 | GPT-5.1-Codex-Max | OpenAI | Irregular External (Net/Vuln/Evasion) | 37% / 41% / 43% | 2025.11 | [System Card](https://cdn.openai.com/pdf/2a7d98b1-57e5-4147-8d0e-683894d782ae/5p1_codex_max_card_03.pdf) |
 | Claude Sonnet 4.5 | Anthropic | Equifax Simulation | 2/5 autonomous | 2025.09 | [System Card](https://www.anthropic.com/claude-sonnet-4-5-system-card) |
-
-#### Real-World Competitions / Investigations
-
-| Model | Company | Benchmark | Score | Date | Source |
-|---|---|---|---|---|---|
-| Claude | Anthropic | PicoCTF 2025 | Top 3% (297th/10,460), 32/41 challenges | 2025 | [Cyber Competitions](https://red.anthropic.com/2025/cyber-competitions/) |
-| Claude | Anthropic | HackTheBox AI vs Human | 30th/161, 4th/8 AI teams, 19/20 solved | 2025 | [Cyber Competitions](https://red.anthropic.com/2025/cyber-competitions/) |
-| Claude | Anthropic | WRCCDC Regional | 6th/9 teams | 2025 | [Cyber Competitions](https://red.anthropic.com/2025/cyber-competitions/) |
-| Claude | Anthropic | WRCCDC Qualifier | 10th/28 teams | 2025 | [Cyber Competitions](https://red.anthropic.com/2025/cyber-competitions/) |
-| Claude | Anthropic | PlaidCTF | 0 challenges solved | 2025 | [Cyber Competitions](https://red.anthropic.com/2025/cyber-competitions/) |
-| Claude | Anthropic | DEF CON CTF Qualifier | 0 challenges solved | 2025 | [Cyber Competitions](https://red.anthropic.com/2025/cyber-competitions/) |
-| Claude | Anthropic | Airbnb Competition | 15/30, 39th/~180 teams | 2025 | [Cyber Competitions](https://red.anthropic.com/2025/cyber-competitions/) |
-| Claude Opus 4.6 | Anthropic | 40 cyber investigations | 38/40 best (blind-ranked) | 2026.02 | [System Card](https://anthropic.com/claude-opus-4-6-system-card) |
-
-#### Cybersecurity Knowledge
-
-| Model | Company | Benchmark | Score | Date | Source |
-|---|---|---|---|---|---|
-| o3-mini | OpenAI | MC Cybersecurity Knowledge | 53% | 2025.01 | [System Card](https://cdn.openai.com/o3-mini-system-card-feb10.pdf) |
-| o1 | OpenAI | MC Cybersecurity Knowledge | 59% | 2025.01 | [System Card](https://cdn.openai.com/o3-mini-system-card-feb10.pdf) |
-| Grok 4 | xAI | WMDP-Cyber | 79% | 2025.08 | [Model Card](https://data.x.ai/2025-08-20-grok-4-model-card.pdf) |
-| Grok 4 Fast | xAI | WMDP-Cyber | 81.4% | 2025.09 | [Model Card](https://data.x.ai/2025-09-19-grok-4-fast-model-card.pdf) |
-| Sec-Gemini v1 | Google | CTI-MCQ | +11% over competitors | 2025.04 | [Blog](https://security.googleblog.com/2025/04/google-launches-sec-gemini-v1-new.html) |
-| Sec-Gemini v1 | Google | CTI-RCM | +10.5% over competitors | 2025.04 | [Blog](https://security.googleblog.com/2025/04/google-launches-sec-gemini-v1-new.html) |
-
-#### Prompt Injection / Robustness
-
-| Model | Company | Benchmark | Score | Date | Source |
-|---|---|---|---|---|---|
-| Operator (GPT-4o) | OpenAI | Prompt Injection | 99% recall | 2025.01 | [System Card](https://cdn.openai.com/operator_system_card.pdf) |
-| Gemini 2.0 → 2.5 | Google | TAP Attack Success | 99.8% → 53.6% | 2025.05 | [Paper](https://arxiv.org/abs/2505.14534) |
-| Claude Sonnet 4.6 | Anthropic | Prompt Injection (coding) | 0% attack success | 2026.02 | [System Card](https://anthropic.com/claude-sonnet-4-6-system-card) |
-| Claude Sonnet 4.6 | Anthropic | Prompt Injection (browser) | <0.3% attack success | 2026.02 | [System Card](https://anthropic.com/claude-sonnet-4-6-system-card) |
-| Grok 4 Fast | xAI | AgentDojo | 0–3% attack success | 2025.09 | [Model Card](https://data.x.ai/2025-09-19-grok-4-fast-model-card.pdf) |
-
-#### Misuse / Behavioral
-
-| Model | Company | Benchmark | Score | Date | Source |
-|---|---|---|---|---|---|
-| Grok 4 Fast | xAI | AgentHarm | 8–10% completion | 2025.09 | [Model Card](https://data.x.ai/2025-09-19-grok-4-fast-model-card.pdf) |
-| Grok 4 | xAI | MASK (deception) | 0.43 | 2025.08 | [Model Card](https://data.x.ai/2025-08-20-grok-4-model-card.pdf) |
-| Grok 4 | xAI | Sycophancy | 0.07 | 2025.08 | [Model Card](https://data.x.ai/2025-08-20-grok-4-model-card.pdf) |
-| Grok 4.1 | xAI | AgentHarm | <14% | 2025.11 | [Model Card](https://data.x.ai/2025-11-17-grok-4-1-model-card.pdf) |
-| Grok 4.1 | xAI | MASK (deception) | 0.49 | 2025.11 | [Model Card](https://data.x.ai/2025-11-17-grok-4-1-model-card.pdf) |
-| Grok 4.1 | xAI | MakeMeSay | 0% (as attacker) | 2025.11 | [Model Card](https://data.x.ai/2025-11-17-grok-4-1-model-card.pdf) |
-| Grok 4.1 | xAI | Sycophancy | 0.19 | 2025.11 | [Model Card](https://data.x.ai/2025-11-17-grok-4-1-model-card.pdf) |
 
 </details>
 
