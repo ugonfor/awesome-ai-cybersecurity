@@ -80,25 +80,39 @@
     <table class="comparison-table">
       <thead>
         <tr>
-          <th rowspan="2" style="min-width:180px">Benchmark</th>
+          <th rowspan="3" style="min-width:180px">Benchmark</th>
           <th colspan="4" class="col-openai" style="text-align:center"><span class="company-header company-openai">OpenAI</span></th>
           <th colspan="3" class="col-anthropic" style="text-align:center"><span class="company-header company-anthropic">Anthropic</span></th>
           <th colspan="2" class="col-google" style="text-align:center"><span class="company-header company-google">Google</span></th>
           <th colspan="3" class="col-xai" style="text-align:center"><span class="company-header company-xai">xAI</span></th>
         </tr>
         <tr>
-          <th class="col-openai"><a href="https://cdn.openai.com/pdf/23eca107-a9b1-4d2c-b156-7deb4fbc697c/GPT-5-3-Codex-System-Card-02.pdf" target="_blank" class="model-header">GPT-5.3<br>Codex</a><a href="https://cdn.openai.com/pdf/8df7697b-c1b2-4222-be00-1fd3298f351d/codex_system_card.pdf" target="_blank" class="agent-setup">Codex CLI<br>+ Linux VM</a></th>
-          <th class="col-openai"><a href="https://cdn.openai.com/pdf/ac7c37ae-7f4c-4442-b741-2eabdeaf77e0/oai_5_2_Codex.pdf" target="_blank" class="model-header">GPT-5.2<br>Codex</a><a href="https://cdn.openai.com/pdf/ac7c37ae-7f4c-4442-b741-2eabdeaf77e0/oai_5_2_Codex.pdf" target="_blank" class="agent-setup">Codex CLI<br>+ Linux VM</a></th>
-          <th class="col-openai"><a href="https://cdn.openai.com/pdf/2a7d98b1-57e5-4147-8d0e-683894d782ae/5p1_codex_max_card_03.pdf" target="_blank" class="model-header">GPT-5.1<br>Codex-Max</a><a href="https://cdn.openai.com/pdf/2a7d98b1-57e5-4147-8d0e-683894d782ae/5p1_codex_max_card_03.pdf" target="_blank" class="agent-setup">Codex CLI<br>+ Linux VM</a></th>
-          <th class="col-openai"><a href="https://cdn.openai.com/gpt-5-system-card.pdf" target="_blank" class="model-header">GPT-5</a><a href="https://cdn.openai.com/gpt-5-system-card.pdf" target="_blank" class="agent-setup">Tool harness<br>+ Linux VM</a></th>
-          <th class="col-anthropic"><a href="https://anthropic.com/claude-opus-4-6-system-card" target="_blank" class="model-header">Opus 4.6</a><a href="https://anthropic.com/claude-opus-4-6-system-card" target="_blank" class="agent-setup">Bash tool<br>+ Kali Linux</a></th>
-          <th class="col-anthropic"><a href="https://www.anthropic.com/claude-opus-4-5-system-card" target="_blank" class="model-header">Opus 4.5</a><a href="https://www.anthropic.com/claude-opus-4-5-system-card" target="_blank" class="agent-setup">Bash tool<br>+ Kali Linux</a></th>
-          <th class="col-anthropic"><a href="https://www.anthropic.com/claude-sonnet-4-5-system-card" target="_blank" class="model-header">Sonnet 4.5</a><a href="https://www.anthropic.com/claude-sonnet-4-5-system-card" target="_blank" class="agent-setup">Bash tool<br>+ Kali Linux</a></th>
-          <th class="col-google"><a href="https://storage.googleapis.com/deepmind-media/gemini/gemini_3_pro_fsf_report.pdf" target="_blank" class="model-header">Gemini<br>3 Pro</a><a href="https://storage.googleapis.com/deepmind-media/gemini/gemini_3_pro_fsf_report.pdf" target="_blank" class="agent-setup">Custom agent<br>+ Bash/PS</a></th>
-          <th class="col-google"><a href="https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Deep-Think-Model-Card.pdf" target="_blank" class="model-header">Gemini<br>2.5 DT</a><a href="https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Deep-Think-Model-Card.pdf" target="_blank" class="agent-setup">Deep Think<br>+ Bash/PS</a></th>
-          <th class="col-xai"><a href="https://data.x.ai/2025-11-17-grok-4-1-model-card.pdf" target="_blank" class="model-header">Grok 4.1</a><a href="https://github.com/UKGovernmentBEIS/inspect_ai" target="_blank" class="agent-setup">UK AISI<br>Inspect</a></th>
-          <th class="col-xai"><a href="https://data.x.ai/2025-09-19-grok-4-fast-model-card.pdf" target="_blank" class="model-header">Grok 4<br>Fast</a><a href="https://github.com/UKGovernmentBEIS/inspect_ai" target="_blank" class="agent-setup">UK AISI<br>Inspect</a></th>
-          <th class="col-xai"><a href="https://data.x.ai/2025-08-20-grok-4-model-card.pdf" target="_blank" class="model-header">Grok 4</a><a href="https://github.com/UKGovernmentBEIS/inspect_ai" target="_blank" class="agent-setup">UK AISI<br>Inspect</a></th>
+          <th class="col-openai"><a href="https://cdn.openai.com/pdf/23eca107-a9b1-4d2c-b156-7deb4fbc697c/GPT-5-3-Codex-System-Card-02.pdf" target="_blank" class="model-header">GPT-5.3 Codex</a></th>
+          <th class="col-openai"><a href="https://cdn.openai.com/pdf/ac7c37ae-7f4c-4442-b741-2eabdeaf77e0/oai_5_2_Codex.pdf" target="_blank" class="model-header">GPT-5.2 Codex</a></th>
+          <th class="col-openai"><a href="https://cdn.openai.com/pdf/2a7d98b1-57e5-4147-8d0e-683894d782ae/5p1_codex_max_card_03.pdf" target="_blank" class="model-header">GPT-5.1 Codex-Max</a></th>
+          <th class="col-openai"><a href="https://cdn.openai.com/gpt-5-system-card.pdf" target="_blank" class="model-header">GPT-5</a></th>
+          <th class="col-anthropic"><a href="https://anthropic.com/claude-opus-4-6-system-card" target="_blank" class="model-header">Opus 4.6</a></th>
+          <th class="col-anthropic"><a href="https://www.anthropic.com/claude-opus-4-5-system-card" target="_blank" class="model-header">Opus 4.5</a></th>
+          <th class="col-anthropic"><a href="https://www.anthropic.com/claude-sonnet-4-5-system-card" target="_blank" class="model-header">Sonnet 4.5</a></th>
+          <th class="col-google"><a href="https://storage.googleapis.com/deepmind-media/gemini/gemini_3_pro_fsf_report.pdf" target="_blank" class="model-header">Gemini 3 Pro</a></th>
+          <th class="col-google"><a href="https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Deep-Think-Model-Card.pdf" target="_blank" class="model-header">Gemini 2.5 DT</a></th>
+          <th class="col-xai"><a href="https://data.x.ai/2025-11-17-grok-4-1-model-card.pdf" target="_blank" class="model-header">Grok 4.1</a></th>
+          <th class="col-xai"><a href="https://data.x.ai/2025-09-19-grok-4-fast-model-card.pdf" target="_blank" class="model-header">Grok 4 Fast</a></th>
+          <th class="col-xai"><a href="https://data.x.ai/2025-08-20-grok-4-model-card.pdf" target="_blank" class="model-header">Grok 4</a></th>
+        </tr>
+        <tr class="agent-row">
+          <th class="col-openai"><a href="https://cdn.openai.com/pdf/8df7697b-c1b2-4222-be00-1fd3298f351d/codex_system_card.pdf" target="_blank" class="agent-setup">Codex CLI + Linux VM</a></th>
+          <th class="col-openai"><a href="https://cdn.openai.com/pdf/ac7c37ae-7f4c-4442-b741-2eabdeaf77e0/oai_5_2_Codex.pdf" target="_blank" class="agent-setup">Codex CLI + Linux VM</a></th>
+          <th class="col-openai"><a href="https://cdn.openai.com/pdf/2a7d98b1-57e5-4147-8d0e-683894d782ae/5p1_codex_max_card_03.pdf" target="_blank" class="agent-setup">Codex CLI + Linux VM</a></th>
+          <th class="col-openai"><a href="https://cdn.openai.com/gpt-5-system-card.pdf" target="_blank" class="agent-setup">Tool harness + Linux VM</a></th>
+          <th class="col-anthropic"><a href="https://anthropic.com/claude-opus-4-6-system-card" target="_blank" class="agent-setup">Bash tool + Kali Linux</a></th>
+          <th class="col-anthropic"><a href="https://www.anthropic.com/claude-opus-4-5-system-card" target="_blank" class="agent-setup">Bash tool + Kali Linux</a></th>
+          <th class="col-anthropic"><a href="https://www.anthropic.com/claude-sonnet-4-5-system-card" target="_blank" class="agent-setup">Bash tool + Kali Linux</a></th>
+          <th class="col-google"><a href="https://storage.googleapis.com/deepmind-media/gemini/gemini_3_pro_fsf_report.pdf" target="_blank" class="agent-setup">Custom agent + Bash/PS</a></th>
+          <th class="col-google"><a href="https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Deep-Think-Model-Card.pdf" target="_blank" class="agent-setup">Deep Think + Bash/PS</a></th>
+          <th class="col-xai"><a href="https://github.com/UKGovernmentBEIS/inspect_ai" target="_blank" class="agent-setup">UK AISI Inspect</a></th>
+          <th class="col-xai"><a href="https://github.com/UKGovernmentBEIS/inspect_ai" target="_blank" class="agent-setup">UK AISI Inspect</a></th>
+          <th class="col-xai"><a href="https://github.com/UKGovernmentBEIS/inspect_ai" target="_blank" class="agent-setup">UK AISI Inspect</a></th>
         </tr>
       </thead>
       <tbody>
