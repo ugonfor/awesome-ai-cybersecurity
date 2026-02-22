@@ -1,11 +1,11 @@
-# Security OF AI Benchmarks
+# Security4AI — Model Robustness Benchmarks
 
 > Protecting AI models from attacks: jailbreak resistance, prompt injection robustness, adversarial defense.
 
 ---
 
 ### Prompt Injection Evaluation
-- **Category**: Security OF AI > Prompt Injection
+- **Category**: Security4AI > Model Robustness > Prompt Injection
 - **Created by**: Multiple (each company has internal version)
 - **Used by**: OpenAI, Anthropic, Google
 - **Scale**: Varies by implementation
@@ -20,7 +20,7 @@
 ---
 
 ### [TAP (Tree of Attacks with Pruning)](https://arxiv.org/abs/2312.02119)
-- **Category**: Security OF AI > Jailbreak
+- **Category**: Security4AI > Model Robustness > Jailbreak
 - **Created by**: Robust Intelligence (now part of Cisco)
 - **Used by**: Google
 - **Scale**: Automated attack generation pipeline
@@ -36,7 +36,7 @@
 ---
 
 ### [AgentDojo](https://arxiv.org/abs/2406.13352)
-- **Category**: Security OF AI > Prompt Injection > Agentic
+- **Category**: Security4AI > Model Robustness > Prompt Injection > Agentic
 - **Created by**: ETH Zurich
 - **Used by**: xAI
 - **Scale**: Prompt injection attacks in agentic tool-use settings
@@ -52,7 +52,7 @@
 ---
 
 ### Jailbreak Robustness
-- **Category**: Security OF AI > Jailbreak
+- **Category**: Security4AI > Model Robustness > Jailbreak
 - **Created by**: Multiple (internal evaluations)
 - **Used by**: OpenAI, Anthropic
 - **Scale**: Varies
@@ -62,7 +62,7 @@
 ---
 
 ### [Automated Red Teaming (ART)](https://arxiv.org/abs/2505.14534)
-- **Category**: Security OF AI > Continuous Adversarial Evaluation
+- **Category**: Security4AI > Model Robustness > Continuous Adversarial Evaluation
 - **Created by**: Google DeepMind
 - **Used by**: Google
 - **Scale**: Continuous evaluation framework
@@ -73,7 +73,7 @@
 ---
 
 ### Expert Red Teaming
-- **Category**: Security OF AI > Manual Adversarial Evaluation
+- **Category**: Security4AI > Model Robustness > Manual Adversarial Evaluation
 - **Created by**: Multiple (external security researchers)
 - **Used by**: OpenAI, Anthropic, Google
 - **Scale**: 50+ external experts (OpenAI); varies by company
@@ -89,7 +89,7 @@
 ---
 
 ### [HarmBench](https://github.com/centerforaisafety/HarmBench)
-- **Category**: Security OF AI > Jailbreak > Automated Red Teaming
+- **Category**: Security4AI > Model Robustness > Jailbreak > Automated Red Teaming
 - **Created by**: Center for AI Safety (CAIS)
 - **Used by**: Academic community (widely adopted as de facto standard)
 - **Scale**: 510 unique harmful behaviors across 4 functional categories; 18 red teaming methods evaluated against 33 target LLMs
@@ -100,7 +100,7 @@
 ---
 
 ### [JailbreakBench](https://github.com/JailbreakBench/jailbreakbench)
-- **Category**: Security OF AI > Jailbreak > Robustness Benchmark
+- **Category**: Security4AI > Model Robustness > Jailbreak > Robustness Benchmark
 - **Created by**: University of Pennsylvania, ETH Zurich, EPFL
 - **Used by**: Academic community
 - **Scale**: 100 distinct misuse behaviors (JBB-Behaviors dataset) + 100 matching benign behaviors; includes leaderboard tracking attacks and defenses
@@ -111,7 +111,7 @@
 ---
 
 ### [StrongREJECT](https://github.com/dsbowen/strong_reject)
-- **Category**: Security OF AI > Jailbreak > Evaluation Metric
+- **Category**: Security4AI > Model Robustness > Jailbreak > Evaluation Metric
 - **Created by**: UC Berkeley, Google DeepMind
 - **Used by**: Academic community
 - **Scale**: 313 forbidden prompts across 6 categories (illegal goods, non-violent crimes, hate/discrimination, disinformation, violence, sexual content)
@@ -122,7 +122,7 @@
 ---
 
 ### [AdvBench](https://github.com/llm-attacks/llm-attacks)
-- **Category**: Security OF AI > Adversarial Robustness > Harmful Behavior Dataset
+- **Category**: Security4AI > Model Robustness > Adversarial Robustness > Harmful Behavior Dataset
 - **Created by**: CMU, Google DeepMind
 - **Used by**: Academic community (foundational dataset for GCG, PAIR, AutoDAN research)
 - **Scale**: 520 harmful behaviors (harmful_behaviors.csv) + harmful strings dataset
@@ -133,7 +133,7 @@
 ---
 
 ### [GCG (Greedy Coordinate Gradient)](https://github.com/llm-attacks/llm-attacks)
-- **Category**: Security OF AI > Adversarial Attack Method > Token-level
+- **Category**: Security4AI > Model Robustness > Adversarial Attack Method > Token-level
 - **Created by**: CMU, Google DeepMind
 - **Used by**: Academic community (baseline in JailbreakBench, HarmBench)
 - **Scale**: Evaluated on AdvBench (520 behaviors); transferable to closed-source models (ChatGPT, Bard, Claude)
@@ -144,7 +144,7 @@
 ---
 
 ### [PAIR (Prompt Automatic Iterative Refinement)](https://github.com/patrickrchao/JailbreakingLLMs)
-- **Category**: Security OF AI > Adversarial Attack Method > Black-box
+- **Category**: Security4AI > Model Robustness > Adversarial Attack Method > Black-box
 - **Created by**: University of Pennsylvania
 - **Used by**: Academic community (baseline in JailbreakBench)
 - **Scale**: Black-box attack requiring <20 queries per jailbreak (250x more efficient than GCG)
@@ -155,7 +155,7 @@
 ---
 
 ### [AutoDAN](https://github.com/SheltonLiu-N/AutoDAN)
-- **Category**: Security OF AI > Adversarial Attack Method > Genetic Algorithm
+- **Category**: Security4AI > Model Robustness > Adversarial Attack Method > Genetic Algorithm
 - **Created by**: University of Wisconsin-Madison
 - **Used by**: Academic community (evaluated in EasyJailbreak, NeurIPS 2024 benchmarks)
 - **Scale**: Generates semantically meaningful jailbreak prompts; evaluated on AdvBench
@@ -166,7 +166,7 @@
 ---
 
 ### [SafetyBench](https://github.com/thu-coai/SafetyBench)
-- **Category**: Security OF AI > Safety > Comprehensive Evaluation
+- **Category**: Security4AI > Model Robustness > Safety > Comprehensive Evaluation
 - **Created by**: Tsinghua University (CoAI Group)
 - **Used by**: Academic community
 - **Scale**: 11,435 multiple-choice questions across 7 safety categories, in English and Chinese
@@ -177,7 +177,7 @@
 ---
 
 ### [SALAD-Bench](https://github.com/OpenSafetyLab/SALAD-BENCH)
-- **Category**: Security OF AI > Safety > Attack/Defense Evaluation
+- **Category**: Security4AI > Model Robustness > Safety > Attack/Defense Evaluation
 - **Created by**: OpenSafetyLab (Peking University, others)
 - **Used by**: Academic community
 - **Scale**: 21,000 harmful base questions across 6 domains, 16 tasks, 66 categories; includes QA + multiple-choice variants
@@ -188,7 +188,7 @@
 ---
 
 ### [TrustLLM](https://github.com/HowieHwong/TrustLLM)
-- **Category**: Security OF AI > Trustworthiness > Multi-dimensional
+- **Category**: Security4AI > Model Robustness > Trustworthiness > Multi-dimensional
 - **Created by**: UIUC, Stanford, UC Berkeley, CAIS, Microsoft Research
 - **Used by**: Academic community
 - **Scale**: 30+ datasets across 6 dimensions (truthfulness, safety, fairness, robustness, privacy, machine ethics); 16 LLMs evaluated
@@ -199,7 +199,7 @@
 ---
 
 ### [DecodingTrust](https://github.com/AI-secure/DecodingTrust)
-- **Category**: Security OF AI > Trustworthiness > GPT Assessment
+- **Category**: Security4AI > Model Robustness > Trustworthiness > GPT Assessment
 - **Created by**: UIUC, Stanford, UC Berkeley, CAIS, Microsoft Research
 - **Used by**: Academic community
 - **Scale**: 8 trustworthiness dimensions (toxicity, stereotype bias, adversarial robustness, OOD robustness, privacy, machine ethics, fairness, adversarial demonstrations)
@@ -210,7 +210,7 @@
 ---
 
 ### [AgentDojo](https://github.com/ethz-spylab/agentdojo)
-- **Category**: Security OF AI > Prompt Injection > Agentic
+- **Category**: Security4AI > Model Robustness > Prompt Injection > Agentic
 - **Created by**: ETH Zurich
 - **Used by**: xAI (in official evals)
 - **Scale**: 97 realistic tasks, 629 security test cases across email, banking, travel scenarios
@@ -221,7 +221,7 @@
 ---
 
 ### [CyberSecEval (Purple Llama)](https://github.com/meta-llama/PurpleLlama)
-- **Category**: Security OF AI > Secure Code Generation + Cyberattack Compliance
+- **Category**: Security4AI > Model Robustness > Secure Code Generation + Cyberattack Compliance
 - **Created by**: Meta AI
 - **Used by**: Meta (Llama evaluations), academic community
 - **Scale**: ~1,000 test cases; 189 static analysis rules covering 50 CWEs (v1); 500 interpreter abuse prompts (v2); prompt injection + social engineering + autonomous cyber ops (v3); CyberSOCEval + AutoPatchBench (v4)
@@ -234,7 +234,7 @@
 ---
 
 ### [CodeShield (Purple Llama)](https://github.com/meta-llama/PurpleLlama/tree/main/CodeShield)
-- **Category**: Security OF AI > Secure Code Filtering > Inference-time
+- **Category**: Security4AI > Model Robustness > Secure Code Filtering > Inference-time
 - **Created by**: Meta AI
 - **Used by**: Meta (Llama deployments)
 - **Scale**: Two-layer scanning solution (pattern detection + deep analysis)

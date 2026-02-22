@@ -1,13 +1,13 @@
-# Security BY AI — Defensive Benchmarks
+# AI4Security — Defensive Capability Benchmarks
 
-> AI performing defensive cybersecurity tasks: detection, analysis, incident response, threat intelligence.
+> AI performing defensive cybersecurity tasks: detection, investigation, SOC automation, threat intelligence.
 
 ---
 
 *Note: Most current vendor evaluations focus on offensive capabilities (CTF, exploit, pentest). Defensive benchmarks are emerging but underrepresented in vendor documentation. See the academic benchmarks section for community-driven defensive evaluation efforts.*
 
 ### Cybersecurity Investigation Benchmark (Anthropic)
-- **Category**: Security BY AI > Defensive > Investigation
+- **Category**: AI4Security > Defensive Capability > Investigation
 - **Created by**: Anthropic
 - **Used by**: Anthropic
 - **Scale**: 40 cybersecurity investigations
@@ -27,7 +27,7 @@
 ---
 
 ### [CyberSOCEval (CyberSecEval 4)](https://meta-llama.github.io/PurpleLlama/CyberSecEval/)
-- **Category**: Security BY AI > Defensive > SOC Automation
+- **Category**: AI4Security > Defensive Capability > SOC Automation
 - **Created by**: Meta AI (in collaboration with CrowdStrike)
 - **Used by**: Meta (Llama evaluations)
 - **Scale**: Two benchmarks: Malware Analysis + Threat Intelligence Reasoning
@@ -37,7 +37,7 @@
 ---
 
 ### [AutoPatchBench (CyberSecEval 4)](https://meta-llama.github.io/PurpleLlama/CyberSecEval/)
-- **Category**: Security BY AI > Defensive > Vulnerability Patching
+- **Category**: AI4Security > Defensive Capability > Vulnerability Patching
 - **Created by**: Meta AI
 - **Used by**: Meta (Llama evaluations)
 - **Scale**: Automated security patch generation for native code vulnerabilities

@@ -13,73 +13,29 @@
 
 ---
 
-## 2. Benchmark Cross-Comparison (Which Company Uses What)
+## 2. AI4Security — Offensive Capability
 
-### Security BY AI — Offensive (Cyber Capability)
+### Benchmark Mapping
 
-| Benchmark | OpenAI | Anthropic | Google | xAI | Category | Description |
-|---|:---:|:---:|:---:|:---:|---|---|
-| **CTF (internal/custom)** | ✅ | ✅ | ✅ | — | BY-AI / Offensive | Each company's proprietary CTF challenge sets |
-| **[Cybench](https://cybench.github.io/)** | — | ✅ | — | ✅ | BY-AI / Offensive | 40 professional CTF tasks from 4 competitions (xAI spells it "CyBench" — same benchmark) |
-| **CyberGym** | — | ✅ | — | — | BY-AI / Offensive | Real-world vuln detection in open-source software |
-| **CVE-Bench** | ✅ | — | — | — | BY-AI / Offensive | Exploit real-world web app CVEs (pass@1) |
-| **OpenAI Cyber Range** | ✅ | — | — | — | BY-AI / Offensive | 15 multi-machine network attack scenarios (internal) |
-| **CMU Cyber Ranges / Incalmo** | — | ✅ | — | — | BY-AI / Offensive | ~50-host networks + Equifax breach simulation |
-| **InterCode-CTF** | — | — | ✅ | — | BY-AI / Offensive | 76 easy CTF challenges (saturated) |
-| **In-house CTF (GDM)** | — | — | ✅ | — | BY-AI / Offensive | 13 medium challenges (open-sourced via UK AISI Inspect) |
-| **Hack the Box** | — | ✅ | ✅ | — | BY-AI / Offensive | Professional-level CTF challenges |
-| **Key Skills Benchmark** | — | — | ✅ | — | BY-AI / Offensive | Recon, tool dev, OPSEC (MITRE ATT&CK aligned) |
-| **Pattern Labs External CTFs** | — | — | ✅ | — | BY-AI / Offensive | 50 non-public challenges (anti-contamination) |
-| **PicoCTF / HTB / WRCCDC** | — | ✅ | — | — | BY-AI / Offensive | Real competitive CTF events |
-| **Equifax Simulation** | — | ✅ | — | — | BY-AI / Offensive | High-fidelity breach simulation |
-| **CMU Cyber Ranges** | — | ✅ | — | — | BY-AI / Offensive | ~50-host network simulations |
+| Benchmark | OpenAI | Anthropic | Google | xAI | Description |
+|---|:---:|:---:|:---:|:---:|---|
+| **CTF (internal/custom)** | ✅ | ✅ | ✅ | — | Each company's proprietary CTF challenge sets |
+| **[Cybench](https://cybench.github.io/)** | — | ✅ | — | ✅ | 40 professional CTF tasks from 4 competitions (xAI spells it "CyBench" — same benchmark) |
+| **CyberGym** | — | ✅ | — | — | Real-world vuln detection in open-source software |
+| **CVE-Bench** | ✅ | — | — | — | Exploit real-world web app CVEs (pass@1) |
+| **OpenAI Cyber Range** | ✅ | — | — | — | 15 multi-machine network attack scenarios (internal) |
+| **CMU Cyber Ranges / Incalmo** | — | ✅ | — | — | ~50-host networks + Equifax breach simulation |
+| **InterCode-CTF** | — | — | ✅ | — | 76 easy CTF challenges (saturated) |
+| **In-house CTF (GDM)** | — | — | ✅ | — | 13 medium challenges (open-sourced via UK AISI Inspect) |
+| **Hack the Box** | — | ✅ | ✅ | — | Professional-level CTF challenges |
+| **Key Skills Benchmark** | — | — | ✅ | — | Recon, tool dev, OPSEC (MITRE ATT&CK aligned) |
+| **Pattern Labs External CTFs** | — | — | ✅ | — | 50 non-public challenges (anti-contamination) |
+| **PicoCTF / HTB / WRCCDC** | — | ✅ | — | — | Real competitive CTF events |
+| **Equifax Simulation** | — | ✅ | — | — | High-fidelity breach simulation |
 
-### Security BY AI — Knowledge
+### Performance Scores
 
-| Benchmark | OpenAI | Anthropic | Google | xAI | Category | Description |
-|---|:---:|:---:|:---:|:---:|---|---|
-| **WMDP-Cyber** | — | — | — | ✅ | BY-AI / Knowledge | Cyber killchain MC questions |
-| **MC Cybersecurity Knowledge** | ✅ | — | — | — | BY-AI / Knowledge | OpenAI internal MC eval |
-| **CTI-MCQ** | — | — | ✅ | — | BY-AI / Knowledge | Threat intelligence knowledge (from [CTI-Bench](https://github.com/xashru/cti-bench), used by Sec-Gemini) |
-| **CTI-RCM** | — | — | ✅ | — | BY-AI / Knowledge | Root cause → CWE mapping (from [CTI-Bench](https://github.com/xashru/cti-bench), used by Sec-Gemini) |
-
-### Security OF AI — Jailbreak / Prompt Injection / Robustness
-
-| Benchmark | OpenAI | Anthropic | Google | xAI | Category | Description |
-|---|:---:|:---:|:---:|:---:|---|---|
-| **Prompt Injection Eval** | ✅ | ✅ | ✅ | — | OF-AI / Robustness | Model robustness to prompt injection attacks |
-| **TAP Attack Success Rate** | — | — | ✅ | — | OF-AI / Robustness | Tree of Attacks with Pruning (99.8% → 53.6%) |
-| **AgentDojo** | — | — | — | ✅ | OF-AI / Robustness | Prompt injection in agentic settings |
-| **Jailbreak Robustness** | ✅ | ✅ | — | — | OF-AI / Jailbreak | Universal jailbreak resistance testing |
-| **Automated Red Teaming (ART)** | — | — | ✅ | — | OF-AI / Red Team | Continuous adversarial evaluation framework |
-| **Expert Red Teaming** | ✅ | ✅ | ✅ | — | OF-AI / Red Team | External experts adversarially testing models |
-
-### Security FROM AI — Misuse Risk / Dual-use
-
-| Benchmark | OpenAI | Anthropic | Google | xAI | Category | Description |
-|---|:---:|:---:|:---:|:---:|---|---|
-| **AgentHarm** | — | — | — | ✅ | FROM-AI / Misuse | Malicious agentic task completion (fraud, cybercrime) |
-| **Malware Benchmark** | ✅ | — | — | — | FROM-AI / Misuse | Synthetic malware-related task eval (Codex) |
-| **Harmful Request Refusal** | ✅ | ✅ | ✅ | ✅ | FROM-AI / Safety | Refusal rate on violative/harmful prompts |
-| **Input/Output Filters** | — | — | — | ✅ | FROM-AI / Safety | False negative rates for restricted content |
-| **Zero-day Discovery Eval** | — | ✅ | — | — | FROM-AI / Risk | Model auditing open-source code for novel vulns |
-
-### Security FROM AI — Behavioral / Alignment
-
-| Benchmark | OpenAI | Anthropic | Google | xAI | Category | Description |
-|---|:---:|:---:|:---:|:---:|---|---|
-| **MASK** | — | — | — | ✅ | FROM-AI / Alignment | Deception measurement under pressure |
-| **MakeMeSay** | — | — | — | ✅ | FROM-AI / Alignment | Persuasion / manipulation eval |
-| **Sycophancy Eval** | — | — | — | ✅ | FROM-AI / Alignment | Ignoring own judgment for user agreement |
-| **Stealth Eval** | — | — | ✅ | — | FROM-AI / Alignment | Ability to circumvent oversight |
-| **Situational Awareness** | — | — | ✅ | — | FROM-AI / Alignment | Self/environment reasoning |
-| **Sabotage Risk** | — | ✅ | — | — | FROM-AI / Alignment | 9 sabotage pathways (METR-reviewed) |
-
----
-
-## 2.5. Reported Performance Numbers by Benchmark
-
-### CTF Performance (Professional-level, comparable difficulty)
+#### CTF Performance
 
 | Model | Company | Benchmark | Score | Date | Source |
 |---|---|---|---|---|---|
@@ -96,25 +52,31 @@
 | Claude 3.7 Sonnet | Anthropic | Cybench (40 tasks) | 35.9% | 2025.02 | [Claude 3.7 Sonnet System Card](https://anthropic.com/claude-3-7-sonnet-system-card) |
 | Claude Opus 4 | Anthropic | Custom CTF (easy/med/hard) | 11/11 easy, 1/2 med, 0/2 hard | 2025.05 | [Claude 4 System Card](https://www.anthropic.com/claude-4-system-card) |
 | Claude Sonnet 4.5 | Anthropic | Cybench (40 tasks) | 76.5% | 2025.09 | [Claude Sonnet 4.5 System Card](https://www.anthropic.com/claude-sonnet-4-5-system-card) |
-| Claude Opus 4.6 | Anthropic | 40 cyber investigations | 38/40 best (blind-ranked) | 2026.02 | [Claude Opus 4.6 System Card](https://anthropic.com/claude-opus-4-6-system-card) |
+| Claude Opus 4.5 | Anthropic | Cybench | 82% pass@1 | 2025.11 | [Claude Opus 4.5 System Card](https://www.anthropic.com/claude-opus-4-5-system-card) |
+| Claude Opus 4.6 | Anthropic | Cybench (37 tasks) | 93% pass@1 | 2026.02 | [Claude Opus 4.6 System Card](https://anthropic.com/claude-opus-4-6-system-card) |
 | Gemini 2.5 Deep Think | Google | InterCode-CTF (Easy, 76 tasks) | 73/76 | 2025.08 | [Gemini 2.5 Deep Think Model Card](https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Deep-Think-Model-Card.pdf) |
 | Gemini 2.5 Deep Think | Google | In-house CTF (Medium, 13 tasks) | 13/13 | 2025.08 | [Gemini 2.5 Deep Think Model Card](https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Deep-Think-Model-Card.pdf) |
 | Gemini 2.5 Deep Think | Google | Hack the Box (Hard) | 3/13 | 2025.08 | [Gemini 2.5 Deep Think Model Card](https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Deep-Think-Model-Card.pdf) |
 | Gemini 2.0 Flash | Google | Pattern Labs External CTF (50 tasks) | 11/50 | 2025.04 | [Gemini 2.0 Flash Model Card](https://modelcards.withgoogle.com/assets/documents/gemini-2-flash.pdf) |
 | Gemini 3 Pro | Google | Key Skills v1 (Hard) | 11/12 | 2025.11 | [Gemini 3 Pro FSF Report](https://storage.googleapis.com/deepmind-media/gemini/gemini_3_pro_fsf_report.pdf) |
 | Gemini 3 Pro | Google | Key Skills v2 (End-to-end) | 0/13 | 2025.11 | [Gemini 3 Pro FSF Report](https://storage.googleapis.com/deepmind-media/gemini/gemini_3_pro_fsf_report.pdf) |
+| Grok 4 | xAI | Cybench (40 tasks) | 43% | 2025.08 | [Grok 4 Model Card](https://data.x.ai/2025-08-20-grok-4-model-card.pdf) |
+| Grok 4 Fast | xAI | Cybench (40 tasks) | 30% | 2025.09 | [Grok 4 Fast Model Card](https://data.x.ai/2025-09-19-grok-4-fast-model-card.pdf) |
+| Grok 4.1 | xAI | Cybench (40 tasks) | 39% | 2025.11 | [Grok 4.1 Model Card](https://data.x.ai/2025-11-17-grok-4-1-model-card.pdf) |
 
-### CVE / Vulnerability Benchmarks
+#### CVE / Vulnerability Discovery
 
 | Model | Company | Benchmark | Score | Date | Source |
 |---|---|---|---|---|---|
 | GPT-5.2-Codex | OpenAI | CVE-Bench (pass@1) | 87% | 2025.12 | [GPT-5.2-Codex Addendum](https://cdn.openai.com/pdf/ac7c37ae-7f4c-4442-b741-2eabdeaf77e0/oai_5_2_Codex.pdf) |
+| GPT-5.3-Codex | OpenAI | CVE-Bench (pass@1) | 90% | 2026.02 | [GPT-5.3-Codex System Card](https://cdn.openai.com/pdf/23eca107-a9b1-4d2c-b156-7deb4fbc697c/GPT-5-3-Codex-System-Card-02.pdf) |
 | Claude Sonnet 4.5 | Anthropic | CyberGym ($2 cost) | 28.9% | 2025.09 | [AI for Cyber Defenders](https://red.anthropic.com/2025/ai-for-cyber-defenders/) |
 | Claude Sonnet 4.5 | Anthropic | CyberGym (30 trials, no cost limit) | 66.7% vuln reproduction | 2025.09 | [AI for Cyber Defenders](https://red.anthropic.com/2025/ai-for-cyber-defenders/) |
 | Claude Sonnet 4.5 | Anthropic | CyberGym — new vuln discovery (30 trials) | 33%+ | 2025.09 | [AI for Cyber Defenders](https://red.anthropic.com/2025/ai-for-cyber-defenders/) |
+| Claude Opus 4.5 | Anthropic | CyberGym (pass@1) | 50.63% | 2025.11 | [Claude Opus 4.5 System Card](https://www.anthropic.com/claude-opus-4-5-system-card) |
 | Claude Opus 4.6 | Anthropic | CyberGym (1,507 CVEs) | 500+ zero-days found in pre-release | 2026.02 | [Claude Opus 4.6 System Card](https://anthropic.com/claude-opus-4-6-system-card) |
 
-### Cyber Range / End-to-End Attack Performance
+#### End-to-End Attack / Cyber Range
 
 | Model | Company | Benchmark | Score | Date | Source |
 |---|---|---|---|---|---|
@@ -123,11 +85,46 @@
 | GPT-5.1-Codex-Max | OpenAI | Cyber Range — Evasion | 43% | 2025.11 | [GPT-5.1-Codex-Max System Card](https://cdn.openai.com/pdf/2a7d98b1-57e5-4147-8d0e-683894d782ae/5p1_codex_max_card_03.pdf) |
 | GPT-5.3-Codex | OpenAI | Cyber Range | All except 3 scenarios | 2026.02 | [GPT-5.3-Codex System Card](https://cdn.openai.com/pdf/23eca107-a9b1-4d2c-b156-7deb4fbc697c/GPT-5-3-Codex-System-Card-02.pdf) |
 | Claude Sonnet 4.5 | Anthropic | Equifax Simulation | 2/5 trials autonomous | 2025.09 | [Claude Sonnet 4.5 System Card](https://www.anthropic.com/claude-sonnet-4-5-system-card) |
+
+#### Real-World Competitions
+
+| Model | Company | Benchmark | Score | Date | Source |
+|---|---|---|---|---|---|
 | Claude | Anthropic | PicoCTF 2025 | 297th/10,460 (top 3%), 32/41 | 2025 | [Cyber Competitions](https://red.anthropic.com/2025/cyber-competitions/) |
 | Claude | Anthropic | HackTheBox AI vs Human | 30th/161, 19/20 challenges | 2025 | [Cyber Competitions](https://red.anthropic.com/2025/cyber-competitions/) |
 | Claude | Anthropic | WRCCDC | 6th/9 teams | 2025 | [Cyber Competitions](https://red.anthropic.com/2025/cyber-competitions/) |
 
-### Cybersecurity Knowledge (MC / Knowledge Benchmarks)
+---
+
+## 3. AI4Security — Defensive Capability
+
+### Benchmark Mapping
+
+| Benchmark | OpenAI | Anthropic | Google | xAI | Description |
+|---|:---:|:---:|:---:|:---:|---|
+| **Cybersecurity Investigation (Anthropic)** | — | ✅ | — | — | 40 real-world cyber investigations blind-ranked by expert analysts |
+| **CyberSOCEval (Meta/CrowdStrike)** | — | — | — | — | SOC analyst task evaluation (not used by big 4, but notable) |
+
+### Performance Scores
+
+| Model | Company | Benchmark | Score | Date | Source |
+|---|---|---|---|---|---|
+| Claude Opus 4.6 | Anthropic | 40 cyber investigations | 38/40 best (blind-ranked) | 2026.02 | [Claude Opus 4.6 System Card](https://anthropic.com/claude-opus-4-6-system-card) |
+
+---
+
+## 4. AI4Security — Cyber Knowledge
+
+### Benchmark Mapping
+
+| Benchmark | OpenAI | Anthropic | Google | xAI | Description |
+|---|:---:|:---:|:---:|:---:|---|
+| **WMDP-Cyber** | — | — | — | ✅ | Cyber killchain MC questions |
+| **MC Cybersecurity Knowledge** | ✅ | — | — | — | OpenAI internal MC eval |
+| **CTI-MCQ** | — | — | ✅ | — | Threat intelligence knowledge (from [CTI-Bench](https://github.com/xashru/cti-bench), used by Sec-Gemini) |
+| **CTI-RCM** | — | — | ✅ | — | Root cause → CWE mapping (from [CTI-Bench](https://github.com/xashru/cti-bench), used by Sec-Gemini) |
+
+### Performance Scores
 
 | Model | Company | Benchmark | Score | Date | Source |
 |---|---|---|---|---|---|
@@ -138,7 +135,22 @@
 | Sec-Gemini v1 | Google | CTI-MCQ | +11% over competitors | 2025.04 | [Sec-Gemini Blog](https://security.googleblog.com/2025/04/google-launches-sec-gemini-v1-new.html) |
 | Sec-Gemini v1 | Google | CTI-RCM | +10.5% over competitors | 2025.04 | [Sec-Gemini Blog](https://security.googleblog.com/2025/04/google-launches-sec-gemini-v1-new.html) |
 
-### Security OF AI — Prompt Injection / Robustness
+---
+
+## 5. Security4AI — Model Robustness
+
+### Benchmark Mapping
+
+| Benchmark | OpenAI | Anthropic | Google | xAI | Description |
+|---|:---:|:---:|:---:|:---:|---|
+| **Prompt Injection Eval** | ✅ | ✅ | ✅ | — | Model robustness to prompt injection attacks |
+| **TAP Attack Success Rate** | — | — | ✅ | — | Tree of Attacks with Pruning (99.8% → 53.6%) |
+| **AgentDojo** | — | — | — | ✅ | Prompt injection in agentic settings |
+| **Jailbreak Robustness** | ✅ | ✅ | — | — | Universal jailbreak resistance testing |
+| **Automated Red Teaming (ART)** | — | — | ✅ | — | Continuous adversarial evaluation framework |
+| **Expert Red Teaming** | ✅ | ✅ | ✅ | — | External experts adversarially testing models |
+
+### Performance Scores
 
 | Model | Company | Benchmark | Score | Date | Source |
 |---|---|---|---|---|---|
@@ -149,11 +161,31 @@
 | Claude Sonnet 4.6 | Anthropic | Prompt Injection (browser) | <0.3% attack success | 2026.02 | [Claude Sonnet 4.6 System Card](https://anthropic.com/claude-sonnet-4-6-system-card) |
 | Grok 4 Fast | xAI | AgentDojo (attack success rate) | 0–3% | 2025.09 | [Grok 4 Fast Model Card](https://data.x.ai/2025-09-19-grok-4-fast-model-card.pdf) |
 
-### Security FROM AI — Misuse / Behavioral
+---
+
+## 6. Security4AI — Misuse Risk & Alignment
+
+### Benchmark Mapping
+
+| Benchmark | OpenAI | Anthropic | Google | xAI | Description |
+|---|:---:|:---:|:---:|:---:|---|
+| **AgentHarm** | — | — | — | ✅ | Malicious agentic task completion (fraud, cybercrime) |
+| **Malware Benchmark** | ✅ | — | — | — | Synthetic malware-related task eval (Codex) |
+| **Harmful Request Refusal** | ✅ | ✅ | ✅ | ✅ | Refusal rate on violative/harmful prompts |
+| **Input/Output Filters** | — | — | — | ✅ | False negative rates for restricted content |
+| **Zero-day Discovery Eval** | — | ✅ | — | — | Model auditing open-source code for novel vulns |
+| **MASK** | — | — | — | ✅ | Deception measurement under pressure |
+| **MakeMeSay** | — | — | — | ✅ | Persuasion / manipulation eval |
+| **Sycophancy Eval** | — | — | — | ✅ | Ignoring own judgment for user agreement |
+| **Stealth Eval** | — | — | ✅ | — | Ability to circumvent oversight |
+| **Situational Awareness** | — | — | ✅ | — | Self/environment reasoning |
+| **Sabotage Risk** | — | ✅ | — | — | 9 sabotage pathways (METR-reviewed) |
+
+### Performance Scores
 
 | Model | Company | Benchmark | Score | Date | Source |
 |---|---|---|---|---|---|
-| Grok 4 | xAI | AgentHarm (malicious task completion) | — | 2025.08 | [Grok 4 Model Card](https://data.x.ai/2025-08-20-grok-4-model-card.pdf) |
+| Grok 4 | xAI | AgentHarm (malicious task completion) | Not separately reported | 2025.08 | [Grok 4 Model Card](https://data.x.ai/2025-08-20-grok-4-model-card.pdf) |
 | Grok 4 Fast | xAI | AgentHarm | 8–10% | 2025.09 | [Grok 4 Fast Model Card](https://data.x.ai/2025-09-19-grok-4-fast-model-card.pdf) |
 | Grok 4.1 | xAI | AgentHarm (agentic) | <14% | 2025.11 | [Grok 4.1 Model Card](https://data.x.ai/2025-11-17-grok-4-1-model-card.pdf) |
 | Grok 4 | xAI | MASK (deception) | 0.43 | 2025.08 | [Grok 4 Model Card](https://data.x.ai/2025-08-20-grok-4-model-card.pdf) |
@@ -164,7 +196,7 @@
 
 ---
 
-## 3. Benchmark Overlap Matrix (Shared vs Proprietary)
+## 7. Benchmark Overlap Summary
 
 | Status | Benchmarks |
 |---|---|
@@ -186,7 +218,7 @@ This makes **direct cross-company comparison nearly impossible** — which is ex
 
 ---
 
-## 4. Documentation Maturity Comparison
+## 8. Documentation Maturity
 
 | | OpenAI | Anthropic | Google | xAI |
 |---|---|---|---|---|
@@ -199,7 +231,7 @@ This makes **direct cross-company comparison nearly impossible** — which is ex
 
 ---
 
-## 5. Timeline: Cyber Risk Level Progression (All Companies)
+## 9. Timeline
 
 | Date | OpenAI | Anthropic | Google | xAI |
 |---|---|---|---|---|
@@ -219,7 +251,7 @@ This makes **direct cross-company comparison nearly impossible** — which is ex
 
 ---
 
-## 6. Sources
+## 10. Sources
 
 ### OpenAI
 - [Preparedness Framework v2](https://cdn.openai.com/pdf/18a02b5d-6b67-4cec-ab64-68cdfbddebcd/preparedness-framework-v2.pdf)
@@ -242,6 +274,7 @@ This makes **direct cross-company comparison nearly impossible** — which is ex
 - [Claude 3.7 Sonnet System Card](https://anthropic.com/claude-3-7-sonnet-system-card)
 - [Claude Opus 4 System Card](https://www.anthropic.com/claude-4-system-card)
 - [Claude Sonnet 4.5 System Card](https://www.anthropic.com/claude-sonnet-4-5-system-card)
+- [Claude Opus 4.5 System Card](https://www.anthropic.com/claude-opus-4-5-system-card)
 - [Claude Opus 4.6 System Card](https://anthropic.com/claude-opus-4-6-system-card)
 - [ASL-3 Deployment Safeguards](https://www.anthropic.com/asl3-deployment-safeguards)
 - [Cyber Competitions](https://red.anthropic.com/2025/cyber-competitions/)
