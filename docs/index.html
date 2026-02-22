@@ -1,0 +1,1181 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Awesome AI Cybersecurity</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#x1F6E1;</text></svg>">
+</head>
+<body>
+
+<!-- Mobile Top Bar -->
+<div class="topbar">
+  <button class="menu-btn" onclick="toggleSidebar()" aria-label="Toggle menu">&#9776;</button>
+  <span class="topbar-title">AI Cybersecurity</span>
+  <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+    <span class="theme-icon">&#9790;</span>
+  </button>
+</div>
+<div class="overlay" onclick="toggleSidebar()"></div>
+
+<!-- Sidebar -->
+<nav class="sidebar" id="sidebar">
+  <div class="sidebar-header">
+    <h2>&#x1F6E1; Awesome AI Cybersecurity</h2>
+    <p>Curated benchmarks, agents &amp; tools</p>
+  </div>
+  <div class="sidebar-links">
+    <div class="nav-section">Overview</div>
+    <a href="#taxonomy">Taxonomy</a>
+    <a href="#glossary">Glossary</a>
+
+    <div class="nav-section">Leaderboard</div>
+    <a href="#leaderboard">Model Leaderboard</a>
+    <a href="#leaderboard-model-provider" class="nav-sub">Model Provider Reported</a>
+    <a href="#leaderboard-benchmark-provider" class="nav-sub">Benchmark Provider Reported</a>
+    <a href="#leaderboard-earlier" class="nav-sub">Earlier Models</a>
+
+    <div class="nav-section">Analysis</div>
+    <a href="#risk-frameworks">Risk Frameworks</a>
+    <a href="#benchmark-mapping">Benchmark Mapping</a>
+    <a href="#performance-numbers">Performance Numbers</a>
+
+    <div class="nav-section">Resources</div>
+    <a href="#benchmarks">Benchmarks</a>
+    <a href="#agents">Agents</a>
+    <a href="#tools">Tools</a>
+    <a href="#vendor-docs">Vendor Docs</a>
+  </div>
+  <div class="sidebar-footer">
+    <a class="gh-link" href="https://github.com/ugonfor/awesome-ai-cybersecurity" target="_blank" rel="noopener">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+      GitHub
+    </a>
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+      <span class="theme-icon">&#9790;</span> Theme
+    </button>
+  </div>
+</nav>
+
+<!-- Main Content -->
+<div class="page-wrapper">
+<main class="main-content">
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="top">
+  <h1><span>Awesome AI Cybersecurity</span></h1>
+  <p class="subtitle">Curated AI cybersecurity benchmarks, agents &amp; tools &mdash; organized by Security OF / BY / FROM AI.<br>
+  The AI cybersecurity space is fragmented: OpenAI, Anthropic, Google, and xAI each use different benchmarks, and terms like &ldquo;red team,&rdquo; &ldquo;safety,&rdquo; and &ldquo;security&rdquo; are used inconsistently. This site cuts through the confusion with a clear taxonomy and comprehensive cross-comparison.</p>
+</section>
+
+<hr class="section-divider">
+
+<!-- ===== TAXONOMY ===== -->
+<section id="taxonomy">
+  <h2>Taxonomy</h2>
+  <h3>Axis 1: Whose security?</h3>
+  <div class="taxonomy-grid">
+    <div class="taxonomy-card">
+      <h4>Security OF AI</h4>
+      <p class="desc">Protecting the AI model itself</p>
+      <p class="example">Jailbreak defense, prompt injection robustness</p>
+    </div>
+    <div class="taxonomy-card">
+      <h4>Security BY AI</h4>
+      <p class="desc">AI performing cybersecurity tasks</p>
+      <p class="example">CTF solving, vulnerability analysis, SOC automation</p>
+    </div>
+    <div class="taxonomy-card">
+      <h4>Security FROM AI</h4>
+      <p class="desc">Assessing risks posed by AI</p>
+      <p class="example">Malware generation capability, exploit writing risk</p>
+    </div>
+  </div>
+
+  <h3>Axis 2: Offensive vs Defensive</h3>
+  <div class="table-wrapper">
+    <table>
+      <thead><tr><th>Category</th><th>Meaning</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Offensive (Red Team)</strong></td><td>Attack simulation, vulnerability discovery</td></tr>
+        <tr><td><strong>Defensive (Blue Team)</strong></td><td>Detection, analysis, incident response</td></tr>
+        <tr><td><strong>Evaluation</strong></td><td>Pure capability measurement</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ===== GLOSSARY ===== -->
+<section id="glossary">
+  <h3>Key Terms</h3>
+  <div class="terms-grid">
+    <div class="term"><strong>pass@k</strong><span>Success rate with k attempts. pass@1 = first try; pass@30 = at least 1 in 30. Higher k inflates scores.</span></div>
+    <div class="term"><strong>CTF</strong><span>Capture The Flag &mdash; competitive cybersecurity challenges (web, RE, crypto, pwn).</span></div>
+    <div class="term"><strong>ASL</strong><span>AI Safety Level (Anthropic). ASL-3 = model can assist expert exploit development.</span></div>
+    <div class="term"><strong>CCL</strong><span>Critical Capability Level (Google). Cyber Uplift L1 = 10x cost reduction for attacks.</span></div>
+    <div class="term"><strong>HIGH</strong><span>OpenAI risk level. Can automate end-to-end ops against hardened targets or discover zero-days.</span></div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ===== LEADERBOARD ===== -->
+<section id="leaderboard">
+  <h2>Model Cyber Capability Leaderboard</h2>
+
+  <!-- 1) Model Provider Reported -->
+  <h3 id="leaderboard-model-provider">1) Model Provider Reported</h3>
+
+  <div class="callout callout-warning">
+    <strong>Important caveats:</strong>
+    <ul>
+      <li><strong>Cross-company comparison is not meaningful.</strong> Each company uses different benchmarks, agent setups, and evaluation protocols.</li>
+      <li><strong>pass@k varies.</strong> Cybench scores use different thresholds per model (e.g., Sonnet 4.5 = pass@10, Opus 4.5 = pass@1, Grok = unguided).</li>
+      <li><strong>&ldquo;CTF (Pro)&rdquo; is NOT a shared benchmark.</strong> Each company has its own proprietary CTF set.</li>
+    </ul>
+  </div>
+
+  <div class="table-wrapper sticky-2col scrollable">
+    <table>
+      <thead>
+        <tr>
+          <th></th>
+          <th>Model</th>
+          <th>Agent Setup</th>
+          <th>Date</th>
+          <th><a href="https://cybench.github.io/" target="_blank" rel="noopener">CTF (Pro)</a></th>
+          <th><a href="https://cybench.github.io/" target="_blank" rel="noopener">Cybench</a></th>
+          <th>CVE-Bench</th>
+          <th>Cyber Range</th>
+          <th><a href="https://red.anthropic.com/2025/ai-for-cyber-defenders/" target="_blank" rel="noopener">CyberGym</a></th>
+          <th><a href="https://www.wmdp.ai/" target="_blank" rel="noopener">WMDP-Cyber</a></th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- OpenAI -->
+        <tr class="company-group">
+          <td rowspan="4"><span class="company-label company-openai">OpenAI</span></td>
+          <td><strong>GPT-5.3-Codex</strong></td>
+          <td>Codex CLI + Linux</td>
+          <td>2026.02</td>
+          <td class="score-high"><a href="https://cdn.openai.com/pdf/23eca107-a9b1-4d2c-b156-7deb4fbc697c/GPT-5-3-Codex-System-Card-02.pdf" target="_blank" rel="noopener">All passed</a></td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-high"><a href="https://cdn.openai.com/pdf/23eca107-a9b1-4d2c-b156-7deb4fbc697c/GPT-5-3-Codex-System-Card-02.pdf" target="_blank" rel="noopener">90%</a></td>
+          <td class="score-high"><a href="https://cdn.openai.com/pdf/23eca107-a9b1-4d2c-b156-7deb4fbc697c/GPT-5-3-Codex-System-Card-02.pdf" target="_blank" rel="noopener">80%</a></td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-na">&mdash;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>GPT-5.2-Codex</td>
+          <td>Codex CLI + Linux</td>
+          <td>2025.12</td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-high"><a href="https://cdn.openai.com/pdf/ac7c37ae-7f4c-4442-b741-2eabdeaf77e0/oai_5_2_Codex.pdf" target="_blank" rel="noopener">87%</a></td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-na">&mdash;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>GPT-5.1-Codex-Max</td>
+          <td>Codex CLI + Linux</td>
+          <td>2025.11</td>
+          <td class="score-high"><a href="https://cdn.openai.com/pdf/2a7d98b1-57e5-4147-8d0e-683894d782ae/5p1_codex_max_card_03.pdf" target="_blank" rel="noopener">~76%</a></td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-na">&mdash;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>GPT-5</td>
+          <td>Linux + tool harness</td>
+          <td>2025.08</td>
+          <td class="score-med"><a href="https://cdn.openai.com/gpt-5-system-card.pdf" target="_blank" rel="noopener">~27%</a></td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-na">&mdash;</td>
+        </tr>
+        <!-- Anthropic -->
+        <tr class="company-group">
+          <td rowspan="3"><span class="company-label company-anthropic">Anthropic</span></td>
+          <td><strong>Claude Opus 4.6</strong></td>
+          <td>Terminal Tool + Kali</td>
+          <td>2026.02</td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-high"><a href="https://anthropic.com/claude-opus-4-6-system-card" target="_blank" rel="noopener">93% p@1</a></td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-high"><a href="https://anthropic.com/claude-opus-4-6-system-card" target="_blank" rel="noopener">66.6% p@1</a></td>
+          <td class="score-na">&mdash;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Claude Opus 4.5</td>
+          <td>Terminal Tool + Kali</td>
+          <td>2025.11</td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-high"><a href="https://www.anthropic.com/claude-opus-4-5-system-card" target="_blank" rel="noopener">82% p@1</a></td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-med"><a href="https://www.anthropic.com/claude-opus-4-5-system-card" target="_blank" rel="noopener">50.6% p@1</a></td>
+          <td class="score-na">&mdash;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Claude Sonnet 4.5</td>
+          <td>Terminal Tool + Kali</td>
+          <td>2025.09</td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-high"><a href="https://www.anthropic.com/claude-sonnet-4-5-system-card" target="_blank" rel="noopener">76.5% p@10</a></td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-med"><a href="https://red.anthropic.com/2025/ai-for-cyber-defenders/" target="_blank" rel="noopener">28.9% p@1</a></td>
+          <td class="score-na">&mdash;</td>
+        </tr>
+        <!-- Google -->
+        <tr class="company-group">
+          <td rowspan="2"><span class="company-label company-google">Google</span></td>
+          <td><strong>Gemini 3 Pro</strong></td>
+          <td>Custom controller</td>
+          <td>2025.11</td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-na">&mdash;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Gemini 2.5 DT</td>
+          <td>Deep Think + Bash/PS</td>
+          <td>2025.08</td>
+          <td class="score-high"><a href="https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Deep-Think-Model-Card.pdf" target="_blank" rel="noopener">13/13 GDM</a></td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-na">&mdash;</td>
+        </tr>
+        <!-- xAI -->
+        <tr class="company-group">
+          <td rowspan="3"><span class="company-label company-xai">xAI</span></td>
+          <td><strong>Grok 4.1</strong></td>
+          <td>UK AISI Inspect</td>
+          <td>2025.11</td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-med"><a href="https://data.x.ai/2025-11-17-grok-4-1-model-card.pdf" target="_blank" rel="noopener">39%</a></td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-high"><a href="https://data.x.ai/2025-11-17-grok-4-1-model-card.pdf" target="_blank" rel="noopener">84%</a></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Grok 4 Fast</td>
+          <td>UK AISI Inspect</td>
+          <td>2025.09</td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-med"><a href="https://data.x.ai/2025-09-19-grok-4-fast-model-card.pdf" target="_blank" rel="noopener">30%</a></td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-high"><a href="https://data.x.ai/2025-09-19-grok-4-fast-model-card.pdf" target="_blank" rel="noopener">81.4%</a></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Grok 4</td>
+          <td>UK AISI Inspect</td>
+          <td>2025.08</td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-med"><a href="https://data.x.ai/2025-08-20-grok-4-model-card.pdf" target="_blank" rel="noopener">43%</a></td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-high"><a href="https://data.x.ai/2025-08-20-grok-4-model-card.pdf" target="_blank" rel="noopener">79%</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- 2) Benchmark Provider Reported -->
+  <h3 id="leaderboard-benchmark-provider">2) Benchmark Provider Reported</h3>
+
+  <div class="callout callout-info">
+    Scores from external evaluators, benchmark developers, or competition organizers &mdash; NOT self-reported by the model company.
+  </div>
+
+  <div class="table-wrapper sticky-col">
+    <table>
+      <thead>
+        <tr><th>Model</th><th>Evaluator</th><th>Benchmark</th><th>Score</th><th>Source</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>GPT-5.3-Codex</strong></td>
+          <td><a href="https://irregular.com" target="_blank" rel="noopener">Irregular (Pattern Labs)</a></td>
+          <td>Network Attack / Vuln / Evasion</td>
+          <td class="score-high">86% / 72% / 53%</td>
+          <td><a href="https://cdn.openai.com/pdf/23eca107-a9b1-4d2c-b156-7deb4fbc697c/GPT-5-3-Codex-System-Card-02.pdf" target="_blank" rel="noopener">System Card</a></td>
+        </tr>
+        <tr>
+          <td><strong>GPT-5.1-Codex-Max</strong></td>
+          <td><a href="https://irregular.com" target="_blank" rel="noopener">Irregular (Pattern Labs)</a></td>
+          <td>Network Attack / Vuln / Evasion</td>
+          <td class="score-med">37% / 41% / 43%</td>
+          <td><a href="https://cdn.openai.com/pdf/2a7d98b1-57e5-4147-8d0e-683894d782ae/5p1_codex_max_card_03.pdf" target="_blank" rel="noopener">System Card</a></td>
+        </tr>
+        <tr>
+          <td><strong>Grok 4</strong></td>
+          <td><a href="https://www.aisi.gov.uk/" target="_blank" rel="noopener">UK AISI</a></td>
+          <td>Realistic cyber (third-party)</td>
+          <td class="score-low">Below human professional</td>
+          <td><a href="https://data.x.ai/2025-08-20-grok-4-model-card.pdf" target="_blank" rel="noopener">Model Card</a></td>
+        </tr>
+        <tr>
+          <td><strong>Claude</strong></td>
+          <td><a href="https://picoctf.org/" target="_blank" rel="noopener">PicoCTF</a> (Competition)</td>
+          <td>PicoCTF 2025</td>
+          <td class="score-high">Top 3% (297th/10,460), 32/41</td>
+          <td><a href="https://red.anthropic.com/2025/cyber-competitions/" target="_blank" rel="noopener">Cyber Competitions</a></td>
+        </tr>
+        <tr>
+          <td><strong>Claude</strong></td>
+          <td><a href="https://www.hackthebox.com/" target="_blank" rel="noopener">HackTheBox</a> (Competition)</td>
+          <td>HTB AI vs Human</td>
+          <td class="score-high">30th/161, 4th/8 AI, 19/20</td>
+          <td><a href="https://red.anthropic.com/2025/cyber-competitions/" target="_blank" rel="noopener">Cyber Competitions</a></td>
+        </tr>
+        <tr>
+          <td><strong>Claude</strong></td>
+          <td><a href="https://wrccdc.org/" target="_blank" rel="noopener">WRCCDC</a> (Competition)</td>
+          <td>WRCCDC Regional</td>
+          <td class="score-med">6th/9 teams</td>
+          <td><a href="https://red.anthropic.com/2025/cyber-competitions/" target="_blank" rel="noopener">Cyber Competitions</a></td>
+        </tr>
+        <tr>
+          <td><strong>Claude</strong></td>
+          <td><a href="https://plaidctf.com/" target="_blank" rel="noopener">PlaidCTF</a> (Competition)</td>
+          <td>PlaidCTF 2025</td>
+          <td class="score-low">0 challenges solved</td>
+          <td><a href="https://red.anthropic.com/2025/cyber-competitions/" target="_blank" rel="noopener">Cyber Competitions</a></td>
+        </tr>
+        <tr>
+          <td><strong>Claude</strong></td>
+          <td><a href="https://defcon.org/" target="_blank" rel="noopener">DEF CON CTF</a> (Competition)</td>
+          <td>DEF CON CTF Qualifier</td>
+          <td class="score-low">0 challenges solved</td>
+          <td><a href="https://red.anthropic.com/2025/cyber-competitions/" target="_blank" rel="noopener">Cyber Competitions</a></td>
+        </tr>
+        <tr>
+          <td><strong>Claude Opus 4.6</strong></td>
+          <td><a href="https://www.nist.gov/artificial-intelligence/us-ai-safety-institute" target="_blank" rel="noopener">US AISI</a></td>
+          <td>OSS vulnerability audit</td>
+          <td class="score-high">Found novel bugs (closed + open source)</td>
+          <td><a href="https://anthropic.com/claude-opus-4-6-system-card" target="_blank" rel="noopener">System Card</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Earlier Models -->
+  <details id="leaderboard-earlier">
+    <summary>Earlier Models (before 2025.08) &mdash; self-reported</summary>
+    <div class="details-content">
+      <div class="table-wrapper sticky-2col">
+        <table>
+          <thead>
+            <tr><th></th><th>Model</th><th>Agent Setup</th><th>Date</th><th>CTF (Pro)</th><th>Cybench</th><th>Key Result</th></tr>
+          </thead>
+          <tbody>
+            <tr class="company-group">
+              <td rowspan="3"><span class="company-label company-openai">OpenAI</span></td>
+              <td><strong>o3</strong></td>
+              <td>Linux + tool harness</td>
+              <td>2025.04</td>
+              <td><a href="https://cdn.openai.com/pdf/2221c875-02dc-4789-800b-e7758f3722c1/o3-and-o4-mini-system-card.pdf" target="_blank" rel="noopener">59%</a></td>
+              <td class="score-na">&mdash;</td>
+              <td class="score-na">&mdash;</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>o4-mini</td>
+              <td>Linux + tool harness</td>
+              <td>2025.04</td>
+              <td><a href="https://cdn.openai.com/pdf/2221c875-02dc-4789-800b-e7758f3722c1/o3-and-o4-mini-system-card.pdf" target="_blank" rel="noopener">41%</a></td>
+              <td class="score-na">&mdash;</td>
+              <td class="score-na">&mdash;</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Deep Research</td>
+              <td>o3 + web browsing</td>
+              <td>2025.02</td>
+              <td><a href="https://cdn.openai.com/deep-research-system-card.pdf" target="_blank" rel="noopener">70%</a></td>
+              <td class="score-na">&mdash;</td>
+              <td>First Medium risk</td>
+            </tr>
+            <tr class="company-group">
+              <td rowspan="3"><span class="company-label company-anthropic">Anthropic</span></td>
+              <td><strong>Claude Opus 4</strong></td>
+              <td>Terminal Tool + Kali</td>
+              <td>2025.05</td>
+              <td class="score-na">&mdash;</td>
+              <td><a href="https://www.anthropic.com/claude-4-system-card" target="_blank" rel="noopener">22/39</a></td>
+              <td>First ASL-3</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Claude Sonnet 4</td>
+              <td>Terminal Tool + Kali</td>
+              <td>2025.05</td>
+              <td class="score-na">&mdash;</td>
+              <td><a href="https://www.anthropic.com/claude-4-system-card" target="_blank" rel="noopener">22/39</a></td>
+              <td class="score-na">&mdash;</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Claude 3.7 Sonnet</td>
+              <td>Terminal Tool + Kali</td>
+              <td>2025.02</td>
+              <td class="score-na">&mdash;</td>
+              <td><a href="https://anthropic.com/claude-3-7-sonnet-system-card" target="_blank" rel="noopener">35.9%</a></td>
+              <td class="score-na">&mdash;</td>
+            </tr>
+            <tr class="company-group">
+              <td rowspan="2"><span class="company-label company-google">Google</span></td>
+              <td><strong>Gemini 2.5 Pro</strong></td>
+              <td>Custom controller</td>
+              <td>2025.06</td>
+              <td><a href="https://modelcards.withgoogle.com/assets/documents/gemini-2.5-pro.pdf" target="_blank" rel="noopener">73-76/76 ICF</a></td>
+              <td class="score-na">&mdash;</td>
+              <td>ICF saturated</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Gemini 2.0 Flash</td>
+              <td>Custom controller</td>
+              <td>2025.04</td>
+              <td class="score-na">&mdash;</td>
+              <td class="score-na">&mdash;</td>
+              <td><a href="https://modelcards.withgoogle.com/assets/documents/gemini-2-flash.pdf" target="_blank" rel="noopener">11/50 PatternLabs</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </details>
+</section>
+
+<hr class="section-divider">
+
+<!-- ===== RISK FRAMEWORKS ===== -->
+<section id="risk-frameworks">
+  <h2>Risk Frameworks</h2>
+  <p>Each company has its own framework for evaluating cybersecurity risk:</p>
+  <div class="table-wrapper sticky-col">
+    <table>
+      <thead>
+        <tr><th></th><th>OpenAI</th><th>Anthropic</th><th>Google</th><th>xAI</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Framework</strong></td>
+          <td><a href="https://cdn.openai.com/pdf/18a02b5d-6b67-4cec-ab64-68cdfbddebcd/preparedness-framework-v2.pdf" target="_blank" rel="noopener">Preparedness Framework v2</a></td>
+          <td><a href="https://www.anthropic.com/responsible-scaling-policy" target="_blank" rel="noopener">RSP v2.2</a></td>
+          <td><a href="https://storage.googleapis.com/deepmind-media/DeepMind.com/Blog/strengthening-our-frontier-safety-framework/frontier-safety-framework_3.pdf" target="_blank" rel="noopener">FSF v3.0</a></td>
+          <td><a href="https://data.x.ai/2025-08-20-xai-risk-management-framework.pdf" target="_blank" rel="noopener">Risk Management Framework</a></td>
+        </tr>
+        <tr>
+          <td><strong>Risk Levels</strong></td>
+          <td>Low &rarr; Medium &rarr; High &rarr; Critical</td>
+          <td>ASL-1 &rarr; ASL-2 &rarr; ASL-3 &rarr; ASL-4</td>
+          <td>CCL alert &rarr; CCL reached</td>
+          <td>Abuse / Propensities / Dual-use</td>
+        </tr>
+        <tr>
+          <td><strong>Cyber Threshold</strong></td>
+          <td>High: automate end-to-end ops OR zero-day discovery</td>
+          <td>ASL-3: &ge;1/5 success in &ge;2/6 expert exploit dev classes</td>
+          <td>Cyber Uplift L1: &ge;10x cost reduction</td>
+          <td>Not explicitly defined</td>
+        </tr>
+        <tr>
+          <td><strong>First Crossed</strong></td>
+          <td><strong>GPT-5.3-Codex</strong> (Feb 2026) &mdash; HIGH (precautionary)</td>
+          <td><strong>Claude Opus 4</strong> (May 2025) &mdash; ASL-3</td>
+          <td>None (alert only)</td>
+          <td>None</td>
+        </tr>
+        <tr>
+          <td><strong>Third-party</strong></td>
+          <td>US/UK AISI</td>
+          <td>US/UK AISI, METR</td>
+          <td>&mdash;</td>
+          <td>UK AISI</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ===== BENCHMARK MAPPING ===== -->
+<section id="benchmark-mapping">
+  <h2>Benchmark Mapping</h2>
+
+  <div class="callout callout-info">
+    <strong>Key Insight:</strong> There is virtually no overlap in quantitative benchmarks across companies.
+  </div>
+
+  <details>
+    <summary>Security BY AI &mdash; Offensive (Cyber Capability)</summary>
+    <div class="details-content">
+      <div class="table-wrapper sticky-col">
+        <table>
+          <thead><tr><th>Benchmark</th><th>OpenAI</th><th>Anthropic</th><th>Google</th><th>xAI</th><th>Description</th></tr></thead>
+          <tbody>
+            <tr><td><strong>CTF (internal/custom)</strong></td><td>&#10003;</td><td>&#10003;</td><td>&#10003;</td><td>&mdash;</td><td>Each company&rsquo;s proprietary CTF challenge sets</td></tr>
+            <tr><td><strong><a href="https://cybench.github.io/" target="_blank" rel="noopener">Cybench</a></strong></td><td>&mdash;</td><td>&#10003;</td><td>&mdash;</td><td>&#10003;</td><td>40 professional CTF tasks (xAI spells &ldquo;CyBench&rdquo;)</td></tr>
+            <tr><td><strong><a href="https://red.anthropic.com/2025/ai-for-cyber-defenders/" target="_blank" rel="noopener">CyberGym</a></strong></td><td>&mdash;</td><td>&#10003;</td><td>&mdash;</td><td>&mdash;</td><td>Real-world vuln detection in open-source software</td></tr>
+            <tr><td><strong>CVE-Bench</strong></td><td>&#10003;</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td><td>Exploit real-world web app CVEs (pass@1)</td></tr>
+            <tr><td><strong>OpenAI Cyber Range</strong></td><td>&#10003;</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td><td>15 multi-machine network attack scenarios (internal)</td></tr>
+            <tr><td><strong>CMU Cyber Ranges / Incalmo</strong></td><td>&mdash;</td><td>&#10003;</td><td>&mdash;</td><td>&mdash;</td><td>~50-host network sims + Equifax breach sim</td></tr>
+            <tr><td><strong><a href="https://arxiv.org/abs/2306.14898" target="_blank" rel="noopener">InterCode-CTF</a></strong></td><td>&mdash;</td><td>&mdash;</td><td>&#10003;</td><td>&mdash;</td><td>76 easy CTF challenges (largely saturated)</td></tr>
+            <tr><td><strong><a href="https://github.com/google-deepmind/dangerous-capability-evaluations" target="_blank" rel="noopener">In-house CTF (GDM)</a></strong></td><td>&mdash;</td><td>&mdash;</td><td>&#10003;</td><td>&mdash;</td><td>13 medium challenges (open-sourced via UK AISI Inspect)</td></tr>
+            <tr><td><strong>Hack the Box</strong></td><td>&mdash;</td><td>&#10003;</td><td>&#10003;</td><td>&mdash;</td><td>Professional-level CTF challenges</td></tr>
+            <tr><td><strong>Key Skills Benchmark</strong></td><td>&mdash;</td><td>&mdash;</td><td>&#10003;</td><td>&mdash;</td><td>Recon, tool dev, OPSEC (MITRE ATT&amp;CK aligned)</td></tr>
+            <tr><td><strong>Pattern Labs External CTFs</strong></td><td>&mdash;</td><td>&mdash;</td><td>&#10003;</td><td>&mdash;</td><td>50 non-public challenges (anti-contamination)</td></tr>
+            <tr><td><strong>PicoCTF / HTB / WRCCDC</strong></td><td>&mdash;</td><td>&#10003;</td><td>&mdash;</td><td>&mdash;</td><td>Real competitive CTF events</td></tr>
+            <tr><td><strong>Equifax Simulation</strong></td><td>&mdash;</td><td>&#10003;</td><td>&mdash;</td><td>&mdash;</td><td>High-fidelity breach simulation</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </details>
+
+  <details>
+    <summary>Security BY AI &mdash; Knowledge</summary>
+    <div class="details-content">
+      <div class="table-wrapper sticky-col">
+        <table>
+          <thead><tr><th>Benchmark</th><th>OpenAI</th><th>Anthropic</th><th>Google</th><th>xAI</th><th>Description</th></tr></thead>
+          <tbody>
+            <tr><td><strong><a href="https://www.wmdp.ai/" target="_blank" rel="noopener">WMDP-Cyber</a></strong></td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td><td>&#10003;</td><td>Cyber killchain MC questions</td></tr>
+            <tr><td><strong>MC Cybersecurity Knowledge</strong></td><td>&#10003;</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td><td>OpenAI internal MC eval</td></tr>
+            <tr><td><strong>CTI-MCQ</strong></td><td>&mdash;</td><td>&mdash;</td><td>&#10003;</td><td>&mdash;</td><td>Threat intelligence knowledge (Sec-Gemini)</td></tr>
+            <tr><td><strong>CTI-RCM</strong></td><td>&mdash;</td><td>&mdash;</td><td>&#10003;</td><td>&mdash;</td><td>Root cause &rarr; CWE mapping (Sec-Gemini)</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </details>
+
+  <details>
+    <summary>Security OF AI &mdash; Jailbreak / Prompt Injection / Robustness</summary>
+    <div class="details-content">
+      <div class="table-wrapper sticky-col">
+        <table>
+          <thead><tr><th>Benchmark</th><th>OpenAI</th><th>Anthropic</th><th>Google</th><th>xAI</th><th>Description</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Prompt Injection Eval</strong></td><td>&#10003;</td><td>&#10003;</td><td>&#10003;</td><td>&mdash;</td><td>Robustness to prompt injection attacks</td></tr>
+            <tr><td><strong><a href="https://arxiv.org/abs/2312.02119" target="_blank" rel="noopener">TAP</a> Attack Success Rate</strong></td><td>&mdash;</td><td>&mdash;</td><td>&#10003;</td><td>&mdash;</td><td>Tree of Attacks with Pruning</td></tr>
+            <tr><td><strong><a href="https://arxiv.org/abs/2406.13352" target="_blank" rel="noopener">AgentDojo</a></strong></td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td><td>&#10003;</td><td>Prompt injection in agentic settings</td></tr>
+            <tr><td><strong>Jailbreak Robustness</strong></td><td>&#10003;</td><td>&#10003;</td><td>&mdash;</td><td>&mdash;</td><td>Universal jailbreak resistance testing</td></tr>
+            <tr><td><strong>Automated Red Teaming (ART)</strong></td><td>&mdash;</td><td>&mdash;</td><td>&#10003;</td><td>&mdash;</td><td>Continuous adversarial evaluation framework</td></tr>
+            <tr><td><strong>Expert Red Teaming</strong></td><td>&#10003;</td><td>&#10003;</td><td>&#10003;</td><td>&mdash;</td><td>External experts adversarially testing models</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </details>
+
+  <details>
+    <summary>Security FROM AI &mdash; Misuse Risk / Dual-use</summary>
+    <div class="details-content">
+      <div class="table-wrapper sticky-col">
+        <table>
+          <thead><tr><th>Benchmark</th><th>OpenAI</th><th>Anthropic</th><th>Google</th><th>xAI</th><th>Description</th></tr></thead>
+          <tbody>
+            <tr><td><strong><a href="https://arxiv.org/abs/2410.09024" target="_blank" rel="noopener">AgentHarm</a></strong></td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td><td>&#10003;</td><td>Malicious agentic task completion</td></tr>
+            <tr><td><strong>Malware Benchmark</strong></td><td>&#10003;</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td><td>Synthetic malware-related task eval (Codex)</td></tr>
+            <tr><td><strong>Harmful Request Refusal</strong></td><td>&#10003;</td><td>&#10003;</td><td>&#10003;</td><td>&#10003;</td><td>Refusal rate on violative/harmful prompts</td></tr>
+            <tr><td><strong>Zero-day Discovery Eval</strong></td><td>&mdash;</td><td>&#10003;</td><td>&mdash;</td><td>&mdash;</td><td>Model auditing OSS for novel vulns</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </details>
+
+  <details>
+    <summary>Security FROM AI &mdash; Behavioral / Alignment</summary>
+    <div class="details-content">
+      <div class="table-wrapper sticky-col">
+        <table>
+          <thead><tr><th>Benchmark</th><th>OpenAI</th><th>Anthropic</th><th>Google</th><th>xAI</th><th>Description</th></tr></thead>
+          <tbody>
+            <tr><td><strong><a href="https://arxiv.org/abs/2503.03750" target="_blank" rel="noopener">MASK</a></strong></td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td><td>&#10003;</td><td>Deception measurement under pressure</td></tr>
+            <tr><td><strong>MakeMeSay</strong></td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td><td>&#10003;</td><td>Persuasion / manipulation eval</td></tr>
+            <tr><td><strong>Sycophancy Eval</strong></td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td><td>&#10003;</td><td>Ignoring own judgment for user agreement</td></tr>
+            <tr><td><strong>Stealth Eval</strong></td><td>&mdash;</td><td>&mdash;</td><td>&#10003;</td><td>&mdash;</td><td>Ability to circumvent oversight</td></tr>
+            <tr><td><strong>Situational Awareness</strong></td><td>&mdash;</td><td>&mdash;</td><td>&#10003;</td><td>&mdash;</td><td>Self/environment reasoning</td></tr>
+            <tr><td><strong>Sabotage Risk</strong></td><td>&mdash;</td><td>&#10003;</td><td>&mdash;</td><td>&mdash;</td><td>9 sabotage pathways (METR-reviewed)</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </details>
+
+  <details>
+    <summary>Benchmark Overlap Summary</summary>
+    <div class="details-content">
+      <div class="table-wrapper">
+        <table>
+          <thead><tr><th>Overlap</th><th>Benchmarks</th></tr></thead>
+          <tbody>
+            <tr><td><strong>4 companies</strong></td><td>Harmful Request Refusal (each with internal version)</td></tr>
+            <tr><td><strong>3 companies</strong></td><td>Expert Red Teaming, Prompt Injection Eval</td></tr>
+            <tr><td><strong>2 companies</strong></td><td>Cybench (Anthropic + xAI), Hack the Box (Anthropic + Google), Jailbreak Robustness</td></tr>
+            <tr><td><strong>1 company only</strong></td><td>OpenAI Cyber Range, CMU Cyber Ranges/Incalmo, CVE-Bench, CyberGym, InterCode-CTF, WMDP-Cyber, AgentHarm, CTI-MCQ/RCM</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </details>
+</section>
+
+<!-- ===== PERFORMANCE NUMBERS ===== -->
+<section id="performance-numbers">
+  <h2>Reported Performance Numbers</h2>
+
+  <details>
+    <summary>CTF Performance</summary>
+    <div class="details-content">
+      <div class="table-wrapper sticky-col">
+        <table>
+          <thead><tr><th>Model</th><th>Company</th><th>Benchmark</th><th>Score</th><th>Date</th><th>Source</th></tr></thead>
+          <tbody>
+            <tr><td>GPT-4o</td><td><span class="company-label company-openai">OpenAI</span></td><td>Custom CTF (HS/Coll/Pro)</td><td>19% / 0% / 1%</td><td>2024.08</td><td><a href="https://cdn.openai.com/gpt-4o-system-card.pdf" target="_blank" rel="noopener">System Card</a></td></tr>
+            <tr><td>o1-preview</td><td><span class="company-label company-openai">OpenAI</span></td><td>Custom CTF (HS/Coll/Pro)</td><td>26.7% / 0% / 2.5%</td><td>2024.09</td><td><a href="https://cdn.openai.com/o1-system-card.pdf" target="_blank" rel="noopener">System Card</a></td></tr>
+            <tr><td>o1-mini</td><td><span class="company-label company-openai">OpenAI</span></td><td>Custom CTF (HS/Coll/Pro)</td><td>28.7% / 0% / 3.9%</td><td>2024.09</td><td><a href="https://cdn.openai.com/o1-system-card.pdf" target="_blank" rel="noopener">System Card</a></td></tr>
+            <tr><td>o1</td><td><span class="company-label company-openai">OpenAI</span></td><td>Custom CTF (HS/Coll/Pro)</td><td>46% / 13% / 13%</td><td>2024.12</td><td><a href="https://cdn.openai.com/o1-system-card-20241205.pdf" target="_blank" rel="noopener">System Card</a></td></tr>
+            <tr><td>o3-mini</td><td><span class="company-label company-openai">OpenAI</span></td><td>Custom CTF (HS/Coll)</td><td>61% / 21%</td><td>2025.01</td><td><a href="https://cdn.openai.com/o3-mini-system-card-feb10.pdf" target="_blank" rel="noopener">System Card</a></td></tr>
+            <tr><td>Deep Research (no browse)</td><td><span class="company-label company-openai">OpenAI</span></td><td>Custom CTF (HS/Coll/Pro)</td><td>82% / 55% / 47%</td><td>2025.02</td><td><a href="https://cdn.openai.com/deep-research-system-card.pdf" target="_blank" rel="noopener">System Card</a></td></tr>
+            <tr><td>Deep Research (w/ browse)</td><td><span class="company-label company-openai">OpenAI</span></td><td>Custom CTF (HS/Coll/Pro)</td><td>92% / 91% / 70%</td><td>2025.02</td><td><a href="https://cdn.openai.com/deep-research-system-card.pdf" target="_blank" rel="noopener">System Card</a></td></tr>
+            <tr><td>o3</td><td><span class="company-label company-openai">OpenAI</span></td><td>Custom CTF (HS/Coll/Pro)</td><td>89% / 68% / 59%</td><td>2025.04</td><td><a href="https://cdn.openai.com/pdf/2221c875-02dc-4789-800b-e7758f3722c1/o3-and-o4-mini-system-card.pdf" target="_blank" rel="noopener">System Card</a></td></tr>
+            <tr><td>o4-mini</td><td><span class="company-label company-openai">OpenAI</span></td><td>Custom CTF (HS/Coll/Pro)</td><td>80% / 55% / 41%</td><td>2025.04</td><td><a href="https://cdn.openai.com/pdf/2221c875-02dc-4789-800b-e7758f3722c1/o3-and-o4-mini-system-card.pdf" target="_blank" rel="noopener">System Card</a></td></tr>
+            <tr><td>GPT-5</td><td><span class="company-label company-openai">OpenAI</span></td><td>Custom CTF (Professional, pass@12)</td><td>~27%</td><td>2025.08</td><td><a href="https://cdn.openai.com/gpt-5-system-card.pdf" target="_blank" rel="noopener">System Card</a></td></tr>
+            <tr><td>GPT-5-Codex</td><td><span class="company-label company-openai">OpenAI</span></td><td>Custom CTF + CVE-Bench + Cyber Range</td><td>&ldquo;Sharp jump&rdquo;</td><td>2025.09</td><td><a href="https://cdn.openai.com/pdf/97cc5669-7a25-4e63-b15f-5fd5bdc4d149/gpt-5-codex-system-card.pdf" target="_blank" rel="noopener">Addendum</a></td></tr>
+            <tr><td>GPT-5.1-Codex-Max</td><td><span class="company-label company-openai">OpenAI</span></td><td>Custom CTF (Professional)</td><td>~76% (17/18 easy, 9/17 med, 0/6 hard)</td><td>2025.11</td><td><a href="https://cdn.openai.com/pdf/2a7d98b1-57e5-4147-8d0e-683894d782ae/5p1_codex_max_card_03.pdf" target="_blank" rel="noopener">System Card</a></td></tr>
+            <tr><td>GPT-5.3-Codex</td><td><span class="company-label company-openai">OpenAI</span></td><td>Custom CTF (Professional)</td><td class="score-high">All passed</td><td>2026.02</td><td><a href="https://cdn.openai.com/pdf/23eca107-a9b1-4d2c-b156-7deb4fbc697c/GPT-5-3-Codex-System-Card-02.pdf" target="_blank" rel="noopener">System Card</a></td></tr>
+            <tr><td>Claude 3.7 Sonnet</td><td><span class="company-label company-anthropic">Anthropic</span></td><td>Cybench (40 tasks)</td><td>35.9%</td><td>2025.02</td><td><a href="https://anthropic.com/claude-3-7-sonnet-system-card" target="_blank" rel="noopener">System Card</a></td></tr>
+            <tr><td>Claude Opus 4</td><td><span class="company-label company-anthropic">Anthropic</span></td><td>Custom CTF / Cybench (39)</td><td>11/11e, 1/2m, 0/2h / 22/39</td><td>2025.05</td><td><a href="https://www.anthropic.com/claude-4-system-card" target="_blank" rel="noopener">System Card</a></td></tr>
+            <tr><td>Claude Sonnet 4</td><td><span class="company-label company-anthropic">Anthropic</span></td><td>Custom CTF (Web) / Cybench (39)</td><td>10/11e, 1/2m, 0/2h / 22/39</td><td>2025.05</td><td><a href="https://www.anthropic.com/claude-4-system-card" target="_blank" rel="noopener">System Card</a></td></tr>
+            <tr><td>Claude Sonnet 4.5</td><td><span class="company-label company-anthropic">Anthropic</span></td><td>Cybench (37 tasks)</td><td class="score-high">76.5% p@10, &gt;80% p@30</td><td>2025.09</td><td><a href="https://www.anthropic.com/claude-sonnet-4-5-system-card" target="_blank" rel="noopener">System Card</a></td></tr>
+            <tr><td>Claude Opus 4.5</td><td><span class="company-label company-anthropic">Anthropic</span></td><td>Cybench</td><td class="score-high">82% p@1</td><td>2025.11</td><td><a href="https://www.anthropic.com/claude-opus-4-5-system-card" target="_blank" rel="noopener">System Card</a></td></tr>
+            <tr><td>Claude Opus 4.6</td><td><span class="company-label company-anthropic">Anthropic</span></td><td>Cybench (37 tasks)</td><td class="score-high">93% p@1, ~100% p@30</td><td>2026.02</td><td><a href="https://anthropic.com/claude-opus-4-6-system-card" target="_blank" rel="noopener">System Card</a></td></tr>
+            <tr><td>Gemini 2.0 Flash</td><td><span class="company-label company-google">Google</span></td><td>Pattern Labs External CTFs</td><td>11/50</td><td>2025.04</td><td><a href="https://modelcards.withgoogle.com/assets/documents/gemini-2-flash.pdf" target="_blank" rel="noopener">Model Card</a></td></tr>
+            <tr><td>Gemini 2.5 Pro</td><td><span class="company-label company-google">Google</span></td><td>InterCode-CTF</td><td>76/76 (saturated)</td><td>2025.06</td><td><a href="https://modelcards.withgoogle.com/assets/documents/gemini-2.5-pro.pdf" target="_blank" rel="noopener">Model Card</a></td></tr>
+            <tr><td>Gemini 2.5 Deep Think</td><td><span class="company-label company-google">Google</span></td><td>InterCode-CTF / In-house / HTB</td><td>73/76 / 13/13 / 3/13</td><td>2025.08</td><td><a href="https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Deep-Think-Model-Card.pdf" target="_blank" rel="noopener">Model Card</a></td></tr>
+            <tr><td>Gemini 3 Pro</td><td><span class="company-label company-google">Google</span></td><td>Key Skills v1 (Hard) / v2 (E2E)</td><td>11/12 / 0/13</td><td>2025.11</td><td><a href="https://storage.googleapis.com/deepmind-media/gemini/gemini_3_pro_fsf_report.pdf" target="_blank" rel="noopener">FSF Report</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </details>
+
+  <details>
+    <summary>CVE / Vulnerability Benchmarks</summary>
+    <div class="details-content">
+      <div class="table-wrapper sticky-col">
+        <table>
+          <thead><tr><th>Model</th><th>Company</th><th>Benchmark</th><th>Score</th><th>Date</th><th>Source</th></tr></thead>
+          <tbody>
+            <tr><td>GPT-5.3-Codex</td><td><span class="company-label company-openai">OpenAI</span></td><td>CVE-Bench (pass@1, 34/40)</td><td class="score-high">90%</td><td>2026.02</td><td><a href="https://cdn.openai.com/pdf/23eca107-a9b1-4d2c-b156-7deb4fbc697c/GPT-5-3-Codex-System-Card-02.pdf" target="_blank" rel="noopener">System Card</a></td></tr>
+            <tr><td>GPT-5.2-Codex</td><td><span class="company-label company-openai">OpenAI</span></td><td>CVE-Bench (pass@1)</td><td class="score-high">87%</td><td>2025.12</td><td><a href="https://cdn.openai.com/pdf/ac7c37ae-7f4c-4442-b741-2eabdeaf77e0/oai_5_2_Codex.pdf" target="_blank" rel="noopener">Addendum</a></td></tr>
+            <tr><td>Claude Sonnet 4.5</td><td><span class="company-label company-anthropic">Anthropic</span></td><td>CyberGym ($2 cost)</td><td>28.9%</td><td>2025.09</td><td><a href="https://red.anthropic.com/2025/ai-for-cyber-defenders/" target="_blank" rel="noopener">Frontier Red Team</a></td></tr>
+            <tr><td>Claude Sonnet 4.5</td><td><span class="company-label company-anthropic">Anthropic</span></td><td>CyberGym (30 trials)</td><td>66.7% vuln repro, 33%+ new vuln</td><td>2025.09</td><td><a href="https://red.anthropic.com/2025/ai-for-cyber-defenders/" target="_blank" rel="noopener">Frontier Red Team</a></td></tr>
+            <tr><td>Claude Opus 4.5</td><td><span class="company-label company-anthropic">Anthropic</span></td><td>CyberGym (pass@1)</td><td>50.63%</td><td>2025.11</td><td><a href="https://www.anthropic.com/claude-opus-4-5-system-card" target="_blank" rel="noopener">System Card</a></td></tr>
+            <tr><td>Claude Opus 4.6</td><td><span class="company-label company-anthropic">Anthropic</span></td><td>CyberGym (pass@1)</td><td class="score-high">66.6%</td><td>2026.02</td><td><a href="https://anthropic.com/claude-opus-4-6-system-card" target="_blank" rel="noopener">System Card</a></td></tr>
+            <tr><td>Claude Opus 4.6</td><td><span class="company-label company-anthropic">Anthropic</span></td><td>Zero-day discovery</td><td class="score-high">500+ novel vulns</td><td>2026.02</td><td><a href="https://anthropic.com/claude-opus-4-6-system-card" target="_blank" rel="noopener">System Card</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </details>
+
+  <details>
+    <summary>Cyber Range / End-to-End Attack</summary>
+    <div class="details-content">
+      <div class="table-wrapper sticky-col">
+        <table>
+          <thead><tr><th>Model</th><th>Company</th><th>Benchmark</th><th>Score</th><th>Date</th><th>Source</th></tr></thead>
+          <tbody>
+            <tr><td>GPT-5.3-Codex</td><td><span class="company-label company-openai">OpenAI</span></td><td>Cyber Range (15 scenarios)</td><td class="score-high">80% (12/15)</td><td>2026.02</td><td><a href="https://cdn.openai.com/pdf/23eca107-a9b1-4d2c-b156-7deb4fbc697c/GPT-5-3-Codex-System-Card-02.pdf" target="_blank" rel="noopener">System Card</a></td></tr>
+            <tr><td>GPT-5.3-Codex</td><td><span class="company-label company-openai">OpenAI</span></td><td>Irregular External (Net/Vuln/Evasion)</td><td>86% / 72% / 53%</td><td>2026.02</td><td><a href="https://cdn.openai.com/pdf/23eca107-a9b1-4d2c-b156-7deb4fbc697c/GPT-5-3-Codex-System-Card-02.pdf" target="_blank" rel="noopener">System Card</a></td></tr>
+            <tr><td>GPT-5.1-Codex-Max</td><td><span class="company-label company-openai">OpenAI</span></td><td>Irregular External (Net/Vuln/Evasion)</td><td>37% / 41% / 43%</td><td>2025.11</td><td><a href="https://cdn.openai.com/pdf/2a7d98b1-57e5-4147-8d0e-683894d782ae/5p1_codex_max_card_03.pdf" target="_blank" rel="noopener">System Card</a></td></tr>
+            <tr><td>Claude Sonnet 4.5</td><td><span class="company-label company-anthropic">Anthropic</span></td><td>Equifax Simulation</td><td>2/5 autonomous</td><td>2025.09</td><td><a href="https://www.anthropic.com/claude-sonnet-4-5-system-card" target="_blank" rel="noopener">System Card</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </details>
+
+  <details>
+    <summary>Real-World Competitions / Investigations</summary>
+    <div class="details-content">
+      <div class="table-wrapper sticky-col">
+        <table>
+          <thead><tr><th>Model</th><th>Company</th><th>Benchmark</th><th>Score</th><th>Date</th><th>Source</th></tr></thead>
+          <tbody>
+            <tr><td>Claude</td><td><span class="company-label company-anthropic">Anthropic</span></td><td>PicoCTF 2025</td><td class="score-high">Top 3% (297th/10,460), 32/41</td><td>2025</td><td><a href="https://red.anthropic.com/2025/cyber-competitions/" target="_blank" rel="noopener">Cyber Competitions</a></td></tr>
+            <tr><td>Claude</td><td><span class="company-label company-anthropic">Anthropic</span></td><td>HackTheBox AI vs Human</td><td class="score-high">30th/161, 4th/8 AI, 19/20</td><td>2025</td><td><a href="https://red.anthropic.com/2025/cyber-competitions/" target="_blank" rel="noopener">Cyber Competitions</a></td></tr>
+            <tr><td>Claude</td><td><span class="company-label company-anthropic">Anthropic</span></td><td>WRCCDC Regional / Qualifier</td><td>6th/9 / 10th/28 teams</td><td>2025</td><td><a href="https://red.anthropic.com/2025/cyber-competitions/" target="_blank" rel="noopener">Cyber Competitions</a></td></tr>
+            <tr><td>Claude</td><td><span class="company-label company-anthropic">Anthropic</span></td><td>PlaidCTF / DEF CON CTF Qual</td><td class="score-low">0 / 0 solved</td><td>2025</td><td><a href="https://red.anthropic.com/2025/cyber-competitions/" target="_blank" rel="noopener">Cyber Competitions</a></td></tr>
+            <tr><td>Claude</td><td><span class="company-label company-anthropic">Anthropic</span></td><td>Airbnb Competition</td><td>15/30, 39th/~180</td><td>2025</td><td><a href="https://red.anthropic.com/2025/cyber-competitions/" target="_blank" rel="noopener">Cyber Competitions</a></td></tr>
+            <tr><td>Claude Opus 4.6</td><td><span class="company-label company-anthropic">Anthropic</span></td><td>40 cyber investigations</td><td class="score-high">38/40 best (blind-ranked)</td><td>2026.02</td><td><a href="https://anthropic.com/claude-opus-4-6-system-card" target="_blank" rel="noopener">System Card</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </details>
+
+  <details>
+    <summary>Cybersecurity Knowledge</summary>
+    <div class="details-content">
+      <div class="table-wrapper sticky-col">
+        <table>
+          <thead><tr><th>Model</th><th>Company</th><th>Benchmark</th><th>Score</th><th>Date</th><th>Source</th></tr></thead>
+          <tbody>
+            <tr><td>o3-mini</td><td><span class="company-label company-openai">OpenAI</span></td><td>MC Cybersecurity Knowledge</td><td>53%</td><td>2025.01</td><td><a href="https://cdn.openai.com/o3-mini-system-card-feb10.pdf" target="_blank" rel="noopener">System Card</a></td></tr>
+            <tr><td>o1</td><td><span class="company-label company-openai">OpenAI</span></td><td>MC Cybersecurity Knowledge</td><td>59%</td><td>2025.01</td><td><a href="https://cdn.openai.com/o3-mini-system-card-feb10.pdf" target="_blank" rel="noopener">System Card</a></td></tr>
+            <tr><td>Grok 4</td><td><span class="company-label company-xai">xAI</span></td><td>WMDP-Cyber</td><td>79%</td><td>2025.08</td><td><a href="https://data.x.ai/2025-08-20-grok-4-model-card.pdf" target="_blank" rel="noopener">Model Card</a></td></tr>
+            <tr><td>Grok 4 Fast</td><td><span class="company-label company-xai">xAI</span></td><td>WMDP-Cyber</td><td>81.4%</td><td>2025.09</td><td><a href="https://data.x.ai/2025-09-19-grok-4-fast-model-card.pdf" target="_blank" rel="noopener">Model Card</a></td></tr>
+            <tr><td>Sec-Gemini v1</td><td><span class="company-label company-google">Google</span></td><td>CTI-MCQ / CTI-RCM</td><td>+11% / +10.5% over competitors</td><td>2025.04</td><td><a href="https://security.googleblog.com/2025/04/google-launches-sec-gemini-v1-new.html" target="_blank" rel="noopener">Blog</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </details>
+
+  <details>
+    <summary>Prompt Injection / Robustness</summary>
+    <div class="details-content">
+      <div class="table-wrapper sticky-col">
+        <table>
+          <thead><tr><th>Model</th><th>Company</th><th>Benchmark</th><th>Score</th><th>Date</th><th>Source</th></tr></thead>
+          <tbody>
+            <tr><td>Operator (GPT-4o)</td><td><span class="company-label company-openai">OpenAI</span></td><td>Prompt Injection</td><td class="score-high">99% recall</td><td>2025.01</td><td><a href="https://cdn.openai.com/operator_system_card.pdf" target="_blank" rel="noopener">System Card</a></td></tr>
+            <tr><td>Gemini 2.0 &rarr; 2.5</td><td><span class="company-label company-google">Google</span></td><td>TAP Attack Success</td><td>99.8% &rarr; 53.6%</td><td>2025.05</td><td><a href="https://arxiv.org/abs/2505.14534" target="_blank" rel="noopener">Paper</a></td></tr>
+            <tr><td>Claude Sonnet 4.6</td><td><span class="company-label company-anthropic">Anthropic</span></td><td>Prompt Injection (coding)</td><td class="score-high">0% attack success</td><td>2026.02</td><td><a href="https://anthropic.com/claude-sonnet-4-6-system-card" target="_blank" rel="noopener">System Card</a></td></tr>
+            <tr><td>Claude Sonnet 4.6</td><td><span class="company-label company-anthropic">Anthropic</span></td><td>Prompt Injection (browser)</td><td class="score-high">&lt;0.3% attack success</td><td>2026.02</td><td><a href="https://anthropic.com/claude-sonnet-4-6-system-card" target="_blank" rel="noopener">System Card</a></td></tr>
+            <tr><td>Grok 4 Fast</td><td><span class="company-label company-xai">xAI</span></td><td>AgentDojo</td><td class="score-high">0&ndash;3% attack success</td><td>2025.09</td><td><a href="https://data.x.ai/2025-09-19-grok-4-fast-model-card.pdf" target="_blank" rel="noopener">Model Card</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </details>
+
+  <details>
+    <summary>Misuse / Behavioral</summary>
+    <div class="details-content">
+      <div class="table-wrapper sticky-col">
+        <table>
+          <thead><tr><th>Model</th><th>Company</th><th>Benchmark</th><th>Score</th><th>Date</th><th>Source</th></tr></thead>
+          <tbody>
+            <tr><td>Grok 4 Fast</td><td><span class="company-label company-xai">xAI</span></td><td>AgentHarm</td><td>8&ndash;10% completion</td><td>2025.09</td><td><a href="https://data.x.ai/2025-09-19-grok-4-fast-model-card.pdf" target="_blank" rel="noopener">Model Card</a></td></tr>
+            <tr><td>Grok 4</td><td><span class="company-label company-xai">xAI</span></td><td>MASK (deception)</td><td>0.43</td><td>2025.08</td><td><a href="https://data.x.ai/2025-08-20-grok-4-model-card.pdf" target="_blank" rel="noopener">Model Card</a></td></tr>
+            <tr><td>Grok 4</td><td><span class="company-label company-xai">xAI</span></td><td>Sycophancy</td><td>0.07</td><td>2025.08</td><td><a href="https://data.x.ai/2025-08-20-grok-4-model-card.pdf" target="_blank" rel="noopener">Model Card</a></td></tr>
+            <tr><td>Grok 4.1</td><td><span class="company-label company-xai">xAI</span></td><td>AgentHarm</td><td>&lt;14%</td><td>2025.11</td><td><a href="https://data.x.ai/2025-11-17-grok-4-1-model-card.pdf" target="_blank" rel="noopener">Model Card</a></td></tr>
+            <tr><td>Grok 4.1</td><td><span class="company-label company-xai">xAI</span></td><td>MASK (deception)</td><td>0.49</td><td>2025.11</td><td><a href="https://data.x.ai/2025-11-17-grok-4-1-model-card.pdf" target="_blank" rel="noopener">Model Card</a></td></tr>
+            <tr><td>Grok 4.1</td><td><span class="company-label company-xai">xAI</span></td><td>MakeMeSay</td><td>0% (as attacker)</td><td>2025.11</td><td><a href="https://data.x.ai/2025-11-17-grok-4-1-model-card.pdf" target="_blank" rel="noopener">Model Card</a></td></tr>
+            <tr><td>Grok 4.1</td><td><span class="company-label company-xai">xAI</span></td><td>Sycophancy</td><td>0.19</td><td>2025.11</td><td><a href="https://data.x.ai/2025-11-17-grok-4-1-model-card.pdf" target="_blank" rel="noopener">Model Card</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </details>
+
+  <details>
+    <summary>Documentation Maturity &amp; Timeline</summary>
+    <div class="details-content">
+      <div class="table-wrapper sticky-col">
+        <table>
+          <thead><tr><th></th><th>OpenAI</th><th>Anthropic</th><th>Google</th><th>xAI</th></tr></thead>
+          <tbody>
+            <tr><td><strong>First cyber benchmark</strong></td><td>GPT-4o (Aug 2024)</td><td>Claude 3 (Mar 2024)</td><td>Phuong et al. (Mar 2024)</td><td>Grok 4 (Aug 2025)</td></tr>
+            <tr><td><strong>Documents w/ cyber evals</strong></td><td>19</td><td>24</td><td>25+</td><td>9</td></tr>
+            <tr><td><strong>Open-sources evals?</strong></td><td>No</td><td>No</td><td>Yes (In-house CTF via Inspect)</td><td>No</td></tr>
+            <tr><td><strong>Real-world threat intel?</strong></td><td>No</td><td>Yes (GTG-1002)</td><td>Yes (12,000+ incidents)</td><td>No</td></tr>
+            <tr><td><strong>Specialized cyber model?</strong></td><td>Aardvark (private beta)</td><td>&mdash;</td><td>Sec-Gemini v1</td><td>&mdash;</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <h4>Timeline</h4>
+      <div class="table-wrapper sticky-col">
+        <table>
+          <thead><tr><th>Date</th><th>OpenAI</th><th>Anthropic</th><th>Google</th><th>xAI</th></tr></thead>
+          <tbody>
+            <tr><td>2023.03</td><td>GPT-4: Low</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td></tr>
+            <tr><td>2023.07</td><td>&mdash;</td><td>Claude 2: qualitative</td><td>&mdash;</td><td>&mdash;</td></tr>
+            <tr><td>2023.12</td><td>&mdash;</td><td>&mdash;</td><td>Gemini 1.0: rudimentary</td><td>Grok-1: no eval</td></tr>
+            <tr><td>2024.03</td><td>&mdash;</td><td>Claude 3: ASL-2</td><td>Gemini 1.0: early warning</td><td>&mdash;</td></tr>
+            <tr><td>2024.08</td><td>GPT-4o: Low</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td></tr>
+            <tr><td>2024.09</td><td>o1: Low</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td></tr>
+            <tr><td>2025.01</td><td>o3-mini: Low</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td></tr>
+            <tr><td>2025.02</td><td>Deep Research: <strong>Medium</strong></td><td>Claude 3.7: ASL-2</td><td>&mdash;</td><td>&mdash;</td></tr>
+            <tr><td>2025.04</td><td>o3: Below High</td><td>&mdash;</td><td>Gemini 2.5 Pro: CCL alert</td><td>&mdash;</td></tr>
+            <tr><td>2025.05</td><td>&mdash;</td><td>Opus 4: <strong>ASL-3</strong></td><td>&mdash;</td><td>&mdash;</td></tr>
+            <tr><td>2025.08</td><td>GPT-5: Below High</td><td>&mdash;</td><td>Gemini 2.5 DT: CCL alert</td><td>Grok 4: below human pro</td></tr>
+            <tr><td>2025.11</td><td>GPT-5.1: Below High</td><td>Opus 4.5: ASL-3</td><td>Gemini 3 Pro: CCL alert</td><td>Grok 4.1: below human pro</td></tr>
+            <tr><td>2026.02</td><td>GPT-5.3: <strong>HIGH (prec.)</strong></td><td>Opus 4.6: ASL-3</td><td>Gemini 3.1 Pro: CCL alert</td><td>&mdash;</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </details>
+</section>
+
+<hr class="section-divider">
+
+<!-- ===== BENCHMARKS ===== -->
+<section id="benchmarks">
+  <h2>Benchmarks</h2>
+  <p>60+ benchmarks across three categories. Vendor-specific benchmarks are mapped in <a href="#benchmark-mapping">Benchmark Mapping</a> above.</p>
+  <div class="table-wrapper">
+    <table>
+      <thead><tr><th>Category</th><th>Scope</th><th>Vendor</th><th>Academic</th><th>Full List</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Security OF AI</strong></td><td>Jailbreak, prompt injection, adversarial robustness</td><td>6</td><td>14</td><td><a href="https://github.com/ugonfor/awesome-ai-cybersecurity/tree/main/benchmarks/security-of-ai/" target="_blank" rel="noopener">benchmarks/security-of-ai/</a></td></tr>
+        <tr><td><strong>Security BY AI</strong></td><td>CTF, pentest, vuln detection, threat intel knowledge</td><td>19</td><td>18</td><td><a href="https://github.com/ugonfor/awesome-ai-cybersecurity/tree/main/benchmarks/security-by-ai/" target="_blank" rel="noopener">benchmarks/security-by-ai/</a></td></tr>
+        <tr><td><strong>Security FROM AI</strong></td><td>Misuse risk, dual-use, deception, alignment</td><td>10</td><td>2</td><td><a href="https://github.com/ugonfor/awesome-ai-cybersecurity/tree/main/benchmarks/security-from-ai/" target="_blank" rel="noopener">benchmarks/security-from-ai/</a></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Notable Academic Benchmarks</h3>
+  <p>Not used by the 4 major vendors:</p>
+  <div class="table-wrapper">
+    <table>
+      <thead><tr><th>Benchmark</th><th>Category</th><th>Scale</th><th>Venue</th></tr></thead>
+      <tbody>
+        <tr><td><a href="https://github.com/centerforaisafety/HarmBench" target="_blank" rel="noopener"><strong>HarmBench</strong></a></td><td>OF AI &mdash; Jailbreak</td><td>510 behaviors, 18 attacks, 33 LLMs</td><td>ICML 2024</td></tr>
+        <tr><td><a href="https://github.com/meta-llama/PurpleLlama" target="_blank" rel="noopener"><strong>CyberSecEval v1-v4</strong></a></td><td>OF AI &mdash; Secure Code</td><td>~1,000+ test cases</td><td>Meta</td></tr>
+        <tr><td><a href="https://github.com/NYU-LLM-CTF/NYU_CTF_Bench" target="_blank" rel="noopener"><strong>NYU CTF Bench</strong></a></td><td>BY AI &mdash; CTF</td><td>200 challenges, 6 categories</td><td>NeurIPS 2024</td></tr>
+        <tr><td><a href="https://github.com/secbench-git/SecBench" target="_blank" rel="noopener"><strong>SecBench</strong></a></td><td>BY AI &mdash; Knowledge</td><td>47,910 questions, 9 domains</td><td>&mdash;</td></tr>
+        <tr><td><a href="https://github.com/DLVulDet/PrimeVul" target="_blank" rel="noopener"><strong>PrimeVul</strong></a></td><td>BY AI &mdash; Vuln Detection</td><td>7K vuln + 229K benign functions</td><td>ICSE 2025</td></tr>
+        <tr><td><a href="https://github.com/AI-secure/DecodingTrust" target="_blank" rel="noopener"><strong>DecodingTrust</strong></a></td><td>OF AI &mdash; Trust</td><td>8 dimensions</td><td>NeurIPS 2023 Outstanding (D&amp;B Track)</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ===== AGENTS ===== -->
+<section id="agents">
+  <h2>Agents &mdash; Security BY AI</h2>
+  <p>AI performing cybersecurity tasks. 39 agents total &mdash; <a href="https://github.com/ugonfor/awesome-ai-cybersecurity/tree/main/agents/" target="_blank" rel="noopener">full details in agents/</a>.</p>
+
+  <h3>Agent Performance Leaderboard</h3>
+  <div class="table-wrapper sticky-col">
+    <table class="agent-table">
+      <thead><tr><th>Agent</th><th>Benchmark</th><th>Score</th><th>vs Human</th><th>Source</th></tr></thead>
+      <tbody>
+        <tr><td><a href="https://xbow.com/" target="_blank" rel="noopener"><strong>XBOW</strong></a></td><td><a href="https://www.hackerone.com/" target="_blank" rel="noopener">HackerOne</a> bug bounty</td><td class="score-high">#1 leaderboard (1,060 reports)</td><td>Outperformed all humans</td><td><a href="https://xbow.com/blog/top-1-how-xbow-did-it" target="_blank" rel="noopener">Blog</a></td></tr>
+        <tr><td><a href="https://github.com/Stanford-Trinity/ARTEMIS" target="_blank" rel="noopener"><strong>ARTEMIS</strong></a></td><td>Enterprise pentest (8K hosts)</td><td class="score-high">2nd/11, 9 vulns found</td><td>Beat 9/10 humans, 1/3 cost</td><td><a href="https://arxiv.org/abs/2512.09882" target="_blank" rel="noopener">Paper</a></td></tr>
+        <tr><td><a href="https://github.com/NYU-LLM-CTF/nyuctf_agents" target="_blank" rel="noopener"><strong>D-CIPHER</strong></a></td><td>NYU CTF / Cybench / HTB</td><td>22% / 22.5% / 44%</td><td>&mdash;</td><td><a href="https://arxiv.org/abs/2502.10931" target="_blank" rel="noopener">Paper</a></td></tr>
+        <tr><td><a href="https://projectzero.google/2024/10/from-naptime-to-big-sleep.html" target="_blank" rel="noopener"><strong>Big Sleep</strong></a></td><td>Real-world vuln discovery</td><td class="score-high">First AI zero-day (SQLite)</td><td>Novel capability</td><td><a href="https://projectzero.google/2024/10/from-naptime-to-big-sleep.html" target="_blank" rel="noopener">Blog</a></td></tr>
+        <tr><td><a href="https://www.microsoft.com/en-us/research/blog/project-ire-autonomously-identifies-malware-at-scale/" target="_blank" rel="noopener"><strong>Project Ire</strong></a></td><td>Malware RE</td><td class="score-high">Precision 0.98, recall 0.83</td><td>First AI malware conviction</td><td><a href="https://www.microsoft.com/en-us/research/blog/project-ire-autonomously-identifies-malware-at-scale/" target="_blank" rel="noopener">Blog</a></td></tr>
+        <tr><td><a href="https://www.microsoft.com/en-us/security/business/ai-machine-learning/microsoft-copilot-security" target="_blank" rel="noopener"><strong>Security Copilot</strong></a></td><td>Phishing triage</td><td>77% accuracy improvement</td><td>40+ hrs/week saved</td><td><a href="https://www.microsoft.com/en-us/security/business/ai-machine-learning/microsoft-copilot-security" target="_blank" rel="noopener">Microsoft</a></td></tr>
+        <tr><td><a href="https://github.com/aliasrobotics/cai" target="_blank" rel="noopener"><strong>CAI</strong></a></td><td>CTF benchmarks</td><td>3,600x human speed</td><td>&mdash;</td><td><a href="https://arxiv.org/abs/2504.06017" target="_blank" rel="noopener">Paper</a></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Offensive &mdash; Top Picks</h3>
+  <div class="table-wrapper">
+    <table>
+      <thead><tr><th>Agent</th><th>Why it matters</th></tr></thead>
+      <tbody>
+        <tr><td><a href="https://xbow.com/" target="_blank" rel="noopener"><strong>XBOW</strong></a></td><td>#1 on HackerOne leaderboard 2025 &mdash; found vulns in Amazon, Disney, PayPal</td></tr>
+        <tr><td><a href="https://github.com/Stanford-Trinity/ARTEMIS" target="_blank" rel="noopener"><strong>ARTEMIS</strong></a></td><td>Beat 9/10 human pentesters in live enterprise test at 1/3 the cost</td></tr>
+        <tr><td><a href="https://github.com/NYU-LLM-CTF/nyuctf_agents" target="_blank" rel="noopener"><strong>D-CIPHER</strong></a></td><td>SOTA on NYU CTF (22%), Cybench (22.5%), HackTheBox (44%)</td></tr>
+        <tr><td><a href="https://github.com/GreyDGL/PentestGPT" target="_blank" rel="noopener"><strong>PentestGPT</strong></a></td><td>First LLM pentest agent &mdash; USENIX Security 2024</td></tr>
+        <tr><td><a href="https://github.com/aliasrobotics/cai" target="_blank" rel="noopener"><strong>CAI</strong></a></td><td>Open-source, 300+ models, 3,600x over human pentesters</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <details>
+    <summary>16 more offensive agents</summary>
+    <div class="details-content">
+      <div class="table-wrapper">
+        <table>
+          <thead><tr><th>Agent</th><th>Created by</th><th>Open Source</th></tr></thead>
+          <tbody>
+            <tr><td><a href="https://github.com/YasodGinige/AutoPentester" target="_blank" rel="noopener">AutoPentester</a></td><td>Univ. Sydney</td><td>Yes</td></tr>
+            <tr><td><a href="https://github.com/SWE-agent/SWE-agent" target="_blank" rel="noopener">SWE-agent / EnIGMA</a></td><td>Princeton/NYU/TAU</td><td>Yes</td></tr>
+            <tr><td><a href="https://github.com/vxcontrol/pentagi" target="_blank" rel="noopener">PentAGI</a></td><td>VXControl</td><td>Yes</td></tr>
+            <tr><td><a href="https://github.com/NYU-LLM-CTF/nyuctf_agents_craken" target="_blank" rel="noopener">CRAKEN</a></td><td>NYU</td><td>Yes</td></tr>
+            <tr><td><a href="https://github.com/ghostsecurity/reaper" target="_blank" rel="noopener">Reaper</a></td><td>Ghost Security</td><td>Yes</td></tr>
+            <tr><td><a href="https://github.com/usestrix/strix" target="_blank" rel="noopener">Strix</a></td><td>usestrix</td><td>Yes</td></tr>
+            <tr><td><a href="https://github.com/ipa-lab/hackingBuddyGPT" target="_blank" rel="noopener">hackingBuddyGPT</a></td><td>TU Wien</td><td>Yes</td></tr>
+            <tr><td><a href="https://github.com/GH05TCREW/pentestagent" target="_blank" rel="noopener">PentestAgent</a></td><td>GH05TCREW</td><td>Yes</td></tr>
+            <tr><td><a href="https://github.com/Hacker-GPT/HackerGPT-2.0" target="_blank" rel="noopener">HackerGPT</a></td><td>Community</td><td>Yes</td></tr>
+            <tr><td><a href="https://github.com/tac01337/ReaperAI" target="_blank" rel="noopener">ReaperAI</a></td><td>tac01337</td><td>Yes</td></tr>
+            <tr><td><a href="https://arxiv.org/abs/2403.01038" target="_blank" rel="noopener">AutoAttacker</a></td><td>UC researchers</td><td>No</td></tr>
+            <tr><td><a href="https://arxiv.org/abs/2601.09129" target="_blank" rel="noopener">KryptoPilot</a></td><td>Academic</td><td>&mdash;</td></tr>
+            <tr><td><a href="https://penligent.ai/" target="_blank" rel="noopener">Penligent</a></td><td>Penligent</td><td>No</td></tr>
+            <tr><td><a href="https://github.com/osgil-defense/TARS" target="_blank" rel="noopener">TARS</a></td><td>Osgil Defense</td><td>Yes</td></tr>
+            <tr><td><a href="https://github.com/Armur-Ai/Auto-Pentest-GPT-AI" target="_blank" rel="noopener">Auto-Pentest-GPT</a></td><td>Armur AI</td><td>Yes</td></tr>
+            <tr><td><a href="https://www.researchgate.net/publication/385337738" target="_blank" rel="noopener">CIPHER</a></td><td>Academic</td><td>&mdash;</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </details>
+
+  <h3>Defensive &mdash; Top Picks</h3>
+  <div class="table-wrapper">
+    <table>
+      <thead><tr><th>Agent</th><th>Why it matters</th></tr></thead>
+      <tbody>
+        <tr><td><a href="https://projectzero.google/2024/10/from-naptime-to-big-sleep.html" target="_blank" rel="noopener"><strong>Big Sleep</strong></a></td><td>First AI-discovered real-world zero-day (SQLite) &mdash; Google P0 + DeepMind</td></tr>
+        <tr><td><a href="https://www.microsoft.com/en-us/security/business/ai-machine-learning/microsoft-copilot-security" target="_blank" rel="noopener"><strong>Microsoft Security Copilot</strong></a></td><td>37+ agents, Phishing Triage improves accuracy 77%</td></tr>
+        <tr><td><a href="https://www.microsoft.com/en-us/research/blog/project-ire-autonomously-identifies-malware-at-scale/" target="_blank" rel="noopener"><strong>Project Ire</strong></a></td><td>Autonomous malware RE, precision 0.98 &mdash; Black Hat 2025</td></tr>
+        <tr><td><a href="https://www.crowdstrike.com/en-us/platform/charlotte-ai/" target="_blank" rel="noopener"><strong>Charlotte AI</strong></a></td><td>&gt;98% triage accuracy, Agentic SOAR &mdash; CrowdStrike</td></tr>
+        <tr><td><a href="https://www.paloaltonetworks.com/cortex/cortex-xsiam" target="_blank" rel="noopener"><strong>Cortex XSIAM</strong></a></td><td>Trained on 1.2B playbooks, 98% MTTR reduction &mdash; Palo Alto</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <details>
+    <summary>9 more defensive agents</summary>
+    <div class="details-content">
+      <div class="table-wrapper">
+        <table>
+          <thead><tr><th>Agent</th><th>Created by</th></tr></thead>
+          <tbody>
+            <tr><td><a href="https://arcticwolf.com/resources/press-releases/arctic-wolf-introduces-an-ai-security-assistant-built-on-the-arctic-wolf-aurora-platform/" target="_blank" rel="noopener">Arctic Wolf Cipher</a></td><td>Arctic Wolf (with Anthropic)</td></tr>
+            <tr><td><a href="https://gtidocs.virustotal.com/docs/agentic-platform" target="_blank" rel="noopener">Google TI Agentic</a></td><td>Google (Mandiant + VirusTotal)</td></tr>
+            <tr><td><a href="https://security.googleblog.com/2025/04/google-launches-sec-gemini-v1-new.html" target="_blank" rel="noopener">Sec-Gemini v1</a></td><td>Google</td></tr>
+            <tr><td><a href="https://openai.com/index/strengthening-cyber-resilience/" target="_blank" rel="noopener">OpenAI Aardvark</a></td><td>OpenAI</td></tr>
+            <tr><td><a href="https://www.dropzone.ai" target="_blank" rel="noopener">Dropzone AI</a></td><td>Dropzone AI</td></tr>
+            <tr><td><a href="https://www.exaforce.com" target="_blank" rel="noopener">Exaforce</a></td><td>Exaforce</td></tr>
+            <tr><td><a href="https://radiantsecurity.ai" target="_blank" rel="noopener">Radiant Security</a></td><td>Radiant Security</td></tr>
+            <tr><td><a href="https://simbian.ai" target="_blank" rel="noopener">Simbian AI</a></td><td>Simbian</td></tr>
+            <tr><td><a href="https://www.joesecurity.org/joe-reverser" target="_blank" rel="noopener">Joe Reverser</a></td><td>Joe Security</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </details>
+
+  <h3>Multi-Purpose</h3>
+  <div class="table-wrapper">
+    <table>
+      <thead><tr><th>Agent</th><th>Summary</th></tr></thead>
+      <tbody>
+        <tr><td><a href="https://github.com/danielmiessler/fabric" target="_blank" rel="noopener"><strong>Fabric</strong></a></td><td>200+ prompt patterns for threat modeling, vuln analysis</td></tr>
+        <tr><td><a href="https://github.com/Cyb3rWard0g/floki" target="_blank" rel="noopener"><strong>Floki / Dapr Agents</strong></a></td><td>Multi-agent framework, donated to CNCF</td></tr>
+        <tr><td><a href="https://github.com/aress31/burpgpt" target="_blank" rel="noopener"><strong>BurpGPT</strong></a></td><td>Burp Suite + LLM passive scanning</td></tr>
+        <tr><td><a href="https://github.com/six2dez/burp-ai-agent" target="_blank" rel="noopener"><strong>Burp AI Agent</strong></a></td><td>53+ MCP tools, 62 vuln classes</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ===== TOOLS ===== -->
+<section id="tools">
+  <h2>Tools</h2>
+  <p>20 tools and platforms. <a href="https://github.com/ugonfor/awesome-ai-cybersecurity/tree/main/tools/" target="_blank" rel="noopener">Full details in tools/</a>.</p>
+
+  <h3>Evaluation Frameworks (cross-taxonomy)</h3>
+  <div class="table-wrapper">
+    <table>
+      <thead><tr><th>Tool</th><th>Created by</th><th>Summary</th></tr></thead>
+      <tbody>
+        <tr><td><a href="https://github.com/UKGovernmentBEIS/inspect_ai" target="_blank" rel="noopener"><strong>Inspect AI</strong></a></td><td>UK AISI</td><td>Python framework for reproducible LLM evaluations with sandboxing</td></tr>
+        <tr><td><a href="https://inspect.cyber.aisi.org.uk/" target="_blank" rel="noopener"><strong>Inspect Cyber</strong></a></td><td>UK AISI</td><td>Agentic cyber eval with CTF/cyber range YAML configs</td></tr>
+        <tr><td><a href="https://github.com/METR/vivaria" target="_blank" rel="noopener"><strong>Vivaria</strong></a></td><td>METR</td><td>Agent evaluation platform (transitioning to Inspect)</td></tr>
+        <tr><td><a href="https://github.com/EleutherAI/lm-evaluation-harness" target="_blank" rel="noopener"><strong>lm-evaluation-harness</strong></a></td><td>EleutherAI</td><td>Unified LLM eval (includes WMDP-Cyber)</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Security OF AI &mdash; Testing Model Robustness</h3>
+  <div class="table-wrapper">
+    <table>
+      <thead><tr><th>Tool</th><th>Created by</th><th>Summary</th></tr></thead>
+      <tbody>
+        <tr><td><a href="https://github.com/NVIDIA/garak" target="_blank" rel="noopener"><strong>Garak</strong></a></td><td>NVIDIA</td><td>LLM vulnerability scanner (prompt injection, jailbreak, data leakage)</td></tr>
+        <tr><td><a href="https://github.com/promptfoo/promptfoo" target="_blank" rel="noopener"><strong>Promptfoo</strong></a></td><td>Open source</td><td>LLM red teaming CLI with OWASP Top 10 + CI/CD</td></tr>
+        <tr><td><a href="https://github.com/centerforaisafety/HarmBench" target="_blank" rel="noopener"><strong>HarmBench</strong></a></td><td>CAIS</td><td>Standardized: 18 attacks vs 33 LLMs</td></tr>
+        <tr><td><a href="https://github.com/JailbreakBench/jailbreakbench" target="_blank" rel="noopener"><strong>JailbreakBench</strong></a></td><td>Multi-institution</td><td>100 behaviors + attack/defense leaderboard</td></tr>
+        <tr><td><a href="https://github.com/dsbowen/strong_reject" target="_blank" rel="noopener"><strong>StrongREJECT</strong></a></td><td>UC Berkeley / GDM</td><td>Jailbreak eval with SOTA human agreement</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Security BY AI &mdash; Cybersecurity Task Platforms</h3>
+  <div class="table-wrapper">
+    <table>
+      <thead><tr><th>Tool</th><th>Created by</th><th>Summary</th></tr></thead>
+      <tbody>
+        <tr><td><a href="https://github.com/meta-llama/PurpleLlama" target="_blank" rel="noopener"><strong>PurpleLlama / CyberSecEval</strong></a></td><td>Meta</td><td>Insecure code gen, SOC eval, auto-patching (v1-v4)</td></tr>
+        <tr><td><a href="https://www.hackthebox.com/" target="_blank" rel="noopener"><strong>Hack The Box</strong></a></td><td>HTB</td><td>AI Range (Dec 2025) for autonomous agent benchmarking</td></tr>
+        <tr><td><a href="https://picoctf.org/" target="_blank" rel="noopener"><strong>picoCTF</strong></a></td><td>CMU CyLab</td><td>800,000+ users; Claude ranked top 3% in 2025</td></tr>
+        <tr><td><a href="https://github.com/CTFd/CTFd" target="_blank" rel="noopener"><strong>CTFd</strong></a></td><td>CTFd LLC</td><td>Most widely used CTF hosting framework</td></tr>
+        <tr><td><a href="https://github.com/microsoft/CyberBattleSim" target="_blank" rel="noopener"><strong>CyberBattleSim</strong></a></td><td>Microsoft Research</td><td>OpenAI Gym for RL attack/defense simulation</td></tr>
+        <tr><td><a href="https://control-arena.aisi.org.uk/" target="_blank" rel="noopener"><strong>ControlArena</strong></a></td><td>UK AISI + Redwood</td><td>AI control experiments for misalignment prevention</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <details>
+    <summary>More tools (benchmark suites, eval collections)</summary>
+    <div class="details-content">
+      <div class="table-wrapper">
+        <table>
+          <thead><tr><th>Tool</th><th>Taxonomy</th><th>Created by</th></tr></thead>
+          <tbody>
+            <tr><td><a href="https://github.com/UKGovernmentBEIS/inspect_evals" target="_blank" rel="noopener">Inspect Evals</a></td><td>Cross-taxonomy</td><td>UK AISI + community</td></tr>
+            <tr><td><a href="https://github.com/google-deepmind/dangerous-capability-evaluations" target="_blank" rel="noopener">Dangerous Capability Evals</a></td><td>FROM AI</td><td>Google DeepMind</td></tr>
+            <tr><td><a href="https://arxiv.org/abs/2510.24317" target="_blank" rel="noopener">CAIBench</a></td><td>BY AI</td><td>Alias Robotics</td></tr>
+            <tr><td><a href="https://github.com/microsoft/SecRL" target="_blank" rel="noopener">ExCyTIn-Bench</a></td><td>BY AI &gt; Defensive</td><td>Microsoft</td></tr>
+            <tr><td><a href="https://github.com/timothee-chauvin/eyeballvul" target="_blank" rel="noopener">eyeballvul</a></td><td>BY AI &gt; Offensive</td><td>METR-affiliated</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </details>
+</section>
+
+<hr class="section-divider">
+
+<!-- ===== VENDOR DOCS ===== -->
+<section id="vendor-docs">
+  <h2>Vendor Documentation</h2>
+  <p>Detailed per-vendor documentation (source of truth for all numbers):</p>
+  <div class="card-grid">
+    <a class="card" href="https://github.com/ugonfor/awesome-ai-cybersecurity/blob/main/raw-data/openai.md" target="_blank" rel="noopener" style="text-decoration:none">
+      <h4 style="color:var(--openai)">OpenAI</h4>
+      <p>19 documents &mdash; GPT-4 through GPT-5.3-Codex</p>
+    </a>
+    <a class="card" href="https://github.com/ugonfor/awesome-ai-cybersecurity/blob/main/raw-data/anthropic.md" target="_blank" rel="noopener" style="text-decoration:none">
+      <h4 style="color:var(--anthropic)">Anthropic</h4>
+      <p>24 documents &mdash; Claude 2 through Claude Opus 4.6</p>
+    </a>
+    <a class="card" href="https://github.com/ugonfor/awesome-ai-cybersecurity/blob/main/raw-data/google.md" target="_blank" rel="noopener" style="text-decoration:none">
+      <h4 style="color:var(--google)">Google</h4>
+      <p>25+ documents &mdash; Gemini 1.0 through Gemini 3.1 Pro</p>
+    </a>
+    <a class="card" href="https://github.com/ugonfor/awesome-ai-cybersecurity/blob/main/raw-data/xai.md" target="_blank" rel="noopener" style="text-decoration:none">
+      <h4 style="color:var(--xai)">xAI</h4>
+      <p>9 documents &mdash; Grok-1 through Grok 4.1</p>
+    </a>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <p><a href="https://github.com/ugonfor/awesome-ai-cybersecurity" target="_blank" rel="noopener">awesome-ai-cybersecurity</a> &mdash; CC0 1.0 Universal</p>
+</footer>
+
+</main>
+</div>
+
+<!-- Back to Top -->
+<button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">&uarr;</button>
+
+<script>
+// Theme toggle
+function toggleTheme() {
+  const html = document.documentElement;
+  const current = html.getAttribute('data-theme');
+  const next = current === 'dark' ? 'light' : 'dark';
+  html.setAttribute('data-theme', next);
+  localStorage.setItem('theme', next);
+  updateThemeIcons(next);
+}
+
+function updateThemeIcons(theme) {
+  document.querySelectorAll('.theme-icon').forEach(el => {
+    el.textContent = theme === 'dark' ? '\u2600' : '\u263E';
+  });
+}
+
+// Init theme
+(function() {
+  const saved = localStorage.getItem('theme');
+  const preferred = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  const theme = saved || preferred;
+  document.documentElement.setAttribute('data-theme', theme);
+  updateThemeIcons(theme);
+})();
+
+// Sidebar toggle (mobile)
+function toggleSidebar() {
+  document.getElementById('sidebar').classList.toggle('open');
+  document.querySelector('.overlay').classList.toggle('active');
+}
+
+// Close sidebar on link click (mobile)
+document.querySelectorAll('.sidebar-links a').forEach(a => {
+  a.addEventListener('click', () => {
+    if (window.innerWidth <= 900) {
+      document.getElementById('sidebar').classList.remove('open');
+      document.querySelector('.overlay').classList.remove('active');
+    }
+  });
+});
+
+// Back to top
+window.addEventListener('scroll', () => {
+  const btn = document.getElementById('backToTop');
+  btn.classList.toggle('visible', window.scrollY > 400);
+});
+
+// Active nav link
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.sidebar-links a[href^="#"]');
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(section => {
+    const top = section.offsetTop - 100;
+    if (window.scrollY >= top) current = section.getAttribute('id');
+  });
+  navLinks.forEach(link => {
+    link.classList.remove('active');
+    if (link.getAttribute('href') === '#' + current) link.classList.add('active');
+  });
+});
+
+// Scroll hint for tables
+document.querySelectorAll('.table-wrapper').forEach(wrapper => {
+  const table = wrapper.querySelector('table');
+  if (!table) return;
+
+  function checkScroll() {
+    const isScrollable = table.scrollWidth > wrapper.clientWidth;
+    wrapper.classList.toggle('scrollable', isScrollable && wrapper.scrollLeft < table.scrollWidth - wrapper.clientWidth - 10);
+    wrapper.classList.toggle('scrolled-end', wrapper.scrollLeft >= table.scrollWidth - wrapper.clientWidth - 10);
+  }
+
+  checkScroll();
+  wrapper.addEventListener('scroll', checkScroll);
+  window.addEventListener('resize', checkScroll);
+});
+</script>
+
+</body>
+</html>

@@ -10,7 +10,7 @@ The AI cybersecurity space is fragmented: OpenAI, Anthropic, Google, and xAI eac
 
 - [Taxonomy](#taxonomy)
 - [Cross-Comparison](#cross-comparison)
-  - [Model Cyber Capability Leaderboard](#model-cyber-capability-leaderboard)
+  - [Model Cyber Capability Leaderboard](#model-cyber-capability-leaderboard) (Model Provider / Benchmark Provider)
   - [Risk Frameworks](#risk-frameworks)
   - [Benchmark Mapping](#benchmark-mapping) (collapsible)
   - [Timeline](#timeline) (collapsible)
@@ -54,9 +54,9 @@ The core differentiator of this repo. We classify everything along two axes:
 
 ### Model Cyber Capability Leaderboard
 
-#### Self-Reported (from each company's own system cards)
+#### 1) Model Provider Reported
 
-> Scores published by the model developer. Agent = evaluation setup described in the system card.
+> Scores self-reported in each company's own system cards and model cards. Agent = evaluation setup described in the document.
 >
 > **Important caveats:**
 > - **Cross-company comparison is not meaningful.** Each company uses different benchmarks, agent setups, and evaluation protocols. Scores in the same column across companies are NOT directly comparable.
@@ -78,21 +78,21 @@ The core differentiator of this repo. We classify everything along two axes:
 | | Grok 4 Fast | UK AISI Inspect | 2025.09 | — | [30%](https://data.x.ai/2025-09-19-grok-4-fast-model-card.pdf) | — | — | — | [81.4%](https://data.x.ai/2025-09-19-grok-4-fast-model-card.pdf) |
 | | Grok 4 | UK AISI Inspect | 2025.08 | — | [43%](https://data.x.ai/2025-08-20-grok-4-model-card.pdf) | — | — | — | [79%](https://data.x.ai/2025-08-20-grok-4-model-card.pdf) |
 
-#### Third-Party & Independent Evaluations
+#### 2) Benchmark Provider Reported
 
-> Scores from external evaluators, competition organizers, or benchmark developers — NOT self-reported by the model company.
+> Scores from external evaluators, benchmark developers, or competition organizers — NOT self-reported by the model company.
 
 | Model | Evaluator | Benchmark | Score | Source |
 |---|---|---|---|---|
 | GPT-5.3-Codex | [Irregular (Pattern Labs)](https://irregular.com) | Network Attack / Vuln / Evasion | 86% / 72% / 53% | [System Card](https://cdn.openai.com/pdf/23eca107-a9b1-4d2c-b156-7deb4fbc697c/GPT-5-3-Codex-System-Card-02.pdf) |
-| GPT-5.1-Codex-Max | Irregular | Network Attack / Vuln / Evasion | 37% / 41% / 43% | [System Card](https://cdn.openai.com/pdf/2a7d98b1-57e5-4147-8d0e-683894d782ae/5p1_codex_max_card_03.pdf) |
-| Grok 4 | UK AISI | Realistic cyber (third-party) | Below human professional | [Model Card](https://data.x.ai/2025-08-20-grok-4-model-card.pdf) |
-| Claude | Competition | PicoCTF 2025 | Top 3% (297th/10,460), 32/41 | [Cyber Competitions](https://red.anthropic.com/2025/cyber-competitions/) |
-| Claude | Competition | HackTheBox AI vs Human | 30th/161, 4th/8 AI, 19/20 | [Cyber Competitions](https://red.anthropic.com/2025/cyber-competitions/) |
-| Claude | Competition | WRCCDC Regional | 6th/9 teams | [Cyber Competitions](https://red.anthropic.com/2025/cyber-competitions/) |
-| Claude | Competition | PlaidCTF | 0 challenges solved | [Cyber Competitions](https://red.anthropic.com/2025/cyber-competitions/) |
-| Claude | Competition | DEF CON CTF Qualifier | 0 challenges solved | [Cyber Competitions](https://red.anthropic.com/2025/cyber-competitions/) |
-| Claude Opus 4.6 | [CAISI](https://www.nist.gov/artificial-intelligence/us-ai-safety-institute) | OSS vulnerability audit | Found novel bugs (closed + open source) | [System Card](https://anthropic.com/claude-opus-4-6-system-card) |
+| GPT-5.1-Codex-Max | [Irregular (Pattern Labs)](https://irregular.com) | Network Attack / Vuln / Evasion | 37% / 41% / 43% | [System Card](https://cdn.openai.com/pdf/2a7d98b1-57e5-4147-8d0e-683894d782ae/5p1_codex_max_card_03.pdf) |
+| Grok 4 | [UK AISI](https://www.aisi.gov.uk/) | Realistic cyber (third-party) | Below human professional | [Model Card](https://data.x.ai/2025-08-20-grok-4-model-card.pdf) |
+| Claude | [PicoCTF](https://picoctf.org/) (Competition) | PicoCTF 2025 | Top 3% (297th/10,460), 32/41 | [Cyber Competitions](https://red.anthropic.com/2025/cyber-competitions/) |
+| Claude | [HackTheBox](https://www.hackthebox.com/) (Competition) | HTB AI vs Human | 30th/161, 4th/8 AI, 19/20 | [Cyber Competitions](https://red.anthropic.com/2025/cyber-competitions/) |
+| Claude | [WRCCDC](https://wrccdc.org/) (Competition) | WRCCDC Regional | 6th/9 teams | [Cyber Competitions](https://red.anthropic.com/2025/cyber-competitions/) |
+| Claude | [PlaidCTF](https://plaidctf.com/) (Competition) | PlaidCTF 2025 | 0 challenges solved | [Cyber Competitions](https://red.anthropic.com/2025/cyber-competitions/) |
+| Claude | [DEF CON CTF](https://defcon.org/) (Competition) | DEF CON CTF Qualifier | 0 challenges solved | [Cyber Competitions](https://red.anthropic.com/2025/cyber-competitions/) |
+| Claude Opus 4.6 | [US AISI](https://www.nist.gov/artificial-intelligence/us-ai-safety-institute) | OSS vulnerability audit | Found novel bugs (closed + open source) | [System Card](https://anthropic.com/claude-opus-4-6-system-card) |
 
 <details>
 <summary>Earlier Models (before 2025.08) — self-reported</summary>
