@@ -2,7 +2,7 @@
 
 > Curated AI cybersecurity benchmarks, agents & tools — organized by AI4Security / Security4AI
 
-The AI cybersecurity space is fragmented: OpenAI, Anthropic, Google, and xAI each use different benchmarks, and terms like "red team," "blue team," "safety," and "security" are used inconsistently. This repo cuts through the confusion with a clear taxonomy and comprehensive cross-comparison.
+The AI cybersecurity space is fragmented: OpenAI, Anthropic, Google, and xAI each use different benchmarks, and there is [virtually no overlap](#benchmark-mapping) in quantitative evaluations. This repo cuts through the confusion with a clear taxonomy — **[AI4Security](#ai4security--offensive-capability)** (AI helping with cybersecurity) and **[Security4AI](#security4ai--model-robustness)** (security concerns about AI) — and comprehensive [cross-comparison](#cross-comparison).
 
 ---
 
@@ -10,12 +10,11 @@ The AI cybersecurity space is fragmented: OpenAI, Anthropic, Google, and xAI eac
 
 - [Taxonomy](#taxonomy)
 - [Cross-Comparison](#cross-comparison)
-  - [Model Cyber Capability Leaderboard](#model-cyber-capability-leaderboard) (Model Provider / Benchmark Provider)
-  - [Risk Frameworks](#risk-frameworks)
-  - [Benchmark Mapping](#benchmark-mapping) (collapsible)
-  - [Timeline](#timeline) (collapsible)
+  - [Offensive Capability](#ai4security--offensive-capability) · [Vulnerability Discovery](#ai4security--vulnerability-discovery) · [Cyber Knowledge](#ai4security--cyber-knowledge) · [Defensive Capability](#ai4security--defensive-capability)
+  - [Model Robustness](#security4ai--model-robustness) · [Misuse Risk & Alignment](#security4ai--misuse-risk--alignment)
+  - [Risk Frameworks](#risk-frameworks) · [Benchmark Mapping](#benchmark-mapping) (collapsible) · [Timeline](#timeline) (collapsible)
 - [Benchmarks](#benchmarks)
-- [Agents — AI4Security](#agents--ai4security)
+- [Agents](#agents--ai4security)
 - [Tools](#tools)
 - [References](#references)
 
@@ -25,19 +24,19 @@ The AI cybersecurity space is fragmented: OpenAI, Anthropic, Google, and xAI eac
 
 ### AI4Security (AI helping with cybersecurity)
 
-| Subcategory | Meaning | Example |
-|----------|---------|---------|
-| **Offensive Capability** | CTF, exploitation, penetration testing | Cybench, CVE-Bench, Cyber Range |
-| **Defensive Capability** | Detection, investigation, SOC automation | CyberGym investigations, CTI analysis |
-| **Cyber Knowledge** | Domain knowledge evaluation | WMDP-Cyber, CTI-MCQ, SecBench |
+| Subcategory | Meaning | Example | Leaderboard |
+|----------|---------|---------|:---:|
+| **Offensive Capability** | CTF, exploitation, penetration testing | Cybench, CVE-Bench, Cyber Range | [→](#ai4security--offensive-capability) |
+| **Defensive Capability** | Detection, investigation, SOC automation | CyberGym investigations, CTI analysis | [→](#ai4security--defensive-capability) |
+| **Cyber Knowledge** | Domain knowledge evaluation | WMDP-Cyber, CTI-MCQ, SecBench | [→](#ai4security--cyber-knowledge) |
 
 ### Security4AI (Security concerns about AI)
 
-| Subcategory | Meaning | Example |
-|----------|---------|---------|
-| **Model Robustness** | Protecting models from attacks | Prompt injection, jailbreak, AgentDojo |
-| **Misuse Risk** | Preventing harmful use of AI | AgentHarm, harmful refusal, malware bench |
-| **Alignment** | Ensuring AI behaves as intended | MASK, sabotage, sycophancy, stealth |
+| Subcategory | Meaning | Example | Leaderboard |
+|----------|---------|---------|:---:|
+| **Model Robustness** | Protecting models from attacks | Prompt injection, jailbreak, AgentDojo | [→](#security4ai--model-robustness) |
+| **Misuse Risk** | Preventing harmful use of AI | AgentHarm, harmful refusal, malware bench | [→](#security4ai--misuse-risk--alignment) |
+| **Alignment** | Ensuring AI behaves as intended | MASK, sabotage, sycophancy, stealth | [→](#security4ai--misuse-risk--alignment) |
 
 **Key terms:**
 - **pass@k** — Success rate when the model gets k attempts per task. pass@1 = must succeed on first try; pass@30 = at least 1 success in 30 tries. Higher k inflates scores.
