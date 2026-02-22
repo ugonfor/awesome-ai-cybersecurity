@@ -2,6 +2,11 @@
 
 ## Project Overview
 
+### Repository 헌법
+1. 병렬작업이 가능한 것은 agent teams기능을 적극적으로 활용한다.
+2. 모든 작업에서 backbone model에 최소한, gemini 3.1 pro, 3 pro, 3 flash, opus 4.6, sonnet 4.6, gpt-5.3-codex, gpt-5.2-codex, grok 4.1, grok 4.1-fast를 포함한다.
+
+
 **awesome-ai-cybersecurity** — A curated list of AI cybersecurity benchmarks, agents, and tools, organized by a clear taxonomy.
 
 - GitHub: https://github.com/ugonfor/awesome-ai-cybersecurity
