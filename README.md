@@ -59,10 +59,12 @@ The AI cybersecurity space is fragmented: OpenAI, Anthropic, Google, and xAI eac
 |---|---|---|---|---|---|
 | GPT-5.3-Codex | OpenAI | — | [All passed](https://cdn.openai.com/pdf/23eca107-a9b1-4d2c-b156-7deb4fbc697c/GPT-5-3-Codex-System-Card-02.pdf) | [80%](https://cdn.openai.com/pdf/23eca107-a9b1-4d2c-b156-7deb4fbc697c/GPT-5-3-Codex-System-Card-02.pdf) | 2026.02 |
 | Claude Opus 4.6 | Anthropic | [**93% p@1**](https://anthropic.com/claude-opus-4-6-system-card) | — | — | 2026.02 |
+| Claude Sonnet 4.6 | Anthropic | — | — | — | 2026.02 |
+| Gemini 3.1 Pro | Google | — | — | — | 2026.02 |
+| Grok 4.1 | xAI | [39%](https://data.x.ai/2025-11-17-grok-4-1-model-card.pdf) | — | — | 2025.11 |
 | Claude Opus 4.5 | Anthropic | [82% p@1](https://www.anthropic.com/claude-opus-4-5-system-card) | — | — | 2025.11 |
 | Gemini 3 Pro | Google | — | [11/12 Key Skills](https://storage.googleapis.com/deepmind-media/gemini/gemini_3_pro_fsf_report.pdf) | — | 2025.11 |
 | Gemini 2.5 DT | Google | — | [13/13 GDM CTF](https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Deep-Think-Model-Card.pdf) | — | 2025.08 |
-| Grok 4.1 | xAI | [39%](https://data.x.ai/2025-11-17-grok-4-1-model-card.pdf) | — | — | 2025.11 |
 | Grok 4 | xAI | [43%](https://data.x.ai/2025-08-20-grok-4-model-card.pdf) | — | — | 2025.08 |
 
 **Real-world competitions** (Anthropic only):
@@ -93,7 +95,8 @@ The AI cybersecurity space is fragmented: OpenAI, Anthropic, Google, and xAI eac
 |---|---|---|---|---|---|
 | GPT-5.3-Codex | OpenAI | [**90%**](https://cdn.openai.com/pdf/23eca107-a9b1-4d2c-b156-7deb4fbc697c/GPT-5-3-Codex-System-Card-02.pdf) | — | — | 2026.02 |
 | Claude Opus 4.6 | Anthropic | — | [**66.6% p@1**](https://anthropic.com/claude-opus-4-6-system-card) | [**500+ novel**](https://anthropic.com/claude-opus-4-6-system-card) | 2026.02 |
-| Gemini 3 Pro | Google | — | — | — | 2025.11 |
+| Claude Sonnet 4.6 | Anthropic | — | — | — | 2026.02 |
+| Gemini 3.1 Pro | Google | — | — | — | 2026.02 |
 | Grok 4.1 | xAI | — | — | — | 2025.11 |
 | GPT-5.2-Codex | OpenAI | [87%](https://cdn.openai.com/pdf/ac7c37ae-7f4c-4442-b741-2eabdeaf77e0/oai_5_2_Codex.pdf) | — | — | 2025.12 |
 | Claude Opus 4.5 | Anthropic | — | [50.6% p@1](https://www.anthropic.com/claude-opus-4-5-system-card) | — | 2025.11 |
@@ -109,7 +112,8 @@ The AI cybersecurity space is fragmented: OpenAI, Anthropic, Google, and xAI eac
 |---|---|---|---|---|---|
 | GPT-5.3-Codex | OpenAI | — | — | — | 2026.02 |
 | Claude Opus 4.6 | Anthropic | — | — | — | 2026.02 |
-| Gemini 3 Pro | Google | — | — | — | 2025.11 |
+| Claude Sonnet 4.6 | Anthropic | — | — | — | 2026.02 |
+| Gemini 3.1 Pro | Google | — | — | — | 2026.02 |
 | Grok 4.1 | xAI | [**84%**](https://data.x.ai/2025-11-17-grok-4-1-model-card.pdf) | — | — | 2025.11 |
 | Grok 4 Fast | xAI | [81.4%](https://data.x.ai/2025-09-19-grok-4-fast-model-card.pdf) | — | — | 2025.09 |
 | Sec-Gemini v1 | Google | — | [+11%](https://security.googleblog.com/2025/04/google-launches-sec-gemini-v1-new.html) | — | 2025.04 |
@@ -126,7 +130,8 @@ The AI cybersecurity space is fragmented: OpenAI, Anthropic, Google, and xAI eac
 | GPT-5.3-Codex | OpenAI | — | — | 2026.02 | — |
 | Claude Opus 4.6 | Anthropic | 40 cyber investigations | **38/40 best** (blind-ranked) | 2026.02 | [System Card](https://anthropic.com/claude-opus-4-6-system-card) |
 | Claude Opus 4.6 | Anthropic | OSS vulnerability audit (US AISI) | Found novel bugs | 2026.02 | [System Card](https://anthropic.com/claude-opus-4-6-system-card) |
-| Gemini 3 Pro | Google | — | — | 2025.11 | — |
+| Claude Sonnet 4.6 | Anthropic | — | — | 2026.02 | — |
+| Gemini 3.1 Pro | Google | — | — | 2026.02 | — |
 | Grok 4.1 | xAI | — | — | 2025.11 | — |
 
 ---
@@ -138,9 +143,10 @@ The AI cybersecurity space is fragmented: OpenAI, Anthropic, Google, and xAI eac
 | Model | Company | Benchmark | Score | Date | Source |
 |---|---|---|---|---|---|
 | GPT-5.3-Codex | OpenAI | — | — | 2026.02 | — |
+| Claude Opus 4.6 | Anthropic | — | — | 2026.02 | — |
 | Claude Sonnet 4.6 | Anthropic | Prompt Injection (coding + ext. thinking) | **0% attack success** | 2026.02 | [System Card](https://anthropic.com/claude-sonnet-4-6-system-card) |
 | Claude Sonnet 4.6 | Anthropic | Prompt Injection (browser) | <0.3% attack success | 2026.02 | [System Card](https://anthropic.com/claude-sonnet-4-6-system-card) |
-| Gemini 3 Pro | Google | — | — | 2025.11 | — |
+| Gemini 3.1 Pro | Google | — | — | 2026.02 | — |
 | Grok 4.1 | xAI | — | — | 2025.11 | — |
 | Grok 4 Fast | xAI | [AgentDojo](https://arxiv.org/abs/2406.13352) | 0–3% attack success | 2025.09 | [Model Card](https://data.x.ai/2025-09-19-grok-4-fast-model-card.pdf) |
 | Operator (GPT-4o) | OpenAI | Prompt Injection | 99% recall | 2025.01 | [System Card](https://cdn.openai.com/operator_system_card.pdf) |
@@ -156,7 +162,8 @@ The AI cybersecurity space is fragmented: OpenAI, Anthropic, Google, and xAI eac
 |---|---|---|---|---|---|---|
 | GPT-5.3-Codex | OpenAI | — | — | — | — | 2026.02 |
 | Claude Opus 4.6 | Anthropic | — | — | — | — | 2026.02 |
-| Gemini 3 Pro | Google | — | — | — | — | 2025.11 |
+| Claude Sonnet 4.6 | Anthropic | — | — | — | — | 2026.02 |
+| Gemini 3.1 Pro | Google | — | — | — | — | 2026.02 |
 | Grok 4.1 | xAI | [<14%](https://data.x.ai/2025-11-17-grok-4-1-model-card.pdf) | [0.49](https://data.x.ai/2025-11-17-grok-4-1-model-card.pdf) | [0.19](https://data.x.ai/2025-11-17-grok-4-1-model-card.pdf) | [0%](https://data.x.ai/2025-11-17-grok-4-1-model-card.pdf) | 2025.11 |
 | Grok 4 Fast | xAI | [8–10%](https://data.x.ai/2025-09-19-grok-4-fast-model-card.pdf) | — | — | — | 2025.09 |
 
