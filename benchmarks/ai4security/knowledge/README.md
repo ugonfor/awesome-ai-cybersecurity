@@ -1,11 +1,11 @@
-# Security BY AI — Knowledge Benchmarks
+# AI4Security — Cyber Knowledge Benchmarks
 
 > Evaluating AI's cybersecurity domain knowledge: threat intelligence, vulnerability classification, killchain understanding.
 
 ---
 
 ### [WMDP-Cyber](https://www.wmdp.ai/)
-- **Category**: Security BY AI > Knowledge
+- **Category**: AI4Security > Cyber Knowledge
 - **Created by**: Center for AI Safety (CAIS)
 - **Used by**: xAI
 - **Scale**: Multiple-choice questions covering cyber killchain (recon, weaponization, exploitation, post-exploitation)
@@ -22,7 +22,7 @@
 ---
 
 ### MC Cybersecurity Knowledge
-- **Category**: Security BY AI > Knowledge
+- **Category**: AI4Security > Cyber Knowledge
 - **Created by**: OpenAI
 - **Used by**: OpenAI
 - **Scale**: Internal multiple-choice evaluation
@@ -37,7 +37,7 @@
 ---
 
 ### CTI-MCQ (Sec-Gemini)
-- **Category**: Security BY AI > Knowledge > Threat Intelligence
+- **Category**: AI4Security > Cyber Knowledge > Threat Intelligence
 - **Created by**: Rochester Institute of Technology ([CTI-Bench](https://github.com/xashru/cti-bench) project)
 - **Used by**: Google (Sec-Gemini)
 - **Scale**: Threat intelligence multiple-choice questions
@@ -52,7 +52,7 @@
 ---
 
 ### CTI-RCM (Sec-Gemini)
-- **Category**: Security BY AI > Knowledge > Vulnerability Classification
+- **Category**: AI4Security > Cyber Knowledge > Vulnerability Classification
 - **Created by**: Rochester Institute of Technology ([CTI-Bench](https://github.com/xashru/cti-bench) project)
 - **Used by**: Google (Sec-Gemini)
 - **Scale**: Root cause to CWE mapping tasks
@@ -73,7 +73,7 @@
 ---
 
 ### [SecBench](https://github.com/secbench-git/SecBench)
-- **Category**: Security BY AI > Knowledge > Multi-dimensional
+- **Category**: AI4Security > Cyber Knowledge > Multi-dimensional
 - **Created by**: Academic researchers (secbench-git)
 - **Used by**: Academic community
 - **Scale**: 44,823 MCQs + 3,087 short-answer questions across 9 cybersecurity sub-domains and 2 difficulty levels; bilingual (EN/ZH)
@@ -84,7 +84,7 @@
 ---
 
 ### [CyberMetric](https://github.com/cybermetric/CyberMetric)
-- **Category**: Security BY AI > Knowledge > Domain Evaluation
+- **Category**: AI4Security > Cyber Knowledge > Domain Evaluation
 - **Created by**: Academic researchers (Tihanyi, Ferrag et al.)
 - **Used by**: Academic community (highest citations among cybersec MCQ benchmarks as of mid-2025)
 - **Scale**: 10,000 questions across 4 variants (CyberMetric-80/500/2000/10000); 9 domains including cryptography, network security, IoT, cloud, pen testing
@@ -95,7 +95,7 @@
 ---
 
 ### [SecQA](https://huggingface.co/datasets/zefang-liu/secqa)
-- **Category**: Security BY AI > Knowledge > Educational
+- **Category**: AI4Security > Cyber Knowledge > Educational
 - **Created by**: Zefang Liu (individual researcher)
 - **Used by**: Academic community
 - **Scale**: 242 multiple-choice questions in 2 sets: v1 (127 questions, introductory) and v2 (115 questions, advanced)
@@ -106,7 +106,7 @@
 ---
 
 ### [SecEval](https://github.com/XuanwuAI/SecEval)
-- **Category**: Security BY AI > Knowledge > Foundation Model Evaluation
+- **Category**: AI4Security > Cyber Knowledge > Foundation Model Evaluation
 - **Created by**: Tencent Security Xuanwu Lab
 - **Used by**: Academic community
 - **Scale**: ~2,100 multiple-choice questions across 9 domains (software security, application security, system security, web security, cryptography, memory safety, network security, pen testing)
@@ -116,7 +116,7 @@
 ---
 
 ### [CTI-Bench](https://github.com/xashru/cti-bench)
-- **Category**: Security BY AI > Knowledge > Cyber Threat Intelligence
+- **Category**: AI4Security > Cyber Knowledge > Cyber Threat Intelligence
 - **Created by**: Rochester Institute of Technology
 - **Used by**: Academic community
 - **Scale**: Multiple datasets: CTI-MCQ (knowledge), CTI-RCM (CVE-to-CWE mapping), CTI-VSP (CVSS scoring), CTI-TAA (threat actor attribution)
@@ -127,7 +127,7 @@
 ---
 
 ### [SECURE](https://arxiv.org/abs/2405.20441)
-- **Category**: Security BY AI > Knowledge > ICS/Critical Infrastructure
+- **Category**: AI4Security > Cyber Knowledge > ICS/Critical Infrastructure
 - **Created by**: Argonne National Laboratory / UChicago
 - **Used by**: Academic community
 - **Scale**: 6 datasets focused on ICS: MAET (MITRE ATT&CK extraction), CWET (CWE extraction), KCV (CVE knowledge), VOOD (vulnerability OOD), RERT (risk evaluation reasoning), CPST (CVSS problem solving)
@@ -138,7 +138,7 @@
 ---
 
 ### [CS-Eval](https://github.com/CS-EVAL/CS-Eval)
-- **Category**: Security BY AI > Knowledge > Comprehensive
+- **Category**: AI4Security > Cyber Knowledge > Comprehensive
 - **Created by**: Academic researchers
 - **Used by**: Academic community
 - **Scale**: 42 subcategories across 11 top-level categories; 3 cognitive levels (knowledge, ability, application)
@@ -149,7 +149,7 @@
 ---
 
 ### [WMDP (Weapons of Mass Destruction Proxy)](https://github.com/centerforaisafety/wmdp)
-- **Category**: Security BY AI > Knowledge > Hazardous Knowledge (dual-use)
+- **Category**: AI4Security > Cyber Knowledge > Hazardous Knowledge (dual-use)
 - **Created by**: Center for AI Safety (CAIS), Scale AI, 20+ academic institutions
 - **Used by**: xAI (WMDP-Cyber subset), academic community
 - **Scale**: 3,668 multiple-choice questions across 3 domains: biosecurity, cybersecurity, chemical security

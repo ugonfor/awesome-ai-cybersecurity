@@ -12,21 +12,27 @@
 
 ### Taxonomy Rules (MUST follow)
 
-Everything in this repo is classified by two axes. **Never create content that violates this structure.**
+Everything in this repo is classified by two levels. **Never create content that violates this structure.**
 
-**Axis 1 — OF / BY / FROM:**
-- **Security OF AI** = Protecting the AI model (jailbreak, prompt injection, robustness)
-- **Security BY AI** = AI performing cybersecurity tasks (CTF, pentest, SOC, threat intel)
-- **Security FROM AI** = Assessing risks posed by AI (misuse, deception, alignment)
+**Level 1 — AI4Security / Security4AI:**
+- **AI4Security** = AI helping with cybersecurity tasks (CTF, pentest, SOC, threat intel, knowledge)
+- **Security4AI** = Security concerns about AI itself (robustness, misuse, alignment)
 
-**Axis 2 — Offensive / Defensive / Evaluation:**
-- **Offensive** = Red team, attack simulation, vulnerability discovery
-- **Defensive** = Blue team, detection, incident response
-- **Evaluation** = Pure capability measurement
+**Level 2 — Subcategories:**
+
+AI4Security:
+- **Offensive Capability** = CTF, exploitation, penetration testing, vulnerability discovery, end-to-end attacks
+- **Defensive Capability** = Detection, investigation, SOC automation, threat intelligence analysis
+- **Cyber Knowledge** = Domain knowledge evaluation (WMDP-Cyber, CTI-MCQ, SecBench)
+
+Security4AI:
+- **Model Robustness** = Protecting models from attacks (prompt injection, jailbreak, adversarial robustness)
+- **Misuse Risk** = Preventing harmful use of AI (AgentHarm, harmful refusal, malware generation)
+- **Alignment** = Ensuring AI behaves as intended (sabotage, deception, sycophancy, stealth)
 
 When adding new entries:
-- ALL agents go under **Security BY AI** (they perform cybersecurity tasks). Use Axis 2 (Offensive/Defensive) for sub-classification.
-- Tools are classified by which axis they test: Garak → OF AI, CTF platforms → BY AI, Inspect → cross-taxonomy.
+- ALL agents go under **AI4Security** (they perform cybersecurity tasks). Use subcategory (Offensive/Defensive) for classification.
+- Tools are classified by which category they serve: Garak → Security4AI (Model Robustness), CTF platforms → AI4Security, Inspect → cross-taxonomy.
 - Some benchmarks are genuinely dual-use (e.g., WMDP, Zero-day Discovery). List in both directories but add a cross-reference note.
 
 ### Factual Accuracy Rules
@@ -48,8 +54,9 @@ When adding new entries:
 - **Group models by company** (OpenAI / Anthropic / Google), not by date
 - **Dense reference tables** (Benchmark Mapping, Timeline, Performance Numbers) should be collapsible (`<details>`)
 - **Agents section**: Show top 5 picks per category, rest in collapsible list
-- **Tools section**: Organize by taxonomy (OF AI tools / BY AI platforms / cross-taxonomy frameworks)
+- **Tools section**: Organize by taxonomy (Security4AI tools / AI4Security platforms / cross-taxonomy frameworks)
 - **Don't repeat** information that's already in Cross-Comparison tables in the Benchmarks section — just link to it
+- **References section** at the bottom of README consolidates all source documents (system cards, framework docs, papers)
 
 ### Entry Format
 
@@ -57,7 +64,7 @@ Every benchmark/agent/tool entry in subdirectories should follow:
 
 ```markdown
 ### [Name](link)
-- **Category**: Security BY AI > Offensive > CTF
+- **Category**: AI4Security > Offensive Capability > CTF
 - **Created by**: Organization
 - **Used by**: OpenAI, Anthropic, ...
 - **Scale**: N tasks/problems
@@ -96,12 +103,14 @@ awesome-ai-cybersecurity/
 │   ├── xai.md                     # 9 documents: Grok-1 → Grok 4.1
 │   └── cross-comparison.md        # Detailed cross-comparison (superset of README tables)
 ├── benchmarks/                    # Individual benchmark entries (70+)
-│   ├── security-of-ai/            # Jailbreak, prompt injection, adversarial robustness
-│   ├── security-by-ai/            # CTF, pentest, code audit, detection benchmarks
-│   │   ├── offensive/
-│   │   ├── defensive/
-│   │   └── knowledge/
-│   └── security-from-ai/          # Misuse risk, dual-use, WMDP-style
+│   ├── ai4security/               # AI helping with cybersecurity
+│   │   ├── offensive/             # CTF, pentest, vuln discovery, exploit
+│   │   ├── defensive/             # Investigation, SOC, threat intel analysis
+│   │   └── knowledge/             # Domain knowledge evaluation
+│   └── security4ai/               # Security concerns about AI
+│       ├── model-robustness/      # Prompt injection, jailbreak, adversarial
+│       ├── misuse-risk/           # AgentHarm, harmful refusal, malware
+│       └── alignment/             # Sabotage, deception, sycophancy
 ├── agents/                        # Cybersecurity AI agents (39)
 │   ├── offensive/                 # Pentest agents, CTF solvers, exploit generators
 │   ├── defensive/                 # SOC agents, detection/analysis agents

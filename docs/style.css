@@ -192,16 +192,16 @@ tbody tr:hover td { background: var(--table-row-hover); }
 .sticky-col table th:first-child,
 .sticky-col table td:first-child {
   position: sticky; left: 0; z-index: 2;
-  background: var(--sticky-col-bg); min-width: 120px;
+  min-width: 120px; border-right: 2px solid var(--border);
 }
-.sticky-col table th:first-child::after,
-.sticky-col table td:first-child::after {
-  content: ''; position: absolute; top: 0; right: -6px; bottom: 0; width: 6px;
-  background: linear-gradient(to right, rgba(0,0,0,0.06), transparent); pointer-events: none;
+.sticky-col table th:first-child {
+  background: var(--table-header-bg);
 }
-[data-theme="dark"] .sticky-col table th:first-child::after,
-[data-theme="dark"] .sticky-col table td:first-child::after {
-  background: linear-gradient(to right, rgba(0,0,0,0.2), transparent);
+.sticky-col table td:first-child {
+  background: var(--bg);
+}
+.sticky-col table tr:nth-child(even) td:first-child {
+  background: var(--table-stripe);
 }
 
 /* Comparison table: benchmark rows, model columns (Google-style) */

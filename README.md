@@ -1,6 +1,6 @@
 # Awesome AI Cybersecurity [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-> Curated AI cybersecurity benchmarks, agents & tools — organized by Security OF / BY / FROM AI
+> Curated AI cybersecurity benchmarks, agents & tools — organized by AI4Security / Security4AI
 
 The AI cybersecurity space is fragmented: OpenAI, Anthropic, Google, and xAI each use different benchmarks, and terms like "red team," "blue team," "safety," and "security" are used inconsistently. This repo cuts through the confusion with a clear taxonomy and comprehensive cross-comparison.
 
@@ -15,31 +15,29 @@ The AI cybersecurity space is fragmented: OpenAI, Anthropic, Google, and xAI eac
   - [Benchmark Mapping](#benchmark-mapping) (collapsible)
   - [Timeline](#timeline) (collapsible)
 - [Benchmarks](#benchmarks)
-- [Agents — Security BY AI](#agents--security-by-ai)
+- [Agents — AI4Security](#agents--ai4security)
 - [Tools](#tools)
-- [Vendor Documentation](#vendor-documentation)
+- [References](#references)
 
 ---
 
 ## Taxonomy
 
-The core differentiator of this repo. We classify everything along two axes:
+### AI4Security (AI helping with cybersecurity)
 
-### Axis 1: Whose security?
-
-| Category | Meaning | Example |
+| Subcategory | Meaning | Example |
 |----------|---------|---------|
-| **Security OF AI** | Protecting the AI model itself | Jailbreak defense, prompt injection robustness |
-| **Security BY AI** | AI performing cybersecurity tasks | CTF solving, vulnerability analysis, SOC automation |
-| **Security FROM AI** | Assessing risks posed by AI | Malware generation capability, exploit writing risk |
+| **Offensive Capability** | CTF, exploitation, penetration testing | Cybench, CVE-Bench, Cyber Range |
+| **Defensive Capability** | Detection, investigation, SOC automation | CyberGym investigations, CTI analysis |
+| **Cyber Knowledge** | Domain knowledge evaluation | WMDP-Cyber, CTI-MCQ, SecBench |
 
-### Axis 2: Offensive vs Defensive
+### Security4AI (Security concerns about AI)
 
-| Category | Meaning |
-|----------|---------|
-| **Offensive (Red Team)** | Attack simulation, vulnerability discovery |
-| **Defensive (Blue Team)** | Detection, analysis, incident response |
-| **Evaluation** | Pure capability measurement |
+| Subcategory | Meaning | Example |
+|----------|---------|---------|
+| **Model Robustness** | Protecting models from attacks | Prompt injection, jailbreak, AgentDojo |
+| **Misuse Risk** | Preventing harmful use of AI | AgentHarm, harmful refusal, malware bench |
+| **Alignment** | Ensuring AI behaves as intended | MASK, sabotage, sycophancy, stealth |
 
 **Key terms:**
 - **pass@k** — Success rate when the model gets k attempts per task. pass@1 = must succeed on first try; pass@30 = at least 1 success in 30 tries. Higher k inflates scores.
@@ -63,7 +61,7 @@ The core differentiator of this repo. We classify everything along two axes:
 > - **pass@k varies.** Unless noted, Cybench scores use different pass@k thresholds per model (e.g., Claude Sonnet 4.5 = pass@10, Opus 4.5 = pass@1, Grok models = unguided). Higher k inflates scores.
 > - **"CTF (Pro)" is NOT a shared benchmark.** Each company has its own proprietary CTF set with different challenges and difficulty calibrations.
 
-| | Model | Agent Setup | Date | CTF (Pro) | [Cybench](https://cybench.github.io/) | [CVE-Bench](benchmarks/security-by-ai/offensive/) | Cyber Range | [CyberGym](https://red.anthropic.com/2025/ai-for-cyber-defenders/) | [WMDP-Cyber](https://www.wmdp.ai/) |
+| | Model | Agent Setup | Date | CTF (Pro) | [Cybench](https://cybench.github.io/) | [CVE-Bench](benchmarks/ai4security/offensive/) | Cyber Range | [CyberGym](https://red.anthropic.com/2025/ai-for-cyber-defenders/) | [WMDP-Cyber](https://www.wmdp.ai/) |
 |---|---|---|---|---|---|---|---|---|---|
 | **OpenAI** | GPT-5.3-Codex | Codex CLI + Linux | 2026.02 | [All passed](https://cdn.openai.com/pdf/23eca107-a9b1-4d2c-b156-7deb4fbc697c/GPT-5-3-Codex-System-Card-02.pdf) | — | [90%](https://cdn.openai.com/pdf/23eca107-a9b1-4d2c-b156-7deb4fbc697c/GPT-5-3-Codex-System-Card-02.pdf) | [80%](https://cdn.openai.com/pdf/23eca107-a9b1-4d2c-b156-7deb4fbc697c/GPT-5-3-Codex-System-Card-02.pdf) | — | — |
 | | GPT-5.2-Codex | Codex CLI + Linux | 2025.12 | — | — | [87%](https://cdn.openai.com/pdf/ac7c37ae-7f4c-4442-b741-2eabdeaf77e0/oai_5_2_Codex.pdf) | — | — | — |
@@ -131,7 +129,7 @@ Each company has its own framework for evaluating cybersecurity risk:
 <details>
 <summary>Which company uses which benchmark? (click to expand)</summary>
 
-#### Security BY AI — Offensive (Cyber Capability)
+#### AI4Security — Offensive Capability
 
 | Benchmark | OpenAI | Anthropic | Google | xAI | Description |
 |---|:---:|:---:|:---:|:---:|---|
@@ -149,7 +147,7 @@ Each company has its own framework for evaluating cybersecurity risk:
 | **PicoCTF / HTB / WRCCDC** | — | ✅ | — | — | Real competitive CTF events |
 | **Equifax Simulation** | — | ✅ | — | — | High-fidelity breach simulation |
 
-#### Security BY AI — Knowledge
+#### AI4Security — Cyber Knowledge
 
 | Benchmark | OpenAI | Anthropic | Google | xAI | Description |
 |---|:---:|:---:|:---:|:---:|---|
@@ -158,7 +156,7 @@ Each company has its own framework for evaluating cybersecurity risk:
 | **CTI-MCQ** | — | — | ✅ | — | Threat intelligence knowledge (Sec-Gemini) |
 | **CTI-RCM** | — | — | ✅ | — | Root cause → CWE mapping (Sec-Gemini) |
 
-#### Security OF AI — Jailbreak / Prompt Injection / Robustness
+#### Security4AI — Model Robustness
 
 | Benchmark | OpenAI | Anthropic | Google | xAI | Description |
 |---|:---:|:---:|:---:|:---:|---|
@@ -169,7 +167,7 @@ Each company has its own framework for evaluating cybersecurity risk:
 | **Automated Red Teaming (ART)** | — | — | ✅ | — | Continuous adversarial evaluation framework |
 | **Expert Red Teaming** | ✅ | ✅ | ✅ | — | External experts adversarially testing models |
 
-#### Security FROM AI — Misuse Risk / Dual-use
+#### Security4AI — Misuse Risk
 
 | Benchmark | OpenAI | Anthropic | Google | xAI | Description |
 |---|:---:|:---:|:---:|:---:|---|
@@ -178,7 +176,7 @@ Each company has its own framework for evaluating cybersecurity risk:
 | **Harmful Request Refusal** | ✅ | ✅ | ✅ | ✅ | Refusal rate on violative/harmful prompts |
 | **Zero-day Discovery Eval** | — | ✅ | — | — | Model auditing OSS for novel vulns |
 
-#### Security FROM AI — Behavioral / Alignment
+#### Security4AI — Alignment
 
 | Benchmark | OpenAI | Anthropic | Google | xAI | Description |
 |---|:---:|:---:|:---:|:---:|---|
@@ -348,26 +346,26 @@ Each company has its own framework for evaluating cybersecurity risk:
 
 | Category | Scope | Vendor | Academic | Full List |
 |---|---|:---:|:---:|---|
-| **Security OF AI** | Jailbreak, prompt injection, adversarial robustness | 6 | 14 | [`benchmarks/security-of-ai/`](benchmarks/security-of-ai/) |
-| **Security BY AI** | CTF, pentest, vuln detection, threat intel knowledge | 19 | 18 | [`benchmarks/security-by-ai/`](benchmarks/security-by-ai/) |
-| **Security FROM AI** | Misuse risk, dual-use, deception, alignment | 10 | 2 | [`benchmarks/security-from-ai/`](benchmarks/security-from-ai/) |
+| **Security4AI: Model Robustness** | Jailbreak, prompt injection, adversarial robustness | 6 | 14 | [`benchmarks/security4ai/model-robustness/`](benchmarks/security4ai/model-robustness/) |
+| **AI4Security** | CTF, pentest, vuln detection, threat intel knowledge | 19 | 18 | [`benchmarks/ai4security/`](benchmarks/ai4security/) |
+| **Security4AI: Misuse Risk & Alignment** | Misuse risk, dual-use, deception, alignment | 10 | 2 | [`benchmarks/security4ai/`](benchmarks/security4ai/) |
 
 **Notable academic benchmarks** (not used by the 4 major vendors):
 
 | Benchmark | Category | Scale | Venue |
 |---|---|---|---|
-| [HarmBench](https://github.com/centerforaisafety/HarmBench) | OF AI — Jailbreak | 510 behaviors, 18 attacks, 33 LLMs | ICML 2024 |
-| [CyberSecEval v1-v4](https://github.com/meta-llama/PurpleLlama) | OF AI — Secure Code | ~1,000+ test cases | Meta |
-| [NYU CTF Bench](https://github.com/NYU-LLM-CTF/NYU_CTF_Bench) | BY AI — CTF | 200 challenges, 6 categories | NeurIPS 2024 |
-| [SecBench](https://github.com/secbench-git/SecBench) | BY AI — Knowledge | 47,910 questions, 9 domains | — |
-| [PrimeVul](https://github.com/DLVulDet/PrimeVul) | BY AI — Vuln Detection | 7K vuln + 229K benign functions | ICSE 2025 |
-| [DecodingTrust](https://github.com/AI-secure/DecodingTrust) | OF AI — Trust | 8 dimensions | NeurIPS 2023 Outstanding (D&B Track) |
+| [HarmBench](https://github.com/centerforaisafety/HarmBench) | Security4AI — Jailbreak | 510 behaviors, 18 attacks, 33 LLMs | ICML 2024 |
+| [CyberSecEval v1-v4](https://github.com/meta-llama/PurpleLlama) | Security4AI — Secure Code | ~1,000+ test cases | Meta |
+| [NYU CTF Bench](https://github.com/NYU-LLM-CTF/NYU_CTF_Bench) | AI4Security — CTF | 200 challenges, 6 categories | NeurIPS 2024 |
+| [SecBench](https://github.com/secbench-git/SecBench) | AI4Security — Knowledge | 47,910 questions, 9 domains | — |
+| [PrimeVul](https://github.com/DLVulDet/PrimeVul) | AI4Security — Vuln Detection | 7K vuln + 229K benign functions | ICSE 2025 |
+| [DecodingTrust](https://github.com/AI-secure/DecodingTrust) | Security4AI — Trust | 8 dimensions | NeurIPS 2023 Outstanding (D&B Track) |
 
 ---
 
-## Agents — Security BY AI
+## Agents — AI4Security
 
-> AI performing cybersecurity tasks (Axis 1: BY AI). Classified by Axis 2: Offensive / Defensive. 39 agents total — full details in [`agents/`](agents/).
+> AI performing cybersecurity tasks. Classified by Offensive / Defensive. 39 agents total — full details in [`agents/`](agents/).
 
 ### Agent Performance Leaderboard
 
@@ -466,7 +464,7 @@ Each company has its own framework for evaluating cybersecurity risk:
 | **[Vivaria](https://github.com/METR/vivaria)** | METR | Agent evaluation platform (transitioning to Inspect) |
 | **[lm-evaluation-harness](https://github.com/EleutherAI/lm-evaluation-harness)** | EleutherAI | Unified LLM eval (includes WMDP-Cyber) |
 
-**Security OF AI** — Testing model robustness:
+**Security4AI — Model Robustness:**
 
 | Tool | Created by | Summary |
 |---|---|---|
@@ -476,7 +474,7 @@ Each company has its own framework for evaluating cybersecurity risk:
 | **[JailbreakBench](https://github.com/JailbreakBench/jailbreakbench)** | Multi-institution | 100 behaviors + attack/defense leaderboard |
 | **[StrongREJECT](https://github.com/dsbowen/strong_reject)** | UC Berkeley / GDM | Jailbreak eval with SOTA human agreement |
 
-**Security BY AI** — Cybersecurity task platforms:
+**AI4Security — Task Platforms:**
 
 | Tool | Created by | Summary |
 |---|---|---|
@@ -493,29 +491,47 @@ Each company has its own framework for evaluating cybersecurity risk:
 | Tool | Taxonomy | Created by |
 |---|---|---|
 | [Inspect Evals](https://github.com/UKGovernmentBEIS/inspect_evals) | Cross-taxonomy | UK AISI + community |
-| [Dangerous Capability Evals](https://github.com/google-deepmind/dangerous-capability-evaluations) | FROM AI | Google DeepMind |
-| [CAIBench](https://arxiv.org/abs/2510.24317) | BY AI | Alias Robotics |
-| [ExCyTIn-Bench](https://github.com/microsoft/SecRL) | BY AI > Defensive | Microsoft |
-| [eyeballvul](https://github.com/timothee-chauvin/eyeballvul) | BY AI > Offensive | METR-affiliated |
+| [Dangerous Capability Evals](https://github.com/google-deepmind/dangerous-capability-evaluations) | Security4AI | Google DeepMind |
+| [CAIBench](https://arxiv.org/abs/2510.24317) | AI4Security | Alias Robotics |
+| [ExCyTIn-Bench](https://github.com/microsoft/SecRL) | AI4Security > Defensive | Microsoft |
+| [eyeballvul](https://github.com/timothee-chauvin/eyeballvul) | AI4Security > Offensive | METR-affiliated |
 
 </details>
 
 ---
 
-## Vendor Documentation
+## References
 
-Detailed per-vendor documentation is available in [`raw-data/`](raw-data/):
-
+### Vendor Documentation (Detailed Analysis)
 - [`raw-data/openai.md`](raw-data/openai.md) — 19 documents, GPT-4 through GPT-5.3-Codex
 - [`raw-data/anthropic.md`](raw-data/anthropic.md) — 24 documents, Claude 2 through Claude Opus 4.6
 - [`raw-data/google.md`](raw-data/google.md) — 25+ documents, Gemini 1.0 through Gemini 3.1 Pro
 - [`raw-data/xai.md`](raw-data/xai.md) — 9 documents, Grok-1 through Grok 4.1
 
+### Risk Frameworks
+- [Preparedness Framework v2 (OpenAI)](https://cdn.openai.com/pdf/18a02b5d-6b67-4cec-ab64-68cdfbddebcd/preparedness-framework-v2.pdf)
+- [RSP v2.2 (Anthropic)](https://www.anthropic.com/responsible-scaling-policy)
+- [FSF v3.0 (Google)](https://storage.googleapis.com/deepmind-media/DeepMind.com/Blog/strengthening-our-frontier-safety-framework/frontier-safety-framework_3.pdf)
+- [Risk Management Framework (xAI)](https://data.x.ai/2025-08-20-xai-risk-management-framework.pdf)
+
+### System Cards & Model Cards
+**OpenAI**: [GPT-5.3-Codex](https://cdn.openai.com/pdf/23eca107-a9b1-4d2c-b156-7deb4fbc697c/GPT-5-3-Codex-System-Card-02.pdf) · [GPT-5.2-Codex](https://cdn.openai.com/pdf/ac7c37ae-7f4c-4442-b741-2eabdeaf77e0/oai_5_2_Codex.pdf) · [GPT-5.1-Codex-Max](https://cdn.openai.com/pdf/2a7d98b1-57e5-4147-8d0e-683894d782ae/5p1_codex_max_card_03.pdf) · [GPT-5](https://cdn.openai.com/gpt-5-system-card.pdf) · [o3/o4-mini](https://cdn.openai.com/pdf/2221c875-02dc-4789-800b-e7758f3722c1/o3-and-o4-mini-system-card.pdf) · [Deep Research](https://cdn.openai.com/deep-research-system-card.pdf) · [o3-mini](https://cdn.openai.com/o3-mini-system-card-feb10.pdf) · [o1](https://cdn.openai.com/o1-system-card-20241205.pdf) · [GPT-4o](https://cdn.openai.com/gpt-4o-system-card.pdf) · [Operator](https://cdn.openai.com/operator_system_card.pdf)
+
+**Anthropic**: [Claude Opus 4.6](https://anthropic.com/claude-opus-4-6-system-card) · [Claude Sonnet 4.6](https://anthropic.com/claude-sonnet-4-6-system-card) · [Claude Opus 4.5](https://www.anthropic.com/claude-opus-4-5-system-card) · [Claude Sonnet 4.5](https://www.anthropic.com/claude-sonnet-4-5-system-card) · [Claude 4](https://www.anthropic.com/claude-4-system-card) · [Claude 3.7 Sonnet](https://anthropic.com/claude-3-7-sonnet-system-card) · [Cyber Competitions](https://red.anthropic.com/2025/cyber-competitions/) · [AI for Cyber Defenders](https://red.anthropic.com/2025/ai-for-cyber-defenders/) · [Disrupting AI Espionage](https://www.anthropic.com/news/disrupting-AI-espionage)
+
+**Google**: [Gemini 2.5 Technical Report](https://arxiv.org/abs/2507.06261) · [Gemini 3 Pro FSF Report](https://storage.googleapis.com/deepmind-media/gemini/gemini_3_pro_fsf_report.pdf) · [Gemini 2.5 Deep Think](https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Deep-Think-Model-Card.pdf) · [Sec-Gemini v1](https://security.googleblog.com/2025/04/google-launches-sec-gemini-v1-new.html) · [Dangerous Capabilities](https://arxiv.org/abs/2403.13793)
+
+**xAI**: [Grok 4.1](https://data.x.ai/2025-11-17-grok-4-1-model-card.pdf) · [Grok 4 Fast](https://data.x.ai/2025-09-19-grok-4-fast-model-card.pdf) · [Grok 4](https://data.x.ai/2025-08-20-grok-4-model-card.pdf) · [FAIF](https://data.x.ai/2025-12-31-xai-frontier-artificial-intelligence-framework.pdf)
+
+### Third-Party Evaluations
+- [US/UK AISI Joint Test — o1](https://www.nist.gov/system/files/documents/2024/12/18/US_UK_AI%20Safety%20Institute_%20December_Publication-OpenAIo1.pdf)
+- [Framework for Evaluating Emerging Cyberattack Capabilities](https://arxiv.org/abs/2503.11917)
+
 ---
 
 ## Contributing
 
-Contributions welcome! Please follow the taxonomy (OF / BY / FROM) when adding new entries.
+Contributions welcome! Please follow the taxonomy (AI4Security / Security4AI) when adding new entries.
 
 ## License
 

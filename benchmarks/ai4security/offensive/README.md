@@ -1,11 +1,11 @@
-# Security BY AI — Offensive Benchmarks
+# AI4Security — Offensive Capability Benchmarks
 
 > AI performing offensive cybersecurity tasks: CTF solving, vulnerability exploitation, penetration testing.
 
 ---
 
 ### [Cybench](https://cybench.github.io/)
-- **Category**: Security BY AI > Offensive > CTF
+- **Category**: AI4Security > Offensive Capability > CTF
 - **Created by**: Stanford University
 - **Used by**: Anthropic, xAI (spells it "CyBench"), UK AISI, US AISI
 - **Scale**: 40 professional-level CTF tasks from 4 competitions (HackTheBox, SekaiCTF, Glacier, HKCert)
@@ -23,7 +23,7 @@
 ---
 
 ### [CyberGym](https://red.anthropic.com/2025/ai-for-cyber-defenders/)
-- **Category**: Security BY AI > Offensive > Vulnerability Discovery
+- **Category**: AI4Security > Offensive Capability > Vulnerability Discovery
 - **Created by**: UC Berkeley (Center for Responsible, Decentralized Intelligence)
 - **Used by**: Anthropic
 - **Scale**: 1,507 vulnerabilities across 188 open-source projects
@@ -38,7 +38,7 @@
 ---
 
 ### CVE-Bench
-- **Category**: Security BY AI > Offensive > Vulnerability Exploitation
+- **Category**: AI4Security > Offensive Capability > Vulnerability Exploitation
 - **Created by**: OpenAI
 - **Used by**: OpenAI
 - **Scale**: Real-world web application CVEs
@@ -52,7 +52,7 @@
 ---
 
 ### OpenAI CTF Challenges
-- **Category**: Security BY AI > Offensive > CTF
+- **Category**: AI4Security > Offensive Capability > CTF
 - **Created by**: OpenAI
 - **Used by**: OpenAI
 - **Scale**: 172 challenges across high-school, collegiate, and professional levels (web exploit, RE, pwn, crypto, misc)
@@ -75,7 +75,7 @@
 ---
 
 ### Cyber Range
-- **Category**: Security BY AI > Offensive > End-to-End Attack
+- **Category**: AI4Security > Offensive Capability > End-to-End Attack
 - **Created by**: OpenAI, Anthropic (independently)
 - **Used by**: OpenAI, Anthropic
 - **Scale**: 5+ multi-machine network scenarios (OpenAI); ~50-host networks (Anthropic/CMU)
@@ -91,7 +91,7 @@
 ---
 
 ### [InterCode-CTF](https://arxiv.org/abs/2306.14898)
-- **Category**: Security BY AI > Offensive > CTF
+- **Category**: AI4Security > Offensive Capability > CTF
 - **Created by**: Princeton University
 - **Used by**: Google
 - **Scale**: 76 easy CTF challenges
@@ -107,7 +107,7 @@
 ---
 
 ### [In-house CTF (Google DeepMind)](https://github.com/google-deepmind/dangerous-capability-evaluations)
-- **Category**: Security BY AI > Offensive > CTF
+- **Category**: AI4Security > Offensive Capability > CTF
 - **Created by**: Google DeepMind
 - **Used by**: Google
 - **Scale**: 13 medium-difficulty challenges (web, exploits, DB, privesc, passwords)
@@ -122,7 +122,7 @@
 ---
 
 ### Hack the Box
-- **Category**: Security BY AI > Offensive > CTF
+- **Category**: AI4Security > Offensive Capability > CTF
 - **Created by**: Hack The Box (platform)
 - **Used by**: Google, Anthropic
 - **Scale**: 12-13 professional-level challenges
@@ -138,7 +138,7 @@
 ---
 
 ### Key Skills Benchmark
-- **Category**: Security BY AI > Offensive > Skill Assessment
+- **Category**: AI4Security > Offensive Capability > Skill Assessment
 - **Created by**: Google DeepMind
 - **Used by**: Google
 - **Scale**: Multiple skill categories (recon, tool dev, tool use, OPSEC)
@@ -152,7 +152,7 @@
 ---
 
 ### Pattern Labs External CTFs
-- **Category**: Security BY AI > Offensive > CTF
+- **Category**: AI4Security > Offensive Capability > CTF
 - **Created by**: Pattern Labs (for Google)
 - **Used by**: Google
 - **Scale**: 50 non-public challenges
@@ -166,7 +166,7 @@
 ---
 
 ### CMU Cyber Ranges
-- **Category**: Security BY AI > Offensive > End-to-End Attack
+- **Category**: AI4Security > Offensive Capability > End-to-End Attack
 - **Created by**: Carnegie Mellon University / Anthropic
 - **Used by**: Anthropic
 - **Scale**: ~50-host network simulations
@@ -176,7 +176,7 @@
 ---
 
 ### Equifax Simulation
-- **Category**: Security BY AI > Offensive > End-to-End Attack
+- **Category**: AI4Security > Offensive Capability > End-to-End Attack
 - **Created by**: Anthropic (Frontier Red Team)
 - **Used by**: Anthropic
 - **Scale**: High-fidelity breach simulation (1 scenario, 5 trials)
@@ -190,7 +190,7 @@
 ---
 
 ### Real CTF Competitions (Anthropic)
-- **Category**: Security BY AI > Offensive > CTF
+- **Category**: AI4Security > Offensive Capability > CTF
 - **Created by**: Various competition organizers
 - **Used by**: Anthropic
 - **Scale**: Multiple live competitions
@@ -207,7 +207,7 @@
 ---
 
 ### Zero-day Discovery Evaluation
-- **Category**: Security BY AI > Offensive > Vulnerability Discovery
+- **Category**: AI4Security > Offensive Capability > Vulnerability Discovery
 - **Created by**: Anthropic
 - **Used by**: Anthropic
 - **Scale**: Pre-release testing against open-source software
@@ -227,7 +227,7 @@
 ---
 
 ### [NYU CTF Bench](https://github.com/NYU-LLM-CTF/NYU_CTF_Bench)
-- **Category**: Security BY AI > Offensive > CTF
+- **Category**: AI4Security > Offensive Capability > CTF
 - **Created by**: New York University
 - **Used by**: Academic community
 - **Scale**: 200 challenges across 6 categories (web, pwn, forensics, reverse engineering, crypto, misc)
@@ -238,7 +238,7 @@
 ---
 
 ### [CTFusion](https://openreview.net/forum?id=2zQJHLbyqM)
-- **Category**: Security BY AI > Offensive > CTF (Live)
+- **Category**: AI4Security > Offensive Capability > CTF (Live)
 - **Created by**: Academic researchers
 - **Used by**: Academic community
 - **Scale**: Streaming evaluation across 5+ live CTF competitions; implemented as MCP server on CTFd platform
@@ -248,7 +248,7 @@
 ---
 
 ### [VulnHub Pentest Benchmark](https://github.com/isamu-isozaki/AI-Pentest-Benchmark)
-- **Category**: Security BY AI > Offensive > Penetration Testing
+- **Category**: AI4Security > Offensive Capability > Penetration Testing
 - **Created by**: Academic researchers
 - **Used by**: Academic community
 - **Scale**: 13 VulnHub boxes (7 easy, 4 medium, 2 hard) with verified walkthroughs
@@ -259,7 +259,7 @@
 ---
 
 ### [SecLLMHolmes](https://github.com/ai4cloudops/SecLLMHolmes)
-- **Category**: Security BY AI > Offensive > Vulnerability Detection
+- **Category**: AI4Security > Offensive Capability > Vulnerability Detection
 - **Created by**: Boston University, IBM Research
 - **Used by**: Academic community
 - **Scale**: 228 code scenarios evaluated across 8 investigative dimensions on 8 LLMs
@@ -270,7 +270,7 @@
 ---
 
 ### [VulDetectBench](https://github.com/Sweetaroo/VulDetectBench)
-- **Category**: Security BY AI > Offensive > Vulnerability Detection
+- **Category**: AI4Security > Offensive Capability > Vulnerability Detection
 - **Created by**: Academic researchers
 - **Used by**: Academic community
 - **Scale**: 5 tasks of increasing difficulty covering 38-48 CWE types; 17 models evaluated
@@ -281,7 +281,7 @@
 ---
 
 ### [PrimeVul](https://github.com/DLVulDet/PrimeVul)
-- **Category**: Security BY AI > Offensive > Vulnerability Detection Dataset
+- **Category**: AI4Security > Offensive Capability > Vulnerability Detection Dataset
 - **Created by**: Academic researchers
 - **Used by**: Google (Gemini 1.5 evaluation), academic community
 - **Scale**: ~7,000 vulnerable functions + ~229,000 benign functions from real C/C++ projects; 140+ CWEs
@@ -292,7 +292,7 @@
 ---
 
 ### [DiverseVul](https://github.com/wagner-group/diversevul)
-- **Category**: Security BY AI > Offensive > Vulnerability Detection Dataset
+- **Category**: AI4Security > Offensive Capability > Vulnerability Detection Dataset
 - **Created by**: UC Berkeley (Wagner Group)
 - **Used by**: Academic community
 - **Scale**: 18,945 vulnerable functions + 330,492 non-vulnerable functions spanning 150 CWEs from 7,514 commits across 295+ projects
@@ -303,7 +303,7 @@
 ---
 
 ### [SWE-bench](https://github.com/SWE-bench/SWE-bench)
-- **Category**: Security BY AI > Offensive > Software Engineering (security-adjacent)
+- **Category**: AI4Security > Offensive Capability > Software Engineering (security-adjacent)
 - **Created by**: Princeton University
 - **Used by**: OpenAI, Anthropic, Google (as general coding benchmark; cybersecurity-adjacent)
 - **Scale**: 2,294 real GitHub issues from 12 Python repos; SWE-bench Verified: 500 human-validated subset
