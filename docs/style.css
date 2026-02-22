@@ -212,19 +212,23 @@ tbody tr:hover td { background: var(--table-row-hover); }
 .comparison-table .bench-notes {
   font-size: 11.5px; color: var(--text-muted); font-weight: 400; display: block;
 }
-.comparison-table .model-header {
+.comparison-table a.model-header,
+.comparison-table a.model-header:link,
+.comparison-table a.model-header:visited {
   font-size: 11px; font-weight: 700; white-space: nowrap;
   color: var(--text); text-decoration: none; display: block;
 }
-.comparison-table th a.model-header:hover {
+.comparison-table a.model-header:hover {
   text-decoration: underline; color: var(--link);
 }
-.comparison-table .agent-setup {
+.comparison-table a.agent-setup,
+.comparison-table a.agent-setup:link,
+.comparison-table a.agent-setup:visited {
   font-size: 10px; font-weight: 500;
   color: var(--text-muted); text-decoration: none;
   white-space: nowrap; text-transform: none; letter-spacing: 0;
 }
-.comparison-table .agent-setup:hover {
+.comparison-table a.agent-setup:hover {
   color: var(--link); text-decoration: underline;
 }
 .comparison-table .agent-row th {
@@ -242,9 +246,9 @@ tbody tr:hover td { background: var(--table-row-hover); }
 .col-xai { border-top: 3px solid var(--xai); }
 
 /* Score cells */
-.score-high { color: #16a34a; font-weight: 600; }
-.score-med { color: #ca8a04; font-weight: 500; }
-.score-low { color: var(--text-muted); }
+.score-high, .score-high a, .score-high a:link, .score-high a:visited { color: #16a34a; font-weight: 600; }
+.score-med, .score-med a, .score-med a:link, .score-med a:visited { color: #ca8a04; font-weight: 500; }
+.score-low, .score-low a, .score-low a:link, .score-low a:visited { color: var(--text-muted); }
 .score-na { color: var(--text-muted); font-style: italic; }
 .company-openai { color: var(--openai); }
 .company-anthropic { color: var(--anthropic); }
