@@ -37,7 +37,7 @@
   | Custom CTF (Professional) | AI4Security > Offensive | 27% → 76% | GPT-5 → GPT-5.1-Codex-Max progression | Report body |
   | CVE-Bench | AI4Security > Offensive | 87% | GPT-5.2-Codex, pass@1 | Report body |
 
-- **Key Findings**: Introduces **Aardvark** (agentic security researcher for internal use). Establishes **Frontier Risk Council** and **Trusted Access for Cyber** program.
+- **Key Findings**: Introduces **Aardvark** (agentic security researcher powered by GPT-5, 92% detection rate on known + synthetic vulnerabilities, 10 CVEs awarded via responsible disclosure). Establishes **Frontier Risk Council** and **Trusted Access for Cyber** program. CTF progression: GPT-5 27% (Aug 2025) → GPT-5.1-Codex-Max 76% (Nov 2025), "more than a twofold increase in just three months."
 
 ---
 
@@ -278,11 +278,16 @@
 
   | Benchmark | Category | Score | Methodology | Source Page/Section |
   |---|---|---|---|---|
-  | Custom CTF (Professional) | AI4Security > Offensive | ~27% | pass@12 | System Card |
-  | Cyber Range | AI4Security > Offensive | Evaluated | Expanded to 5 scenarios | System Card |
+  | Custom CTF (Professional) | AI4Security > Offensive | ~27% | pass@12, 100+ curated challenges | System Card |
+  | Cyber Range — all 5 scenarios | AI4Security > Offensive | 0/30 unaided (all scenarios) | gpt-5-thinking, 30 rollouts each | System Card (Figure 15) |
+  | Cyber Range — w/ hints | AI4Security > Offensive | Solves Simple Priv Esc + Azure SSRF infrequently | gpt-5-thinking, pass@1 w/ hints | System Card (Figure 15) |
+  | Irregular External — Evasion | AI4Security > Offensive | 51% | Pattern Labs, avg success rate | System Card |
+  | Irregular External — Network Attack | AI4Security > Offensive | 49% | Pattern Labs, avg success rate | System Card |
+  | Irregular External — Vuln D&E | AI4Security > Offensive | 35% | Pattern Labs, avg success rate | System Card |
+  | Irregular External (difficulty) | AI4Security > Offensive | 17/18 easy, 8/14 medium, 0/4 hard | Pattern Labs, difficulty-stratified | System Card |
 
-- **Key Findings**: Professional CTF ~27%. Cyber Range expanded to 5 scenarios.
-- **Notes**: CVE-Bench was NOT introduced in GPT-5; it first appears in the GPT-5.1-Codex-Max card.
+- **Key Findings**: Professional CTF ~27%. Cyber Range expanded to 5 scenarios but gpt-5-thinking scores 0/30 unaided on all. gpt-5-thinking-mini solves Simple Privilege Escalation twice. Pattern Labs concludes "limited assistance to a moderately skilled cyberoffensive operator."
+- **Notes**: CVE-Bench was NOT introduced in GPT-5; it first appears in the GPT-5.1-Codex-Max card. ChatGPT agent achieves highest Collegiate CTF; o3 achieves highest Professional CTF among models compared in this card.
 
 ### 15. GPT-5-Codex Addendum
 
@@ -295,11 +300,11 @@
 
   | Benchmark | Category | Score | Methodology | Source Page/Section |
   |---|---|---|---|---|
-  | Custom CTF (Professional) | AI4Security > Offensive | Sharp jump | Professional-level CTFs | Addendum |
-  | CVE-Bench | AI4Security > Offensive | Evaluated | pass@1 | Addendum |
+  | Custom CTF (Professional) | AI4Security > Offensive | ~50% | pass@12 (reported as comparison in GPT-5.1-Codex-Max card) | Addendum / GPT-5.1 card |
+  | CVE-Bench | AI4Security > Offensive | 53% | pass@1 (reported as comparison in GPT-5.1-Codex-Max card) | Addendum / GPT-5.1 card |
   | Cyber Range | AI4Security > Offensive | Evaluated | Multi-machine scenarios | Addendum |
 
-- **Key Findings**: "Sharp jump" in capability across Professional CTFs, CVE-Bench, and Cyber Range.
+- **Key Findings**: Sharp jump from GPT-5 (27% CTF → 50%, CVE-Bench introduced at 53%). Cross-model comparison in GPT-5.1-Codex-Max card provides the specific numbers.
 
 ### 16. GPT-5.1-Codex-Max System Card
 
@@ -312,13 +317,16 @@
 
   | Benchmark | Category | Score | Methodology | Source Page/Section |
   |---|---|---|---|---|
-  | Custom CTF (Professional) | AI4Security > Offensive | ~76% | Up from 27% (GPT-5) | System Card |
-  | Cyber Range — Network Attack | AI4Security > Offensive | 37% | Average success rate | System Card |
-  | Cyber Range — Vuln Discovery | AI4Security > Offensive | 41% | Average success rate | System Card |
-  | Cyber Range — Evasion | AI4Security > Offensive | 43% | Average success rate | System Card |
-  | Custom CTF (difficulty breakdown) | AI4Security > Offensive | 17/18 easy, 9/17 medium, 0/6 hard | Difficulty-stratified results | System Card |
+  | Custom CTF (Professional) | AI4Security > Offensive | 76% | pass@12; up from 50% (GPT-5-Codex) and 27% (GPT-5) | System Card |
+  | CVE-Bench | AI4Security > Offensive | 80% | pass@1; up from 53% (GPT-5-Codex) | System Card |
+  | Cyber Range | AI4Security > Offensive | 7/8 scenarios | Solved Leaked Token via unintended misconfiguration | System Card |
+  | Irregular External — Network Attack | AI4Security > Offensive | 37% | Pattern Labs, average success rate | System Card |
+  | Irregular External — Vuln Discovery | AI4Security > Offensive | 41% | Pattern Labs, average success rate | System Card |
+  | Irregular External — Evasion | AI4Security > Offensive | 43% | Pattern Labs, average success rate | System Card |
+  | Irregular External (difficulty) | AI4Security > Offensive | 17/18 easy, 9/17 medium, 0/6 hard | Pattern Labs, difficulty-stratified | System Card |
 
-- **Key Findings**: Major leap from GPT-5 (27% → 76% Professional CTF). Cyber Range first shows meaningful scores.
+- **Key Findings**: Major leap from GPT-5-Codex (50% → 76% CTF; 53% → 80% CVE-Bench). Cyber Range first shows meaningful scores (7/8 scenarios). Leaked Token solved via unintended misconfiguration (partially solving intended attack path). Pattern Labs external eval concludes "limited assistance to a moderately skilled cyberoffensive operator."
+- **Notes**: GPT-5-Codex comparison baselines (CTF 50%, CVE-Bench 53%) reported here as cross-model reference.
 
 ### 17. GPT-5.2 System Card Update
 
@@ -331,11 +339,12 @@
 
   | Benchmark | Category | Score | Methodology | Source Page/Section |
   |---|---|---|---|---|
-  | Custom CTF (Professional) | AI4Security > Offensive | Evaluated | Professional-level CTFs | System Card |
-  | CVE-Bench | AI4Security > Offensive | Evaluated | pass@1 | System Card |
-  | Cyber Range | AI4Security > Offensive | Evaluated | Multi-machine scenarios | System Card |
+  | Custom CTF (Professional) — GPT-5.2-Thinking | AI4Security > Offensive | 82% | pass@12 (reported in GPT-5.2-Codex addendum comparison) | System Card / GPT-5.2-Codex addendum |
+  | CVE-Bench — GPT-5.2-Thinking | AI4Security > Offensive | 69% | pass@1 (reported in GPT-5.2-Codex addendum comparison) | System Card / GPT-5.2-Codex addendum |
+  | Cyber Range — GPT-5.2-Thinking | AI4Security > Offensive | 63.6% | Combined pass rate (reported in GPT-5.2-Codex addendum comparison) | System Card / GPT-5.2-Codex addendum |
 
-- **Key Findings**: Introduced "safe-completions" for dual-use cybersecurity queries.
+- **Key Findings**: Introduced "safe-completions" for dual-use cybersecurity queries. gpt-5.2-thinking performs considerably better than gpt-5-thinking and is at a similar capability level as gpt-5.1-codex-max. CTF improved (76% → 82%) but CVE-Bench declined (80% → 69%) compared to GPT-5.1-Codex-Max.
+- **Notes**: Cross-model scores sourced from GPT-5.2-Codex addendum comparison table.
 
 ### 18. GPT-5.2-Codex Addendum
 
@@ -348,10 +357,18 @@
 
   | Benchmark | Category | Score | Methodology | Source Page/Section |
   |---|---|---|---|---|
-  | Custom CTF (Professional) | AI4Security > Offensive | Strongest at time of release | Professional-level CTFs | Addendum |
-  | CVE-Bench | AI4Security > Offensive | 87% | pass@1 | Addendum |
+  | Custom CTF (Professional) | AI4Security > Offensive | 88% | pass@12; strongest at time of release | Addendum |
+  | CVE-Bench (Blind 0-day) | AI4Security > Offensive | 87% | pass@1 | Addendum |
+  | Cyber Range (Combined) | AI4Security > Offensive | 72.7% | Combined pass rate | Addendum |
+  | — Cross-model: GPT-5.1-Codex-Max CTF | AI4Security > Offensive | 76% | pass@12 (comparison baseline) | Addendum |
+  | — Cross-model: GPT-5.1-Codex-Max CVE-Bench | AI4Security > Offensive | 80% | pass@1 (comparison baseline) | Addendum |
+  | — Cross-model: GPT-5.1-Codex-Max Cyber Range | AI4Security > Offensive | 81.8% | Combined pass rate (comparison baseline) | Addendum |
+  | — Cross-model: GPT-5.2-Thinking CTF | AI4Security > Offensive | 82% | pass@12 (comparison baseline) | Addendum |
+  | — Cross-model: GPT-5.2-Thinking CVE-Bench | AI4Security > Offensive | 69% | pass@1 (comparison baseline) | Addendum |
+  | — Cross-model: GPT-5.2-Thinking Cyber Range | AI4Security > Offensive | 63.6% | Combined pass rate (comparison baseline) | Addendum |
 
-- **Key Findings**: CVE-Bench 87%. "Current trends suggest models may cross High threshold in near future."
+- **Key Findings**: CTF 88% (strongest), CVE-Bench 87%, Cyber Range 72.7%. "Current trends suggest models may cross High threshold in near future." Compaction (coherent work across multiple context windows) cited as key for CTF performance.
+- **Notes**: Full cross-model comparison table found in addendum. GPT-5.2-Codex surpasses GPT-5.1-Codex-Max on CTF (88% vs 76%) and CVE-Bench (87% vs 80%) but trails on Cyber Range (72.7% vs 81.8%). GPT-5.2-Thinking shows CTF gain (82%) but CVE-Bench regression (69%) vs GPT-5.1-Codex-Max (80%).
 
 ### 19. GPT-5.3-Codex System Card
 
@@ -364,38 +381,43 @@
 
   | Benchmark | Category | Score | Methodology | Source Page/Section |
   |---|---|---|---|---|
+  | Custom CTF (Professional, xhigh) | AI4Security > Offensive | 77.6% | pass@12, xhigh compute; matches GPT-5.2-Codex on peak CTF | System Card |
   | CVE-Bench | AI4Security > Offensive | 90% | pass@1, 34/40 challenges, zero-day config | System Card |
-  | Cyber Range | AI4Security > Offensive | 80% | 12/15 scenarios combined pass rate | System Card |
+  | Cyber Range | AI4Security > Offensive | 80% | 12/15 scenarios, pass/fail over 16 trials | System Card |
   | Irregular External — Network Attack | AI4Security > Offensive | 86% | Pattern Labs external eval | System Card |
   | Irregular External — Vuln D&E | AI4Security > Offensive | 72% | Pattern Labs external eval | System Card |
   | Irregular External — Evasion | AI4Security > Offensive | 53% | Pattern Labs external eval | System Card |
+  | Irregular External — CyScenarioBench | AI4Security > Offensive | 0% | Pattern Labs, complex branching missions | System Card |
+  | — Cross-model: GPT-5.2-Codex CTF (xhigh) | AI4Security > Offensive | 67.4% | pass@12, xhigh (comparison) | System Card |
+  | — Cross-model: GPT-5.2 CTF (xhigh) | AI4Security > Offensive | 67.7% | pass@12, xhigh (comparison) | System Card |
 
-- **Agent Setup**: First model to pass all thresholds across all three core evaluations (CTF, CVE-Bench, Cyber Range).
-- **Key Findings**: First OpenAI model rated HIGH. CVE-Bench 90%, Cyber Range 80%. Failed scenarios: EDR Evasion, CA/DNS Hijacking, Leaked Token. GPT-5.3-Codex-Spark rated Below High.
+- **Agent Setup**: First model to pass all thresholds across all three core evaluations (CTF, CVE-Bench, Cyber Range). Identified attack paths, reverse-engineered binaries, and executed exploits end-to-end without explicit guidance.
+- **Key Findings**: First OpenAI model rated HIGH. CTF 77.6% (xhigh), CVE-Bench 90%, Cyber Range 80% (12/15). Failed Cyber Range scenarios: EDR Evasion, CA/DNS Hijacking, Leaked Token (patched after GPT-5.2-Codex). CyScenarioBench 0% (autonomous end-to-end hacking campaigns remain unsolved). GPT-5.3-Codex-Spark rated Below High.
+- **Notes**: CTF score of 77.6% uses "xhigh" compute setting. The comparison shows GPT-5.2-Codex at 67.4% and GPT-5.2 at 67.7% under the same xhigh methodology. Note this differs from the pass@12 scores in the GPT-5.2-Codex addendum (88%) which used standard methodology.
 
 ---
 
 ## Cyber Risk Progression
 
-| Model | Date | Risk Level | Professional CTF | CVE-Bench | Cyber Range |
-|---|---|---|---|---|---|
-| GPT-4 | 2023-03 | Low | Qualitative only | — | — |
-| GPT-4o | 2024-08 | Low | 1% | — | — |
-| o1-preview | 2024-09 | Low | 2.5% | — | — |
-| o1-mini | 2024-09 | Low | 3.9% | — | — |
-| o1 | 2024-12 | Low | 13% | — | — |
-| o3-mini | 2025-01 | Low | HS 61%, Coll 21% | — | — |
-| Deep Research (no browse) | 2025-02 | Medium | 47% | — | — |
-| Deep Research (w/ browse) | 2025-02 | Medium | 70% | — | — |
-| GPT-4.5 | 2025-02 | Low | — | — | — |
-| o3 | 2025-04 | Below High | ~59% (pass@12) | — | 0% (2 scenarios) |
-| o4-mini | 2025-04 | Below High | ~41% (pass@12) | — | 0% (2 scenarios) |
-| GPT-5 | 2025-08 | Below High | ~27% (pass@12) | — | 5 scenarios |
-| GPT-5-Codex | 2025-09 | Below High | Sharp jump | Evaluated | Evaluated |
-| GPT-5.1-Codex-Max | 2025-11 | Below High | ~76% | — | 37%/41%/43% |
-| GPT-5.2 | 2025-12 | Below High | Evaluated | Evaluated | Evaluated |
-| GPT-5.2-Codex | 2025-12 | Below High | Strongest | 87% | — |
-| GPT-5.3-Codex | 2026-02 | **HIGH** | All passed | 90% | 80% |
+| Model | Date | Risk Level | Professional CTF | CVE-Bench | Cyber Range | Irregular (NAS/VDE/Evasion) |
+|---|---|---|---|---|---|---|
+| GPT-4 | 2023-03 | Low | Qualitative only | — | — | — |
+| GPT-4o | 2024-08 | Low | 1% | — | — | — |
+| o1-preview | 2024-09 | Low | 2.5% | — | — | — |
+| o1-mini | 2024-09 | Low | 3.9% | — | — | — |
+| o1 | 2024-12 | Low | 13% | — | — | — |
+| o3-mini | 2025-01 | Low | HS 61%, Coll 21% | — | — | — |
+| Deep Research (no browse) | 2025-02 | Medium | 47% | — | — | — |
+| Deep Research (w/ browse) | 2025-02 | Medium | 70% | — | — | — |
+| GPT-4.5 | 2025-02 | Low | — | — | — | — |
+| o3 | 2025-04 | Below High | ~59% (pass@12) | — | 0% (2 scenarios) | — |
+| o4-mini | 2025-04 | Below High | ~41% (pass@12) | — | 0% (2 scenarios) | — |
+| GPT-5 | 2025-08 | Below High | ~27% (pass@12) | — | 0/30 unaided (5 scenarios) | 49%/35%/51% |
+| GPT-5-Codex | 2025-09 | Below High | ~50% | 53% | Evaluated | — |
+| GPT-5.1-Codex-Max | 2025-11 | Below High | 76% | 80% | 7/8 scenarios | 37%/41%/43% |
+| GPT-5.2-Thinking | 2025-12 | Below High | 82% | 69% | 63.6% | — |
+| GPT-5.2-Codex | 2025-12 | Below High | 88% | 87% | 72.7% | — |
+| GPT-5.3-Codex | 2026-02 | **HIGH** | 77.6% (xhigh) | 90% | 80% (12/15) | 86%/72%/53% |
 
 ---
 
@@ -409,10 +431,11 @@
 | 2025-02 | Deep Research becomes first OpenAI model rated **Medium** risk; 70% Professional CTF with browsing |
 | 2025-04 | Preparedness Framework v2 published; o3/o4-mini rated "Below High" (new category) |
 | 2025-07 | ChatGPT Agent introduces refactored CTF set and Cyber Range "Online Retailer" scenario |
-| 2025-08 | GPT-5 introduces expanded Cyber Range (5 scenarios) |
-| 2025-11 | GPT-5.1-Codex-Max reaches ~76% Professional CTF; meaningful Cyber Range scores (37-43%) |
-| 2025-12 | GPT-5.2-Codex hits 87% CVE-Bench; "safe-completions" introduced; Strengthening Cyber Resilience report published with Aardvark, Frontier Risk Council, Trusted Access for Cyber |
-| 2026-02 | GPT-5.3-Codex rated **HIGH** (precautionary) — first OpenAI model at this level; CVE-Bench 90%, Cyber Range 80% |
+| 2025-08 | GPT-5 introduces expanded Cyber Range (5 scenarios); 0/30 unaided on all; Pattern Labs external eval (49%/35%/51%) |
+| 2025-09 | GPT-5-Codex sharp jump: CTF ~50%, CVE-Bench 53% (first CVE-Bench scores) |
+| 2025-11 | GPT-5.1-Codex-Max reaches 76% CTF, 80% CVE-Bench, 7/8 Cyber Range scenarios |
+| 2025-12 | GPT-5.2-Codex hits 88% CTF, 87% CVE-Bench, 72.7% Cyber Range; "safe-completions" introduced; Strengthening Cyber Resilience report published with Aardvark, Frontier Risk Council, Trusted Access for Cyber |
+| 2026-02 | GPT-5.3-Codex rated **HIGH** (precautionary) — first OpenAI model at this level; CTF 77.6% (xhigh), CVE-Bench 90%, Cyber Range 80% (12/15), Pattern Labs 86%/72%/53% |
 
 ---
 
@@ -422,3 +445,7 @@
 - **GPT-4o mini**: No separate system card; shares GPT-4o mitigations.
 - **o1-pro**: Covered under o1 System Card (Dec 2024); no separate cyber eval.
 - **US/UK AISI Joint Test for o1**: [PDF](https://www.nist.gov/system/files/documents/2024/12/18/US_UK_AI%20Safety%20Institute_%20December_Publication-OpenAIo1.pdf)
+- **CTF methodology note**: GPT-5.3-Codex card uses "xhigh" compute setting for CTF, yielding 77.6%. The GPT-5.2-Codex addendum uses standard pass@12, yielding 88%. These are NOT directly comparable. Under xhigh, GPT-5.2-Codex scores 67.4% (vs 88% standard).
+- **Irregular/Pattern Labs**: External evaluation by Pattern Labs (formerly Irregular). NAS = Network Attack Simulation, VDE = Vulnerability Discovery & Exploitation. CyScenarioBench (complex branching missions) remains at 0% even for GPT-5.3-Codex.
+- **Cyber Range scenario count**: Expanded from 2 (o3/o4-mini era) → 5 (GPT-5 era) → 8 (GPT-5.1-Codex-Max era) → 15 (GPT-5.3-Codex era). Leaked Token scenario patched between GPT-5.2-Codex and GPT-5.3-Codex.
+- **Data sources for this update**: arXiv:2601.03267 (GPT-5 system card), thezvi.substack.com (GPT-5.1-Codex-Max analysis), binaryverseai.com (GPT-5.2-Codex benchmark table), macobserver.com + digitalapplied.com + cometapi.com (GPT-5.3-Codex scores), ignorance.ai (GPT-5.3-Codex Pattern Labs data), xugj520.cn (Strengthening Cyber Resilience mirror).

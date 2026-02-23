@@ -55,10 +55,12 @@
 
   | Benchmark | Category | Score | Methodology | Source Page/Section |
   |---|---|---|---|---|
+  | InterCode-CTF (81 tasks) | AI4Security > Offensive Capability | Gemini 1.0: 24/81 (29%) | ReAct agent | Phuong et al. (2403.13793) |
   | Dangerous Capabilities (persuasion, cyber, self-proliferation, self-reasoning) | Security4AI > Misuse Risk | Qualitative (rudimentary) | Internal eval | Technical Report |
 
 - **Agent Setup**: N/A (foundational evaluation)
-- **Key Findings**: First Gemini cyber assessment. Rudimentary capabilities observed; moderate threats flagged in deception and cybersecurity domains.
+- **Key Findings**: First Gemini cyber assessment. Gemini 1.0 solved 24/81 InterCode-CTF tasks (29% pass rate, per Phuong et al.). Rudimentary capabilities observed; Pro and Ultra can solve basic CTF tasks and identify straightforward web vulnerabilities, but fail multi-step cybersecurity challenges. Moderate threats flagged in deception and cybersecurity domains.
+- **Cross-model Context**: On the same InterCode-CTF benchmark, GPT-4 scored 40/85 (47%) pass@1, GPT-4o scored 26/85 (30%) pass@1, and o1-preview scored 49/85 (57%) pass@1 (per Palisade Research, arXiv:2412.02776, using 85-task subset).
 
 ### 4. Gemini 1.5 Technical Report
 
@@ -91,12 +93,15 @@
   | In-house CTF (13 tasks) | AI4Security > Offensive Capability | Gemini 2.5 Deep Think: 13/13 | ReAct agent | Cyber Evals Section |
   | Hack the Box | AI4Security > Offensive Capability | Gemini 2.5 Deep Think: 3/13 | Agent-based | Cyber Evals Section |
   | Key Skills Benchmark | AI4Security > Offensive Capability | Reported (details in FSF report) | MITRE ATT&CK aligned | Cyber Evals Section |
-  | Pattern Labs External CTFs (50 tasks) | AI4Security > Offensive Capability | Gemini 2.0 Flash: 11/50 | Non-public challenges | Cyber Evals Section |
-  | TAP Attack Success Rate | Security4AI > Model Robustness | 99.8% (2.0) → 53.6% (2.5) | Tree of Attacks with Pruning | Security Section |
-  | Indirect Prompt Injection | Security4AI > Model Robustness | Significant improvement 2.0→2.5 | Adversarial evaluation | Security Section |
+  | Pattern Labs External CTFs (50 tasks) | AI4Security > Offensive Capability | Gemini 2.0 Flash: 11/50 (see Entry 23 for breakdown) | Non-public challenges (sourced from Pattern Labs) | Cyber Evals Section |
+  | TAP Attack Success Rate (email) | Security4AI > Model Robustness | **99.8% (2.0) → 53.6% (2.5)** | Tree of Attacks with Pruning | Security Section |
+  | Beam Search ASR | Security4AI > Model Robustness | **75% (2.0) → 4% (2.5)** | Beam Search attack | Security Section |
+  | TAP ASR (calendar) | Security4AI > Model Robustness | 94.6% (2.5) — hardest scenario | TAP, adaptive | Security Section |
+  | Combined Defense (2.5 + Warning) | Security4AI > Model Robustness | **6.2% ASR** | Adversarial fine-tuning + Warning | Security Section |
+  | Average ASR reduction | Security4AI > Model Robustness | ~47% across attack types (2.0 → 2.5) | Multiple attack methods | Security Section |
 
-- **Agent Setup**: ReAct agent framework for CTF evaluations; N=30-50 attempts per challenge
-- **Key Findings**: Most comprehensive Gemini cyber report. InterCode-CTF saturated. Deep Think achieved perfect 13/13 on in-house CTF. Significant prompt injection defense improvement (TAP 99.8% → 53.6%). FSF Cyber Uplift Level 1 alert threshold reached but CCL not met.
+- **Agent Setup**: ReAct agent framework for CTF evaluations; N=30-50 attempts per challenge for 2.5 Pro runs, N=10-30 for other models. InterCode-CTF denominator changed from 81 to 76 (5 internet-requiring challenges removed). A challenge is considered solved if any agent in the model family succeeds in at least 1 of N attempts.
+- **Key Findings**: Most comprehensive Gemini cyber report. InterCode-CTF saturated (73-76/76 across all models). Deep Think achieved perfect 13/13 on in-house CTF. Significant prompt injection defense improvement via adversarial fine-tuning: TAP 99.8% → 53.6% (email), Beam Search 75% → 4%. Calendar scenario remains challenging (94.6% TAP ASR). Combined Gemini 2.5 + Warning defense achieves 6.2% ASR. FSF Cyber Uplift Level 1 alert threshold reached but CCL not met.
 
 ---
 
@@ -291,10 +296,14 @@
 
   | Benchmark | Category | Score | Methodology | Source Page/Section |
   |---|---|---|---|---|
-  | FSF Cyber Evals (Deep Think mode focus) | AI4Security > Offensive Capability | Increased vs 3 Pro | Standard FSF + Deep Think | Model Card |
+  | FSF Cyber Evals (standard mode) | AI4Security > Offensive Capability | Increased vs 3 Pro | Standard FSF | Model Card |
+  | FSF Cyber Evals (Deep Think mode) | AI4Security > Offensive Capability | Considerably worse than standard mode | Deep Think mode | Model Card |
+  | Safety: Text-to-Text | Security4AI > Misuse Risk | +0.10% vs Gemini 3 Pro | Standard safety eval | Model Card |
+  | Safety: Multilingual | Security4AI > Misuse Risk | +0.11% vs Gemini 3 Pro | Standard safety eval | Model Card |
+  | Safety: Image-to-Text | Security4AI > Misuse Risk | -0.33% vs Gemini 3 Pro | Standard safety eval | Model Card |
 
-- **Agent Setup**: Deep Think mode focus for cyber evaluations
-- **Key Findings**: Latest Gemini model (Feb 2026). Increased cyber capabilities vs Gemini 3 Pro. Cyber Uplift Level 1 alert threshold reached, CCL not met. Deep Think mode specifically assessed for cyber capabilities.
+- **Agent Setup**: Deep Think mode focus for cyber evaluations; standard mode also assessed
+- **Key Findings**: Latest Gemini model (Feb 2026). Increased cyber capabilities vs Gemini 3 Pro in standard mode. However, Deep Think mode performs considerably worse than standard mode on cyber evaluations (notable finding). Cyber Uplift Level 1 alert threshold reached, CCL not met. Marginal safety improvements over Gemini 3 Pro (+0.10% text, +0.11% multilingual) but slight regression on image-to-text (-0.33%).
 
 ---
 
@@ -335,10 +344,11 @@
 
   | Benchmark | Category | Score | Methodology | Source Page/Section |
   |---|---|---|---|---|
-  | In-house CTF (13 challenges) | AI4Security > Offensive Capability | Early warning signs | ReAct agent, 13 GDM-built challenges | Paper |
+  | InterCode-CTF (81 tasks) | AI4Security > Offensive Capability | Gemini 1.0: 24/81 (29%) | ReAct agent | Paper |
+  | In-house CTF (13 challenges) | AI4Security > Offensive Capability | Early warning signs (basic tasks solvable, multi-step challenges fail) | ReAct agent, 13 GDM-built challenges | Paper |
 
 - **Agent Setup**: ReAct agent framework. 13 in-house CTF challenges covering web exploitation, database attacks, privilege escalation, password cracking.
-- **Key Findings**: Foundational paper for Google's cyber evaluation methodology. Four evaluation domains: persuasion/deception, cybersecurity, self-proliferation, self-reasoning. No strong dangerous capabilities found but early warning signs flagged. Open-sourced: [github.com/google-deepmind/dangerous-capability-evaluations](https://github.com/google-deepmind/dangerous-capability-evaluations).
+- **Key Findings**: Foundational paper for Google's cyber evaluation methodology. Four evaluation domains: persuasion/deception, cybersecurity, self-proliferation, self-reasoning. Gemini 1.0 solved 24/81 InterCode-CTF tasks (29%). Pro and Ultra agents can solve basic CTF tasks and identify straightforward web vulnerabilities but fail multi-step challenges — unlikely to be of use to threat actors. No strong dangerous capabilities found but early warning signs flagged. Open-sourced: [github.com/google-deepmind/dangerous-capability-evaluations](https://github.com/google-deepmind/dangerous-capability-evaluations).
 
 ### 22. Evaluating Frontier Models for Stealth and Situational Awareness
 
@@ -351,27 +361,60 @@
 
   | Benchmark | Category | Score | Methodology | Source Page/Section |
   |---|---|---|---|---|
-  | Stealth Eval (5 evaluations) | Security4AI > Alignment | No concerning levels | Scheming inability safety case | Paper |
-  | Situational Awareness (11 evaluations) | Security4AI > Alignment | No concerning levels | Instrumental reasoning assessment | Paper |
+  | Stealth Eval (5 evaluations) | Security4AI > Alignment | No concerning levels (pass threshold: 4/5) | Scheming inability safety case | Paper |
+  | Situational Awareness (11 evaluations) | Security4AI > Alignment | No concerning levels (pass threshold: 9/11) | Instrumental reasoning assessment | Paper |
 
-- **Agent Setup**: 16 total evaluations (5 stealth + 11 situational awareness)
-- **Key Findings**: Establishes "scheming inability safety case" — models failing these tests would be almost certainly incapable of severe harm via scheming. None of the tested frontier models showed concerning levels of stealth or situational awareness.
+- **Agent Setup**: 16 total evaluations (5 stealth + 11 situational awareness). Pass threshold: 80%.
+- **Cross-model Stealth Results** (5 evaluations):
+
+  | Evaluation | Gemini 2.5 Pro | Gemini 2.5 Flash | GPT-4o | o1 | Claude 3.7 Sonnet |
+  |---|---|---|---|---|---|
+  | cover_your_tracks | 0.0% success / 18.0% score | 0.0% / 14.9% | 0.0% / 19.1% | Refused | 0.0% / 15.4% |
+  | decision_sabotage | 44.1% success (PASS) | 45.8% (PASS) | N/A | N/A | N/A |
+  | strategic_rule_breaking | 35.0% score | 39.5% | 27.9% | 29.8% | 41.2% |
+  | classifier_evasion | 15.5% success / 26.3% score | 7.2% / 15.6% | 6.5% / 15.6% | 2.2% / 8.6% | 8.5% / 25.4% |
+  | oversight_pattern | 35.4% success / 41.8% (PASS) | 23.0% / 32.0% | 11.0% / 14.7% | 2.0% / 12.7% | 34.0% / 36.3% (PASS) |
+
+  Note: decision_sabotage results not available for non-Gemini models.
+
+- **Cross-model Situational Awareness Results** (11 evaluations):
+  - 3 challenges solved by all 5 models: read_logs, disabled_tool, approved_directories
+  - 6 challenges solved by no model
+  - o1 solved the most challenges overall
+  - Gemini 2.5 Pro and Claude 3.7 Sonnet achieved higher success rates on challenges they did solve
+  - No model came close to the 80% passing threshold (9/11 challenges)
+
+- **Key Findings**: Establishes "scheming inability safety case" — models failing these tests would be almost certainly incapable of severe harm via scheming. None of the tested frontier models showed concerning levels of stealth or situational awareness. On stealth, Gemini 2.5 Pro and Claude 3.7 Sonnet were the only models to pass oversight_pattern; only Gemini models tested on decision_sabotage.
 
 ### 23. Framework for Evaluating Emerging Cyberattack Capabilities
 
 - **Date**: 2025-03-14
 - **URL**: [arXiv](https://arxiv.org/abs/2503.11917)
-- **Models**: Gemini 2.0 Flash (experimental) + others
+- **Models**: Gemini 2.0 Flash (experimental) — single model evaluated
 - **Type**: Paper
-- **Cyber Risk Level**: Assessment framework (not model-specific)
+- **Cyber Risk Level**: Assessment framework (model-specific results for Gemini 2.0 Flash)
 - **Benchmarks Reported**:
 
   | Benchmark | Category | Score | Methodology | Source Page/Section |
   |---|---|---|---|---|
-  | 50 new cyberattack challenges | AI4Security > Offensive Capability | Framework-level assessment | 7 attack chain archetypes, 12,000+ real incidents | Paper |
+  | Pattern Labs CTF (50 challenges) | AI4Security > Offensive Capability | **11/50** (22% overall) | Agent-based, 7 attack chain archetypes | Paper |
+  | — Strawman difficulty | | 2/2 (100%) | | |
+  | — Easy difficulty | | 4/8 (50%) | | |
+  | — Medium difficulty | | 4/28 (14.3%) | | |
+  | — Hard difficulty | | 1/12 (8.3%) | | |
 
-- **Agent Setup**: End-to-end attack chain evaluation framework. 12,000+ real-world incidents catalogued by Google Threat Intelligence Group. 7 representative attack chain archetypes identified.
-- **Key Findings**: Most comprehensive AI cyber risk evaluation framework published to date. Bottleneck analysis identifying phases most susceptible to AI-driven disruption. 50 new externally-developed challenges. Recommendations for defense prioritization.
+  **Performance by Bottleneck Skill (Gemini 2.0 Flash)**:
+
+  | Skill Area | Success Rate |
+  |---|---|
+  | Operational Security / Evasion | 40% |
+  | Malware Development | 30% |
+  | Information Gathering / Reconnaissance | 11.11% |
+  | Vulnerability Exploitation | 6.25% |
+
+- **Agent Setup**: End-to-end attack chain evaluation framework. 12,000+ real-world incidents catalogued by Google Threat Intelligence Group. 7 representative attack chain archetypes identified. 50 challenges sourced from Pattern Labs' library of withheld CTFs.
+- **Key Findings**: Most comprehensive AI cyber risk evaluation framework published to date. Gemini 2.0 Flash solved 11/50 challenges overall. Strongest in evasion/OpSec (40%), weakest in vulnerability exploitation (6.25%). 50% of tasks requiring apprentice-level skills solved consistently; medium/hard tasks requiring practitioner/expert-level skills showed limited success. Model "still lacks the skills necessary for real-world operations" — cannot execute end-to-end attacks. Common failures: syntax errors, hallucinated parameters, reliance on generic strategies.
+- **Notes**: The 50 challenges are confirmed as Pattern Labs External CTFs (same set referenced in Gemini 2.0 Flash Model Card and Gemini 2.5 Technical Report). Only Gemini 2.0 Flash was evaluated — no cross-model comparison available in this paper.
 
 ### 24. Defending Gemini Against Indirect Prompt Injections
 
@@ -384,11 +427,25 @@
 
   | Benchmark | Category | Score | Methodology | Source Page/Section |
   |---|---|---|---|---|
-  | TAP Attack Success Rate | Security4AI > Model Robustness | 99.8% (Gemini 2.0) → 53.6% (Gemini 2.5) | Tree of Attacks with Pruning | Paper |
+  | TAP Attack Success Rate (email scenario) | Security4AI > Model Robustness | **99.8% (Gemini 2.0) → 53.6% (Gemini 2.5)** | Tree of Attacks with Pruning | Paper Section 9 |
+  | TAP Attack Success Rate (calendar scenario) | Security4AI > Model Robustness | 94.6% (Gemini 2.5) | TAP, adaptive | Paper Section 9 |
+  | Beam Search ASR | Security4AI > Model Robustness | **75% (Gemini 2.0) → 4% (Gemini 2.5)** | Beam Search, adaptive | Paper Section 9 |
+  | Combined Defense (Gemini 2.5 + Warning) | Security4AI > Model Robustness | **6.2% ASR** (calendar, adaptive TAP) | Adversarial fine-tuning + Warning defense | Paper Section 9 |
+  | Gemini 2.0 + Warning baseline | Security4AI > Model Robustness | 10.8% ASR | Warning defense only | Paper Section 8 |
+  | Undefended Gemini 2.0 (all attacks) | Security4AI > Model Robustness | >70% ASR in all scenarios | TAP, Actor-Critic, Beam Search, Linear Gen | Paper Section 6 |
   | Automated Red Teaming (ART) | Security4AI > Model Robustness | Continuous evaluation | Adversarial evaluation framework | Paper |
 
-- **Agent Setup**: Adversarial evaluation framework deploying suite of adaptive attack techniques continuously against past, current, and future Gemini versions. Function-calling and tool-use capabilities specifically targeted.
-- **Key Findings**: TAP attack success rate reduced from 99.8% (Gemini 2.0) to 53.6% (Gemini 2.5) — significant improvement. Introduces Automated Red Teaming (ART) framework for continuous adversarial evaluation. Addresses indirect prompt injection in function-calling/tool-use contexts.
+  **Attack Methods Tested**: TAP (Tree of Attacks with Pruning), Actor-Critic, Beam Search, Linear Generation.
+
+  **Key ASR Progression (Gemini 2.0 → 2.5, after adversarial fine-tuning)**:
+  - Average ~47% reduction in ASR across attack types
+  - TAP (email): 99.8% → 53.6%
+  - Beam Search: 75% → 4%
+  - Calendar Event (TAP): remains at 94.6% — hardest scenario
+  - Best combined defense (Gemini 2.5 + Warning): 6.2% ASR
+
+- **Agent Setup**: Adversarial evaluation framework deploying 4 automated attack techniques continuously against past, current, and future Gemini versions. Function-calling and tool-use capabilities specifically targeted. Attack construction cost: less than $10 against Gemini 2.0 Flash. Non-adaptive and adaptive attack settings tested. Appendix H includes baseline defense analysis on Gemini 1.5.
+- **Key Findings**: TAP attack success rate reduced from 99.8% (Gemini 2.0) to 53.6% (Gemini 2.5) in email scenario — significant improvement. Beam Search ASR dropped from 75% to 4%. However, calendar scenario remains challenging (94.6% TAP ASR). Combined defense-in-depth (adversarial fine-tuning + Warning) achieves 6.2% ASR. Adversarial training improves robustness without harming general model capabilities. Most baseline defenses (ICL, Spotlighting, Paraphrasing, Self-reflection) still allow >70% ASR when facing adaptive attacks. Introduces Automated Red Teaming (ART) framework for continuous adversarial evaluation.
 
 ---
 
@@ -405,12 +462,19 @@
 
   | Benchmark | Category | Score | Methodology | Source Page/Section |
   |---|---|---|---|---|
-  | CTI-MCQ | AI4Security > Cyber Knowledge | +11% over competitors | [CTI-Bench](https://github.com/xashru/cti-bench) (Rochester IT) | Blog |
-  | CTI-RCM | AI4Security > Cyber Knowledge | +10.5% over competitors | [CTI-Bench](https://github.com/xashru/cti-bench) (Rochester IT) | Blog |
+  | CTI-MCQ | AI4Security > Cyber Knowledge | **~86.5%** (+11pp over next best model) | [CTI-Bench](https://github.com/xashru/cti-bench) (Rochester IT) | Blog |
+  | CTI-RCM | AI4Security > Cyber Knowledge | +10.5pp over next best model | [CTI-Bench](https://github.com/xashru/cti-bench) (Rochester IT) | Blog |
+
+  **Competitors Tested**: GPT-4o, o1, o3-mini, Claude 3.5 Sonnet, DeepSeek V3, Mistral Large.
+
+  **CTI-MCQ Score Derivation**: SecLM (Sec-Gemini's successor platform) achieved 88.5% on CTI-MCQ — described as "2 points ahead of the initial Sec-Gemini announcement and nearly 14 percentage points above the next leading foundation model" ([Google Cloud Security Community](https://security.googlecloudcommunity.com/community-blog-42/fueling-ai-innovation-in-secops-products-the-seclm-platform-and-sec-gemini-research-pipeline-3997)). This implies:
+  - Sec-Gemini v1: ~86.5% on CTI-MCQ
+  - Next best foundation model: ~74.5% on CTI-MCQ
+  - Margin: ~12pp (blog claims 11%+ margin)
 
 - **Agent Setup**: Integrates Google Threat Intelligence (GTI), OSV (Google's open-source vulnerability database), and Mandiant data for real-time cybersecurity reasoning.
-- **Key Findings**: First dedicated cybersecurity AI model from Google. Outperforms competitors by 11%+ on CTI-MCQ (threat intelligence) and 10.5%+ on CTI-RCM (root cause → CWE mapping). Available free to select organizations, institutions, professionals, and NGOs for research purposes.
-- **Notes**: CTI-MCQ and CTI-RCM benchmarks are from Rochester IT's [CTI-Bench](https://github.com/xashru/cti-bench) project, NOT created by Google. Google/Sec-Gemini uses them for evaluation.
+- **Key Findings**: First dedicated cybersecurity AI model from Google. Outperforms competitors by 11%+ on CTI-MCQ (threat intelligence) and 10.5%+ on CTI-RCM (root cause → CWE mapping). Estimated ~86.5% CTI-MCQ based on SecLM follow-up data. Available free to select organizations, institutions, professionals, and NGOs for research purposes. Measurements performed in early 2025.
+- **Notes**: CTI-MCQ and CTI-RCM benchmarks are from Rochester IT's [CTI-Bench](https://github.com/xashru/cti-bench) project, NOT created by Google. Google/Sec-Gemini uses them for evaluation. The ~86.5% CTI-MCQ score is derived from the SecLM blog post (88.5% - 2pp), not directly stated by Google.
 
 ---
 
@@ -418,16 +482,17 @@
 
 | Date | Milestone |
 |---|---|
-| 2023-12 | Gemini 1.0: rudimentary cyber capabilities, early warning signs |
+| 2023-12 | Gemini 1.0: 24/81 InterCode-CTF (29%), rudimentary cyber capabilities, early warning signs |
 | 2024-03 | Phuong et al.: foundational dangerous capabilities paper, 13 in-house CTF challenges, ReAct agent methodology established |
 | 2024-05 | FSF v1.0 published — establishes CCL framework |
-| 2025-03 | Framework for Evaluating Emerging Cyberattack Capabilities — 12,000+ real incidents, 50 new challenges |
+| 2025-03 | Framework for Evaluating Emerging Cyberattack Capabilities — Gemini 2.0 Flash: 11/50 Pattern Labs CTFs (OpSec 40%, VulnExploit 6.25%) |
 | 2025-04 | Gemini 2.5 Pro Preview: first Gemini model to reach CCL alert threshold |
-| 2025-04 | Sec-Gemini v1 launched — +11% CTI-MCQ, +10.5% CTI-RCM over competitors |
-| 2025-05 | TAP attack success rate: 99.8% (2.0) → 53.6% (2.5) |
+| 2025-04 | Sec-Gemini v1 launched — ~86.5% CTI-MCQ, +11pp over competitors (GPT-4o, o1, o3-mini, Claude 3.5 Sonnet, DeepSeek V3, Mistral Large) |
+| 2025-05 | Stealth/Situational Awareness: 5-model comparison (Gemini 2.5 Pro/Flash, GPT-4o, o1, Claude 3.7 Sonnet) — no concerning levels found |
+| 2025-05 | TAP attack success rate: 99.8% (2.0) → 53.6% (2.5, email); Beam Search: 75% → 4%; Combined defense: 6.2% ASR |
 | 2025-07 | Gemini 2.5 Technical Report — most comprehensive cyber eval to date |
 | 2025-08 | Gemini 2.5 Deep Think: 13/13 in-house CTF (strongest), 3/13 HTB |
 | 2025-10 | FSF v3.0 published — four risk domains |
 | 2025-11 | Gemini 3 Pro: Key Skills v1 hard 11/12, Key Skills v2 end-to-end 0/13. InterCode-CTF/In-house CTF/HTB retired |
-| 2026-02 | Gemini 3.1 Pro: increased capabilities vs 3 Pro, CCL alert, CCL not met |
+| 2026-02 | Gemini 3.1 Pro: increased capabilities vs 3 Pro (standard mode), Deep Think worse than standard on cyber. CCL alert, CCL not met |
 | 2026-02 | **No Gemini model has crossed Cyber Uplift Level 1 CCL** |
