@@ -50,6 +50,15 @@ System card/model card PDF에서 벤치마크 수치를 추출할 때:
 4. **차트에서 읽은 근사값은 `~` 접두사를 붙여라** — 예: WMDP-Bio ~88.2% (차트에서 읽음). 본문 텍스트에서 확인된 수치는 `~` 없이 표기.
 5. **Subagent에게 PDF 수치 추출을 맡길 때는 반드시 직접 검증하라** — Agent가 WebFetch나 pdftotext로 작업한 수치는 PDF를 Read tool로 직접 열어 교차 검증해야 한다.
 
+### Data Integrity Rules
+
+- **Never show scores from different benchmarks in the same column without marking which benchmark each score is from.** OpenAI CTF ≠ Google Key Skills ≠ Anthropic RSP CTF. Each column must represent exactly one benchmark.
+- **Mark proprietary benchmarks with *(internal)*.** Public benchmarks (Cybench, CVE-Bench, CyberGym, AgentDojo, TAP, Shade) get no label. Internal/proprietary benchmarks (OpenAI Custom CTF, OpenAI Cyber Range, Google Key Skills) get *(internal)* after the column name.
+- **Never label public benchmarks with company names.** CVE-Bench is not "OpenAI's CVE-Bench" — it's a public benchmark that OpenAI happens to use. Same for Cybench, CyberGym, AgentDojo, etc.
+- **When Misuse Risk and Alignment are separate taxonomy categories, keep them as separate tables.** Don't merge them into a single "Safety" table.
+- **Avoid duplicate entries.** Agent Performance Leaderboard should not duplicate with Top Picks. If an agent appears in the Leaderboard, don't repeat it in Top Picks.
+- **Collapsible sections for non-core data.** Real-world competitions, third-party evaluations, full performance history, and benchmark mapping should be in `<details>` collapsible sections. Keep the main view clean with only current leaderboard tables.
+
 ### Factual Accuracy Rules
 
 - **Verify creator attribution** before writing. Common pitfalls we've hit:
@@ -62,16 +71,40 @@ System card/model card PDF에서 벤치마크 수치를 추출할 때:
   - Cybench and CyBench are the SAME benchmark. xAI just capitalizes differently.
 - **Cross-check numbers** across README, raw-data/, benchmarks/, and cross-comparison.md. The same score must be identical everywhere.
 - **87% WMDP for Grok 4.1 is WMDP-Bio**, not WMDP-Cyber. Don't conflate them.
+- **GPT-5.3-Codex CTF is 88% (pass@12).** There is NO "77.6% xhigh" score — this was a hallucination from pdftotext-based chart reading.
+- **CVE-Bench GPT-5.2-Codex: 87% in own card (40 tasks) vs 85% in GPT-5.3 card (34-task subset).** Both numbers are correct in their respective contexts. Always note which task count applies.
+- **Opus 4.5 Cybench: 82% pass@1 (full 40 tasks) vs 79% (RSP 37-task subset).** Both are correct. Always note which task subset is being referenced.
+- **Anthropic RSP Cyber CTF categories (Web/Crypto/Pwn/Rev/Network) INCLUDE Cybench tasks** — don't show RSP CTF category breakdowns as a separate benchmark from Cybench. They overlap.
 
 ### README Structure Rules
 
+**General layout:**
 - **Leaderboards come first** in Cross-Comparison (most valuable to users)
-- **Group models by company** (OpenAI / Anthropic / Google), not by date
+- **Group models by company** (OpenAI / Anthropic / Google / xAI), not by date
 - **Dense reference tables** (Benchmark Mapping, Timeline, Performance Numbers) should be collapsible (`<details>`)
-- **Agents section**: Show top 5 picks per category, rest in collapsible list
-- **Tools section**: Organize by taxonomy (Security4AI tools / AI4Security platforms / cross-taxonomy frameworks)
 - **Don't repeat** information that's already in Cross-Comparison tables in the Benchmarks section — just link to it
 - **References section** at the bottom of README consolidates all source documents (system cards, framework docs, papers)
+
+**Taxonomy table:**
+- Two columns: **Purpose** + **Benchmarks** (NOT "Meaning" + "Example")
+
+**Leaderboard table rules:**
+- **NO Date column** in main leaderboard tables. Date belongs only in collapsible performance history sections.
+- All backbone models must appear in every table (see Repository 헌법 #2).
+
+**Specific table structures:**
+- **Offensive Capability**: Cybench (shared public) + CTF *(internal)* + Cyber Range *(internal)* columns
+- **Vulnerability Discovery**: CVE-Bench + CyberGym + Zero-day columns — this is a SEPARATE table from Offensive Capability
+- **Misuse Risk**: Separate table from Alignment (never merge them)
+- **Alignment**: Includes Sabotage + Stealth/SA columns
+- **Model Robustness**: PI: Coding + PI: Browser + PI: Computer Use + AgentDojo columns
+
+**Agents section:**
+- Agent Performance Leaderboard with a **Type** column (Offensive / Defensive / Multi-purpose)
+- Top Picks lists only agents NOT already in the Leaderboard — no duplicates
+
+**Tools section:**
+- Organize by taxonomy (Security4AI tools / AI4Security platforms / cross-taxonomy frameworks)
 
 ### Entry Format
 
@@ -112,7 +145,7 @@ awesome-ai-cybersecurity/
 ├── README.md                      # Main awesome list (leaderboards, cross-comparison, curated lists)
 ├── CLAUDE.md                      # This file (behavioral guidelines)
 ├── raw-data/                      # Vendor documentation analysis (source of truth for numbers)
-│   ├── openai.md                  # 21 documents: GPT-4 → GPT-5.3-Codex
+│   ├── openai.md                  # 19 documents: GPT-4 → GPT-5.3-Codex
 │   ├── anthropic.md               # 24 documents: Claude 2 → Claude Opus 4.6
 │   ├── google.md                  # 25+ documents: Gemini 1.0 → Gemini 3.1 Pro
 │   ├── xai.md                     # 9 documents: Grok-1 → Grok 4.1

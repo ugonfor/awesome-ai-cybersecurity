@@ -47,7 +47,7 @@
       <div class="summary-card-company company-openai">OpenAI</div>
       <div class="summary-card-model">GPT-5.3-Codex</div>
       <span class="summary-card-status status-high">HIGH (precautionary)</span>
-      <div class="summary-card-detail">CVE-Bench <strong>90%</strong> &middot; Cyber Range <strong>80%</strong></div>
+      <div class="summary-card-detail">CTF <strong>88%</strong> &middot; CVE-Bench <strong>90%</strong> &middot; Cyber Range <strong>80%</strong></div>
     </div>
     <div class="summary-card">
       <div class="summary-card-company company-anthropic">Anthropic</div>
@@ -82,24 +82,43 @@
   <div class="table-wrapper">
     <table>
       <thead>
-        <tr><th>Model</th><th>Company</th><th>Cybench</th><th>CTF (Pro)</th><th>Cyber Range</th><th>Date</th></tr>
+        <tr><th>Model</th><th>Company</th><th>Cybench</th><th>CTF</th><th>Cyber Range</th></tr>
       </thead>
       <tbody>
         <tr>
           <td><strong>GPT-5.3-Codex</strong></td>
           <td>OpenAI</td>
           <td class="score-na">&mdash;</td>
-          <td class="score-high"><a href="https://cdn.openai.com/pdf/23eca107-a9b1-4d2c-b156-7deb4fbc697c/GPT-5-3-Codex-System-Card-02.pdf" target="_blank">All passed</a></td>
-          <td class="score-high"><a href="https://cdn.openai.com/pdf/23eca107-a9b1-4d2c-b156-7deb4fbc697c/GPT-5-3-Codex-System-Card-02.pdf" target="_blank">80%</a></td>
-          <td>2026.02</td>
+          <td class="score-high"><a href="https://cdn.openai.com/pdf/23eca107-a9b1-4d2c-b156-7deb4fbc697c/GPT-5-3-Codex-System-Card-02.pdf" target="_blank">88%</a> <em>(internal)</em></td>
+          <td class="score-high"><a href="https://cdn.openai.com/pdf/23eca107-a9b1-4d2c-b156-7deb4fbc697c/GPT-5-3-Codex-System-Card-02.pdf" target="_blank">80%</a> <em>(internal)</em></td>
         </tr>
         <tr>
           <td><strong>GPT-5.2-Codex</strong></td>
           <td>OpenAI</td>
           <td class="score-na">&mdash;</td>
+          <td class="score-high"><a href="https://cdn.openai.com/pdf/ac7c37ae-7f4c-4442-b741-2eabdeaf77e0/oai_5_2_Codex.pdf" target="_blank">88%</a> <em>(internal)</em></td>
+          <td class="score-med"><a href="https://cdn.openai.com/pdf/ac7c37ae-7f4c-4442-b741-2eabdeaf77e0/oai_5_2_Codex.pdf" target="_blank">72.7%</a> <em>(internal)</em></td>
+        </tr>
+        <tr>
+          <td><strong>GPT-5.2</strong></td>
+          <td>OpenAI</td>
           <td class="score-na">&mdash;</td>
+          <td class="score-high"><a href="https://cdn.openai.com/pdf/3a4153c8-c748-4b71-8e31-aecbde944f8d/oai_5_2_system-card.pdf" target="_blank">82%</a> <em>(internal)</em></td>
+          <td class="score-med"><a href="https://cdn.openai.com/pdf/3a4153c8-c748-4b71-8e31-aecbde944f8d/oai_5_2_system-card.pdf" target="_blank">63.6%</a> <em>(internal)</em></td>
+        </tr>
+        <tr>
+          <td><strong>GPT-5.1-Codex-Max</strong></td>
+          <td>OpenAI</td>
           <td class="score-na">&mdash;</td>
-          <td>2025.12</td>
+          <td class="score-med"><a href="https://cdn.openai.com/pdf/2a7d98b1-57e5-4147-8d0e-683894d782ae/5p1_codex_max_card_03.pdf" target="_blank">76%</a> <em>(internal)</em></td>
+          <td class="score-med"><a href="https://cdn.openai.com/pdf/23eca107-a9b1-4d2c-b156-7deb4fbc697c/GPT-5-3-Codex-System-Card-02.pdf" target="_blank">60%</a> <em>(internal)</em></td>
+        </tr>
+        <tr>
+          <td><strong>GPT-5-Codex</strong></td>
+          <td>OpenAI</td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-med"><a href="https://cdn.openai.com/pdf/97cc5669-7a25-4e63-b15f-5fd5bdc4d149/gpt-5-codex-system-card.pdf" target="_blank">~50%</a> <em>(internal)</em></td>
+          <td class="score-na">&mdash;</td>
         </tr>
         <tr>
           <td><strong>Claude Opus 4.6</strong></td>
@@ -107,15 +126,13 @@
           <td class="score-high"><a href="https://anthropic.com/claude-opus-4-6-system-card" target="_blank"><strong>93% p@1</strong></a></td>
           <td class="score-na">&mdash;</td>
           <td class="score-na">&mdash;</td>
-          <td>2026.02</td>
         </tr>
         <tr>
           <td><strong>Claude Sonnet 4.6</strong></td>
           <td>Anthropic</td>
+          <td class="score-high"><a href="https://anthropic.com/claude-sonnet-4-6-system-card" target="_blank">90% p@1</a></td>
           <td class="score-na">&mdash;</td>
           <td class="score-na">&mdash;</td>
-          <td class="score-na">&mdash;</td>
-          <td>2026.02</td>
         </tr>
         <tr>
           <td><strong>Claude Opus 4.5</strong></td>
@@ -123,7 +140,6 @@
           <td class="score-med"><a href="https://www.anthropic.com/claude-opus-4-5-system-card" target="_blank">82% p@1</a></td>
           <td class="score-na">&mdash;</td>
           <td class="score-na">&mdash;</td>
-          <td>2025.11</td>
         </tr>
         <tr>
           <td><strong>Gemini 3.1 Pro</strong></td>
@@ -131,15 +147,6 @@
           <td class="score-na">&mdash;</td>
           <td class="score-na">&mdash;</td>
           <td class="score-na">&mdash;</td>
-          <td>2026.02</td>
-        </tr>
-        <tr>
-          <td><strong>Gemini 3 Pro</strong></td>
-          <td>Google</td>
-          <td class="score-na">&mdash;</td>
-          <td class="score-high"><a href="https://storage.googleapis.com/deepmind-media/gemini/gemini_3_pro_fsf_report.pdf" target="_blank">11/12 Key Skills</a></td>
-          <td class="score-na">&mdash;</td>
-          <td>2025.11</td>
         </tr>
         <tr>
           <td><strong>Gemini 3 Flash</strong></td>
@@ -147,7 +154,20 @@
           <td class="score-na">&mdash;</td>
           <td class="score-na">&mdash;</td>
           <td class="score-na">&mdash;</td>
-          <td>2025.12</td>
+        </tr>
+        <tr>
+          <td><strong>Gemini 3 Pro</strong></td>
+          <td>Google</td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-high"><a href="https://storage.googleapis.com/deepmind-media/gemini/gemini_3_pro_fsf_report.pdf" target="_blank">11/12</a> <em>(internal)</em></td>
+          <td class="score-na">&mdash;</td>
+        </tr>
+        <tr>
+          <td><strong>Gemini 2.5 DT</strong></td>
+          <td>Google</td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-high"><a href="https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Deep-Think-Model-Card.pdf" target="_blank">13/13</a></td>
+          <td class="score-na">&mdash;</td>
         </tr>
         <tr>
           <td><strong>Grok 4.1</strong></td>
@@ -155,15 +175,27 @@
           <td class="score-med"><a href="https://data.x.ai/2025-11-17-grok-4-1-model-card.pdf" target="_blank">39%</a></td>
           <td class="score-na">&mdash;</td>
           <td class="score-na">&mdash;</td>
-          <td>2025.11</td>
         </tr>
         <tr>
-          <td><strong>Grok 4 Fast</strong></td>
+          <td><strong>Grok 4.1 Fast</strong></td>
           <td>xAI</td>
           <td class="score-na">&mdash;</td>
           <td class="score-na">&mdash;</td>
           <td class="score-na">&mdash;</td>
-          <td>2025.09</td>
+        </tr>
+        <tr>
+          <td><strong>Grok 4 Fast</strong></td>
+          <td>xAI</td>
+          <td class="score-med"><a href="https://data.x.ai/2025-09-19-grok-4-fast-model-card.pdf" target="_blank">30%</a></td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-na">&mdash;</td>
+        </tr>
+        <tr>
+          <td><strong>Grok 4</strong></td>
+          <td>xAI</td>
+          <td class="score-med"><a href="https://data.x.ai/2025-08-20-grok-4-model-card.pdf" target="_blank">43%</a></td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-na">&mdash;</td>
         </tr>
       </tbody>
     </table>
@@ -177,7 +209,7 @@
   <div class="table-wrapper">
     <table>
       <thead>
-        <tr><th>Model</th><th>Company</th><th>CVE-Bench</th><th>CyberGym</th><th>Zero-day</th><th>Date</th></tr>
+        <tr><th>Model</th><th>Company</th><th>CVE-Bench</th><th>CyberGym</th><th>Zero-day</th></tr>
       </thead>
       <tbody>
         <tr>
@@ -186,15 +218,34 @@
           <td class="score-high"><a href="https://cdn.openai.com/pdf/23eca107-a9b1-4d2c-b156-7deb4fbc697c/GPT-5-3-Codex-System-Card-02.pdf" target="_blank"><strong>90%</strong></a></td>
           <td class="score-na">&mdash;</td>
           <td class="score-na">&mdash;</td>
-          <td>2026.02</td>
         </tr>
         <tr>
           <td><strong>GPT-5.2-Codex</strong></td>
           <td>OpenAI</td>
+          <td class="score-high"><a href="https://cdn.openai.com/pdf/ac7c37ae-7f4c-4442-b741-2eabdeaf77e0/oai_5_2_Codex.pdf" target="_blank">87%</a></td>
           <td class="score-na">&mdash;</td>
           <td class="score-na">&mdash;</td>
+        </tr>
+        <tr>
+          <td><strong>GPT-5.1-Codex-Max</strong></td>
+          <td>OpenAI</td>
+          <td class="score-high"><a href="https://cdn.openai.com/pdf/2a7d98b1-57e5-4147-8d0e-683894d782ae/5p1_codex_max_card_03.pdf" target="_blank">80%</a></td>
           <td class="score-na">&mdash;</td>
-          <td>2025.12</td>
+          <td class="score-na">&mdash;</td>
+        </tr>
+        <tr>
+          <td><strong>GPT-5-Codex</strong></td>
+          <td>OpenAI</td>
+          <td class="score-med"><a href="https://cdn.openai.com/pdf/97cc5669-7a25-4e63-b15f-5fd5bdc4d149/gpt-5-codex-system-card.pdf" target="_blank">53%</a></td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-na">&mdash;</td>
+        </tr>
+        <tr>
+          <td><strong>GPT-5</strong></td>
+          <td>OpenAI</td>
+          <td class="score-med"><a href="https://cdn.openai.com/gpt-5-system-card.pdf" target="_blank">43%</a></td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-na">&mdash;</td>
         </tr>
         <tr>
           <td><strong>Claude Opus 4.6</strong></td>
@@ -202,15 +253,27 @@
           <td class="score-na">&mdash;</td>
           <td class="score-high"><a href="https://anthropic.com/claude-opus-4-6-system-card" target="_blank"><strong>66.6% p@1</strong></a></td>
           <td class="score-high"><a href="https://anthropic.com/claude-opus-4-6-system-card" target="_blank"><strong>500+ novel</strong></a></td>
-          <td>2026.02</td>
         </tr>
         <tr>
           <td><strong>Claude Sonnet 4.6</strong></td>
           <td>Anthropic</td>
           <td class="score-na">&mdash;</td>
+          <td class="score-high"><a href="https://anthropic.com/claude-sonnet-4-6-system-card" target="_blank">65.2% p@1</a></td>
           <td class="score-na">&mdash;</td>
+        </tr>
+        <tr>
+          <td><strong>Claude Opus 4.5</strong></td>
+          <td>Anthropic</td>
           <td class="score-na">&mdash;</td>
-          <td>2026.02</td>
+          <td class="score-med"><a href="https://www.anthropic.com/claude-opus-4-5-system-card" target="_blank">51.0% p@1</a></td>
+          <td class="score-na">&mdash;</td>
+        </tr>
+        <tr>
+          <td><strong>Claude Sonnet 4.5</strong></td>
+          <td>Anthropic</td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-low"><a href="https://anthropic.com/claude-opus-4-6-system-card" target="_blank">29.8% p@1</a> (28.9% at $2)</td>
+          <td class="score-na">&mdash;</td>
         </tr>
         <tr>
           <td><strong>Gemini 3.1 Pro</strong></td>
@@ -218,15 +281,6 @@
           <td class="score-na">&mdash;</td>
           <td class="score-na">&mdash;</td>
           <td class="score-na">&mdash;</td>
-          <td>2026.02</td>
-        </tr>
-        <tr>
-          <td><strong>Gemini 3 Pro</strong></td>
-          <td>Google</td>
-          <td class="score-na">&mdash;</td>
-          <td class="score-na">&mdash;</td>
-          <td class="score-na">&mdash;</td>
-          <td>2025.11</td>
         </tr>
         <tr>
           <td><strong>Gemini 3 Flash</strong></td>
@@ -234,7 +288,13 @@
           <td class="score-na">&mdash;</td>
           <td class="score-na">&mdash;</td>
           <td class="score-na">&mdash;</td>
-          <td>2025.12</td>
+        </tr>
+        <tr>
+          <td><strong>Gemini 3 Pro</strong></td>
+          <td>Google</td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-na">&mdash;</td>
         </tr>
         <tr>
           <td><strong>Grok 4.1</strong></td>
@@ -242,7 +302,13 @@
           <td class="score-na">&mdash;</td>
           <td class="score-na">&mdash;</td>
           <td class="score-na">&mdash;</td>
-          <td>2025.11</td>
+        </tr>
+        <tr>
+          <td><strong>Grok 4.1 Fast</strong></td>
+          <td>xAI</td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-na">&mdash;</td>
         </tr>
         <tr>
           <td><strong>Grok 4 Fast</strong></td>
@@ -250,7 +316,6 @@
           <td class="score-na">&mdash;</td>
           <td class="score-na">&mdash;</td>
           <td class="score-na">&mdash;</td>
-          <td>2025.09</td>
         </tr>
       </tbody>
     </table>
@@ -264,7 +329,7 @@
   <div class="table-wrapper">
     <table>
       <thead>
-        <tr><th>Model</th><th>Company</th><th>WMDP-Cyber</th><th>CTI-MCQ</th><th>MC Knowledge</th><th>Date</th></tr>
+        <tr><th>Model</th><th>Company</th><th>WMDP-Cyber</th><th>CTI-MCQ</th><th>MC Knowledge</th></tr>
       </thead>
       <tbody>
         <tr>
@@ -273,7 +338,6 @@
           <td class="score-na">&mdash;</td>
           <td class="score-na">&mdash;</td>
           <td class="score-na">&mdash;</td>
-          <td>2026.02</td>
         </tr>
         <tr>
           <td><strong>GPT-5.2-Codex</strong></td>
@@ -281,7 +345,13 @@
           <td class="score-na">&mdash;</td>
           <td class="score-na">&mdash;</td>
           <td class="score-na">&mdash;</td>
-          <td>2025.12</td>
+        </tr>
+        <tr>
+          <td><strong>o1</strong></td>
+          <td>OpenAI</td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-med"><a href="https://cdn.openai.com/o3-mini-system-card-feb10.pdf" target="_blank">59%</a></td>
         </tr>
         <tr>
           <td><strong>Claude Opus 4.6</strong></td>
@@ -289,7 +359,6 @@
           <td class="score-na">&mdash;</td>
           <td class="score-na">&mdash;</td>
           <td class="score-na">&mdash;</td>
-          <td>2026.02</td>
         </tr>
         <tr>
           <td><strong>Claude Sonnet 4.6</strong></td>
@@ -297,7 +366,6 @@
           <td class="score-na">&mdash;</td>
           <td class="score-na">&mdash;</td>
           <td class="score-na">&mdash;</td>
-          <td>2026.02</td>
         </tr>
         <tr>
           <td><strong>Gemini 3.1 Pro</strong></td>
@@ -305,15 +373,6 @@
           <td class="score-na">&mdash;</td>
           <td class="score-na">&mdash;</td>
           <td class="score-na">&mdash;</td>
-          <td>2026.02</td>
-        </tr>
-        <tr>
-          <td><strong>Gemini 3 Pro</strong></td>
-          <td>Google</td>
-          <td class="score-na">&mdash;</td>
-          <td class="score-na">&mdash;</td>
-          <td class="score-na">&mdash;</td>
-          <td>2025.11</td>
         </tr>
         <tr>
           <td><strong>Gemini 3 Flash</strong></td>
@@ -321,15 +380,20 @@
           <td class="score-na">&mdash;</td>
           <td class="score-na">&mdash;</td>
           <td class="score-na">&mdash;</td>
-          <td>2025.12</td>
+        </tr>
+        <tr>
+          <td><strong>Gemini 3 Pro</strong></td>
+          <td>Google</td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-na">&mdash;</td>
         </tr>
         <tr>
           <td><strong>Sec-Gemini v1</strong></td>
           <td>Google</td>
           <td class="score-na">&mdash;</td>
-          <td class="score-high"><a href="https://security.googleblog.com/2025/04/google-launches-sec-gemini-v1-new.html" target="_blank">+11%</a></td>
+          <td class="score-high"><a href="https://security.googleblog.com/2025/04/google-launches-sec-gemini-v1-new.html" target="_blank">~86.5% (+11pp)</a></td>
           <td class="score-na">&mdash;</td>
-          <td>2025.04</td>
         </tr>
         <tr>
           <td><strong>Grok 4.1</strong></td>
@@ -337,15 +401,27 @@
           <td class="score-high"><a href="https://data.x.ai/2025-11-17-grok-4-1-model-card.pdf" target="_blank"><strong>84%</strong></a></td>
           <td class="score-na">&mdash;</td>
           <td class="score-na">&mdash;</td>
-          <td>2025.11</td>
         </tr>
         <tr>
-          <td><strong>Grok 4 Fast</strong></td>
+          <td><strong>Grok 4.1 Fast</strong></td>
           <td>xAI</td>
           <td class="score-na">&mdash;</td>
           <td class="score-na">&mdash;</td>
           <td class="score-na">&mdash;</td>
-          <td>2025.09</td>
+        </tr>
+        <tr>
+          <td><strong>Grok 4 Fast</strong></td>
+          <td>xAI</td>
+          <td class="score-high"><a href="https://data.x.ai/2025-09-19-grok-4-fast-model-card.pdf" target="_blank">81.4%</a></td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-na">&mdash;</td>
+        </tr>
+        <tr>
+          <td><strong>Grok 4</strong></td>
+          <td>xAI</td>
+          <td class="score-med"><a href="https://data.x.ai/2025-08-20-grok-4-model-card.pdf" target="_blank">79%</a></td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-na">&mdash;</td>
         </tr>
       </tbody>
     </table>
@@ -359,7 +435,7 @@
   <div class="table-wrapper">
     <table>
       <thead>
-        <tr><th>Model</th><th>Company</th><th>Benchmark</th><th>Score</th><th>Date</th></tr>
+        <tr><th>Model</th><th>Company</th><th>Benchmark</th><th>Score</th></tr>
       </thead>
       <tbody>
         <tr>
@@ -367,63 +443,66 @@
           <td>OpenAI</td>
           <td class="score-na">&mdash;</td>
           <td class="score-na">&mdash;</td>
-          <td>2026.02</td>
         </tr>
         <tr>
           <td><strong>GPT-5.2-Codex</strong></td>
           <td>OpenAI</td>
           <td class="score-na">&mdash;</td>
           <td class="score-na">&mdash;</td>
-          <td>2025.12</td>
         </tr>
         <tr>
           <td><strong>Claude Opus 4.6</strong></td>
           <td>Anthropic</td>
           <td>40 cyber investigations</td>
-          <td class="score-high"><a href="https://anthropic.com/claude-opus-4-6-system-card" target="_blank"><strong>38/40 best</strong></a></td>
-          <td>2026.02</td>
+          <td class="score-high"><a href="https://anthropic.com/claude-opus-4-6-system-card" target="_blank"><strong>38/40 best</strong> (blind-ranked)</a></td>
+        </tr>
+        <tr>
+          <td><strong>Claude Opus 4.6</strong></td>
+          <td>Anthropic</td>
+          <td>CAISI Assessment (US CAISI)</td>
+          <td class="score-high"><a href="https://anthropic.com/claude-opus-4-6-system-card" target="_blank">Novel vulns in open &amp; closed source</a></td>
         </tr>
         <tr>
           <td><strong>Claude Sonnet 4.6</strong></td>
           <td>Anthropic</td>
           <td class="score-na">&mdash;</td>
           <td class="score-na">&mdash;</td>
-          <td>2026.02</td>
         </tr>
         <tr>
           <td><strong>Gemini 3.1 Pro</strong></td>
           <td>Google</td>
           <td class="score-na">&mdash;</td>
           <td class="score-na">&mdash;</td>
-          <td>2026.02</td>
-        </tr>
-        <tr>
-          <td><strong>Gemini 3 Pro</strong></td>
-          <td>Google</td>
-          <td class="score-na">&mdash;</td>
-          <td class="score-na">&mdash;</td>
-          <td>2025.11</td>
         </tr>
         <tr>
           <td><strong>Gemini 3 Flash</strong></td>
           <td>Google</td>
           <td class="score-na">&mdash;</td>
           <td class="score-na">&mdash;</td>
-          <td>2025.12</td>
+        </tr>
+        <tr>
+          <td><strong>Gemini 3 Pro</strong></td>
+          <td>Google</td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-na">&mdash;</td>
         </tr>
         <tr>
           <td><strong>Grok 4.1</strong></td>
           <td>xAI</td>
           <td class="score-na">&mdash;</td>
           <td class="score-na">&mdash;</td>
-          <td>2025.11</td>
+        </tr>
+        <tr>
+          <td><strong>Grok 4.1 Fast</strong></td>
+          <td>xAI</td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-na">&mdash;</td>
         </tr>
         <tr>
           <td><strong>Grok 4 Fast</strong></td>
           <td>xAI</td>
           <td class="score-na">&mdash;</td>
           <td class="score-na">&mdash;</td>
-          <td>2025.09</td>
         </tr>
       </tbody>
     </table>
@@ -437,7 +516,7 @@
   <div class="table-wrapper">
     <table>
       <thead>
-        <tr><th>Model</th><th>Company</th><th>Benchmark</th><th>Score</th><th>Date</th></tr>
+        <tr><th>Model</th><th>Company</th><th>PI: Coding</th><th>PI: Browser</th><th>PI: Computer Use</th><th>AgentDojo</th><th>Source</th></tr>
       </thead>
       <tbody>
         <tr>
@@ -445,70 +524,117 @@
           <td>OpenAI</td>
           <td class="score-na">&mdash;</td>
           <td class="score-na">&mdash;</td>
-          <td>2026.02</td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-na">&mdash;</td>
         </tr>
         <tr>
           <td><strong>GPT-5.2-Codex</strong></td>
           <td>OpenAI</td>
           <td class="score-na">&mdash;</td>
           <td class="score-na">&mdash;</td>
-          <td>2025.12</td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-na">&mdash;</td>
+        </tr>
+        <tr>
+          <td><strong>Operator (GPT-4o)</strong></td>
+          <td>OpenAI</td>
+          <td class="score-high">99% recall</td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-na">&mdash;</td>
+          <td><a href="https://cdn.openai.com/operator_system_card.pdf" target="_blank">System Card</a></td>
         </tr>
         <tr>
           <td><strong>Claude Opus 4.6</strong></td>
           <td>Anthropic</td>
+          <td class="score-high"><strong>0% ASR</strong></td>
+          <td class="score-high">~2% ASR <em>(Shade)</em></td>
+          <td class="score-med">17.8% ASR</td>
           <td class="score-na">&mdash;</td>
-          <td class="score-na">&mdash;</td>
-          <td>2026.02</td>
+          <td><a href="https://anthropic.com/claude-opus-4-6-system-card" target="_blank">System Card</a></td>
         </tr>
         <tr>
           <td><strong>Claude Sonnet 4.6</strong></td>
           <td>Anthropic</td>
-          <td>Prompt Injection (coding)</td>
-          <td class="score-high"><a href="https://anthropic.com/claude-opus-4-6-system-card" target="_blank"><strong>0% attack</strong></a></td>
-          <td>2026.02</td>
-        </tr>
-        <tr>
-          <td><strong>Claude Sonnet 4.6</strong></td>
-          <td>Anthropic</td>
-          <td>Prompt Injection (browser)</td>
-          <td class="score-high"><a href="https://anthropic.com/claude-opus-4-6-system-card" target="_blank">&lt;0.3% attack</a></td>
-          <td>2026.02</td>
+          <td class="score-high"><strong>0% ASR</strong> (ext) / 0.1% (std)</td>
+          <td class="score-high">&lt;0.3% ASR <em>(Shade)</em></td>
+          <td class="score-high"><strong>12.0% ASR</strong></td>
+          <td class="score-na">&mdash;</td>
+          <td><a href="https://anthropic.com/claude-sonnet-4-6-system-card" target="_blank">System Card</a></td>
         </tr>
         <tr>
           <td><strong>Gemini 3.1 Pro</strong></td>
           <td>Google</td>
           <td class="score-na">&mdash;</td>
           <td class="score-na">&mdash;</td>
-          <td>2026.02</td>
-        </tr>
-        <tr>
-          <td><strong>Gemini 3 Pro</strong></td>
-          <td>Google</td>
           <td class="score-na">&mdash;</td>
           <td class="score-na">&mdash;</td>
-          <td>2025.11</td>
+          <td class="score-na">&mdash;</td>
         </tr>
         <tr>
           <td><strong>Gemini 3 Flash</strong></td>
           <td>Google</td>
           <td class="score-na">&mdash;</td>
           <td class="score-na">&mdash;</td>
-          <td>2025.12</td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-na">&mdash;</td>
+        </tr>
+        <tr>
+          <td><strong>Gemini 3 Pro</strong></td>
+          <td>Google</td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-na">&mdash;</td>
+        </tr>
+        <tr>
+          <td><strong>Gemini 2.5</strong></td>
+          <td>Google</td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-med"><a href="https://arxiv.org/abs/2505.14534" target="_blank">TAP 99.8% &rarr; 53.6% ASR</a></td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-na">&mdash;</td>
+          <td><a href="https://arxiv.org/abs/2505.14534" target="_blank">Paper</a></td>
         </tr>
         <tr>
           <td><strong>Grok 4.1</strong></td>
           <td>xAI</td>
           <td class="score-na">&mdash;</td>
           <td class="score-na">&mdash;</td>
-          <td>2025.11</td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-high">0.05 (T) / 0.01 (NT)</td>
+          <td><a href="https://data.x.ai/2025-11-17-grok-4-1-model-card.pdf" target="_blank">Model Card</a></td>
+        </tr>
+        <tr>
+          <td><strong>Grok 4.1 Fast</strong></td>
+          <td>xAI</td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-na">&mdash;</td>
         </tr>
         <tr>
           <td><strong>Grok 4 Fast</strong></td>
           <td>xAI</td>
-          <td>AgentDojo</td>
-          <td class="score-high"><a href="https://data.x.ai/2025-09-19-grok-4-fast-model-card.pdf" target="_blank">0-3% attack</a></td>
-          <td>2025.09</td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-high">0&ndash;3% ASR</td>
+          <td><a href="https://data.x.ai/2025-09-19-grok-4-fast-model-card.pdf" target="_blank">Model Card</a></td>
+        </tr>
+        <tr>
+          <td><strong>Grok 4</strong></td>
+          <td>xAI</td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-high">0.02 ASR</td>
+          <td><a href="https://data.x.ai/2025-08-20-grok-4-model-card.pdf" target="_blank">Model Card</a></td>
         </tr>
       </tbody>
     </table>
@@ -516,13 +642,97 @@
 
   <hr>
 
-  <!-- Section 6: Misuse Risk & Alignment -->
-  <h2 class="section-title">Security4AI &mdash; Misuse Risk &amp; Alignment</h2>
-  <p class="section-desc">Measuring harmful compliance, deception propensity, and sycophantic behavior.</p>
+  <!-- Section 6: Misuse Risk -->
+  <h2 class="section-title">Security4AI &mdash; Misuse Risk</h2>
+  <p class="section-desc">Malicious task completion, harmful request refusal.</p>
   <div class="table-wrapper">
     <table>
       <thead>
-        <tr><th>Model</th><th>Company</th><th>AgentHarm</th><th>MASK</th><th>Sycophancy</th><th>Date</th></tr>
+        <tr><th>Model</th><th>Company</th><th>Malicious Refusal</th><th>AgentHarm</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>GPT-5.3-Codex</strong></td>
+          <td>OpenAI</td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-na">&mdash;</td>
+        </tr>
+        <tr>
+          <td><strong>GPT-5.2-Codex</strong></td>
+          <td>OpenAI</td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-na">&mdash;</td>
+        </tr>
+        <tr>
+          <td><strong>Claude Opus 4.6</strong></td>
+          <td>Anthropic</td>
+          <td class="score-high">CU 88.34%, Code 99.59%</td>
+          <td class="score-na">&mdash;</td>
+        </tr>
+        <tr>
+          <td><strong>Claude Sonnet 4.6</strong></td>
+          <td>Anthropic</td>
+          <td class="score-high">CU <strong>99.38%</strong>, Code 99.39%</td>
+          <td class="score-na">&mdash;</td>
+        </tr>
+        <tr>
+          <td><strong>Gemini 3.1 Pro</strong></td>
+          <td>Google</td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-na">&mdash;</td>
+        </tr>
+        <tr>
+          <td><strong>Gemini 3 Flash</strong></td>
+          <td>Google</td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-na">&mdash;</td>
+        </tr>
+        <tr>
+          <td><strong>Gemini 3 Pro</strong></td>
+          <td>Google</td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-na">&mdash;</td>
+        </tr>
+        <tr>
+          <td><strong>Grok 4.1</strong></td>
+          <td>xAI</td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-high"><a href="https://data.x.ai/2025-11-17-grok-4-1-model-card.pdf" target="_blank">0.14</a></td>
+        </tr>
+        <tr>
+          <td><strong>Grok 4.1 Fast</strong></td>
+          <td>xAI</td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-na">&mdash;</td>
+        </tr>
+        <tr>
+          <td><strong>Grok 4 Fast</strong></td>
+          <td>xAI</td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-high"><a href="https://data.x.ai/2025-09-19-grok-4-fast-model-card.pdf" target="_blank">0.08/0.10</a></td>
+        </tr>
+        <tr>
+          <td><strong>Grok 4</strong></td>
+          <td>xAI</td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-high"><a href="https://data.x.ai/2025-08-20-grok-4-model-card.pdf" target="_blank">0.14</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="section-desc" style="margin-top:8px;font-size:12px;color:var(--text-muted)">
+    <strong>Malicious Refusal</strong>: CU = Malicious Computer Use refusal rate (without mitigations), Code = Malicious Claude Code Use refusal rate (with mitigations). Higher is better. Source: <a href="https://anthropic.com/claude-sonnet-4-6-system-card" target="_blank">Sonnet 4.6 System Card</a>.
+  </p>
+
+  <hr>
+
+  <!-- Section 7: Alignment -->
+  <h2 class="section-title">Security4AI &mdash; Alignment</h2>
+  <p class="section-desc">Deception, sycophancy, sabotage, stealth, situational awareness.</p>
+  <div class="table-wrapper">
+    <table>
+      <thead>
+        <tr><th>Model</th><th>Company</th><th>MASK</th><th>Sycophancy</th><th>MakeMeSay</th><th>Sabotage</th><th>Stealth / SA</th></tr>
       </thead>
       <tbody>
         <tr>
@@ -531,7 +741,8 @@
           <td class="score-na">&mdash;</td>
           <td class="score-na">&mdash;</td>
           <td class="score-na">&mdash;</td>
-          <td>2026.02</td>
+          <td class="score-med"><a href="https://cdn.openai.com/pdf/23eca107-a9b1-4d2c-b156-7deb4fbc697c/GPT-5-3-Codex-System-Card-02.pdf" target="_blank">0.88</a> <sup>Apollo</sup></td>
+          <td class="score-na">&mdash;</td>
         </tr>
         <tr>
           <td><strong>GPT-5.2-Codex</strong></td>
@@ -539,7 +750,8 @@
           <td class="score-na">&mdash;</td>
           <td class="score-na">&mdash;</td>
           <td class="score-na">&mdash;</td>
-          <td>2025.12</td>
+          <td class="score-med"><a href="https://cdn.openai.com/pdf/23eca107-a9b1-4d2c-b156-7deb4fbc697c/GPT-5-3-Codex-System-Card-02.pdf" target="_blank">0.66</a> <sup>Apollo</sup></td>
+          <td class="score-na">&mdash;</td>
         </tr>
         <tr>
           <td><strong>Claude Opus 4.6</strong></td>
@@ -547,7 +759,8 @@
           <td class="score-na">&mdash;</td>
           <td class="score-na">&mdash;</td>
           <td class="score-na">&mdash;</td>
-          <td>2026.02</td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-na">&mdash;</td>
         </tr>
         <tr>
           <td><strong>Claude Sonnet 4.6</strong></td>
@@ -555,7 +768,8 @@
           <td class="score-na">&mdash;</td>
           <td class="score-na">&mdash;</td>
           <td class="score-na">&mdash;</td>
-          <td>2026.02</td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-na">&mdash;</td>
         </tr>
         <tr>
           <td><strong>Gemini 3.1 Pro</strong></td>
@@ -563,15 +777,8 @@
           <td class="score-na">&mdash;</td>
           <td class="score-na">&mdash;</td>
           <td class="score-na">&mdash;</td>
-          <td>2026.02</td>
-        </tr>
-        <tr>
-          <td><strong>Gemini 3 Pro</strong></td>
-          <td>Google</td>
           <td class="score-na">&mdash;</td>
-          <td class="score-na">&mdash;</td>
-          <td class="score-na">&mdash;</td>
-          <td>2025.11</td>
+          <td class="score-med"><a href="https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-1-Pro-Model-Card.pdf" target="_blank">~100% on 3 SA</a></td>
         </tr>
         <tr>
           <td><strong>Gemini 3 Flash</strong></td>
@@ -579,27 +786,60 @@
           <td class="score-na">&mdash;</td>
           <td class="score-na">&mdash;</td>
           <td class="score-na">&mdash;</td>
-          <td>2025.12</td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-na">&mdash;</td>
+        </tr>
+        <tr>
+          <td><strong>Gemini 3 Pro</strong></td>
+          <td>Google</td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-low"><a href="https://storage.googleapis.com/deepmind-media/gemini/gemini_3_pro_fsf_report.pdf" target="_blank">3/11 SA, 1/4 stealth</a></td>
         </tr>
         <tr>
           <td><strong>Grok 4.1</strong></td>
           <td>xAI</td>
-          <td class="score-high"><a href="https://data.x.ai/2025-11-17-grok-4-1-model-card.pdf" target="_blank">&lt;14%</a></td>
           <td class="score-high"><a href="https://data.x.ai/2025-11-17-grok-4-1-model-card.pdf" target="_blank">0.49</a></td>
           <td class="score-high"><a href="https://data.x.ai/2025-11-17-grok-4-1-model-card.pdf" target="_blank">0.19</a></td>
-          <td>2025.11</td>
+          <td class="score-high"><a href="https://data.x.ai/2025-11-17-grok-4-1-model-card.pdf" target="_blank">0%</a></td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-na">&mdash;</td>
         </tr>
         <tr>
-          <td><strong>Grok 4 Fast</strong></td>
+          <td><strong>Grok 4.1 Fast</strong></td>
           <td>xAI</td>
           <td class="score-na">&mdash;</td>
           <td class="score-na">&mdash;</td>
           <td class="score-na">&mdash;</td>
-          <td>2025.09</td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-na">&mdash;</td>
+        </tr>
+        <tr>
+          <td><strong>Grok 4 Fast</strong></td>
+          <td>xAI</td>
+          <td class="score-high"><a href="https://data.x.ai/2025-09-19-grok-4-fast-model-card.pdf" target="_blank">0.47/0.63</a></td>
+          <td class="score-high"><a href="https://data.x.ai/2025-09-19-grok-4-fast-model-card.pdf" target="_blank">0.10/0.13</a></td>
+          <td class="score-high"><a href="https://data.x.ai/2025-09-19-grok-4-fast-model-card.pdf" target="_blank">0.12</a></td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-na">&mdash;</td>
+        </tr>
+        <tr>
+          <td><strong>Grok 4</strong></td>
+          <td>xAI</td>
+          <td class="score-high"><a href="https://data.x.ai/2025-08-20-grok-4-model-card.pdf" target="_blank">0.43</a></td>
+          <td class="score-high"><a href="https://data.x.ai/2025-08-20-grok-4-model-card.pdf" target="_blank">0.07</a></td>
+          <td class="score-high"><a href="https://data.x.ai/2025-08-20-grok-4-model-card.pdf" target="_blank">0.12</a></td>
+          <td class="score-na">&mdash;</td>
+          <td class="score-na">&mdash;</td>
         </tr>
       </tbody>
     </table>
   </div>
+  <p class="section-desc" style="margin-top:8px;font-size:12px;color:var(--text-muted)">
+    <strong>Sabotage</strong>: <sup>Apollo</sup> = Apollo Research mean best-of-10 sabotage score (higher = stronger sabotage capability). <strong>Stealth / SA</strong>: SA = Situational Awareness challenges solved; stealth = stealth eval challenges solved.
+  </p>
 
   <p class="section-desc" style="margin-top:8px;font-size:12px;color:var(--text-muted)">
     Each score links to the specific system card or document reporting it. See <a href="#" onclick="switchTab('about');return false;">About</a> for methodology caveats.
@@ -614,7 +854,9 @@
       <thead><tr><th>Model</th><th>Evaluator</th><th>Benchmark</th><th>Score</th><th>Source</th></tr></thead>
       <tbody>
         <tr><td><strong>GPT-5.3-Codex</strong></td><td><a href="https://irregular.com" target="_blank">Irregular (Pattern Labs)</a></td><td>Network Attack / Vuln / Evasion</td><td class="score-high">86% / 72% / 53%</td><td><a href="https://cdn.openai.com/pdf/23eca107-a9b1-4d2c-b156-7deb4fbc697c/GPT-5-3-Codex-System-Card-02.pdf" target="_blank">System Card</a></td></tr>
+        <tr><td><strong>GPT-5.2-Codex</strong></td><td><a href="https://irregular.com" target="_blank">Irregular (Pattern Labs)</a></td><td>Network Attack / Vuln / Evasion</td><td class="score-med">79% / 80% / 49% (original)</td><td><a href="https://cdn.openai.com/pdf/ac7c37ae-7f4c-4442-b741-2eabdeaf77e0/oai_5_2_Codex.pdf" target="_blank">Addendum</a></td></tr>
         <tr><td><strong>GPT-5.1-Codex-Max</strong></td><td><a href="https://irregular.com" target="_blank">Irregular (Pattern Labs)</a></td><td>Network Attack / Vuln / Evasion</td><td class="score-med">37% / 41% / 43%</td><td><a href="https://cdn.openai.com/pdf/2a7d98b1-57e5-4147-8d0e-683894d782ae/5p1_codex_max_card_03.pdf" target="_blank">System Card</a></td></tr>
+        <tr><td><strong>GPT-5</strong></td><td><a href="https://irregular.com" target="_blank">Irregular (Pattern Labs)</a></td><td>Network Attack / Vuln / Evasion</td><td class="score-med">49% / 35% / 51%</td><td><a href="https://cdn.openai.com/gpt-5-system-card.pdf" target="_blank">System Card</a></td></tr>
         <tr><td><strong>Grok 4</strong></td><td><a href="https://www.aisi.gov.uk/" target="_blank">UK AISI</a></td><td>Realistic cyber</td><td class="score-low">Below human professional</td><td><a href="https://data.x.ai/2025-08-20-grok-4-model-card.pdf" target="_blank">Model Card</a></td></tr>
         <tr><td><strong>Claude</strong></td><td><a href="https://picoctf.org/" target="_blank">PicoCTF</a></td><td>PicoCTF 2025</td><td class="score-high">Top 3% (297th/10,460), 32/41</td><td><a href="https://red.anthropic.com/2025/cyber-competitions/" target="_blank">Cyber Competitions</a></td></tr>
         <tr><td><strong>Claude</strong></td><td><a href="https://www.hackthebox.com/" target="_blank">HackTheBox</a></td><td>HTB AI vs Human</td><td class="score-high">30th/161, 4th/8 AI, 19/20</td><td><a href="https://red.anthropic.com/2025/cyber-competitions/" target="_blank">Cyber Competitions</a></td></tr>
@@ -658,6 +900,7 @@
         <tr><td><strong>Levels</strong></td><td>Low &rarr; Med &rarr; High &rarr; Critical</td><td>ASL-1 &rarr; 2 &rarr; 3 &rarr; 4</td><td>CCL alert &rarr; reached</td><td>Abuse / Propensities / Dual-use</td></tr>
         <tr><td><strong>Cyber Threshold</strong></td><td>End-to-end ops OR zero-day</td><td>&ge;1/5 in &ge;2/6 exploit dev classes</td><td>&ge;10x cost reduction</td><td>Not defined</td></tr>
         <tr><td><strong>First Crossed</strong></td><td>GPT-5.3 (2026.02) &mdash; <strong>HIGH (prec.)</strong></td><td>Opus 4 (2025.05) &mdash; <strong>ASL-3</strong></td><td>None (alert only)</td><td>None</td></tr>
+        <tr><td><strong>Third-party</strong></td><td>US/UK AISI, US CAISI</td><td>US/UK AISI, METR, US CAISI</td><td>&mdash;</td><td>UK AISI</td></tr>
       </tbody>
     </table>
   </div>
@@ -669,15 +912,16 @@
 <div class="tab-panel" id="tab-benchmarks">
 
   <h2 class="section-title">Benchmark Overview</h2>
-  <p class="section-desc">60+ benchmarks across three categories. <strong>Key insight: virtually no overlap across companies.</strong></p>
+  <p class="section-desc">70+ benchmarks across AI4Security and Security4AI. <strong>Key insight: virtually no overlap across companies.</strong></p>
 
   <div class="table-wrapper">
     <table>
       <thead><tr><th>Category</th><th>Scope</th><th>Vendor</th><th>Academic</th><th>Full List</th></tr></thead>
       <tbody>
+        <tr><td><strong>AI4Security</strong></td><td>CTF, pentest, vuln detection, threat intel knowledge</td><td>19</td><td>18</td><td><a href="https://github.com/ugonfor/awesome-ai-cybersecurity/tree/main/benchmarks/ai4security/" target="_blank">ai4security/</a></td></tr>
         <tr><td><strong>Security4AI: Model Robustness</strong></td><td>Jailbreak, prompt injection, adversarial robustness</td><td>6</td><td>14</td><td><a href="https://github.com/ugonfor/awesome-ai-cybersecurity/tree/main/benchmarks/security4ai/model-robustness/" target="_blank">security4ai/model-robustness/</a></td></tr>
-        <tr><td><strong>AI4Security</strong></td><td>CTF, pentest, vuln detection, threat intel</td><td>19</td><td>18</td><td><a href="https://github.com/ugonfor/awesome-ai-cybersecurity/tree/main/benchmarks/ai4security/" target="_blank">ai4security/</a></td></tr>
-        <tr><td><strong>Security4AI: Misuse Risk & Alignment</strong></td><td>Misuse risk, dual-use, deception, alignment</td><td>10</td><td>2</td><td><a href="https://github.com/ugonfor/awesome-ai-cybersecurity/tree/main/benchmarks/security4ai/" target="_blank">security4ai/</a></td></tr>
+        <tr><td><strong>Security4AI: Misuse Risk</strong></td><td>Harmful request refusal, malicious task completion</td><td>5</td><td>1</td><td><a href="https://github.com/ugonfor/awesome-ai-cybersecurity/tree/main/benchmarks/security4ai/misuse-risk/" target="_blank">security4ai/misuse-risk/</a></td></tr>
+        <tr><td><strong>Security4AI: Alignment</strong></td><td>Deception, sycophancy, sabotage, stealth</td><td>8</td><td>1</td><td><a href="https://github.com/ugonfor/awesome-ai-cybersecurity/tree/main/benchmarks/security4ai/alignment/" target="_blank">security4ai/alignment/</a></td></tr>
       </tbody>
     </table>
   </div>
@@ -920,7 +1164,7 @@
 
   <h3 class="section-subtitle">Vendor Documentation</h3>
   <div class="card-grid">
-    <a class="card" href="https://github.com/ugonfor/awesome-ai-cybersecurity/blob/main/raw-data/openai.md" target="_blank" style="text-decoration:none"><h4 style="color:var(--openai)">OpenAI</h4><p>19 docs &mdash; GPT-4 through GPT-5.3-Codex</p></a>
+    <a class="card" href="https://github.com/ugonfor/awesome-ai-cybersecurity/blob/main/raw-data/openai.md" target="_blank" style="text-decoration:none"><h4 style="color:var(--openai)">OpenAI</h4><p>21 docs &mdash; GPT-4 through GPT-5.3-Codex</p></a>
     <a class="card" href="https://github.com/ugonfor/awesome-ai-cybersecurity/blob/main/raw-data/anthropic.md" target="_blank" style="text-decoration:none"><h4 style="color:var(--anthropic)">Anthropic</h4><p>24 docs &mdash; Claude 2 through Opus 4.6</p></a>
     <a class="card" href="https://github.com/ugonfor/awesome-ai-cybersecurity/blob/main/raw-data/google.md" target="_blank" style="text-decoration:none"><h4 style="color:var(--google)">Google</h4><p>25+ docs &mdash; Gemini 1.0 through 3.1 Pro</p></a>
     <a class="card" href="https://github.com/ugonfor/awesome-ai-cybersecurity/blob/main/raw-data/xai.md" target="_blank" style="text-decoration:none"><h4 style="color:var(--xai)">xAI</h4><p>9 docs &mdash; Grok-1 through 4.1</p></a>
