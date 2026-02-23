@@ -40,6 +40,16 @@ When adding new entries:
 - Tools are classified by which category they serve: Garak → Security4AI (Model Robustness), CTF platforms → AI4Security, Inspect → cross-taxonomy.
 - Some benchmarks are genuinely dual-use (e.g., WMDP, Zero-day Discovery). List in both directories but add a cross-reference note.
 
+### PDF Reading Rules (MUST follow)
+
+System card/model card PDF에서 벤치마크 수치를 추출할 때:
+
+1. **Read tool로 직접 PDF를 읽어라** — `Read` tool은 PDF를 시각적으로 렌더링하여 Figure/차트/테이블의 라벨을 정확하게 볼 수 있다. `pages` 파라미터로 페이지 범위를 지정한다 (한번에 최대 20페이지).
+2. **`pdftotext`로 차트 수치를 추출하지 마라** — `pdftotext`는 텍스트만 추출하고 차트/Figure 속 라벨은 추출하지 못한다. Agent가 pdftotext 텍스트만 보고 차트 수치를 "추론"하면 hallucination이 발생한다 (실제 사례: GPT-5.3-Codex CTF "77.6% xhigh" — PDF에 존재하지 않는 수치를 agent가 만들어냄).
+3. **본문 텍스트에 명시된 수치만 신뢰하라** — Figure/차트의 bar 높이에서 수치를 "읽는" 것은 근사값일 수 있다. 본문에 "scored 0.90" 같이 텍스트로 명시된 수치가 가장 신뢰할 수 있다.
+4. **차트에서 읽은 근사값은 `~` 접두사를 붙여라** — 예: WMDP-Bio ~88.2% (차트에서 읽음). 본문 텍스트에서 확인된 수치는 `~` 없이 표기.
+5. **Subagent에게 PDF 수치 추출을 맡길 때는 반드시 직접 검증하라** — Agent가 WebFetch나 pdftotext로 작업한 수치는 PDF를 Read tool로 직접 열어 교차 검증해야 한다.
+
 ### Factual Accuracy Rules
 
 - **Verify creator attribution** before writing. Common pitfalls we've hit:
@@ -102,7 +112,7 @@ awesome-ai-cybersecurity/
 ├── README.md                      # Main awesome list (leaderboards, cross-comparison, curated lists)
 ├── CLAUDE.md                      # This file (behavioral guidelines)
 ├── raw-data/                      # Vendor documentation analysis (source of truth for numbers)
-│   ├── openai.md                  # 19 documents: GPT-4 → GPT-5.3-Codex
+│   ├── openai.md                  # 21 documents: GPT-4 → GPT-5.3-Codex
 │   ├── anthropic.md               # 24 documents: Claude 2 → Claude Opus 4.6
 │   ├── google.md                  # 25+ documents: Gemini 1.0 → Gemini 3.1 Pro
 │   ├── xai.md                     # 9 documents: Grok-1 → Grok 4.1
