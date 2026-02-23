@@ -245,10 +245,10 @@ tbody tr:hover td { background: var(--table-row-hover); }
 .col-google { border-top: 3px solid var(--google); }
 .col-xai { border-top: 3px solid var(--xai); }
 
-/* Score cells */
-.score-high, .score-high a, .score-high a:link, .score-high a:visited { color: #16a34a; font-weight: 600; }
-.score-med, .score-med a, .score-med a:link, .score-med a:visited { color: #ca8a04; font-weight: 500; }
-.score-low, .score-low a, .score-low a:link, .score-low a:visited { color: var(--text-muted); }
+/* Score cells — no color coding, plain text */
+.score-high, .score-high a, .score-high a:link, .score-high a:visited { color: var(--text); font-weight: 600; }
+.score-med, .score-med a, .score-med a:link, .score-med a:visited { color: var(--text); font-weight: 500; }
+.score-low, .score-low a, .score-low a:link, .score-low a:visited { color: var(--text); }
 .score-na { color: var(--text-muted); font-style: italic; }
 .company-openai { color: var(--openai); }
 .company-anthropic { color: var(--anthropic); }
