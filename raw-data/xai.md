@@ -78,6 +78,26 @@
 - **Cyber Risk Level**: Below human professional in realistic cyber (UK AISI assessment)
 - **Benchmarks Reported**:
 
+  **Abuse Potential (Table 1):**
+
+  | Benchmark | Category | Score (API) | Score (Web) | Methodology | Source Page/Section |
+  |---|---|---|---|---|---|
+  | Chat Refusals | Security4AI > Misuse Risk | 0.00 | 0.00 | Answer rate on violative prompts (multilingual) | Table 1 |
+  | + User Jailbreak | Security4AI > Model Robustness | 0.00 | 0.01 | Answer rate under user jailbreak | Table 1 |
+  | + System Jailbreak | Security4AI > Model Robustness | 0.01 | — | Answer rate under system jailbreak (Web does not accept custom system prompts) | Table 1 |
+  | AgentHarm | Security4AI > Misuse Risk | 0.14 | — | Completion rate of malicious agentic tasks | Table 1 |
+  | AgentDojo | Security4AI > Model Robustness | 0.02 | — | Prompt injection attack success rate | Table 1 |
+
+  **Concerning Propensities (Table 2):**
+
+  | Benchmark | Category | Score (API) | Methodology | Source Page/Section |
+  |---|---|---|---|---|
+  | MASK | Security4AI > Alignment | 0.43 | Deception measurement (faithfully reporting beliefs) | Table 2 |
+  | Soft Bias (Internal) | Other (Political Bias) | 0.36 | Average bias on paired sociopolitical questions | Table 2 |
+  | Sycophancy | Security4AI > Alignment | 0.07 | Ignoring own judgment to agree with misleading user input | Table 2 |
+
+  **Dual-Use Capabilities (Table 3):**
+
   | Benchmark | Category | Score (API) | Score (Web) | Methodology | Source Page/Section |
   |---|---|---|---|---|---|
   | WMDP-Cyber | AI4Security > Cyber Knowledge | 79% | — | MC questions, cyber killchain (recon, weaponization, exploitation, post-exploitation) | Table 3 |
@@ -86,14 +106,10 @@
   | CyBench | AI4Security > Offensive Capability | 43% unguided | — | 40 professional CTF tasks, UK AISI Inspect framework | Table 3 |
   | BioLP-Bench | Other (Biology) | 47% | 44% | Identifying issues in biological lab protocols | Table 3 |
   | VCT | Other (Virology) | 60% | 71% | Expert-level virology troubleshooting (text-only) | Table 3 |
-  | AgentHarm | Security4AI > Misuse Risk | 0.14 | — | Completion rate of malicious agentic tasks | Table 1 |
-  | AgentDojo | Security4AI > Model Robustness | 0.02 | — | Prompt injection robustness in agentic settings | Table 1 |
-  | MASK | Security4AI > Alignment | 0.43 | — | Deception measurement (faithfully reporting beliefs) | Table 2 |
   | MakeMeSay | Security4AI > Alignment | 0.12 | — | Persuasion eval (win rate against non-thinking Grok-3-Mini defender) | Table 3 |
-  | Sycophancy | Security4AI > Alignment | 0.07 | — | Ignoring own judgment to agree with misleading user input | Table 2 |
 
 - **Agent Setup**: UK AISI Inspect framework for CyBench evaluation
-- **Key Findings**: First xAI model with cybersecurity benchmarks. UK AISI third-party testing confirmed model is below human professional in realistic cyber scenarios. Also evaluated on internal harmful request datasets in 6 languages. Grok 4 API and Web show different scores on biology benchmarks (VCT: 60% API vs 71% Web). Superhuman performance on BioLP-Bench (47% vs 38.4% human) and VCT (60% vs 22.1% human).
+- **Key Findings**: First xAI model with cybersecurity benchmarks. UK AISI third-party testing confirmed model is below human professional in realistic cyber scenarios. Also evaluated on internal harmful request datasets in 6 languages. Grok 4 API and Web show different scores on biology benchmarks (VCT: 60% API vs 71% Web). Superhuman performance on BioLP-Bench (47% vs 38.4% human) and VCT (60% vs 22.1% human). Chat refusal rates near zero for both API and Web (API: 0.00/0.00/0.01 for standard/user-jailbreak/system-jailbreak; Web: 0.00/0.01/- with system jailbreak not evaluated since Web does not accept custom system prompts). Political bias measured at 0.36 (Soft Bias, internal eval).
 - **Notes**: Grok 4 initially launched (July 2025) without a safety report, drawing public criticism. Model card published retroactively in August 2025. CyBench is the same benchmark as [Cybench](https://cybench.github.io/) ([arxiv:2408.08926](https://arxiv.org/abs/2408.08926)); xAI uses alternate capitalization. CyBench and WMDP-Cyber only evaluated for API, not Web.
 
 ### 6. Grok Code Fast 1 Model Card
@@ -122,24 +138,40 @@
 - **Cyber Risk Level**: Not explicitly stated (consistent with Grok 4 assessment)
 - **Benchmarks Reported**:
 
+  **Abuse Potential (Table 1):**
+
   | Benchmark | Category | Score (R) | Score (NR) | Methodology | Source Page/Section |
   |---|---|---|---|---|---|
-  | WMDP-Cyber | AI4Security > Cyber Knowledge | 81.4% | — | MC questions, cyber killchain | Table 3 |
-  | WMDP-Bio | Other (Biology) | 85.2% | — | MC questions, biological weapons knowledge | Table 3 |
-  | WMDP-Chem | Other (Chemistry) | 77.5% | — | MC questions, dual-use chemical knowledge | Table 3 |
-  | CyBench | AI4Security > Offensive Capability | 30% unguided | — | 40 professional CTF tasks, UK AISI Inspect framework | Table 3 |
-  | BioLP-Bench | Other (Biology) | 39.0% | — | Identifying issues in biological lab protocols | Table 3 |
-  | VCT | Other (Virology) | 54.5% | — | Expert-level virology troubleshooting (text-only) | Table 3 |
+  | Chat Refusals | Security4AI > Misuse Risk | 0.00 | 0.00 | Answer rate on violative prompts (multilingual) | Table 1 |
+  | + User Jailbreak | Security4AI > Model Robustness | 0.00 | 0.00 | Answer rate under user jailbreak | Table 1 |
+  | + System Jailbreak | Security4AI > Model Robustness | 0.00 | 0.01 | Answer rate under system jailbreak | Table 1 |
   | AgentHarm | Security4AI > Misuse Risk | 0.08 | 0.10 | Completion rate of malicious agentic tasks | Table 1 |
   | AgentDojo | Security4AI > Model Robustness | 0.00 | 0.03 | Prompt injection attack success rate | Table 1 |
+
+  **Concerning Propensities (Table 2):**
+
+  | Benchmark | Category | Score (R) | Score (NR) | Methodology | Source Page/Section |
+  |---|---|---|---|---|---|
   | MASK | Security4AI > Alignment | 0.47 | 0.63 | Deception measurement | Table 2 |
-  | MakeMeSay | Security4AI > Alignment | 0.12 | — | Persuasion eval (win rate against non-thinking Grok-3-Mini defender) | Table 3 |
+  | Soft Bias (Internal) | Other (Political Bias) | 0.79 | 0.89 | Average bias on paired sociopolitical questions | Table 2 |
   | Sycophancy | Security4AI > Alignment | 0.10 | 0.13 | Ignoring own judgment to agree with misleading input | Table 2 |
+
+  **Dual-Use Capabilities (Table 3):**
+
+  | Benchmark | Category | Score (R) | Methodology | Source Page/Section |
+  |---|---|---|---|---|
+  | WMDP-Cyber | AI4Security > Cyber Knowledge | 81.4% | MC questions, cyber killchain | Table 3 |
+  | WMDP-Bio | Other (Biology) | 85.2% | MC questions, biological weapons knowledge | Table 3 |
+  | WMDP-Chem | Other (Chemistry) | 77.5% | MC questions, dual-use chemical knowledge | Table 3 |
+  | CyBench | AI4Security > Offensive Capability | 30% unguided | 40 professional CTF tasks, UK AISI Inspect framework | Table 3 |
+  | BioLP-Bench | Other (Biology) | 39.0% | Identifying issues in biological lab protocols | Table 3 |
+  | VCT | Other (Virology) | 54.5% | Expert-level virology troubleshooting (text-only) | Table 3 |
+  | MakeMeSay | Security4AI > Alignment | 0.12 | Persuasion eval (win rate against non-thinking Grok-3-Mini defender) | Table 3 |
 
   R = Reasoning mode, NR = Non-Reasoning mode. Dual-use benchmarks (Table 3) reported with reasoning enabled only.
 
 - **Agent Setup**: UK AISI Inspect framework for CyBench evaluation
-- **Key Findings**: Higher WMDP-Cyber score (81.4%) than Grok 4 (79%) but lower CyBench performance (30% vs 43%), suggesting knowledge gains did not translate to practical CTF capability. Lower AgentHarm scores indicate better safety behavior. Non-reasoning mode increases dishonesty rate substantially (0.63 vs 0.47). WMDP-Bio at 85.2%, lower than Grok 4's 87%. Dual-use capabilities remain below Grok 4 overall.
+- **Key Findings**: Higher WMDP-Cyber score (81.4%) than Grok 4 (79%) but lower CyBench performance (30% vs 43%), suggesting knowledge gains did not translate to practical CTF capability. Lower AgentHarm scores indicate better safety behavior. Non-reasoning mode increases dishonesty rate substantially (0.63 vs 0.47). WMDP-Bio at 85.2%, lower than Grok 4's 87%. Dual-use capabilities remain below Grok 4 overall. Chat refusal rates near zero across both modes. Political bias notably high (Soft Bias: R=0.79, NR=0.89) compared to Grok 4 API (0.36).
 
 ### 8. Grok 4.1 Model Card
 
@@ -256,15 +288,35 @@
 
 R = Reasoning, NR = Non-Reasoning, T = Thinking, NT = Non-Thinking. WMDP-Cyber and CyBench reported with reasoning/thinking enabled only. Grok 4.1 Fast has no model card yet.
 
+### Chat Refusals & Adversarial Robustness (from model cards)
+
+| Model | Refusals | + User Jailbreak | + System Jailbreak | Source |
+|---|---|---|---|---|
+| Grok 4 (API) | 0.00 | 0.00 | 0.01 | Grok 4 Card Table 1 |
+| Grok 4 (Web) | 0.00 | 0.01 | — | Grok 4 Card Table 1 |
+| Grok 4 Fast (R/NR) | 0.00/0.00 | 0.00/0.00 | 0.00/0.01 | Grok 4 Fast Card Table 1 |
+| Grok 4.1 (T/NT) | 0.07/0.05 | 0.02/0.00 | 0.02/0.00 | Grok 4.1 Card Table 1 |
+
+Note: Grok 4.1 card acknowledges previous model cards had an evaluation error (English-only prompts). Grok 4.1 reports true multilingual refusal results, making refusal scores not directly comparable across model generations.
+
+### Political Bias (Soft Bias, Internal Eval)
+
+| Model | Soft Bias (R/default) | Soft Bias (NR) | Source |
+|---|---|---|---|
+| Grok 4 (API) | 0.36 | — | Grok 4 Card Table 2 |
+| Grok 4 Fast (R/NR) | 0.79 | 0.89 | Grok 4 Fast Card Table 2 |
+
 ### Extended Dual-Use Benchmarks (from model cards)
 
 | Model | WMDP-Bio | WMDP-Chem | VCT | BioLP-Bench | ProtocolQA | FigQA | CloningScenarios |
 |---|---|---|---|---|---|---|---|
-| Grok 4 (API) | 87% | 83% | 60% | 47% | 76% | 29% | 45% |
+| Grok 4 (API) | 87% | 83% | 60% | 47% | 76%* | 29%* | 45%* |
 | Grok 4 (Web) | 88% | 85% | 71% | 44% | — | — | — |
 | Grok 4 Fast | 85.2% | 77.5% | 54.5% | 39.0% | — | — | — |
 | Grok 4.1 T | 87% | 84% | 61% | 37% | 79% | 34% | 46% |
 | Human Baseline | 61% | 43% | 22% | 38% | 79% | 77% | 60% |
+
+\* Grok 4 ProtocolQA, FigQA, CloningScenarios values sourced from Grok 4.1 Model Card Table 4 cross-model comparison (not present in Grok 4's own model card Table 3).
 
 ### Cross-Model Comparison (from Grok 4.1 Model Card Table 4)
 

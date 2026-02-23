@@ -243,20 +243,34 @@
 
   | Benchmark | Category | Score | Methodology | Source Page/Section |
   |---|---|---|---|---|
-  | Cybench | AI4Security > Offensive Capability | 93% pass@1 (37 tasks); ~100% pass@30 (saturated) | pass@1 and pass@30, 37 professional CTF tasks | System Card |
-  | Cybench by category | AI4Security > Offensive Capability | Web: 13/13, Crypto: 16/18, Pwn: 5/7, Rev: 6/6, Network: 5/5 | Category-level breakdown | System Card |
-  | CyberGym | AI4Security > Offensive Capability | 66.6% pass@1 (1,507 CVEs) | pass@1, real-world CVE detection, no thinking, default effort | System Card |
+  | Cybench | AI4Security > Offensive Capability | 93% pass@1 (37 tasks); ~100% pass@30 (saturated) | pass@1 and pass@30, 37 professional CTF tasks | Section 8.4.7 (p202) |
+  | Cybench by category | AI4Security > Offensive Capability | Web: 13/13, Crypto: 16/18, Pwn: 5/7, Rev: 6/6, Network: 5/5 | Category-level breakdown | Section 8.4.7 (p202) |
+  | CyberGym | AI4Security > Offensive Capability | 66.6% pass@1 (1,507 CVEs) | pass@1, real-world CVE detection, no thinking, default effort | Section 2.17 (p28-29) |
+  | RSP Cyber CTF — Web | AI4Security > Offensive Capability | 13/13 | 15 challenges (11 easy, 2 med, 2 hard); Easy 8/8, Med 4/4, Hard 1/1 | Section 8.4.2 (p198) |
+  | RSP Cyber CTF — Crypto | AI4Security > Offensive Capability | 16/18 | 22 challenges (7 easy, 6 med, 9 hard); Easy 5/5, Med 8/8, Hard 3/5 | Section 8.4.3 (p198) |
+  | RSP Cyber CTF — Pwn | AI4Security > Offensive Capability | 5/7 | 9 challenges (5 easy, 2 med, 2 hard); Easy 2/2, Med 2/3, Hard 1/1, Expert 0/1 | Section 8.4.4 (p199) |
+  | RSP Cyber CTF — Rev | AI4Security > Offensive Capability | 6/6 | 8 challenges (5 easy, 2 med, 1 hard); Easy 3/3, Med 1/1, Hard 2/2 | Section 8.4.5 (p200) |
+  | RSP Cyber CTF — Network | AI4Security > Offensive Capability | 5/5 | 4 challenges (1 easy, 3 med); Easy 1/1, Med 3/3, Hard 1/1 | Section 8.4.6 (p201) |
+  | Aggregate Cyber by Category (pass@30) | AI4Security > Offensive Capability | PWN ~71%, WEB 100%, CRYPTO ~94%, REV 100%, NETWORK 100%, MISC 100%, FORENSICS 100% | Aggregate success rates across all CTF challenges | Section 8.4.6.B (p201) |
   | 40 Cybersecurity Investigations | AI4Security > Defensive Capability | 38/40 blind-ranked best | Blind-ranked vs Claude 4.5 models, up to 9 subagents, 100+ tool calls | System Card |
   | Zero-day Discovery | Security4AI > Misuse Risk | 500+ zero-days | Pre-release testing, validated by internal team and external researchers | System Card |
+  | CAISI Assessment | AI4Security > Offensive Capability | Novel vulns discovered in open & closed source software | US Center for AI Standards and Innovation, 1-week evaluation, hundreds of challenges | Section 8.4.8 (p202) |
   | 6 new cybersecurity probes | Security4AI > Misuse Risk | Evaluated | New probe evaluations for tracking misuse | System Card |
-  | Prompt injection (coding, extended thinking) | Security4AI > Model Robustness | 0.0% ASR at k=1; 0.0% ASR at k=200 (no safeguards); 0.0% at k=1; 0.0% at k=200 (with safeguards) | Shade indirect PI in coding env | System Card |
-  | Prompt injection (coding, standard thinking) | Security4AI > Model Robustness | 0.0% ASR at k=1; 0.0% ASR at k=200 (no safeguards); 0.0% at k=1; 0.0% at k=200 (with safeguards) | Shade indirect PI in coding env | System Card |
-  | Prompt injection (browser) | Security4AI > Model Robustness | ~2% ASR (98% defense rate) | Browser-based evaluation | System Card |
-  | Malicious computer use | Security4AI > Misuse Risk | 88.34% refusal rate | Without mitigations | System Card |
+  | Agent Red Teaming (ART) benchmark | Security4AI > Model Robustness | k=1: 0.2%, k=10: 2.1%, k=100: 14.8% (no thinking); k=1: 0.2%, k=10: 2.2%, k=100: 21.7% (with thinking) | Gray Swan / UK AISI, 19 scenarios, indirect PI only | Section 5.2.1 (p84) |
+  | Prompt injection (coding, extended thinking) | Security4AI > Model Robustness | 0.0% ASR at k=1; 0.0% ASR at k=200 (no safeguards); 0.0% at k=1; 0.0% at k=200 (with safeguards) | Shade indirect PI in coding env | Section 5.2.2.1 (p85) |
+  | Prompt injection (coding, standard thinking) | Security4AI > Model Robustness | 0.0% ASR at k=1; 0.0% ASR at k=200 (no safeguards); 0.0% at k=1; 0.0% at k=200 (with safeguards) | Shade indirect PI in coding env | Section 5.2.2.1 (p85) |
+  | Prompt injection (computer use, extended thinking) | Security4AI > Model Robustness | 17.8% ASR at k=1; 78.6% at k=200 (no safeguards); 9.7% at k=1; 57.1% at k=200 (with safeguards) | Shade indirect PI in computer use env (stronger attacker variant) | Section 5.2.2.2 (p86) |
+  | Prompt injection (computer use, standard thinking) | Security4AI > Model Robustness | 20.0% ASR at k=1; 85.7% at k=200 (no safeguards); 10.0% at k=1; 64.3% at k=200 (with safeguards) | Shade indirect PI in computer use env (stronger attacker variant) | Section 5.2.2.2 (p86) |
+  | Prompt injection (browser, Best-of-N, without safeguards) | Security4AI > Model Robustness | Ext: 2.06%/0.29%; Std: 2.83%/0.49% (scenario/attempt ASR) | Internal Best-of-N PI, 389 scenarios, 10 attacks each | Section 5.2.2.3 (p88) |
+  | Prompt injection (browser, Best-of-N, with previous safeguards) | Security4AI > Model Robustness | 0.26%/0.03% (scenario/attempt ASR, standard thinking) | Internal Best-of-N PI with previous safeguards | Section 5.2.2.3 (p88) |
+  | Prompt injection (browser, Best-of-N, with updated safeguards) | Security4AI > Model Robustness | 0.77%/0.08% (scenario/attempt ASR, standard thinking) | Internal Best-of-N PI with updated safeguards | Section 5.2.2.3 (p88) |
+  | Malicious computer use | Security4AI > Misuse Risk | 88.34% refusal rate | Without mitigations | Section 5.1.3 |
+  | Malicious Claude Code use (without mitigations) | Security4AI > Misuse Risk | 83.20% malicious refusal; 91.75% dual-use/benign success | Claude Code tools | Section 5.1.2 |
+  | Malicious Claude Code use (with mitigations) | Security4AI > Misuse Risk | 99.59% malicious refusal; 95.59% dual-use/benign success | Claude Code tools with prompting mitigations | Section 5.1.2 |
 
-- **Agent Setup**: Full agentic setup with network tools, vulnerability scanning, and investigation capabilities
-- **Key Findings**: Cybench 93% pass@1 (highest reported for any model); saturated Cybench at ~100% pass@30; CyberGym 66.6% pass@1 (highest reported); best in 38/40 blind-ranked cybersecurity investigations vs Claude 4.5 models; 500+ zero-day vulnerabilities discovered in pre-release testing; 0% prompt injection success in coding environments; 213-page system card
-- **Notes**: Cybench saturated -- Anthropic states current benchmarks can no longer track capability progression. CyberGym run with no thinking, default effort, temperature, and top_p, with a "think" tool for interleaved thinking. Slightly more vulnerable to indirect prompt injection in GUI/computer use than predecessor.
+- **Agent Setup**: Full agentic setup with network tools, vulnerability scanning, and investigation capabilities; Kali-based environment with pwntools, metasploit, ghidra, tshark; code editor + Terminal Tool with async terminal management; reports pass@30 trials
+- **Key Findings**: Cybench 93% pass@1 (highest reported for any model); saturated Cybench at ~100% pass@30; CyberGym 66.6% pass@1 (highest reported); best in 38/40 blind-ranked cybersecurity investigations vs Claude 4.5 models; 500+ zero-day vulnerabilities discovered in pre-release testing; 0% prompt injection success in coding environments (all configurations); CAISI assessment discovered novel vulnerabilities in both open and closed source software; Opus 4.6 without extended thinking achieves ART robustness comparable to Opus 4.5 (14.8% vs 16.5% at k=100); unusually, extended thinking increases ART attack success (21.7% vs 14.8% at k=100) -- opposite of prior models; 212-page system card
+- **Notes**: Cybench saturated -- Anthropic states current benchmarks can no longer track capability progression. CyberGym run with no thinking, default effort, temperature, and top_p, with a "think" tool for interleaved thinking. Computer use PI uses stronger attacker variant (previous version saturated at 0% for Opus 4.5 with extended thinking). Browser PI data from Opus 4.6 system card (Tables 5.2.2.3.A and 5.2.2.3.B). ART benchmark numbers updated with corrected grading (may differ from previous system cards). CAISI: US Center for AI Standards and Innovation assessed cyber capabilities over one-week window in partnership with US Government.
 
 ### 14. Claude Sonnet 4.6 System Card
 
@@ -264,7 +278,7 @@
 - **URL**: [Web](https://anthropic.com/claude-sonnet-4-6-system-card) | [PDF](https://www-cdn.anthropic.com/78073f739564e986ff3e28522761a7a0b4484f84.pdf)
 - **Models**: Claude Sonnet 4.6
 - **Type**: System Card
-- **Cyber Risk Level**: ASL-2
+- **Cyber Risk Level**: ASL-3
 - **Benchmarks Reported**:
 
   | Benchmark | Category | Score | Methodology | Source Page/Section |
@@ -283,15 +297,15 @@
   | Prompt injection (browser, Best-of-N, without safeguards) | Security4AI > Model Robustness | Ext: 1.29%/0.24%; Std: 1.29%/0.29% (scenario/attempt ASR) | Internal Best-of-N PI, 389 scenarios, 10 attacks each | System Card Section 5.2.2.3 |
   | Prompt injection (browser, Best-of-N, with previous safeguards) | Security4AI > Model Robustness | 1.03%/0.16% (scenario/attempt ASR, standard thinking) | Internal Best-of-N PI with previous safeguards | System Card Section 5.2.2.3 |
   | Prompt injection (browser, Best-of-N, with updated safeguards) | Security4AI > Model Robustness | 0.51%/0.08% (scenario/attempt ASR, standard thinking) | Internal Best-of-N PI with updated safeguards | System Card Section 5.2.2.3 |
-  | Agent Red Teaming (ART) benchmark | Security4AI > Model Robustness | Comparable to Opus 4.6; major improvement over Sonnet 4.5 | Gray Swan / UK AISI, 19 scenarios, k=1/10/100 attempts | System Card Section 5.2.1 |
+  | Agent Red Teaming (ART) benchmark | Security4AI > Model Robustness | k=1: 2.20%, k=10: 15.94%, k=100: 20.72% (no thinking); k=1: 2.73% (with thinking) | Gray Swan / UK AISI, 19 scenarios, indirect PI only, updated grading | System Card Section 5.2.1 (Figure 5.2.1.A) |
   | Agentic coding refusal | Security4AI > Misuse Risk | 100% refusal rate | 150 malicious coding requests, without mitigations | System Card Section 5.1.1 |
   | Malicious Claude Code use (without mitigations) | Security4AI > Misuse Risk | 79.34% malicious refusal; 88.52% dual-use/benign success | Claude Code tools | System Card Section 5.1.2 |
   | Malicious Claude Code use (with mitigations) | Security4AI > Misuse Risk | 99.39% malicious refusal; 91.78% dual-use/benign success | Claude Code tools with prompting mitigations | System Card Section 5.1.2 |
   | Malicious computer use | Security4AI > Misuse Risk | 99.38% refusal rate | 112 tasks, extended + standard thinking (224 attempts), without mitigations | System Card Section 5.1.3 |
 
 - **Agent Setup**: Evaluated in coding, computer use, and browser environments with extended and standard thinking
-- **Key Findings**: Cybench 90% pass@1 (37 tasks), just below Opus 4.6 (93%); saturated at 100% pass@30; CyberGym 65.2% pass@1 -- nearly matches Opus 4.6 (66.6%), more than doubled from Sonnet 4.5 (29.8%); near-perfect prompt injection resistance: 0% in coding with extended thinking, <0.3% in browser environments; first Sonnet-class model to achieve Opus-level prompt injection resistance; major improvement over Sonnet 4.5 in computer use PI defense; 99.38% malicious computer use refusal (highest among all Claude models); 100% agentic coding refusal rate; Shade computer use PI ASR substantially lower than Opus 4.6 (12.0% vs 17.8% ext thinking, no safeguards)
-- **Notes**: Matches Opus 4.6 prompt injection resistance in coding -- significant for enterprise deployment at Sonnet-tier pricing. Computer use PI: Sonnet 4.6 actually outperforms Opus 4.6 (lower ASR). ART benchmark scores from figure only (no exact numeric values provided). Browser Best-of-N: with updated safeguards, 0.51%/0.08% scenario/attempt ASR -- competitive with Opus 4.6 (0.77%/0.08%).
+- **Key Findings**: ASL-3 (first Sonnet-class model deployed under ASL-3 Standard); Cybench 90% pass@1 (37 tasks), just below Opus 4.6 (93%); saturated at 100% pass@30; CyberGym 65.2% pass@1 -- nearly matches Opus 4.6 (66.6%), more than doubled from Sonnet 4.5 (29.8%); near-perfect prompt injection resistance: 0% in coding with extended thinking, <0.3% in browser environments; first Sonnet-class model to achieve Opus-level prompt injection resistance; major improvement over Sonnet 4.5 in computer use PI defense; 99.38% malicious computer use refusal (highest among all Claude models); 100% agentic coding refusal rate; Shade computer use PI ASR substantially lower than Opus 4.6 (12.0% vs 17.8% ext thinking, no safeguards); ART benchmark k=1: 2.20% comparable to Opus 4.6 (0.2%)
+- **Notes**: ASL-3 (deployed under ASL-3 Standard, same as Opus 4.6). Matches Opus 4.6 prompt injection resistance in coding -- significant for enterprise deployment at Sonnet-tier pricing. Computer use PI: Sonnet 4.6 actually outperforms Opus 4.6 (lower ASR). ART benchmark: k=1 2.20% / k=10 15.94% / k=100 20.72% (no thinking), k=1 2.73% (thinking) -- comparable to Opus 4.6 and major improvement over Sonnet 4.5 (k=1: 9.31%/10.85%). Browser Best-of-N: with updated safeguards, 0.51%/0.08% scenario/attempt ASR -- competitive with Opus 4.6 (0.77%/0.08%).
 
 ---
 
@@ -462,7 +476,7 @@
 |---|---|---|---|---|
 | Claude 3.7 Sonnet | 2025-02 | 35.9% | pass@5, 40 tasks | [System Card](https://anthropic.com/claude-3-7-sonnet-system-card) |
 | Claude Sonnet 4.5 | 2025-09 | 76.5% (pass@10); 60% (pass@1) | pass@10 and pass@1, 40 tasks | [System Card](https://www.anthropic.com/claude-sonnet-4-5-system-card) |
-| Claude Opus 4.5 | 2025-11 | 82% (pass@1) | pass@1, tasks | [System Card](https://www.anthropic.com/claude-opus-4-5-system-card) |
+| Claude Opus 4.5 | 2025-11 | 82% (pass@1, full 40 tasks); 79% (pass@1, RSP 37-task subset) | pass@1 | [System Card](https://www.anthropic.com/claude-opus-4-5-system-card); Opus 4.6 SC Fig 8.4.7 |
 | Claude Sonnet 4.6 | 2026-02 | 90% (pass@1); 100% (pass@30, saturated) | pass@1 and pass@30, 37 tasks | [System Card](https://anthropic.com/claude-sonnet-4-6-system-card) |
 | Claude Opus 4.6 | 2026-02 | 93% (pass@1); ~100% (pass@30, saturated) | pass@1 and pass@30, 37 tasks | [System Card](https://anthropic.com/claude-opus-4-6-system-card) |
 
@@ -611,6 +625,99 @@ Source: [Sonnet 4.6 System Card](https://anthropic.com/claude-sonnet-4-6-system-
 
 ---
 
+## Agent Red Teaming (ART) Benchmark — Indirect Prompt Injection Robustness
+
+| Model | k=1 | k=10 | k=100 |
+|---|---|---|---|
+| Gemini 3 Flash | 17.8% | 63.6% | 73.3% |
+| Gemini 3 Flash Thinking | 12.0% | 50.9% | 84.1% |
+| Gemini 3 Pro | 7.1% | 40.0% | 74.2% |
+| Gemini 3 Pro Preview | 7.0% | 39.6% | 75.6% |
+| Gemini 3 Pro Thinking | 3.2% | 23.3% | 62.7% |
+| GPT-5.2 | 2.3% | 16.6% | 49.2% |
+| GPT-5.2 Thinking | 2.6% | 23.1% | 52.3% |
+| Haiku 4.5 | 10.8% | 19.2% | 40.7% |
+| Haiku 4.5 Thinking | 9.3% | 34.9% | — |
+| Sonnet 4.5 | 1.1% | 9.31% | 34.9% |
+| Sonnet 4.5 Thinking | 1.3% | 10.85% | 40.7% |
+| Opus 4.5 | 2.0% | 16.5% | — |
+| Opus 4.5 Thinking | 1.6% | 14.2% | — |
+| Opus 4.6 | 0.2% | 2.1% | 14.8% |
+| Opus 4.6 Thinking | 0.2% | 2.2% | 21.7% |
+| Sonnet 4.6 | 2.2% | 15.9% | 20.7% |
+| Sonnet 4.6 Thinking | 2.7% | — | — |
+
+Source: [Opus 4.6 System Card](https://anthropic.com/claude-opus-4-6-system-card) Figure 5.2.1.A and [Sonnet 4.6 System Card](https://anthropic.com/claude-sonnet-4-6-system-card) Figure 5.2.1.A. Lower is better. Attack success evaluated on 19 scenarios. Numbers reflect updated grading (corrected in collaboration with Gray Swan; may differ from previous system cards). Some k=100 values not readable from figures marked with —.
+
+---
+
+## RSP Cyber CTF Per-Category Breakdown by Difficulty (pass@30)
+
+### Web (15 challenges: 11 easy, 2 medium, 2 hard)
+
+| Model | Easy | Medium | Hard | Total |
+|---|---|---|---|---|
+| Sonnet 4.5 | 8/8 | 2/4 | 1/1 | 11/13 |
+| Opus 4.5 | 8/8 | 3/4 | 1/1 | 12/13 |
+| Opus 4.6 | 8/8 | 4/4 | 1/1 | 13/13 |
+| Sonnet 4.6 | 8/8 | 4/4 | 1/1 | 13/13 |
+
+### Crypto (22 challenges: 7 easy, 6 medium, 9 hard)
+
+| Model | Easy | Medium | Hard | Total |
+|---|---|---|---|---|
+| Sonnet 4.5 | 5/5 | 6/8 | 3/5 | 14/18 |
+| Opus 4.5 | 5/5 | 6/8 | 4/5 | 15/18 |
+| Opus 4.6 | 5/5 | 8/8 | 3/5 | 16/18 |
+| Sonnet 4.6 | 5/5 | 8/8 | 3/5 | 16/18 |
+
+### Pwn (9 challenges: 5 easy, 2 medium, 2 hard)
+
+| Model | Easy | Medium | Hard | Expert | Total |
+|---|---|---|---|---|---|
+| Sonnet 4.5 | 2/2 | 0/2 | 0/3 | — | 2/7 |
+| Opus 4.5 | 2/2 | 1/3 | 0/1 | — | 3/7 |
+| Opus 4.6 | 2/2 | 2/3 | 1/1 | 0/1 | 5/7 |
+| Sonnet 4.6 | 2/2 | 2/3 | 1/1 | 0/1 | 5/7 |
+
+### Rev (8 challenges: 5 easy, 2 medium, 1 hard)
+
+| Model | Easy | Medium | Hard | Total |
+|---|---|---|---|---|
+| Sonnet 4.5 | 3/3 | 2/2 | 0/1 | 5/6 |
+| Opus 4.5 | 3/3 | 1/1 | 2/2 | 6/6 |
+| Opus 4.6 | 3/3 | 1/1 | 2/2 | 6/6 |
+| Sonnet 4.6 | 3/3 | 1/1 | 2/2 | 6/6 |
+
+### Network (4 challenges: 1 easy, 3 medium)
+
+| Model | Easy | Medium | Hard | Total |
+|---|---|---|---|---|
+| Sonnet 4.5 | 1/1 | 2/3 | 0/1 | 3/5 |
+| Opus 4.5 | 1/1 | 3/3 | 0/1 | 4/5 |
+| Opus 4.6 | 1/1 | 3/3 | 1/1 | 5/5 |
+| Sonnet 4.6 | 1/1 | 3/3 | 1/1 | 5/5 |
+
+Source: [Opus 4.6 System Card](https://anthropic.com/claude-opus-4-6-system-card) Figures 8.4.2-8.4.6; [Sonnet 4.6 System Card](https://anthropic.com/claude-sonnet-4-6-system-card) Figures 6.4.2-6.4.6. Difficulty breakdown from stacked bar charts. Note: "Total" column counts unique challenges solved at pass@30 (best-of-30 trials). Network shows 5 total despite only 4 described challenges, suggesting an additional challenge or sub-task.
+
+---
+
+## Aggregate Cyber Challenge Success Rates by Category (pass@30)
+
+| Category | Sonnet 4.5 | Opus 4.5 | Opus 4.6 | Sonnet 4.6 |
+|---|---|---|---|---|
+| PWN | ~29% | ~43% | ~71% | ~71% |
+| WEB | ~85% | ~92% | 100% | ~95% |
+| CRYPTO | ~78% | ~83% | ~94% | ~96% |
+| REV | ~83% | ~97% | 100% | 100% |
+| NETWORK | ~60% | ~80% | 100% | 100% |
+| MISC | ~67% | 100% | 100% | 100% |
+| FORENSICS | 100% | 100% | 100% | 100% |
+
+Source: [Opus 4.6 System Card](https://anthropic.com/claude-opus-4-6-system-card) Figure 8.4.6.B (p201); [Sonnet 4.6 System Card](https://anthropic.com/claude-sonnet-4-6-system-card) Figure 6.4.6.B (p124). Values approximated from bar charts. Cumulative scores across all CTF challenges including Cybench subset. Sonnet 4.6 performs comparably to Opus 4.6 across all categories.
+
+---
+
 ## Key Milestones
 
 - **First ASL-3 model**: Claude Opus 4 (2025-05) -- exceeded ASL-3 thresholds in cyber and CBRN
@@ -619,9 +726,12 @@ Source: [Sonnet 4.6 System Card](https://anthropic.com/claude-sonnet-4-6-system-
 - **First successful network challenge without human assistance**: Claude Opus 4.5 (2025-11)
 - **First real-world adversary use documented**: 2025-08 -- Chinese state-sponsored GTG-1002
 - **First 500+ zero-day discovery**: Claude Opus 4.6 (2026-02)
+- **First CAISI external cyber assessment**: Claude Opus 4.6 (2026-02) -- US Center for AI Standards and Innovation + US Government partners, novel vulnerabilities discovered
 - **Highest Cybench score**: Claude Opus 4.6 at 93% pass@1, ~100% pass@30 (2026-02) -- benchmark saturated
 - **Highest CyberGym score**: Claude Opus 4.6 at 66.6% pass@1 (2026-02)
 - **Best prompt injection resistance (coding)**: Claude Opus 4.6 at 0.0% ASR in coding (all configurations); Claude Sonnet 4.6 matches Opus-level PI resistance in extended thinking (2026-02)
 - **Best prompt injection resistance (computer use)**: Claude Sonnet 4.6 at 12.0%/42.9% ASR (ext thinking, no safeguards) -- outperforms Opus 4.6 (17.8%/78.6%) (2026-02)
+- **Best ART benchmark robustness**: Claude Opus 4.6 at k=1: 0.2% (lowest single-attempt attack success among all models tested) (2026-02)
 - **First Sonnet-class model with Opus-level PI defense**: Claude Sonnet 4.6 (2026-02)
 - **Highest malicious computer use refusal rate**: Claude Sonnet 4.6 at 99.38% (2026-02) -- surpasses all previous models including Opus 4.6 (88.34%)
+- **First Sonnet-class ASL-3 model**: Claude Sonnet 4.6 (2026-02) -- deployed under ASL-3 Standard
