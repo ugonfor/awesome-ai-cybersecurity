@@ -24,7 +24,7 @@ The AI cybersecurity space is fragmented: OpenAI, Anthropic, Google, and xAI eac
 
 ### AI4Security (AI helping with cybersecurity)
 
-| Subcategory | Meaning | Benchmarks in Leaderboard | Leaderboard |
+| Subcategory | Purpose | Benchmarks | |
 |----------|---------|---------|:---:|
 | **Offensive Capability** | CTF, exploitation, end-to-end attacks | Cybench, CTF *(internal)*, Cyber Range *(internal)* | [→](#ai4security--offensive-capability) |
 | **Vulnerability Discovery** | CVE exploitation, zero-day detection | CVE-Bench, CyberGym | [→](#ai4security--vulnerability-discovery) |
@@ -33,7 +33,7 @@ The AI cybersecurity space is fragmented: OpenAI, Anthropic, Google, and xAI eac
 
 ### Security4AI (Security concerns about AI)
 
-| Subcategory | Meaning | Benchmarks in Leaderboard | Leaderboard |
+| Subcategory | Purpose | Benchmarks | |
 |----------|---------|---------|:---:|
 | **Model Robustness** | Protecting models from attacks | PI: Coding/Browser/Computer Use (Shade, TAP), AgentDojo | [→](#security4ai--model-robustness) |
 | **Misuse Risk & Alignment** | Preventing harmful use, ensuring intended behavior | Malicious Refusal, AgentHarm, MASK, Sycophancy, MakeMeSay | [→](#security4ai--misuse-risk--alignment) |
