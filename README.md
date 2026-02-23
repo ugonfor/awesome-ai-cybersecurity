@@ -112,9 +112,9 @@ The AI cybersecurity space is fragmented: OpenAI, Anthropic, Google, and xAI eac
 
 > CVE exploitation, real-world vulnerability detection, zero-day discovery.
 >
-> **[CVE-Bench](benchmarks/ai4security/offensive/)** (OpenAI only) and **[CyberGym](https://red.anthropic.com/2025/ai-for-cyber-defenders/)** (Anthropic only) test similar capabilities (finding/exploiting real vulnerabilities) but use completely different challenge sets and metrics. Scores are NOT comparable across these two benchmarks.
+> **[CVE-Bench](benchmarks/ai4security/offensive/)** and **[CyberGym](https://red.anthropic.com/2025/ai-for-cyber-defenders/)** both test real-world vulnerability detection but use different challenge sets (40 web CVEs vs 1,507 OSS CVEs). Currently only used by OpenAI and Anthropic respectively — no cross-vendor scores exist.
 
-| Model | Company | [CVE-Bench](benchmarks/ai4security/offensive/) ^OpenAI | [CyberGym](https://red.anthropic.com/2025/ai-for-cyber-defenders/) ^Anthropic | Zero-day | Date |
+| Model | Company | [CVE-Bench](benchmarks/ai4security/offensive/) | [CyberGym](https://red.anthropic.com/2025/ai-for-cyber-defenders/) | Zero-day | Date |
 |---|---|---|---|---|---|
 | GPT-5.3-Codex | OpenAI | [**90%**](https://cdn.openai.com/pdf/23eca107-a9b1-4d2c-b156-7deb4fbc697c/GPT-5-3-Codex-System-Card-02.pdf) | — | — | 2026.02 |
 | GPT-5.2-Codex | OpenAI | [87%](https://cdn.openai.com/pdf/ac7c37ae-7f4c-4442-b741-2eabdeaf77e0/oai_5_2_Codex.pdf) | — | — | 2025.12 |
@@ -180,9 +180,9 @@ The AI cybersecurity space is fragmented: OpenAI, Anthropic, Google, and xAI eac
 
 > Prompt injection resistance, jailbreak defense, adversarial robustness.
 >
-> PI benchmarks differ by company: Anthropic uses **Shade** (Gray Swan adaptive attacker), Google uses **TAP** (Tree of Attacks with Pruning), xAI uses **AgentDojo**. Scores are NOT comparable across these tools.
+> Different PI tools used: Anthropic uses **[Shade](https://www.grayswan.ai/)** (Gray Swan adaptive attacker) for Coding/Computer Use columns; Google uses **[TAP](https://arxiv.org/abs/2312.02119)**; xAI uses **[AgentDojo](https://arxiv.org/abs/2406.13352)**. All are public benchmarks but no vendor has run another's PI tool, so cross-company comparison does not exist.
 
-| Model | Company | PI (Coding) ^Shade | PI (Browser) | PI (Computer Use) ^Shade | [AgentDojo](https://arxiv.org/abs/2406.13352) ^xAI | Date | Source |
+| Model | Company | PI Coding ([Shade](https://www.grayswan.ai/)) | PI Browser | PI Computer Use ([Shade](https://www.grayswan.ai/)) | [AgentDojo](https://arxiv.org/abs/2406.13352) | Date | Source |
 |---|---|---|---|---|---|---|---|
 | GPT-5.3-Codex | OpenAI | — | — | — | — | 2026.02 | — |
 | GPT-5.2-Codex | OpenAI | — | — | — | — | 2025.12 | — |
