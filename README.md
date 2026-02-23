@@ -74,7 +74,8 @@ The AI cybersecurity space is fragmented: OpenAI, Anthropic, Google, and xAI eac
 | Grok 4 Fast | xAI | [30%](https://data.x.ai/2025-09-19-grok-4-fast-model-card.pdf) | — | — | 2025.09 |
 | Grok 4 | xAI | [43%](https://data.x.ai/2025-08-20-grok-4-model-card.pdf) | — | — | 2025.08 |
 
-**Real-world competitions** (Anthropic only):
+<details>
+<summary>Real-world competitions (Anthropic only)</summary>
 
 | Competition | Score | Source |
 |---|---|---|
@@ -86,7 +87,10 @@ The AI cybersecurity space is fragmented: OpenAI, Anthropic, Google, and xAI eac
 | [PlaidCTF](https://plaidctf.com/) 2025 | 0 solved | [Cyber Competitions](https://red.anthropic.com/2025/cyber-competitions/) |
 | [DEF CON CTF](https://defcon.org/) Qualifier | 0 solved | [Cyber Competitions](https://red.anthropic.com/2025/cyber-competitions/) |
 
-**Third-party evaluations:**
+</details>
+
+<details>
+<summary>Third-party evaluations (Irregular / Pattern Labs, UK AISI)</summary>
 
 | Model | Evaluator | Benchmark | Score | Source |
 |---|---|---|---|---|
@@ -95,6 +99,8 @@ The AI cybersecurity space is fragmented: OpenAI, Anthropic, Google, and xAI eac
 | GPT-5.1-Codex-Max | [Irregular](https://irregular.com) | Network Attack / Vuln / Evasion | 37% / 41% / 43% | [System Card](https://cdn.openai.com/pdf/2a7d98b1-57e5-4147-8d0e-683894d782ae/5p1_codex_max_card_03.pdf) |
 | GPT-5 | [Irregular](https://irregular.com) | Network Attack / Vuln / Evasion | 49% / 35% / 51% | [System Card](https://cdn.openai.com/gpt-5-system-card.pdf) |
 | Grok 4 | [UK AISI](https://www.aisi.gov.uk/) | Realistic cyber | Below human professional | [Model Card](https://data.x.ai/2025-08-20-grok-4-model-card.pdf) |
+
+</details>
 
 ---
 
@@ -178,7 +184,7 @@ The AI cybersecurity space is fragmented: OpenAI, Anthropic, Google, and xAI eac
 | Gemini 3.1 Pro | Google | — | — | — | — | 2026.02 | — |
 | Gemini 3 Flash | Google | — | — | — | — | 2025.12 | — |
 | Gemini 3 Pro | Google | — | — | — | — | 2025.11 | — |
-| Gemini 2.5 | Google | — | — | — | — | 2025.05 | [TAP](https://arxiv.org/abs/2505.14534): 99.8% → 53.6% ASR (vs 2.0) |
+| Gemini 2.5 | Google | — | [TAP](https://arxiv.org/abs/2505.14534) 99.8% → 53.6% ASR | — | — | 2025.05 | [Paper](https://arxiv.org/abs/2505.14534) |
 | Grok 4.1 | xAI | — | — | — | 0.05 (T) / 0.01 (NT) | 2025.11 | [Model Card](https://data.x.ai/2025-11-17-grok-4-1-model-card.pdf) |
 | Grok 4.1 Fast | xAI | — | — | — | — | 2025.11 | — |
 | Grok 4 Fast | xAI | — | — | — | 0–3% ASR | 2025.09 | [Model Card](https://data.x.ai/2025-09-19-grok-4-fast-model-card.pdf) |
