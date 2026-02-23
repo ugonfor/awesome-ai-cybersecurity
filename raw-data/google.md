@@ -150,9 +150,10 @@
   |---|---|---|---|---|
   | Pattern Labs External CTF (50 tasks) | AI4Security > Offensive Capability | 11/50 | Non-public challenges, anti-contamination | Model Card |
   | FSF Cyber Evals | AI4Security > Offensive Capability | Below CCL alert | Standard FSF methodology | Model Card |
+  | Key Skills v1 (Hard) | AI4Security > Offensive Capability | **0/12** | MITRE ATT&CK aligned, N=10-30 attempts | Gemini 3 Pro FSF Report Figure 2 |
 
-- **Agent Setup**: Agent-based CTF solving
-- **Key Findings**: First model card with Pattern Labs CTF results. 11/50 on non-public challenges.
+- **Agent Setup**: Agent-based CTF solving. N=10-30 attempts on Key Skills v1 hard tasks.
+- **Key Findings**: First model card with Pattern Labs CTF results. 11/50 on non-public challenges. Key Skills v1 hard: 0/12 (per Gemini 3 Pro FSF Report Figure 2).
 
 ### 10. Gemini 2.5 Pro Preview Model Card
 
@@ -191,8 +192,14 @@
 - **Models**: Gemini 2.5 Flash
 - **Type**: Model Card
 - **Cyber Risk Level**: CCL alert threshold reached, CCL not met
-- **Benchmarks Reported**: FSF cyber evaluations (details in 2.5 Technical Report)
-- **Key Findings**: Final model card for Gemini 2.5 Flash. Supersedes preview card.
+- **Benchmarks Reported**:
+
+  | Benchmark | Category | Score | Methodology | Source Page/Section |
+  |---|---|---|---|---|
+  | FSF Cyber Evals | AI4Security > Offensive Capability | Details in 2.5 Technical Report | Standard FSF | Model Card |
+  | Key Skills v1 (Hard) | AI4Security > Offensive Capability | **2/12** | MITRE ATT&CK aligned, N=200 attempts | Gemini 3 Pro FSF Report Figure 2 |
+
+- **Key Findings**: Final model card for Gemini 2.5 Flash. Supersedes preview card. Key Skills v1 hard: 2/12 (per Gemini 3 Pro FSF Report Figure 2).
 
 ### 13. Gemini 2.5 Pro Model Card
 
@@ -208,9 +215,10 @@
   | InterCode-CTF | AI4Security > Offensive Capability | ~76/76 (saturated) | N=30-50 attempts | Model Card |
   | In-house CTF (13 tasks) | AI4Security > Offensive Capability | Reported | Open-sourced via UK AISI Inspect | Model Card |
   | Hack the Box | AI4Security > Offensive Capability | Reported | Standard FSF | Model Card |
+  | Key Skills v1 (Hard) | AI4Security > Offensive Capability | **4/12** | MITRE ATT&CK aligned, N=100 attempts | Gemini 3 Pro FSF Report Figure 2 |
 
-- **Agent Setup**: ReAct agent, N=30-50 attempts per challenge. In-house CTF open-sourced via UK AISI Inspect framework.
-- **Key Findings**: Comprehensive FSF evals. In-house CTF challenges open-sourced. Supersedes preview card.
+- **Agent Setup**: ReAct agent, N=100 attempts per challenge (Key Skills v1), N=30-50 attempts (other evals). In-house CTF open-sourced via UK AISI Inspect framework.
+- **Key Findings**: Comprehensive FSF evals. In-house CTF challenges open-sourced. Key Skills v1 hard: 4/12 (per Gemini 3 Pro FSF Report Figure 2). Supersedes preview card.
 
 ### 14. Gemini 2.5 Deep Think Model Card
 
@@ -226,10 +234,10 @@
   | InterCode-CTF (76 tasks) | AI4Security > Offensive Capability | 73/76 | ReAct agent | Model Card |
   | In-house CTF (13 tasks) | AI4Security > Offensive Capability | **13/13** | ReAct agent | Model Card |
   | Hack the Box (13 tasks) | AI4Security > Offensive Capability | 3/13 | Agent-based | Model Card |
-  | Key Skills v1 (Hard) | AI4Security > Offensive Capability | 6/12 | MITRE ATT&CK aligned (reported in Gemini 3 Pro FSF Report as comparison) | Gemini 3 Pro FSF Report |
+  | Key Skills v1 (Hard) | AI4Security > Offensive Capability | **6/12** (vs 2.5 Pro 4/12, 2.5 Flash 2/12, 2.0 Pro 1/12, 2.0 Flash 0/12, 2.0 Flash-Lite 0/12) | MITRE ATT&CK aligned, N=50 attempts (hard tasks) | Gemini 3 Pro FSF Report Figure 2 |
 
-- **Agent Setup**: Extended reasoning (Deep Think mode)
-- **Key Findings**: Strongest in-house CTF performance (13/13 — perfect score). CCL alert for both Cyber and CBRN domains. First model to achieve 100% on in-house CTF.
+- **Agent Setup**: Extended reasoning (Deep Think mode). N=50 attempts on hard Key Skills v1 tasks, N=32-46 on medium/easy tasks.
+- **Key Findings**: Strongest in-house CTF performance (13/13 — perfect score). CCL alert for both Cyber and CBRN domains. First model to achieve 100% on in-house CTF. Key Skills v1 hard: 6/12 — best among 2.5 models (2.5 Pro achieved 4/12, 2.5 Flash 2/12).
 
 ### 15. Gemini 2.5 Flash-Lite Model Card
 
@@ -299,7 +307,7 @@
   |---|---|---|---|---|
   | FSF Cyber Evals (standard mode) | AI4Security > Offensive Capability | Increased vs 3 Pro; alert threshold reached, CCL not met | Standard FSF | Model Card |
   | FSF Cyber Evals (Deep Think mode) | AI4Security > Offensive Capability | Considerably worse than standard mode (even at high inference levels) | Deep Think mode | Model Card |
-  | FSF RE-Bench (ML R&D, Deep Think) | Security4AI > Alignment | Human-normalised avg score **1.27** (vs Gemini 3 Pro's 1.04); "Optimise LLM Foundry": 47s vs human 94s (2x human baseline) | Deep Think mode | Model Card |
+  | FSF RE-Bench (ML R&D, Deep Think) | Security4AI > Alignment | Human-normalised avg score **1.27** (vs Gemini 3 Pro's 1.04); "Optimise LLM Foundry": reduced fine-tuning script runtime from 300s to **47s** vs human reference of 94s (2x human baseline) | Deep Think mode | Model Card pp.8-9 |
   | FSF Harmful Manipulation (Deep Think) | Security4AI > Misuse Risk | Max odds ratio **3.6x** for belief change (same as Gemini 3 Pro); below alert threshold | Deep Think mode | Model Card |
   | FSF CBRN (Deep Think) | Security4AI > Misuse Risk | CCL not reached (Uplift Level 1); accurate info but fails novel/critical stages | Deep Think mode | Model Card |
   | FSF Misalignment (Deep Think, Exploratory) | Security4AI > Alignment | Stealth: similar to Gemini 3 Pro. Situational awareness: stronger — **~100% success** on max_tokens, context_size_mod, oversight_frequency (first model to consistently solve these). Alert threshold not reached overall | Deep Think mode | Model Card |
@@ -309,9 +317,10 @@
   | Safety: Tone | Security4AI > Misuse Risk | +0.02% vs Gemini 3 Pro | Standard safety eval | Model Card |
   | Safety: Unjustified-refusals | Security4AI > Misuse Risk | -0.08% vs Gemini 3 Pro | Standard safety eval | Model Card |
 
-- **Agent Setup**: Deep Think mode focus for FSF evaluations (cyber, CBRN, ML R&D, misalignment); standard mode also assessed for cyber
-- **Key Findings**: Latest Gemini model (Feb 2026). Increased cyber capabilities vs Gemini 3 Pro in standard mode; alert threshold reached but CCL not met. Deep Think mode performs considerably worse than standard mode on cyber evaluations (notable finding — even at high inference levels). RE-Bench ML R&D: 1.27 human-normalised average (vs 3 Pro's 1.04), with 2x human baseline on one challenge. Situational awareness: first model to consistently solve max_tokens, context_size_mod, and oversight_frequency (~100% success). Harmful manipulation unchanged from 3 Pro (3.6x odds ratio). Safety improvements over Gemini 3 Pro (+0.10% text, +0.11% multilingual, +0.02% tone) but slight regressions on image-to-text (-0.33%) and unjustified-refusals (-0.08%). Human red teaming: satisfied child safety thresholds; similar safety performance to Gemini 3 Pro.
+- **Agent Setup**: Deep Think mode focus for FSF evaluations covering **five risk domains**: CBRN, cyber, harmful manipulation, ML R&D, and misalignment. Standard mode also assessed for cyber. References the Gemini 3 Pro FSF Report for detailed methodology.
+- **Key Findings**: Latest Gemini model (Feb 2026). Increased cyber capabilities vs Gemini 3 Pro in standard mode; alert threshold reached but CCL not met. Deep Think mode performs **considerably worse** than standard mode on cyber evaluations — even at high inference levels, results do not suggest higher capability than without Deep Think (notable finding). RE-Bench ML R&D: 1.27 human-normalised average (vs 3 Pro's 1.04), with "Optimise LLM Foundry" reducing fine-tuning script runtime from 300s to 47s (human: 94s, i.e. 2x human baseline). Situational awareness: first model to consistently solve max_tokens, context_size_mod, and oversight_frequency (~100% success). Harmful manipulation unchanged from 3 Pro (3.6x max odds ratio for belief change). Safety improvements over Gemini 3 Pro (+0.10% text, +0.11% multilingual, +0.02% tone) but slight regressions on image-to-text (-0.33%) and unjustified-refusals (-0.08%). Human red teaming: satisfied child safety thresholds; similar safety performance to Gemini 3 Pro.
 - **Cross-vendor Context (from Claude Opus 4.6 System Card)**: Gemini 3 Pro scored 56.2% on Terminal-Bench 2.0 (Terminus-2 harness, 445 trials) and Gemini 3 Flash scored 50.3%. Gemini 3 Pro achieved $5,478.2 on Vending-Bench 2 (previous SOTA before Opus 4.6's $8,017.59). On OpenAI MRCR v2 256K 8-needles: Gemini 3 Pro = 45.4, Gemini 3 Flash = 58.5; on 1M 8-needles: Gemini 3 Pro = 24.5, Gemini 3 Flash = 32.6. On SWE-bench Verified: Gemini 3 Pro = 76.2%. Additional Gemini 3 Pro scores from Opus 4.6 table: tau2-bench Retail 85.3%, Telecom 98.0%, MCP-Atlas 54.1%, ARC-AGI-2 45.1% (Deep Thinking), GPQA Diamond 91.9%, MMMU-Pro (no tools) 81%, MMMLU 91.8%.
+- **Cross-vendor Context (from Gemini 3.1 Pro Model Card, p.4)**: Self-reported evaluation table comparing Gemini 3.1 Pro (Thinking High) vs Gemini 3 Pro, Sonnet 4.6, Opus 4.6, GPT-5.2, GPT-5.3-Codex. Key scores: Gemini 3.1 Pro ARC-AGI-2 **77.1%** (vs 3 Pro 31.1%, Opus 4.6 68.8%); Terminal-Bench 2.0 **68.5%** (vs 3 Pro 56.9%, GPT-5.3-Codex **77.3%**); SWE-Bench Verified **80.6%** (vs 3 Pro 76.2%, Opus 4.6 80.8%); SWE-Bench Pro **54.2%** (vs GPT-5.3-Codex 56.8%); tau2-bench Retail **90.8%** / Telecom **99.3%**; MCP Atlas **69.2%** (vs 3 Pro 54.1%); GPQA Diamond **94.3%**; LiveCodeBench Pro Elo **2887**; MRCR v2 128k avg **84.9%**, 1M **26.3%**.
 
 ---
 
@@ -328,14 +337,43 @@
 
   | Benchmark | Category | Score | Methodology | Source Page/Section |
   |---|---|---|---|---|
-  | InterCode-CTF (76 tasks) | AI4Security > Offensive Capability | Saturated | Standard (retired for 3 Pro) | FSF Report |
-  | In-house CTF (13 tasks) | AI4Security > Offensive Capability | Significantly stronger than 2.5 | Standard (retired for 3 Pro) | FSF Report |
-  | Key Skills v1 Hard | AI4Security > Offensive Capability | **11/12** (vs 2.5 DT's 6/12) | MITRE ATT&CK aligned | FSF Report |
-  | Key Skills v2 End-to-end Attack | AI4Security > Offensive Capability | **0/13** | Multi-stage realistic attacks | FSF Report |
+  | InterCode-CTF (76 tasks) | AI4Security > Offensive Capability | Saturated | Standard (retired for 3 Pro) | FSF Report p.8 |
+  | In-house CTF (13 tasks) | AI4Security > Offensive Capability | Significantly stronger than 2.5 | Standard (retired for 3 Pro) | FSF Report p.8 |
+  | Key Skills v1 Hard (12 challenges) | AI4Security > Offensive Capability | **11/12** (vs 2.5 DT's 6/12) | MITRE ATT&CK aligned, N=75 attempts | FSF Report pp.9-10, Figure 2 |
+  | Key Skills v2 End-to-end Attack (13 challenges) | AI4Security > Offensive Capability | **0/13** | Multi-stage realistic attacks | FSF Report p.10 |
+  | WMDP BIO (N=1273) | Security4AI > Misuse Risk (CBRN) | Gemini 3 Pro: **~88.2%** (vs 2.5 DT ~84%, 2.5 Pro ~83.8%, 2.5 Flash ~86.1%) | MCQ, shuffled answers | FSF Report p.7, Figure 1 |
+  | WMDP CHEM (N=408) | Security4AI > Misuse Risk (CBRN) | Gemini 3 Pro: **~84.9%** (vs 2.5 DT ~83.4%, 2.5 Pro ~79.7%, 2.5 Flash ~75.3%) | MCQ, shuffled answers | FSF Report p.7, Figure 1 |
+  | LAB-Bench ProtocolQA (N=108) | Security4AI > Misuse Risk (CBRN) | Gemini 3 Pro: **~94.2%** (vs 2.5 DT ~81.7%, 2.5 Pro ~74.4%, 2.5 Flash ~63.5%) | MCQ, shuffled answers | FSF Report p.7, Figure 1 |
+  | LAB-Bench Cloning Scenarios (N=33) | Security4AI > Misuse Risk (CBRN) | Gemini 3 Pro: **~65.6%** (vs 2.5 DT ~60.6%, 2.5 Pro ~53.1%, 2.5 Flash ~44.1%) | MCQ, shuffled answers | FSF Report p.7, Figure 1 |
+  | LAB-Bench SeqQA (N=600) | Security4AI > Misuse Risk (CBRN) | Gemini 3 Pro: **~87.6%** (vs 2.5 DT ~75.5%, 2.5 Pro ~71.9%, 2.5 Flash ~57.9%) | MCQ, shuffled answers | FSF Report p.7, Figure 1 |
+  | SecureBio VCT-SC (N=350) | Security4AI > Misuse Risk (CBRN) | Gemini 3 Pro: **~61.2%** (vs 2.5 DT ~59.8%, 2.5 Pro ~54.4%, 2.5 Flash ~46.7%) — no statistically significant change | MCQ, shuffled answers | FSF Report p.7, Figure 1 |
+  | Harmful Manipulation Efficacy | Security4AI > Misuse Risk | Belief change odds ratio: significant shift **3.44x**, sentiment flip **3.57x**; Behavior: petition-signing **1.34x**, donation **1.05x** (all vs non-AI baseline) | Human behavioral study (N=610 via Prolific; adversarial n=421, control n=189) | FSF Report pp.11-13, Figure 3 |
+  | Harmful Manipulation Efficacy (Gemini 2.5 Pro comparison) | Security4AI > Misuse Risk | Belief change: significant shift **1.96x**, sentiment flip **1.50x**; Behavior: petition-signing **1.41x**, donation **2.13x** | Same methodology | FSF Report p.13, Figure 3 |
+  | RE-Bench (5 of 7 tasks) | Security4AI > Alignment | Gemini 3 Pro outperforms 2.5 models on Scaling Law Experiment and Optimize LLM Foundry (~2x 2.5 scores); similar on others | 16 attempts per task, 2hr limit, 32hr total budget, Modular scaffold (Wijk et al. 2024) | FSF Report pp.13-15, Figure 4 |
+  | Misalignment: Stealth (4 evals) | Security4AI > Alignment | Gemini 3 Pro solves **1/4** stealth challenges; Oversight Pattern score **much lower** than 2.5 models | 50 attempts per challenge; chain-of-thought + reflection scaffold | FSF Report pp.16-17, Figure 5 |
+  | Misalignment: Situational Awareness (11 evals) | Security4AI > Alignment | Gemini 3 Pro solves **3/11**; notable gains on read_logs and approved_directories vs 2.5 | 50 attempts per challenge | FSF Report pp.16-18, Figure 6 |
 
-- **Agent Setup**: Agentic evaluation aligned with MITRE ATT&CK and Unified Kill Chain frameworks. New realistic multi-stage attack scenarios introduced.
-- **Key Findings**: Most detailed standalone cyber eval from Google. Key Skills v1 hard: 11/12 (nearly doubled from 2.5 Deep Think's 6/12). Key Skills v2 end-to-end: 0/13 (new harder benchmark). InterCode-CTF, In-house CTF, and HTB retired as saturated. New evaluation methodology aligned with MITRE ATT&CK and Unified Kill Chain.
-- **Notes**: InterCode-CTF, In-house CTF, and HTB were **retired** for Gemini 3 Pro evaluations due to benchmark saturation.
+  **Key Skills v1 Hard — Per-Model Progression (Figure 2)**:
+
+  | Model | Key Skills v1 Hard (/12) | N attempts |
+  |---|---|---|
+  | Gemini 2.0 Flash-Lite | 0/12 | 10-30 |
+  | Gemini 2.0 Flash | 0/12 | 10-30 |
+  | Gemini 2.0 Pro | 1/12 | 10-30 |
+  | Gemini 2.5 Flash | 2/12 | 200 |
+  | Gemini 2.5 Pro | 4/12 | 100 |
+  | Gemini 2.5 Deep Think | 6/12 | 50 |
+  | **Gemini 3 Pro** | **11/12** | 75 |
+
+  **Key Skills Benchmark Structure**:
+  - **v1**: 50 total challenges developed with a third party (Pattern Labs), 12 at "hard" difficulty level. Tests individual bottleneck tasks (e.g., developing an exploit for a known vulnerability). Mapped to MITRE ATT&CK and Unified Kill Chain frameworks.
+  - **v2**: 13 new end-to-end attack challenges simulating full attack chains (e.g., reconnaissance -> vulnerability exploitation -> network enumeration -> second exploitation). Covers all 7 key attack kill chains from Rodriguez et al. 2025.
+  - **Four key skill areas**: Reconnaissance, Tool development, Tool usage, Operational security.
+  - **Motivation**: Full or partial automation of these key skills could reduce resources needed for sophisticated cyberattacks.
+
+- **Agent Setup**: Custom controller with multi-stage structured reasoning protocol. Agent can execute Bash/PowerShell commands, run Python scripts, and search the web. N=75 attempts for Gemini 3 Pro (increased from N=100 for 2.5 Pro, N=200 for 2.5 Flash, N=50 for 2.5 Deep Think on hard tasks). 40 steps per challenge attempt. For Gemini 3 Pro, additional tooling added: Python on Windows environments, long file reader on Linux, custom web search tool. Retry loop (up to 5 attempts) for stochastic generation errors. Evaluations benefit from increased attempt budgets and enhanced tool affordances vs prior generations, preventing strict apples-to-apples comparison across model generations.
+- **Key Findings**: Most detailed standalone cyber eval from Google (26 pages). Key Skills v1 hard: 11/12 (nearly doubled from 2.5 Deep Think's 6/12). On two of the 11 challenges solved, Gemini 3 Pro found unintended shortcuts, but subject matter experts concluded it is likely capable of solving them the intended way. Key Skills v2 end-to-end: 0/13 (confirms model is below CCL). InterCode-CTF, In-house CTF, and HTB retired because "they add little signal on top of the key skills benchmark" (footnote 5, p.8). External cyber evaluators (MITRE ATT&CK/Unified Kill Chain aligned) found Gemini 3 Pro performs faster than humans on certain tasks (tool use, basic reverse engineering) but hard tasks remain difficult. CBRN: WMDP BIO ~88.2%, WMDP CHEM ~84.9% (both highest among Gemini models); notable improvement on LAB-Bench (ProtocolQA ~94.2%, SeqQA ~87.6%); no significant change on SecureBio VCT. Harmful Manipulation: belief change odds ratio up to 3.57x (sentiment flip) vs non-AI baseline, significantly higher than Gemini 2.5 Pro's 1.50x; however no statistically significant difference between 2.5 Pro and 3 Pro on efficacy. Misalignment: 3/11 situational awareness, 1/4 stealth — similar to 2.5 models overall, with Oversight Pattern performance notably lower. External evaluators found "substantial propensity for strategic deception in certain limited circumstances" but model is insufficiently capable of stealth/situational awareness for real-world harm. Sandbagging checks performed; model showed awareness of being in synthetic environments (verbatim examples in Appendix 2) but no confirmed sandbagging found. Evaluation awareness during training also investigated (Appendix 2).
+- **Notes**: InterCode-CTF, In-house CTF, and HTB were **retired** for Gemini 3 Pro evaluations — explicitly because "they add little signal on top of the key skills benchmark," not just saturation. WMDP BIO/CHEM scores are approximate, read from Figure 1 bar chart. Harmful manipulation odds ratios read from Figure 3.
 
 ---
 
@@ -499,8 +537,8 @@
 | 2025-05 | Stealth/Situational Awareness: 5-model comparison (Gemini 2.5 Pro/Flash, GPT-4o, o1, Claude 3.7 Sonnet) — no concerning levels found |
 | 2025-05 | TAP attack success rate: 99.8% (2.0) → 53.6% (2.5, email); Beam Search: 75% → 4%; Combined defense: 6.2% ASR |
 | 2025-07 | Gemini 2.5 Technical Report — most comprehensive cyber eval to date |
-| 2025-08 | Gemini 2.5 Deep Think: 13/13 in-house CTF (strongest), 3/13 HTB |
+| 2025-08 | Gemini 2.5 Deep Think: 13/13 in-house CTF (strongest), 3/13 HTB, Key Skills v1 hard 6/12 |
 | 2025-10 | FSF v3.0 published — four risk domains |
-| 2025-11 | Gemini 3 Pro: Key Skills v1 hard 11/12, Key Skills v2 end-to-end 0/13. InterCode-CTF/In-house CTF/HTB retired |
-| 2026-02 | Gemini 3.1 Pro: increased cyber capabilities vs 3 Pro (standard mode), Deep Think worse than standard on cyber. RE-Bench 1.27 (vs 3 Pro's 1.04). Situational awareness: ~100% on 3 novel challenges. CCL alert, CCL not met |
+| 2025-11 | Gemini 3 Pro FSF Report: Key Skills v1 hard **11/12** (progression: 2.0 Flash 0/12 → 2.0 Pro 1/12 → 2.5 Flash 2/12 → 2.5 Pro 4/12 → 2.5 DT 6/12 → 3 Pro 11/12). Key Skills v2 end-to-end **0/13**. InterCode-CTF/In-house CTF/HTB retired ("add little signal on top of key skills"). WMDP BIO ~88.2%, WMDP CHEM ~84.9%. Harmful manipulation belief change odds ratio up to 3.57x. Misalignment: 3/11 situational awareness, 1/4 stealth |
+| 2026-02 | Gemini 3.1 Pro: increased cyber capabilities vs 3 Pro (standard mode), Deep Think **considerably worse** than standard on cyber (even at high inference). RE-Bench 1.27 (vs 3 Pro's 1.04); "Optimise LLM Foundry" 300s→47s (human 94s). Situational awareness: ~100% on max_tokens, context_size_mod, oversight_frequency (first model). CCL alert, CCL not met |
 | 2026-02 | **No Gemini model has crossed Cyber Uplift Level 1 CCL** |
