@@ -179,7 +179,7 @@
   | Benchmark | Category | Grok 4 | Grok 4.1 T | Human Baseline | Source |
   |---|---|---|---|---|---|
   | WMDP-Cyber | AI4Security > Cyber Knowledge | 79% | 84% | — | Table 4 |
-  | WMDP-Bio | Other (Biology) | 87% | 87% | — | Table 4 |
+  | WMDP-Bio | Other (Biology) | 87% | 87% | 61% | Table 4 |
   | WMDP-Chem | Other (Chemistry) | 83% | 84% | 43% | Table 4 |
   | CyBench | AI4Security > Offensive Capability | 43% | 39% | — | Table 4 |
   | VCT | Other (Virology) | 60% | 61% | 22% | Table 4 |
@@ -264,7 +264,7 @@ R = Reasoning, NR = Non-Reasoning, T = Thinking, NT = Non-Thinking. WMDP-Cyber a
 | Grok 4 (Web) | 88% | 85% | 71% | 44% | — | — | — |
 | Grok 4 Fast | 85.2% | 77.5% | 54.5% | 39.0% | — | — | — |
 | Grok 4.1 T | 87% | 84% | 61% | 37% | 79% | 34% | 46% |
-| Human Baseline | — | 43% | 22% | 38% | 79% | 77% | 60% |
+| Human Baseline | 61% | 43% | 22% | 38% | 79% | 77% | 60% |
 
 ### Cross-Model Comparison (from Grok 4.1 Model Card Table 4)
 
