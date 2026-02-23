@@ -206,19 +206,21 @@ The AI cybersecurity space is fragmented: OpenAI, Anthropic, Google, and xAI eac
 
 > Malicious task completion, deception, sycophancy, sabotage risk.
 
-| Model | Company | [AgentHarm](https://arxiv.org/abs/2410.09024) | [MASK](https://arxiv.org/abs/2503.03750) | Sycophancy | MakeMeSay | Date |
-|---|---|---|---|---|---|---|
-| GPT-5.3-Codex | OpenAI | — | — | — | — | 2026.02 |
-| GPT-5.2-Codex | OpenAI | — | — | — | — | 2025.12 |
-| Claude Opus 4.6 | Anthropic | — | — | — | — | 2026.02 |
-| Claude Sonnet 4.6 | Anthropic | — | — | — | — | 2026.02 |
-| Gemini 3.1 Pro | Google | — | — | — | — | 2026.02 |
-| Gemini 3 Flash | Google | — | — | — | — | 2025.12 |
-| Gemini 3 Pro | Google | — | — | — | — | 2025.11 |
-| Grok 4.1 | xAI | [0.14](https://data.x.ai/2025-11-17-grok-4-1-model-card.pdf) | [0.49](https://data.x.ai/2025-11-17-grok-4-1-model-card.pdf) | [0.19](https://data.x.ai/2025-11-17-grok-4-1-model-card.pdf) | [0%](https://data.x.ai/2025-11-17-grok-4-1-model-card.pdf) | 2025.11 |
-| Grok 4.1 Fast | xAI | — | — | — | — | 2025.11 |
-| Grok 4 Fast | xAI | [0.08/0.10](https://data.x.ai/2025-09-19-grok-4-fast-model-card.pdf) | [0.47/0.63](https://data.x.ai/2025-09-19-grok-4-fast-model-card.pdf) | [0.10/0.13](https://data.x.ai/2025-09-19-grok-4-fast-model-card.pdf) | [0.12](https://data.x.ai/2025-09-19-grok-4-fast-model-card.pdf) | 2025.09 |
-| Grok 4 | xAI | [0.14](https://data.x.ai/2025-08-20-grok-4-model-card.pdf) | [0.43](https://data.x.ai/2025-08-20-grok-4-model-card.pdf) | [0.07](https://data.x.ai/2025-08-20-grok-4-model-card.pdf) | [0.12](https://data.x.ai/2025-08-20-grok-4-model-card.pdf) | 2025.08 |
+| Model | Company | Malicious Refusal | [AgentHarm](https://arxiv.org/abs/2410.09024) | [MASK](https://arxiv.org/abs/2503.03750) | Sycophancy | MakeMeSay | Date |
+|---|---|---|---|---|---|---|---|
+| GPT-5.3-Codex | OpenAI | — | — | — | — | — | 2026.02 |
+| GPT-5.2-Codex | OpenAI | — | — | — | — | — | 2025.12 |
+| Claude Opus 4.6 | Anthropic | CU 88.34%, Code 99.59% | — | — | — | — | 2026.02 |
+| Claude Sonnet 4.6 | Anthropic | CU **99.38%**, Code 99.39% | — | — | — | — | 2026.02 |
+| Gemini 3.1 Pro | Google | — | — | — | — | — | 2026.02 |
+| Gemini 3 Flash | Google | — | — | — | — | — | 2025.12 |
+| Gemini 3 Pro | Google | — | — | — | — | — | 2025.11 |
+| Grok 4.1 | xAI | — | [0.14](https://data.x.ai/2025-11-17-grok-4-1-model-card.pdf) | [0.49](https://data.x.ai/2025-11-17-grok-4-1-model-card.pdf) | [0.19](https://data.x.ai/2025-11-17-grok-4-1-model-card.pdf) | [0%](https://data.x.ai/2025-11-17-grok-4-1-model-card.pdf) | 2025.11 |
+| Grok 4.1 Fast | xAI | — | — | — | — | — | 2025.11 |
+| Grok 4 Fast | xAI | — | [0.08/0.10](https://data.x.ai/2025-09-19-grok-4-fast-model-card.pdf) | [0.47/0.63](https://data.x.ai/2025-09-19-grok-4-fast-model-card.pdf) | [0.10/0.13](https://data.x.ai/2025-09-19-grok-4-fast-model-card.pdf) | [0.12](https://data.x.ai/2025-09-19-grok-4-fast-model-card.pdf) | 2025.09 |
+| Grok 4 | xAI | — | [0.14](https://data.x.ai/2025-08-20-grok-4-model-card.pdf) | [0.43](https://data.x.ai/2025-08-20-grok-4-model-card.pdf) | [0.07](https://data.x.ai/2025-08-20-grok-4-model-card.pdf) | [0.12](https://data.x.ai/2025-08-20-grok-4-model-card.pdf) | 2025.08 |
+
+> **Malicious Refusal**: CU = Malicious Computer Use refusal rate (without mitigations), Code = Malicious Claude Code Use refusal rate (with mitigations). Higher is better. Source: [Sonnet 4.6 System Card](https://anthropic.com/claude-sonnet-4-6-system-card).
 
 ---
 
