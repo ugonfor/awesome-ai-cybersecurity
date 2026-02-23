@@ -53,11 +53,8 @@
 | GPT-5.1-Thinking | OpenAI | Custom CTF (Professional, pass@12) | 43% | 2025.11 | [GPT-5.1-Codex-Max System Card](https://cdn.openai.com/pdf/2a7d98b1-57e5-4147-8d0e-683894d782ae/5p1_codex_max_card_03.pdf) (cross-model) |
 | GPT-5.1-Codex-Max | OpenAI | Custom CTF (Professional, pass@12) | 76% | 2025.11 | [GPT-5.1-Codex-Max System Card](https://cdn.openai.com/pdf/2a7d98b1-57e5-4147-8d0e-683894d782ae/5p1_codex_max_card_03.pdf) |
 | GPT-5.2-Thinking | OpenAI | Custom CTF (Professional, pass@12) | 82% | 2025.12 | [GPT-5.2 System Card](https://cdn.openai.com/pdf/3a4153c8-c748-4b71-8e31-aecbde944f8d/oai_5_2_system-card.pdf) |
-| GPT-5.2-Thinking | OpenAI | Custom CTF (Professional, xhigh) | 67.7% | 2025.12 | [GPT-5.3-Codex System Card](https://cdn.openai.com/pdf/23eca107-a9b1-4d2c-b156-7deb4fbc697c/GPT-5-3-Codex-System-Card-02.pdf) (cross-model) |
 | GPT-5.2-Codex | OpenAI | Custom CTF (Professional, pass@12) | 88% | 2025.12 | [GPT-5.2-Codex Addendum](https://cdn.openai.com/pdf/ac7c37ae-7f4c-4442-b741-2eabdeaf77e0/oai_5_2_Codex.pdf) |
-| GPT-5.2-Codex | OpenAI | Custom CTF (Professional, xhigh) | 67.4% | 2025.12 | [GPT-5.3-Codex System Card](https://cdn.openai.com/pdf/23eca107-a9b1-4d2c-b156-7deb4fbc697c/GPT-5-3-Codex-System-Card-02.pdf) (cross-model) |
-| GPT-5.3-Codex | OpenAI | Custom CTF (Professional, pass@12) | 88% (standard) | 2026.02 | [GPT-5.3-Codex System Card](https://cdn.openai.com/pdf/23eca107-a9b1-4d2c-b156-7deb4fbc697c/GPT-5-3-Codex-System-Card-02.pdf) |
-| GPT-5.3-Codex | OpenAI | Custom CTF (Professional, xhigh) | 77.6% | 2026.02 | [GPT-5.3-Codex System Card](https://cdn.openai.com/pdf/23eca107-a9b1-4d2c-b156-7deb4fbc697c/GPT-5-3-Codex-System-Card-02.pdf) |
+| GPT-5.3-Codex | OpenAI | Custom CTF (Professional, pass@12) | 88% | 2026.02 | [GPT-5.3-Codex System Card](https://cdn.openai.com/pdf/23eca107-a9b1-4d2c-b156-7deb4fbc697c/GPT-5-3-Codex-System-Card-02.pdf) |
 | Claude 3.7 Sonnet | Anthropic | Cybench (40 tasks) | 35.9% (pass@5) | 2025.02 | [Claude 3.7 Sonnet System Card](https://anthropic.com/claude-3-7-sonnet-system-card) |
 | Claude Opus 4 | Anthropic | Custom CTF (easy/med/hard) | 11/11 easy, 1/2 med, 0/2 hard | 2025.05 | [Claude 4 System Card](https://www.anthropic.com/claude-4-system-card) |
 | Claude Sonnet 4.5 | Anthropic | Cybench (40 tasks) | 76.5% (pass@10); 60% (pass@1) | 2025.09 | [Claude Sonnet 4.5 System Card](https://www.anthropic.com/claude-sonnet-4-5-system-card) |
