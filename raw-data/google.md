@@ -297,14 +297,21 @@
 
   | Benchmark | Category | Score | Methodology | Source Page/Section |
   |---|---|---|---|---|
-  | FSF Cyber Evals (standard mode) | AI4Security > Offensive Capability | Increased vs 3 Pro | Standard FSF | Model Card |
-  | FSF Cyber Evals (Deep Think mode) | AI4Security > Offensive Capability | Considerably worse than standard mode | Deep Think mode | Model Card |
-  | Safety: Text-to-Text | Security4AI > Misuse Risk | +0.10% vs Gemini 3 Pro | Standard safety eval | Model Card |
-  | Safety: Multilingual | Security4AI > Misuse Risk | +0.11% vs Gemini 3 Pro | Standard safety eval | Model Card |
+  | FSF Cyber Evals (standard mode) | AI4Security > Offensive Capability | Increased vs 3 Pro; alert threshold reached, CCL not met | Standard FSF | Model Card |
+  | FSF Cyber Evals (Deep Think mode) | AI4Security > Offensive Capability | Considerably worse than standard mode (even at high inference levels) | Deep Think mode | Model Card |
+  | FSF RE-Bench (ML R&D, Deep Think) | Security4AI > Alignment | Human-normalised avg score **1.27** (vs Gemini 3 Pro's 1.04); "Optimise LLM Foundry": 47s vs human 94s (2x human baseline) | Deep Think mode | Model Card |
+  | FSF Harmful Manipulation (Deep Think) | Security4AI > Misuse Risk | Max odds ratio **3.6x** for belief change (same as Gemini 3 Pro); below alert threshold | Deep Think mode | Model Card |
+  | FSF CBRN (Deep Think) | Security4AI > Misuse Risk | CCL not reached (Uplift Level 1); accurate info but fails novel/critical stages | Deep Think mode | Model Card |
+  | FSF Misalignment (Deep Think, Exploratory) | Security4AI > Alignment | Stealth: similar to Gemini 3 Pro. Situational awareness: stronger — **~100% success** on max_tokens, context_size_mod, oversight_frequency (first model to consistently solve these). Alert threshold not reached overall | Deep Think mode | Model Card |
+  | Safety: Text-to-Text | Security4AI > Misuse Risk | +0.10% vs Gemini 3 Pro (non-egregious) | Standard safety eval | Model Card |
+  | Safety: Multilingual | Security4AI > Misuse Risk | +0.11% vs Gemini 3 Pro (non-egregious) | Standard safety eval | Model Card |
   | Safety: Image-to-Text | Security4AI > Misuse Risk | -0.33% vs Gemini 3 Pro | Standard safety eval | Model Card |
+  | Safety: Tone | Security4AI > Misuse Risk | +0.02% vs Gemini 3 Pro | Standard safety eval | Model Card |
+  | Safety: Unjustified-refusals | Security4AI > Misuse Risk | -0.08% vs Gemini 3 Pro | Standard safety eval | Model Card |
 
-- **Agent Setup**: Deep Think mode focus for cyber evaluations; standard mode also assessed
-- **Key Findings**: Latest Gemini model (Feb 2026). Increased cyber capabilities vs Gemini 3 Pro in standard mode. However, Deep Think mode performs considerably worse than standard mode on cyber evaluations (notable finding). Cyber Uplift Level 1 alert threshold reached, CCL not met. Marginal safety improvements over Gemini 3 Pro (+0.10% text, +0.11% multilingual) but slight regression on image-to-text (-0.33%).
+- **Agent Setup**: Deep Think mode focus for FSF evaluations (cyber, CBRN, ML R&D, misalignment); standard mode also assessed for cyber
+- **Key Findings**: Latest Gemini model (Feb 2026). Increased cyber capabilities vs Gemini 3 Pro in standard mode; alert threshold reached but CCL not met. Deep Think mode performs considerably worse than standard mode on cyber evaluations (notable finding — even at high inference levels). RE-Bench ML R&D: 1.27 human-normalised average (vs 3 Pro's 1.04), with 2x human baseline on one challenge. Situational awareness: first model to consistently solve max_tokens, context_size_mod, and oversight_frequency (~100% success). Harmful manipulation unchanged from 3 Pro (3.6x odds ratio). Safety improvements over Gemini 3 Pro (+0.10% text, +0.11% multilingual, +0.02% tone) but slight regressions on image-to-text (-0.33%) and unjustified-refusals (-0.08%). Human red teaming: satisfied child safety thresholds; similar safety performance to Gemini 3 Pro.
+- **Cross-vendor Context (from Claude Opus 4.6 System Card)**: Gemini 3 Pro scored 56.2% on Terminal-Bench 2.0 (Terminus-2 harness, 445 trials) and Gemini 3 Flash scored 50.3%. Gemini 3 Pro achieved $5,478.2 on Vending-Bench 2 (previous SOTA before Opus 4.6's $8,017.59). On OpenAI MRCR v2 256K 8-needles: Gemini 3 Pro = 45.4, Gemini 3 Flash = 58.5; on 1M 8-needles: Gemini 3 Pro = 24.5, Gemini 3 Flash = 32.6. On SWE-bench Verified: Gemini 3 Pro = 76.2%. Additional Gemini 3 Pro scores from Opus 4.6 table: tau2-bench Retail 85.3%, Telecom 98.0%, MCP-Atlas 54.1%, ARC-AGI-2 45.1% (Deep Thinking), GPQA Diamond 91.9%, MMMU-Pro (no tools) 81%, MMMLU 91.8%.
 
 ---
 
@@ -495,5 +502,5 @@
 | 2025-08 | Gemini 2.5 Deep Think: 13/13 in-house CTF (strongest), 3/13 HTB |
 | 2025-10 | FSF v3.0 published — four risk domains |
 | 2025-11 | Gemini 3 Pro: Key Skills v1 hard 11/12, Key Skills v2 end-to-end 0/13. InterCode-CTF/In-house CTF/HTB retired |
-| 2026-02 | Gemini 3.1 Pro: increased capabilities vs 3 Pro (standard mode), Deep Think worse than standard on cyber. CCL alert, CCL not met |
+| 2026-02 | Gemini 3.1 Pro: increased cyber capabilities vs 3 Pro (standard mode), Deep Think worse than standard on cyber. RE-Bench 1.27 (vs 3 Pro's 1.04). Situational awareness: ~100% on 3 novel challenges. CCL alert, CCL not met |
 | 2026-02 | **No Gemini model has crossed Cyber Uplift Level 1 CCL** |
