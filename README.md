@@ -65,8 +65,8 @@ The AI cybersecurity space is fragmented: OpenAI, Anthropic, Google, and xAI eac
 | GPT-5.2 | OpenAI | — | [82%](https://cdn.openai.com/pdf/3a4153c8-c748-4b71-8e31-aecbde944f8d/oai_5_2_system-card.pdf) *(internal)* | [63.6%](https://cdn.openai.com/pdf/3a4153c8-c748-4b71-8e31-aecbde944f8d/oai_5_2_system-card.pdf) *(internal)* |
 | GPT-5.1-Codex-Max | OpenAI | — | [76%](https://cdn.openai.com/pdf/2a7d98b1-57e5-4147-8d0e-683894d782ae/5p1_codex_max_card_03.pdf) *(internal)* | [60%](https://cdn.openai.com/pdf/23eca107-a9b1-4d2c-b156-7deb4fbc697c/GPT-5-3-Codex-System-Card-02.pdf) *(internal)* |
 | GPT-5-Codex | OpenAI | — | [~50%](https://cdn.openai.com/pdf/97cc5669-7a25-4e63-b15f-5fd5bdc4d149/gpt-5-codex-system-card.pdf) *(internal)* | — |
-| Claude Opus 4.6 | Anthropic | [**93% p@1**](https://anthropic.com/claude-opus-4-6-system-card) | — | — |
-| Claude Sonnet 4.6 | Anthropic | [90% p@1](https://anthropic.com/claude-sonnet-4-6-system-card) | — | — |
+| Claude Opus 4.6 | Anthropic | [**93% p@1**](https://anthropic.com/claude-opus-4-6-system-card) | [45/49](https://anthropic.com/claude-opus-4-6-system-card) *(internal)* | — |
+| Claude Sonnet 4.6 | Anthropic | [90% p@1](https://anthropic.com/claude-sonnet-4-6-system-card) | [45/49](https://anthropic.com/claude-sonnet-4-6-system-card) *(internal)* | — |
 | Claude Opus 4.5 | Anthropic | [82% p@1](https://www.anthropic.com/claude-opus-4-5-system-card) | — | — |
 | Gemini 3.1 Pro | Google | — | — | — |
 | Gemini 3 Flash | Google | — | — | — |
