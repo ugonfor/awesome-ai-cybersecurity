@@ -182,8 +182,7 @@ The AI cybersecurity space is fragmented: OpenAI, Anthropic, Google, and xAI eac
 >
 > Different PI tools used: Anthropic uses **[Shade](https://www.grayswan.ai/)** (Gray Swan adaptive attacker) for Coding/Computer Use columns; Google uses **[TAP](https://arxiv.org/abs/2312.02119)**; xAI uses **[AgentDojo](https://arxiv.org/abs/2406.13352)**. All are public benchmarks but no vendor has run another's PI tool, so cross-company comparison does not exist.
 
-| Model | Company | Prompt Injection | | | [AgentDojo](https://arxiv.org/abs/2406.13352) | Source |
-| | | Coding ([Shade](https://www.grayswan.ai/)) | Browser | Computer Use ([Shade](https://www.grayswan.ai/)) | | |
+| Model | Company | PI: Coding | PI: Browser | PI: Computer Use | [AgentDojo](https://arxiv.org/abs/2406.13352) | Source |
 |---|---|---|---|---|---|---|
 | GPT-5.3-Codex | OpenAI | — | — | — | — | — |
 | GPT-5.2-Codex | OpenAI | — | — | — | — | — |
