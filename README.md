@@ -182,13 +182,14 @@ The AI cybersecurity space is fragmented: OpenAI, Anthropic, Google, and xAI eac
 >
 > Different PI tools used: Anthropic uses **[Shade](https://www.grayswan.ai/)** (Gray Swan adaptive attacker) for Coding/Computer Use columns; Google uses **[TAP](https://arxiv.org/abs/2312.02119)**; xAI uses **[AgentDojo](https://arxiv.org/abs/2406.13352)**. All are public benchmarks but no vendor has run another's PI tool, so cross-company comparison does not exist.
 
-| Model | Company | PI Coding ([Shade](https://www.grayswan.ai/)) | PI Browser | PI Computer Use ([Shade](https://www.grayswan.ai/)) | [AgentDojo](https://arxiv.org/abs/2406.13352) | Source |
+| Model | Company | Prompt Injection | | | [AgentDojo](https://arxiv.org/abs/2406.13352) | Source |
+| | | Coding ([Shade](https://www.grayswan.ai/)) | Browser | Computer Use ([Shade](https://www.grayswan.ai/)) | | |
 |---|---|---|---|---|---|---|
 | GPT-5.3-Codex | OpenAI | — | — | — | — | — |
 | GPT-5.2-Codex | OpenAI | — | — | — | — | — |
 | Operator (GPT-4o) | OpenAI | 99% recall | — | — | — | [System Card](https://cdn.openai.com/operator_system_card.pdf) |
-| Claude Opus 4.6 | Anthropic | **0% ASR** | ~2% ASR | 17.8% ASR | — | [System Card](https://anthropic.com/claude-opus-4-6-system-card) |
-| Claude Sonnet 4.6 | Anthropic | **0% ASR** (ext) / 0.1% (std) | <0.3% ASR | **12.0% ASR** | — | [System Card](https://anthropic.com/claude-sonnet-4-6-system-card) |
+| Claude Opus 4.6 | Anthropic | **0% ASR** | ~2% ASR *(Shade)* | 17.8% ASR | — | [System Card](https://anthropic.com/claude-opus-4-6-system-card) |
+| Claude Sonnet 4.6 | Anthropic | **0% ASR** (ext) / 0.1% (std) | <0.3% ASR *(Shade)* | **12.0% ASR** | — | [System Card](https://anthropic.com/claude-sonnet-4-6-system-card) |
 | Gemini 3.1 Pro | Google | — | — | — | — | — |
 | Gemini 3 Flash | Google | — | — | — | — | — |
 | Gemini 3 Pro | Google | — | — | — | — | — |
