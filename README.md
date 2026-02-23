@@ -11,7 +11,7 @@ The AI cybersecurity space is fragmented: OpenAI, Anthropic, Google, and xAI eac
 - [Taxonomy](#taxonomy)
 - [Cross-Comparison](#cross-comparison)
   - [Offensive Capability](#ai4security--offensive-capability) · [Vulnerability Discovery](#ai4security--vulnerability-discovery) · [Cyber Knowledge](#ai4security--cyber-knowledge) · [Defensive Capability](#ai4security--defensive-capability)
-  - [Model Robustness](#security4ai--model-robustness) · [Misuse Risk & Alignment](#security4ai--misuse-risk--alignment)
+  - [Model Robustness](#security4ai--model-robustness) · [Misuse Risk](#security4ai--misuse-risk) · [Alignment](#security4ai--alignment)
   - [Risk Frameworks](#risk-frameworks) · [Benchmark Mapping](#benchmark-mapping) (collapsible) · [Timeline](#timeline) (collapsible)
 - [Benchmarks](#benchmarks)
 - [Agents](#agents--ai4security)
@@ -36,7 +36,8 @@ The AI cybersecurity space is fragmented: OpenAI, Anthropic, Google, and xAI eac
 | Subcategory | Purpose | Benchmarks | |
 |----------|---------|---------|:---:|
 | **Model Robustness** | Protecting models from attacks | PI: Coding/Browser/Computer Use (Shade, TAP), AgentDojo | [→](#security4ai--model-robustness) |
-| **Misuse Risk & Alignment** | Preventing harmful use, ensuring intended behavior | Malicious Refusal, AgentHarm, MASK, Sycophancy, MakeMeSay | [→](#security4ai--misuse-risk--alignment) |
+| **Misuse Risk** | Preventing harmful use of AI | Malicious Refusal, AgentHarm | [→](#security4ai--misuse-risk) |
+| **Alignment** | Ensuring AI behaves as intended | MASK, Sycophancy, MakeMeSay, Sabotage, Stealth/SA | [→](#security4ai--alignment) |
 
 **Key terms:**
 - **pass@k** — Success rate when the model gets k attempts per task. pass@1 = must succeed on first try; pass@30 = at least 1 success in 30 tries. Higher k inflates scores.
@@ -202,25 +203,47 @@ The AI cybersecurity space is fragmented: OpenAI, Anthropic, Google, and xAI eac
 
 ---
 
-### Security4AI — Misuse Risk & Alignment
+### Security4AI — Misuse Risk
 
-> Malicious task completion, deception, sycophancy, sabotage risk.
+> Malicious task completion, harmful request refusal.
 
-| Model | Company | Malicious Refusal | [AgentHarm](https://arxiv.org/abs/2410.09024) | [MASK](https://arxiv.org/abs/2503.03750) | [Sycophancy](https://arxiv.org/abs/2310.13548) | [MakeMeSay](https://github.com/openai/evals) |
-|---|---|---|---|---|---|---|
-| GPT-5.3-Codex | OpenAI | — | — | — | — | — |
-| GPT-5.2-Codex | OpenAI | — | — | — | — | — |
-| Claude Opus 4.6 | Anthropic | CU 88.34%, Code 99.59% | — | — | — | — |
-| Claude Sonnet 4.6 | Anthropic | CU **99.38%**, Code 99.39% | — | — | — | — |
-| Gemini 3.1 Pro | Google | — | — | — | — | — |
-| Gemini 3 Flash | Google | — | — | — | — | — |
-| Gemini 3 Pro | Google | — | — | — | — | — |
-| Grok 4.1 | xAI | — | [0.14](https://data.x.ai/2025-11-17-grok-4-1-model-card.pdf) | [0.49](https://data.x.ai/2025-11-17-grok-4-1-model-card.pdf) | [0.19](https://data.x.ai/2025-11-17-grok-4-1-model-card.pdf) | [0%](https://data.x.ai/2025-11-17-grok-4-1-model-card.pdf) |
-| Grok 4.1 Fast | xAI | — | — | — | — | — |
-| Grok 4 Fast | xAI | — | [0.08/0.10](https://data.x.ai/2025-09-19-grok-4-fast-model-card.pdf) | [0.47/0.63](https://data.x.ai/2025-09-19-grok-4-fast-model-card.pdf) | [0.10/0.13](https://data.x.ai/2025-09-19-grok-4-fast-model-card.pdf) | [0.12](https://data.x.ai/2025-09-19-grok-4-fast-model-card.pdf) |
-| Grok 4 | xAI | — | [0.14](https://data.x.ai/2025-08-20-grok-4-model-card.pdf) | [0.43](https://data.x.ai/2025-08-20-grok-4-model-card.pdf) | [0.07](https://data.x.ai/2025-08-20-grok-4-model-card.pdf) | [0.12](https://data.x.ai/2025-08-20-grok-4-model-card.pdf) |
+| Model | Company | Malicious Refusal | [AgentHarm](https://arxiv.org/abs/2410.09024) |
+|---|---|---|---|
+| GPT-5.3-Codex | OpenAI | — | — |
+| GPT-5.2-Codex | OpenAI | — | — |
+| Claude Opus 4.6 | Anthropic | CU 88.34%, Code 99.59% | — |
+| Claude Sonnet 4.6 | Anthropic | CU **99.38%**, Code 99.39% | — |
+| Gemini 3.1 Pro | Google | — | — |
+| Gemini 3 Flash | Google | — | — |
+| Gemini 3 Pro | Google | — | — |
+| Grok 4.1 | xAI | — | [0.14](https://data.x.ai/2025-11-17-grok-4-1-model-card.pdf) |
+| Grok 4.1 Fast | xAI | — | — |
+| Grok 4 Fast | xAI | — | [0.08/0.10](https://data.x.ai/2025-09-19-grok-4-fast-model-card.pdf) |
+| Grok 4 | xAI | — | [0.14](https://data.x.ai/2025-08-20-grok-4-model-card.pdf) |
 
 > **Malicious Refusal**: CU = Malicious Computer Use refusal rate (without mitigations), Code = Malicious Claude Code Use refusal rate (with mitigations). Higher is better. Source: [Sonnet 4.6 System Card](https://anthropic.com/claude-sonnet-4-6-system-card).
+
+---
+
+### Security4AI — Alignment
+
+> Deception, sycophancy, sabotage, stealth, situational awareness.
+
+| Model | Company | [MASK](https://arxiv.org/abs/2503.03750) | [Sycophancy](https://arxiv.org/abs/2310.13548) | [MakeMeSay](https://github.com/openai/evals) | Sabotage | Stealth / SA |
+|---|---|---|---|---|---|---|
+| GPT-5.3-Codex | OpenAI | — | — | — | [0.88](https://cdn.openai.com/pdf/23eca107-a9b1-4d2c-b156-7deb4fbc697c/GPT-5-3-Codex-System-Card-02.pdf) ^Apollo | — |
+| GPT-5.2-Codex | OpenAI | — | — | — | [0.66](https://cdn.openai.com/pdf/23eca107-a9b1-4d2c-b156-7deb4fbc697c/GPT-5-3-Codex-System-Card-02.pdf) ^Apollo | — |
+| Claude Opus 4.6 | Anthropic | — | — | — | — | — |
+| Claude Sonnet 4.6 | Anthropic | — | — | — | — | — |
+| Gemini 3.1 Pro | Google | — | — | — | — | [~100% on 3 SA](https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-1-Pro-Model-Card.pdf) |
+| Gemini 3 Flash | Google | — | — | — | — | — |
+| Gemini 3 Pro | Google | — | — | — | — | [3/11 SA, 1/4 stealth](https://storage.googleapis.com/deepmind-media/gemini/gemini_3_pro_fsf_report.pdf) |
+| Grok 4.1 | xAI | [0.49](https://data.x.ai/2025-11-17-grok-4-1-model-card.pdf) | [0.19](https://data.x.ai/2025-11-17-grok-4-1-model-card.pdf) | [0%](https://data.x.ai/2025-11-17-grok-4-1-model-card.pdf) | — | — |
+| Grok 4.1 Fast | xAI | — | — | — | — | — |
+| Grok 4 Fast | xAI | [0.47/0.63](https://data.x.ai/2025-09-19-grok-4-fast-model-card.pdf) | [0.10/0.13](https://data.x.ai/2025-09-19-grok-4-fast-model-card.pdf) | [0.12](https://data.x.ai/2025-09-19-grok-4-fast-model-card.pdf) | — | — |
+| Grok 4 | xAI | [0.43](https://data.x.ai/2025-08-20-grok-4-model-card.pdf) | [0.07](https://data.x.ai/2025-08-20-grok-4-model-card.pdf) | [0.12](https://data.x.ai/2025-08-20-grok-4-model-card.pdf) | — | — |
+
+> **Sabotage**: ^Apollo = Apollo Research mean best-of-10 sabotage score (higher = stronger sabotage capability). **Stealth / SA**: SA = Situational Awareness challenges solved; stealth = stealth eval challenges solved. Source: [Gemini 3 Pro FSF Report](https://storage.googleapis.com/deepmind-media/gemini/gemini_3_pro_fsf_report.pdf), [Gemini 3.1 Pro Model Card](https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-1-Pro-Model-Card.pdf).
 
 ---
 
