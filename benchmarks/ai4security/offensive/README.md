@@ -8,17 +8,29 @@
 - **Category**: AI4Security > Offensive Capability > CTF
 - **Created by**: Stanford University
 - **Used by**: Anthropic, xAI (spells it "CyBench"), UK AISI, US AISI
-- **Scale**: 40 professional-level CTF tasks from 4 competitions (HackTheBox, SekaiCTF, Glacier, HKCert)
+- **Scale**: 40 professional-level CTF tasks from 4 competitions (HackTheBox, SekaiCTF, Glacier, HKCert); Anthropic uses 37-task subset (3 excluded due to infra/timing)
 - **Dataset**: Open
 - **Reference**: [Cybench: A Framework for Evaluating Cybersecurity Capabilities and Risks of Language Models](https://arxiv.org/abs/2408.08926)
-- **Summary**: Professional CTF benchmark covering pwn, crypto, web, reverse engineering, forensics, and misc. Evaluated via UK AISI Inspect framework. Used in US/UK AISI joint pre-deployment tests on Claude 3.5 Sonnet and OpenAI o1.
+- **Summary**: Professional CTF benchmark covering pwn, crypto, web, reverse engineering, forensics, and misc. Evaluated via UK AISI Inspect framework. Used in US/UK AISI joint pre-deployment tests on Claude 3.5 Sonnet and OpenAI o1. Anthropic reports benchmark is saturated at pass@30 for latest models.
 - **Results**:
-  | Model | Score | Date | Source |
-  |---|---|---|---|
-  | Claude 3.7 Sonnet | 35.9% | 2025.02 | [System Card](https://anthropic.com/claude-3-7-sonnet-system-card) |
-  | Claude Sonnet 4.5 | 76.5% | 2025.09 | [System Card](https://www.anthropic.com/claude-sonnet-4-5-system-card) |
-  | Grok 4 | Below human professional | 2025.08 | [Model Card](https://data.x.ai/2025-08-20-grok-4-model-card.pdf) |
-  | Grok 4.1 | Substantially below human experts | 2025.11 | [Model Card](https://data.x.ai/2025-11-17-grok-4-1-model-card.pdf) |
+  | Model | Score | Methodology | Date | Source |
+  |---|---|---|---|---|
+  | Claude 3.7 Sonnet | 35.9% | pass@5, 40 tasks | 2025.02 | [System Card](https://anthropic.com/claude-3-7-sonnet-system-card) |
+  | Claude Sonnet 4.5 | 76.5% (pass@10); 60% (pass@1) | pass@10 and pass@1, 40 tasks | 2025.09 | [System Card](https://www.anthropic.com/claude-sonnet-4-5-system-card) |
+  | Claude Opus 4.5 | 82% (pass@1) | pass@1, 40 tasks | 2025.11 | [System Card](https://www.anthropic.com/claude-opus-4-5-system-card) |
+  | Claude Sonnet 4.6 | 90% (pass@1); 100% (pass@30, saturated) | pass@1 and pass@30, 37 tasks | 2026.02 | [System Card](https://anthropic.com/claude-sonnet-4-6-system-card) |
+  | Claude Opus 4.6 | 93% (pass@1); ~100% (pass@30, saturated) | pass@1 and pass@30, 37 tasks | 2026.02 | [System Card](https://anthropic.com/claude-opus-4-6-system-card) |
+  | Grok 4 | 43% unguided | unguided, 40 tasks | 2025.08 | [Model Card](https://data.x.ai/2025-08-20-grok-4-model-card.pdf) |
+  | Grok 4 Fast | 30% unguided | unguided, 40 tasks | 2025.09 | [Model Card](https://data.x.ai/2025-09-19-grok-4-fast-model-card.pdf) |
+  | Grok 4.1 | 39% unguided | unguided, 40 tasks | 2025.11 | [Model Card](https://data.x.ai/2025-11-17-grok-4-1-model-card.pdf) |
+- **Category Breakdown (pass@1)**:
+  | Category | Sonnet 4.5 | Opus 4.5 | Sonnet 4.6 | Opus 4.6 |
+  |---|---|---|---|---|
+  | Web | 11/13 | 12/13 | 13/13 | 13/13 |
+  | Crypto | 14/18 | 15/18 | 16/18 | 16/18 |
+  | Pwn | 2/7 | 3/7 | 5/7 | 5/7 |
+  | Rev | 5/6 | 6/6 | 6/6 | 6/6 |
+  | Network | 3/5 | 4/5 | 5/5 | 5/5 |
 
 ---
 
@@ -33,7 +45,10 @@
   | Model | Score | Date | Source |
   |---|---|---|---|
   | Claude Sonnet 4 | Strongest on public leaderboard | 2025 | [Frontier Red Team](https://red.anthropic.com/2025/ai-for-cyber-defenders/) |
-  | Claude Sonnet 4.5 | 28.9% ($2 cost), 66.7% vuln reproduction (30 trials) | 2025.09 | [Frontier Red Team](https://red.anthropic.com/2025/ai-for-cyber-defenders/) |
+  | Claude Sonnet 4.5 | 29.8% (pass@1); 28.9% ($2 cost); 66.7% vuln reproduction (30 trials) | 2025.09 | [System Card](https://www.anthropic.com/claude-sonnet-4-5-system-card) |
+  | Claude Opus 4.5 | 51.0% (pass@1) | 2025.11 | [System Card](https://www.anthropic.com/claude-opus-4-5-system-card) |
+  | Claude Sonnet 4.6 | 65.2% (pass@1) | 2026.02 | [System Card](https://anthropic.com/claude-sonnet-4-6-system-card) |
+  | Claude Opus 4.6 | 66.6% (pass@1) | 2026.02 | [System Card](https://anthropic.com/claude-opus-4-6-system-card) |
 
 ---
 
@@ -41,13 +56,19 @@
 - **Category**: AI4Security > Offensive Capability > Vulnerability Exploitation
 - **Created by**: OpenAI
 - **Used by**: OpenAI
-- **Scale**: Real-world web application CVEs
+- **Scale**: 40 real-world web application CVEs (zero-day configuration)
 - **Dataset**: Closed
-- **Summary**: Benchmark for exploiting real-world web application vulnerabilities (actual CVEs), measured with pass@1 metric.
+- **Summary**: Benchmark for exploiting real-world web application vulnerabilities (actual CVEs), measured with pass@1 metric. Tests blind zero-day exploitation capability.
 - **Results**:
   | Model | Score | Date | Source |
   |---|---|---|---|
+  | GPT-5 | 43% (pass@1) | 2025.08 | [GPT-5.1-Codex-Max System Card](https://cdn.openai.com/pdf/2a7d98b1-57e5-4147-8d0e-683894d782ae/5p1_codex_max_card_03.pdf) |
+  | GPT-5-Codex | 53% (pass@1) | 2025.09 | [GPT-5.1-Codex-Max System Card](https://cdn.openai.com/pdf/2a7d98b1-57e5-4147-8d0e-683894d782ae/5p1_codex_max_card_03.pdf) |
+  | GPT-5.1-Thinking | 61% (pass@1) | 2025.11 | [GPT-5.1-Codex-Max System Card](https://cdn.openai.com/pdf/2a7d98b1-57e5-4147-8d0e-683894d782ae/5p1_codex_max_card_03.pdf) |
+  | GPT-5.2-Thinking | 69% (pass@1) | 2025.12 | [GPT-5.2 System Card](https://cdn.openai.com/pdf/3a4153c8-c748-4b71-8e31-aecbde944f8d/oai_5_2_system-card.pdf) |
+  | GPT-5.1-Codex-Max | 80% (pass@1) | 2025.11 | [System Card](https://cdn.openai.com/pdf/2a7d98b1-57e5-4147-8d0e-683894d782ae/5p1_codex_max_card_03.pdf) |
   | GPT-5.2-Codex | 87% (pass@1) | 2025.12 | [Addendum](https://cdn.openai.com/pdf/ac7c37ae-7f4c-4442-b741-2eabdeaf77e0/oai_5_2_Codex.pdf) |
+  | GPT-5.3-Codex | 90% (pass@1, 34/40) | 2026.02 | [System Card](https://cdn.openai.com/pdf/23eca107-a9b1-4d2c-b156-7deb4fbc697c/GPT-5-3-Codex-System-Card-02.pdf) |
 
 ---
 
@@ -67,26 +88,34 @@
   | o3-mini | 61% | 21% | — | 2025.01 | [System Card](https://cdn.openai.com/o3-mini-system-card-feb10.pdf) |
   | Deep Research (no browse) | 82% | 55% | 47% | 2025.02 | [System Card](https://cdn.openai.com/deep-research-system-card.pdf) |
   | Deep Research (w/ browse) | 92% | 91% | 70% | 2025.02 | [System Card](https://cdn.openai.com/deep-research-system-card.pdf) |
-  | o3 | — | — | ~58% | 2025.04 | [System Card](https://cdn.openai.com/pdf/2221c875-02dc-4789-800b-e7758f3722c1/o3-and-o4-mini-system-card.pdf) |
+  | o3 | 89% | 68% | 59% (pass@12) | 2025.04 | [System Card](https://cdn.openai.com/pdf/2221c875-02dc-4789-800b-e7758f3722c1/o3-and-o4-mini-system-card.pdf) |
+  | o4-mini | 80% | 55% | 41% (pass@12) | 2025.04 | [System Card](https://cdn.openai.com/pdf/2221c875-02dc-4789-800b-e7758f3722c1/o3-and-o4-mini-system-card.pdf) |
   | GPT-5 | — | — | ~27% (pass@12) | 2025.08 | [System Card](https://cdn.openai.com/gpt-5-system-card.pdf) |
-  | GPT-5.1-Codex-Max | — | — | ~76% | 2025.11 | [System Card](https://cdn.openai.com/pdf/2a7d98b1-57e5-4147-8d0e-683894d782ae/5p1_codex_max_card_03.pdf) |
-  | GPT-5.3-Codex | — | — | All passed | 2026.02 | [System Card](https://cdn.openai.com/pdf/23eca107-a9b1-4d2c-b156-7deb4fbc697c/GPT-5-3-Codex-System-Card-02.pdf) |
+  | GPT-5-Codex | — | — | ~50% (pass@12) | 2025.09 | [Addendum](https://cdn.openai.com/pdf/97cc5669-7a25-4e63-b15f-5fd5bdc4d149/gpt-5-codex-system-card.pdf) |
+  | GPT-5.1-Thinking | — | — | 43% (pass@12) | 2025.11 | [GPT-5.1-Codex-Max System Card](https://cdn.openai.com/pdf/2a7d98b1-57e5-4147-8d0e-683894d782ae/5p1_codex_max_card_03.pdf) |
+  | GPT-5.1-Codex-Max | — | — | 76% (pass@12) | 2025.11 | [System Card](https://cdn.openai.com/pdf/2a7d98b1-57e5-4147-8d0e-683894d782ae/5p1_codex_max_card_03.pdf) |
+  | GPT-5.2-Thinking | — | — | 82% (pass@12) | 2025.12 | [GPT-5.2 System Card](https://cdn.openai.com/pdf/3a4153c8-c748-4b71-8e31-aecbde944f8d/oai_5_2_system-card.pdf) |
+  | GPT-5.2-Codex | — | — | 88% (pass@12) | 2025.12 | [Addendum](https://cdn.openai.com/pdf/ac7c37ae-7f4c-4442-b741-2eabdeaf77e0/oai_5_2_Codex.pdf) |
+  | GPT-5.3-Codex | — | — | 88% (standard pass@12); 77.6% (xhigh) | 2026.02 | [System Card](https://cdn.openai.com/pdf/23eca107-a9b1-4d2c-b156-7deb4fbc697c/GPT-5-3-Codex-System-Card-02.pdf) |
 
 ---
 
-### Cyber Range
+### Cyber Range (OpenAI)
 - **Category**: AI4Security > Offensive Capability > End-to-End Attack
-- **Created by**: OpenAI, Anthropic (independently)
-- **Used by**: OpenAI, Anthropic
-- **Scale**: 5+ multi-machine network scenarios (OpenAI); ~50-host networks (Anthropic/CMU)
+- **Created by**: OpenAI
+- **Used by**: OpenAI
+- **Scale**: Expanded from 2 scenarios (o3/o4-mini era) to 15 scenarios (GPT-5.3-Codex era) including Simple Priv Esc, Basic C2, Azure SSRF, Online Retailer, Coffee Roasters, Financial Capital, Leaked Token, Medium C2, Printer Queue, HTTPS Oracle, Binary Exploitation, CA/DNS Hijacking, EDR Evasion, Firewall Evasion
 - **Dataset**: Closed
-- **Summary**: Realistic multi-machine network attack scenarios testing end-to-end offensive capabilities including network infiltration, lateral movement, and privilege escalation.
+- **Summary**: Realistic multi-machine network attack scenarios testing end-to-end offensive capabilities including network infiltration, lateral movement, and privilege escalation. Pass/fail over 16 trials per scenario.
 - **Results**:
   | Model | Score | Date | Source |
   |---|---|---|---|
-  | GPT-5.1-Codex-Max | Network Attack 37%, Vuln Discovery 41%, Evasion 43% | 2025.11 | [System Card](https://cdn.openai.com/pdf/2a7d98b1-57e5-4147-8d0e-683894d782ae/5p1_codex_max_card_03.pdf) |
-  | GPT-5.3-Codex | All except 3 scenarios | 2026.02 | [System Card](https://cdn.openai.com/pdf/23eca107-a9b1-4d2c-b156-7deb4fbc697c/GPT-5-3-Codex-System-Card-02.pdf) |
-  | Claude Sonnet 4.5 | Equifax Simulation: 2/5 autonomous | 2025.09 | [System Card](https://www.anthropic.com/claude-sonnet-4-5-system-card) |
+  | o3 / o4-mini | 0% (2 scenarios, unaided) | 2025.04 | [System Card](https://cdn.openai.com/pdf/2221c875-02dc-4789-800b-e7758f3722c1/o3-and-o4-mini-system-card.pdf) |
+  | GPT-5 | 0/30 unaided (5 scenarios) | 2025.08 | [System Card](https://cdn.openai.com/gpt-5-system-card.pdf) |
+  | GPT-5.1-Codex-Max | 7/10 scenarios; 60% (15-scenario set) | 2025.11 | [System Card](https://cdn.openai.com/pdf/2a7d98b1-57e5-4147-8d0e-683894d782ae/5p1_codex_max_card_03.pdf) |
+  | GPT-5.2-Thinking | 63.6% (11 scenarios); 47% (15-scenario, partial) | 2025.12 | [GPT-5.2 System Card](https://cdn.openai.com/pdf/3a4153c8-c748-4b71-8e31-aecbde944f8d/oai_5_2_system-card.pdf) |
+  | GPT-5.2-Codex | 72.7% (8/11 scenarios); 53.33% (15-scenario) | 2025.12 | [Addendum](https://cdn.openai.com/pdf/ac7c37ae-7f4c-4442-b741-2eabdeaf77e0/oai_5_2_Codex.pdf) |
+  | GPT-5.3-Codex | 80% (12/15 scenarios) | 2026.02 | [System Card](https://cdn.openai.com/pdf/23eca107-a9b1-4d2c-b156-7deb4fbc697c/GPT-5-3-Codex-System-Card-02.pdf) |
 
 ---
 
@@ -125,43 +154,62 @@
 - **Category**: AI4Security > Offensive Capability > CTF
 - **Created by**: Hack The Box (platform)
 - **Used by**: Google, Anthropic
-- **Scale**: 12-13 professional-level challenges
+- **Scale**: 13 professional-level challenges (Google FSF eval)
 - **Dataset**: Partial (commercial platform)
-- **Summary**: Professional-grade CTF challenges from the Hack The Box platform, used to evaluate AI on hard real-world challenges.
+- **Summary**: Professional-grade CTF challenges from the Hack The Box platform, used to evaluate AI on hard real-world challenges. Retired by Google for Gemini 3 Pro evaluations (replaced by Key Skills Benchmark).
 - **Results**:
   | Model | Score | Date | Source |
   |---|---|---|---|
   | Gemini 2.5 Deep Think | 3/13 | 2025.08 | [Model Card](https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Deep-Think-Model-Card.pdf) |
-  | Gemini 3 Pro | 11/12 | 2025.11 | [FSF Report](https://storage.googleapis.com/deepmind-media/gemini/gemini_3_pro_fsf_report.pdf) |
   | Claude (HackTheBox AI vs Human) | 19/20, 30th/161 | 2025 | [Cyber Competitions](https://red.anthropic.com/2025/cyber-competitions/) |
+- **Notes**: Retired for Gemini 3 Pro evaluations -- "they add little signal on top of the key skills benchmark."
 
 ---
 
 ### Key Skills Benchmark
 - **Category**: AI4Security > Offensive Capability > Skill Assessment
-- **Created by**: Google DeepMind
+- **Created by**: Google DeepMind (with Pattern Labs)
 - **Used by**: Google
-- **Scale**: Multiple skill categories (recon, tool dev, tool use, OPSEC)
+- **Scale**: v1: 50 challenges (12 at "hard" difficulty); v2: 13 end-to-end attack challenges covering all 7 key attack kill chains
 - **Dataset**: Closed
-- **Summary**: MITRE ATT&CK-aligned skill evaluation measuring specific offensive capabilities: reconnaissance, tool development, tool usage, and operational security.
-- **Results**:
+- **Summary**: MITRE ATT&CK and Unified Kill Chain-aligned skill evaluation measuring specific offensive capabilities: reconnaissance, tool development, tool usage, and operational security. v2 introduces multi-stage realistic attack scenarios (e.g., recon -> vuln exploitation -> network enumeration -> second exploitation).
+- **Key Skills v1 Hard Results (/12)**:
+  | Model | Score | N attempts | Date | Source |
+  |---|---|---|---|---|
+  | Gemini 2.0 Flash-Lite | 0/12 | 10-30 | 2025.04 | [Gemini 3 Pro FSF Report](https://storage.googleapis.com/deepmind-media/gemini/gemini_3_pro_fsf_report.pdf) |
+  | Gemini 2.0 Flash | 0/12 | 10-30 | 2025.04 | [Gemini 3 Pro FSF Report](https://storage.googleapis.com/deepmind-media/gemini/gemini_3_pro_fsf_report.pdf) |
+  | Gemini 2.0 Pro | 1/12 | 10-30 | 2025.04 | [Gemini 3 Pro FSF Report](https://storage.googleapis.com/deepmind-media/gemini/gemini_3_pro_fsf_report.pdf) |
+  | Gemini 2.5 Flash | 2/12 | 200 | 2025.06 | [Gemini 3 Pro FSF Report](https://storage.googleapis.com/deepmind-media/gemini/gemini_3_pro_fsf_report.pdf) |
+  | Gemini 2.5 Pro | 4/12 | 100 | 2025.06 | [Gemini 3 Pro FSF Report](https://storage.googleapis.com/deepmind-media/gemini/gemini_3_pro_fsf_report.pdf) |
+  | Gemini 2.5 Deep Think | 6/12 | 50 | 2025.08 | [Model Card](https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Deep-Think-Model-Card.pdf) |
+  | Gemini 3 Pro | 11/12 | 75 | 2025.11 | [FSF Report](https://storage.googleapis.com/deepmind-media/gemini/gemini_3_pro_fsf_report.pdf) |
+- **Key Skills v2 End-to-End Results (/13)**:
   | Model | Score | Date | Source |
   |---|---|---|---|
-  | Gemini 3 Pro | Almost all hard challenges completed | 2025.11 | [FSF Report](https://storage.googleapis.com/deepmind-media/gemini/gemini_3_pro_fsf_report.pdf) |
+  | Gemini 3 Pro | 0/13 | 2025.11 | [FSF Report](https://storage.googleapis.com/deepmind-media/gemini/gemini_3_pro_fsf_report.pdf) |
+- **Notes**: InterCode-CTF, In-house CTF, and HTB were retired for Gemini 3 Pro evaluations because "they add little signal on top of the key skills benchmark." v2 end-to-end 0/13 confirms model is below CCL (Critical Capability Level).
 
 ---
 
-### Pattern Labs External CTFs
-- **Category**: AI4Security > Offensive Capability > CTF
-- **Created by**: Pattern Labs (for Google)
-- **Used by**: Google
-- **Scale**: 50 non-public challenges
+### Pattern Labs External CTFs / Irregular External Evals
+- **Category**: AI4Security > Offensive Capability > CTF / End-to-End
+- **Created by**: Pattern Labs (formerly Irregular)
+- **Used by**: Google, OpenAI
+- **Scale**: 50 non-public challenges (Google); Network Attack, Vulnerability R&E, Evasion, CyScenarioBench categories (OpenAI)
 - **Dataset**: Closed (anti-contamination design)
-- **Summary**: External CTF challenges specifically designed to prevent data contamination, providing unbiased evaluation of model capabilities.
-- **Results**:
+- **Summary**: External CTF and attack simulation challenges specifically designed to prevent data contamination, providing unbiased evaluation of model capabilities. Used by both Google (50-task CTF) and OpenAI (multi-category evaluation including Network Attack Simulation, Vulnerability Research & Exploitation, and Evasion).
+- **Google Results (50 challenges)**:
   | Model | Score | Date | Source |
   |---|---|---|---|
-  | Gemini 2.0 Flash | 11/50 | 2025.04 | [Model Card](https://modelcards.withgoogle.com/assets/documents/gemini-2-flash.pdf) |
+  | Gemini 2.0 Flash | 11/50 (22%) | 2025.04 | [Model Card](https://modelcards.withgoogle.com/assets/documents/gemini-2-flash.pdf) |
+- **OpenAI Results (by category)**:
+  | Model | Network Attack | Vuln R&E | Evasion | CyScenarioBench | Date | Source |
+  |---|---|---|---|---|---|---|
+  | GPT-5 | 49% | 35% | 51% | — | 2025.08 | [System Card](https://cdn.openai.com/gpt-5-system-card.pdf) |
+  | GPT-5.1-Codex-Max | 37% | 41% | 43% | — | 2025.11 | [System Card](https://cdn.openai.com/pdf/2a7d98b1-57e5-4147-8d0e-683894d782ae/5p1_codex_max_card_03.pdf) |
+  | GPT-5.2-Codex | 68-79% | 75-80% | 49-52% | 0% | 2025.12 | [Addendum](https://cdn.openai.com/pdf/ac7c37ae-7f4c-4442-b741-2eabdeaf77e0/oai_5_2_Codex.pdf) |
+  | GPT-5.3-Codex | 86% | 72% | 53% | 0% | 2026.02 | [System Card](https://cdn.openai.com/pdf/23eca107-a9b1-4d2c-b156-7deb4fbc697c/GPT-5-3-Codex-System-Card-02.pdf) |
+- **Notes**: CyScenarioBench (complex branching missions) remains at 0% even for GPT-5.3-Codex. OpenAI scores differ between original runs and re-runs using Irregular Agent harness.
 
 ---
 
