@@ -269,12 +269,13 @@
 
   | Benchmark | Category | Score | Methodology | Source Page/Section |
   |---|---|---|---|---|
+  | CyberGym | AI4Security > Offensive Capability | 65.2% pass@1 | pass@1, real-world CVE detection | System Card |
   | Prompt injection (coding + extended thinking) | Security4AI > Model Robustness | 0% attack success | Coding environment with extended thinking | System Card |
   | Prompt injection (browser) | Security4AI > Model Robustness | <0.3% attack success | Browser-based evaluation | System Card |
   | Prompt injection (overall) | Security4AI > Model Robustness | Opus-level resistance | First Sonnet-class model with Opus-level PI defense | System Card |
 
 - **Agent Setup**: Evaluated in coding and browser environments with extended thinking
-- **Key Findings**: Near-perfect prompt injection resistance: 0% in coding with extended thinking, <0.3% in browser environments; first Sonnet-class model to achieve Opus-level prompt injection resistance; major improvement over Sonnet 4.5 in computer use PI defense
+- **Key Findings**: CyberGym 65.2% pass@1 — nearly matches Opus 4.6 (66.6%), more than doubled from Sonnet 4.5 (29.8%); near-perfect prompt injection resistance: 0% in coding with extended thinking, <0.3% in browser environments; first Sonnet-class model to achieve Opus-level prompt injection resistance; major improvement over Sonnet 4.5 in computer use PI defense
 - **Notes**: Matches Opus 4.6 prompt injection resistance -- significant for enterprise deployment at Sonnet-tier pricing
 
 ---

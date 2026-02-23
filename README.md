@@ -105,7 +105,7 @@ The AI cybersecurity space is fragmented: OpenAI, Anthropic, Google, and xAI eac
 | GPT-5.1-Codex-Max | OpenAI | [80%](https://cdn.openai.com/pdf/2a7d98b1-57e5-4147-8d0e-683894d782ae/5p1_codex_max_card_03.pdf) | — | — | 2025.11 |
 | GPT-5-Codex | OpenAI | [53%](https://cdn.openai.com/pdf/97cc5669-7a25-4e63-b15f-5fd5bdc4d149/gpt-5-codex-system-card.pdf) | — | — | 2025.09 |
 | Claude Opus 4.6 | Anthropic | — | [**66.6% p@1**](https://anthropic.com/claude-opus-4-6-system-card) | [**500+ novel**](https://anthropic.com/claude-opus-4-6-system-card) | 2026.02 |
-| Claude Sonnet 4.6 | Anthropic | — | — | — | 2026.02 |
+| Claude Sonnet 4.6 | Anthropic | — | [65.2% p@1](https://anthropic.com/claude-sonnet-4-6-system-card) | — | 2026.02 |
 | Claude Opus 4.5 | Anthropic | — | [51.0% p@1](https://www.anthropic.com/claude-opus-4-5-system-card) | — | 2025.11 |
 | Claude Sonnet 4.5 | Anthropic | — | [29.8% p@1](https://anthropic.com/claude-opus-4-6-system-card) (28.9% at $2) | — | 2025.09 |
 | Gemini 3.1 Pro | Google | — | — | — | 2026.02 |

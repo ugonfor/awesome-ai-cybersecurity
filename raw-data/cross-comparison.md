@@ -78,6 +78,7 @@
 | Claude Sonnet 4.5 | Anthropic | CyberGym (30 trials) | 66.7% vuln reproduction | 2025.09 | [AI for Cyber Defenders](https://red.anthropic.com/2025/ai-for-cyber-defenders/) |
 | Claude Sonnet 4.5 | Anthropic | CyberGym (30 trials, new vulns) | 33%+ new vuln discovery | 2025.09 | [AI for Cyber Defenders](https://red.anthropic.com/2025/ai-for-cyber-defenders/) |
 | Claude Opus 4.5 | Anthropic | CyberGym (pass@1) | 50.63% | 2025.11 | [Claude Opus 4.5 System Card](https://www.anthropic.com/claude-opus-4-5-system-card) |
+| Claude Sonnet 4.6 | Anthropic | CyberGym (pass@1) | 65.2% | 2026.02 | [Claude Sonnet 4.6 System Card](https://anthropic.com/claude-sonnet-4-6-system-card) |
 | Claude Opus 4.6 | Anthropic | Zero-day Discovery | 500+ zero-days in pre-release testing | 2026.02 | [Claude Opus 4.6 System Card](https://anthropic.com/claude-opus-4-6-system-card) |
 
 #### End-to-End Attack / Cyber Range
