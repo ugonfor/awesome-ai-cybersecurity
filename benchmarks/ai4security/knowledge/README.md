@@ -7,17 +7,18 @@
 ### [WMDP-Cyber](https://www.wmdp.ai/)
 - **Category**: AI4Security > Cyber Knowledge
 - **Created by**: Center for AI Safety (CAIS)
-- **Used by**: xAI
+- **Used by**: xAI, Google (WMDP-Bio/Chem in FSF evals)
 - **Scale**: Multiple-choice questions covering cyber killchain (recon, weaponization, exploitation, post-exploitation)
 - **Dataset**: Open
 - **Reference**: [The WMDP Benchmark: Measuring and Reducing Malicious Use With Unlearning](https://arxiv.org/abs/2403.03218)
-- **Summary**: Multiple-choice cybersecurity knowledge benchmark covering the full cyber killchain, originally designed for measuring dual-use knowledge.
+- **Summary**: Multiple-choice cybersecurity knowledge benchmark covering the full cyber killchain, originally designed for measuring dual-use knowledge. Part of the broader WMDP benchmark (3,668 questions across bio/cyber/chem).
 - **Results**:
   | Model | Score | Date | Source |
   |---|---|---|---|
   | Grok 4 | 79% | 2025.08 | [Model Card](https://data.x.ai/2025-08-20-grok-4-model-card.pdf) |
   | Grok 4 Fast | 81.4% | 2025.09 | [Model Card](https://data.x.ai/2025-09-19-grok-4-fast-model-card.pdf) |
-  | Grok 4.1 | 87% (WMDP-Bio; WMDP-Cyber score not separately reported) | 2025.11 | [Model Card](https://data.x.ai/2025-11-17-grok-4-1-model-card.pdf) |
+  | Grok 4.1 | 84% | 2025.11 | [Model Card](https://data.x.ai/2025-11-17-grok-4-1-model-card.pdf) |
+- **Notes**: Grok 4.1's 87% WMDP score is WMDP-Bio, NOT WMDP-Cyber. The WMDP-Cyber score for Grok 4.1 is 84%. WMDP-Cyber scores trend upward across xAI models (79% -> 81.4% -> 84%).
 
 ---
 

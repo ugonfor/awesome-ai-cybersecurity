@@ -6,16 +6,46 @@
 
 ### Prompt Injection Evaluation
 - **Category**: Security4AI > Model Robustness > Prompt Injection
-- **Created by**: Multiple (each company has internal version)
+- **Created by**: Multiple (each company has internal version; Anthropic uses Shade framework)
 - **Used by**: OpenAI, Anthropic, Google
 - **Scale**: Varies by implementation
 - **Dataset**: Closed (per company)
-- **Summary**: Evaluates model robustness against prompt injection attacks that attempt to override system instructions or extract sensitive data.
-- **Results**:
+- **Summary**: Evaluates model robustness against prompt injection attacks that attempt to override system instructions or extract sensitive data. Anthropic evaluates across three environments: coding, computer use, and browser.
+- **OpenAI Results**:
   | Model | Score | Date | Source |
   |---|---|---|---|
   | Operator (GPT-4o) | 99% recall on 77 attempts | 2025.01 | [System Card](https://cdn.openai.com/operator_system_card.pdf) |
-  | Claude Sonnet 4.6 | 0% attack success (coding w/ extended thinking) | 2026.02 | [System Card](https://anthropic.com/claude-sonnet-4-6-system-card) |
+  | GPT-5.1-Codex-Max | 100% PI defense in coding tasks | 2025.11 | [System Card](https://cdn.openai.com/pdf/2a7d98b1-57e5-4147-8d0e-683894d782ae/5p1_codex_max_card_03.pdf) |
+- **Anthropic Shade PI — Coding Environment (ASR = lower is better)**:
+  | Model | Thinking Mode | ASR k=1 (no safeguards) | ASR k=200 (no safeguards) | ASR k=1 (with safeguards) | ASR k=200 (with safeguards) |
+  |---|---|---|---|---|---|
+  | Claude Opus 4.6 | Extended | 0.0% | 0.0% | 0.0% | 0.0% |
+  | Claude Opus 4.6 | Standard | 0.0% | 0.0% | 0.0% | 0.0% |
+  | Claude Sonnet 4.6 | Extended | 0.0% | 0.0% | 0.0% | 0.0% |
+  | Claude Sonnet 4.6 | Standard | 0.1% | 7.5% | 0.04% | 5.0% |
+  | Claude Opus 4.5 | Extended | 0.3% | 10.0% | 0.1% | 7.5% |
+  | Claude Opus 4.5 | Standard | 0.7% | 17.5% | 0.2% | 7.5% |
+  | Claude Sonnet 4.5 | Extended | 18.3% | 70.0% | 1.6% | 25.0% |
+  | Claude Sonnet 4.5 | Standard | 31.6% | 87.5% | 1.7% | 25.0% |
+- **Anthropic Shade PI — Computer Use Environment (ASR = lower is better)**:
+  | Model | Thinking Mode | ASR k=1 (no safeguards) | ASR k=200 (no safeguards) |
+  |---|---|---|---|
+  | Claude Sonnet 4.6 | Extended | 12.0% | 42.9% |
+  | Claude Sonnet 4.6 | Standard | 14.4% | 64.3% |
+  | Claude Opus 4.6 | Extended | 17.8% | 78.6% |
+  | Claude Opus 4.6 | Standard | 20.0% | 85.7% |
+  | Claude Opus 4.5 | Extended | 28.0% | 78.6% |
+  | Claude Opus 4.5 | Standard | 35.4% | 85.7% |
+- **Anthropic Shade PI — Browser Environment (Best-of-N, without safeguards, ASR = lower is better)**:
+  | Model | Thinking Mode | ASR % of Scenarios | ASR % of Attempts |
+  |---|---|---|---|
+  | Claude Sonnet 4.6 | Extended | 1.29% | 0.24% |
+  | Claude Sonnet 4.6 | Standard | 1.29% | 0.29% |
+  | Claude Opus 4.6 | Extended | 2.06% | 0.29% |
+  | Claude Opus 4.6 | Standard | 2.83% | 0.49% |
+  | Claude Opus 4.5 | Extended | 18.77% | 6.40% |
+  | Claude Sonnet 4.5 | Extended | 54.24% | 20.45% |
+- **Notes**: Opus 4.6 and Sonnet 4.6 achieve 0% ASR in coding environments with extended thinking. Sonnet 4.6 actually outperforms Opus 4.6 on computer use PI defense (12.0% vs 17.8%). Computer use PI uses stronger attacker variant (previous version saturated at 0% for Opus 4.5).
 
 ---
 
@@ -26,12 +56,15 @@
 - **Scale**: Automated attack generation pipeline
 - **Dataset**: Open
 - **Reference**: [Tree of Attacks: Jailbreaking Black-Box LLMs with Red-Teaming Language Models](https://arxiv.org/abs/2312.02119)
-- **Summary**: Automated jailbreak attack method using tree-of-thought reasoning. Google tracks defense against TAP as a key robustness metric.
-- **Results**:
-  | Model | Attack Success Rate | Date | Source |
+- **Summary**: Automated jailbreak attack method using tree-of-thought reasoning. Google tracks defense against TAP as a key robustness metric. Significant improvement from Gemini 2.0 to 2.5 via adversarial fine-tuning.
+- **Results (by scenario)**:
+  | Scenario | Gemini 2.0 ASR | Gemini 2.5 ASR | Source |
   |---|---|---|---|
-  | Gemini 2.0 | 99.8% | 2025.05 | [Paper](https://arxiv.org/abs/2505.14534) |
-  | Gemini 2.5 | 53.6% | 2025.05 | [Paper](https://arxiv.org/abs/2505.14534) |
+  | Email | 99.8% | 53.6% | [Paper](https://arxiv.org/abs/2505.14534) |
+  | Calendar | — | 94.6% (hardest scenario) | [Paper](https://arxiv.org/abs/2505.14534) |
+  | Beam Search (non-TAP) | 75% | 4% | [Paper](https://arxiv.org/abs/2505.14534) |
+  | Combined defense (2.5 + Warning) | — | 6.2% | [Paper](https://arxiv.org/abs/2505.14534) |
+- **Notes**: Average ~47% reduction in ASR across attack types from Gemini 2.0 to 2.5. Calendar scenario remains the hardest (94.6% TAP ASR even for 2.5). Combined defense (adversarial fine-tuning + Warning) achieves best result: 6.2% ASR.
 
 ---
 
@@ -43,11 +76,12 @@
 - **Dataset**: Open
 - **Reference**: [AgentDojo: A Dynamic Environment to Evaluate Prompt Injection Attacks and Defenses for LLM Agents](https://arxiv.org/abs/2406.13352)
 - **Summary**: Evaluates AI agent robustness to prompt injection in realistic agentic workflows with tool use.
-- **Results**:
-  | Model | Attack Success Rate | Date | Source |
+- **Results (Attack Success Rate, lower is better)**:
+  | Model | Score | Date | Source |
   |---|---|---|---|
-  | Grok 4 Fast | 0-3% | 2025.09 | [Model Card](https://data.x.ai/2025-09-19-grok-4-fast-model-card.pdf) |
-  | Grok 4.1 | 0-3% | 2025.11 | [Model Card](https://data.x.ai/2025-11-17-grok-4-1-model-card.pdf) |
+  | Grok 4 (API) | 0.02 | 2025.08 | [Model Card](https://data.x.ai/2025-08-20-grok-4-model-card.pdf) |
+  | Grok 4 Fast (R/NR) | 0.00 / 0.03 | 2025.09 | [Model Card](https://data.x.ai/2025-09-19-grok-4-fast-model-card.pdf) |
+  | Grok 4.1 (T/NT) | 0.05 / 0.01 | 2025.11 | [Model Card](https://data.x.ai/2025-11-17-grok-4-1-model-card.pdf) |
 
 ---
 
@@ -61,14 +95,26 @@
 
 ---
 
-### [Automated Red Teaming (ART)](https://arxiv.org/abs/2505.14534)
+### [Agent Red Teaming (ART) Benchmark](https://arxiv.org/abs/2505.14534)
 - **Category**: Security4AI > Model Robustness > Continuous Adversarial Evaluation
-- **Created by**: Google DeepMind
-- **Used by**: Google
-- **Scale**: Continuous evaluation framework
+- **Created by**: Gray Swan AI, UK AI Safety Institute (19 scenarios, indirect PI only)
+- **Used by**: Anthropic, Google
+- **Scale**: 19 scenarios, indirect prompt injection evaluation
 - **Dataset**: Closed
 - **Reference**: [Defending Gemini Against Indirect Prompt Injections](https://arxiv.org/abs/2505.14534)
-- **Summary**: Continuous automated adversarial evaluation framework for testing Gemini's robustness against evolving attack techniques.
+- **Summary**: Adversarial evaluation benchmark measuring model robustness against indirect prompt injection across 19 agentic scenarios. Lower is better. Numbers reflect updated grading (corrected in collaboration with Gray Swan).
+- **Results (k=1 / k=10 / k=100 ASR, lower is better)**:
+  | Model | k=1 | k=10 | k=100 | Source |
+  |---|---|---|---|---|
+  | Claude Opus 4.6 | 0.2% | 2.1% | 14.8% | [System Card](https://anthropic.com/claude-opus-4-6-system-card) |
+  | Claude Opus 4.6 (Thinking) | 0.2% | 2.2% | 21.7% | [System Card](https://anthropic.com/claude-opus-4-6-system-card) |
+  | Claude Sonnet 4.6 | 2.2% | 15.9% | 20.7% | [System Card](https://anthropic.com/claude-sonnet-4-6-system-card) |
+  | GPT-5.2 | 2.3% | 16.6% | 49.2% | [Opus 4.6 System Card](https://anthropic.com/claude-opus-4-6-system-card) |
+  | GPT-5.2 Thinking | 2.6% | 23.1% | 52.3% | [Opus 4.6 System Card](https://anthropic.com/claude-opus-4-6-system-card) |
+  | Gemini 3 Pro Thinking | 3.2% | 23.3% | 62.7% | [Opus 4.6 System Card](https://anthropic.com/claude-opus-4-6-system-card) |
+  | Gemini 3 Pro | 7.1% | 40.0% | 74.2% | [Opus 4.6 System Card](https://anthropic.com/claude-opus-4-6-system-card) |
+  | Gemini 3 Flash | 17.8% | 63.6% | 73.3% | [Opus 4.6 System Card](https://anthropic.com/claude-opus-4-6-system-card) |
+- **Notes**: Claude Opus 4.6 achieves the lowest single-attempt attack success (0.2% at k=1) among all models tested. Unusually, extended thinking increases ART attack success for Opus 4.6 (21.7% vs 14.8% at k=100).
 
 ---
 

@@ -11,12 +11,14 @@
 - **Scale**: 110 malicious agent tasks (440 with augmentations) across 11 harm categories
 - **Dataset**: Open ([HuggingFace](https://huggingface.co/datasets/ai-safety-institute/AgentHarm))
 - **Reference**: [AgentHarm: A Benchmark for Measuring Harmfulness of LLM Agents](https://arxiv.org/abs/2410.09024)
-- **Summary**: Agent misuse benchmark; LLMs are surprisingly compliant with malicious agent requests without jailbreaking. ICLR 2025.
-- **Results**:
-  | Model | Completion Rate | Date | Source |
+- **Summary**: Agent misuse benchmark measuring completion rate of malicious agentic tasks; LLMs are surprisingly compliant with malicious agent requests without jailbreaking. Lower completion rate is safer. ICLR 2025.
+- **Results (Completion Rate, lower is safer)**:
+  | Model | Score | Date | Source |
   |---|---|---|---|
-  | Grok 4 Fast | 8-10% | 2025.09 | [Model Card](https://data.x.ai/2025-09-19-grok-4-fast-model-card.pdf) |
-  | Grok 4.1 | <14% | 2025.11 | [Model Card](https://data.x.ai/2025-11-17-grok-4-1-model-card.pdf) |
+  | Grok 4 (API) | 0.14 | 2025.08 | [Model Card](https://data.x.ai/2025-08-20-grok-4-model-card.pdf) |
+  | Grok 4 Fast (R/NR) | 0.08 / 0.10 | 2025.09 | [Model Card](https://data.x.ai/2025-09-19-grok-4-fast-model-card.pdf) |
+  | Grok 4.1 (T/NT) | 0.14 / 0.04 | 2025.11 | [Model Card](https://data.x.ai/2025-11-17-grok-4-1-model-card.pdf) |
+- **Notes**: Non-Thinking/Non-Reasoning variants generally show better safety (lower completion rates). Grok 4.1 Non-Thinking achieves the lowest rate (0.04).
 
 ---
 
@@ -37,6 +39,25 @@
 - **Scale**: Varies (xAI: 6 languages; OpenAI: 97% refusal)
 - **Dataset**: Closed
 - **Summary**: Measures refusal rate on violative/harmful prompts across categories including cyber exploitation, weapon creation, and social engineering.
+
+---
+
+### Malicious Computer Use Refusal (Anthropic)
+- **Category**: Security4AI > Misuse Risk > Refusal > Agentic
+- **Created by**: Anthropic
+- **Used by**: Anthropic
+- **Scale**: 112 tasks, extended + standard thinking evaluated
+- **Dataset**: Closed
+- **Summary**: Measures refusal rate when models are asked to perform malicious actions through computer use (without mitigations). Higher is safer.
+- **Results (Refusal Rate, higher is safer)**:
+  | Model | Refusal Rate | Date | Source |
+  |---|---|---|---|
+  | Claude Sonnet 4.6 | 99.38% | 2026.02 | [System Card](https://anthropic.com/claude-sonnet-4-6-system-card) |
+  | Claude Opus 4.5 | 88.39% | 2025.11 | [System Card](https://www.anthropic.com/claude-opus-4-5-system-card) |
+  | Claude Opus 4.6 | 88.34% | 2026.02 | [System Card](https://anthropic.com/claude-opus-4-6-system-card) |
+  | Claude Sonnet 4.5 | 86.08% | 2025.09 | [System Card](https://www.anthropic.com/claude-sonnet-4-5-system-card) |
+  | Claude Haiku 4.5 | 77.68% | 2025.10 | [System Card](https://www.anthropic.com/claude-haiku-4-5-system-card) |
+- **Notes**: Claude Sonnet 4.6 achieves the highest refusal rate (99.38%), surpassing all previous models including Opus 4.6 (88.34%).
 
 ---
 
