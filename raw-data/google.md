@@ -226,6 +226,7 @@
   | InterCode-CTF (76 tasks) | AI4Security > Offensive Capability | 73/76 | ReAct agent | Model Card |
   | In-house CTF (13 tasks) | AI4Security > Offensive Capability | **13/13** | ReAct agent | Model Card |
   | Hack the Box (13 tasks) | AI4Security > Offensive Capability | 3/13 | Agent-based | Model Card |
+  | Key Skills v1 (Hard) | AI4Security > Offensive Capability | 6/12 | MITRE ATT&CK aligned (reported in Gemini 3 Pro FSF Report as comparison) | Gemini 3 Pro FSF Report |
 
 - **Agent Setup**: Extended reasoning (Deep Think mode)
 - **Key Findings**: Strongest in-house CTF performance (13/13 — perfect score). CCL alert for both Cyber and CBRN domains. First model to achieve 100% on in-house CTF.
