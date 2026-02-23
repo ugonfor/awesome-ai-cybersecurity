@@ -175,16 +175,20 @@
 
   | Benchmark | Category | Score | Methodology | Source Page/Section |
   |---|---|---|---|---|
-  | Cybench | AI4Security > Offensive Capability | 76.5% | pass@10, 40 professional CTF tasks | System Card |
+  | Cybench | AI4Security > Offensive Capability | 76.5% pass@10; 60% pass@1 | pass@10 (40 tasks) and pass@1 | System Card |
+  | Cybench by category (pass@1) | AI4Security > Offensive Capability | Web: 11/13, Crypto: 14/18, Pwn: 2/7, Rev: 5/6, Network: 3/5 | Category-level breakdown | Opus 4.6 System Card (progression chart) |
+  | CyberGym (pass@1) | AI4Security > Offensive Capability | 29.8% pass@1 | pass@1, real-world CVE detection | Opus 4.6 System Card (cross-model comparison) |
   | CyberGym ($2 cost limit) | AI4Security > Offensive Capability | 28.9% SOTA | Real-world CVE detection, $2 cost cap | System Card |
   | CyberGym (30 trials) | AI4Security > Offensive Capability | 66.7% vuln reproduction | 30 trial attempts, no cost limit | System Card |
-  | CyberGym (30 trials, new vulns) | AI4Security > Offensive Capability | 33%+ new vuln discovery | 30 trial attempts | System Card |
+  | CyberGym (30 trials, new vulns) | AI4Security > Offensive Capability | 33%+ new vuln discovery; 5% single trial | 30 trial attempts (vs Sonnet 4 ~2% single trial) | System Card |
+  | CyberGym (patch generation) | AI4Security > Defensive Capability | 15% semantic match | Generated patches vs reference patches | AI for Cyber Defenders |
   | CMU Cyber Ranges | AI4Security > Offensive Capability | Evaluated | ~50-host network simulations | System Card |
   | Equifax Simulation | AI4Security > Offensive Capability | 2/5 autonomous | 5 independent trial runs | System Card |
+  | Malicious computer use | Security4AI > Misuse Risk | 86.08% refusal rate | Without mitigations | Opus 4.6 System Card |
 
 - **Agent Setup**: Agentic setup with standard Kali Linux tools; operates on ~50-host network simulations; Equifax simulation used only publicly disclosed CVE exploitation
-- **Key Findings**: Cybench score doubled from 3.7 Sonnet's 35.9% to 76.5%; SOTA on CyberGym; first to demonstrate autonomous Equifax breach reproduction (2/5 trials); single-attempt success rate higher than Opus 4.1 with ten attempts
-- **Notes**: CyberGym created by UC Berkeley RDI (1,507 known CVEs). CMU Cyber Ranges developed collaboratively with Carnegie Mellon University's CyLab and Incalmo.
+- **Key Findings**: Cybench pass@10 doubled from 3.7 Sonnet's 35.9% to 76.5%; Cybench pass@1 at 60%; CyberGym pass@1 at 29.8%; SOTA on CyberGym at $2 cost; first to demonstrate autonomous Equifax breach reproduction (2/5 trials); single-attempt success rate higher than Opus 4.1 with ten attempts; patch generation 15% semantic match with merged open-source patches
+- **Notes**: CyberGym created by UC Berkeley RDI (1,507 known CVEs). CMU Cyber Ranges developed collaboratively with Carnegie Mellon University's CyLab and Incalmo. Cybench pass@1 (60%) and category breakdown sourced from Opus 4.6 system card progression chart. CyberGym pass@1 (29.8%) from Opus 4.6 system card cross-model comparison (slightly differs from 28.9% at $2 cost limit). Sonnet 4: novel vulns in ~2% of targets vs Sonnet 4.5: 5% single trial.
 
 ### 11. Claude Haiku 4.5 System Card
 
@@ -198,9 +202,10 @@
   | Benchmark | Category | Score | Methodology | Source Page/Section |
   |---|---|---|---|---|
   | RSP evaluations | Security4AI > Misuse Risk | 87.7% appropriate assistance | Legitimate security research prompts | System Card |
+  | Malicious computer use | Security4AI > Misuse Risk | 77.68% refusal rate | Without mitigations | Opus 4.6 System Card |
 
 - **Agent Setup**: Standard prompting
-- **Key Findings**: Remains ASL-2; 87.7% appropriate assistance rate on legitimate security research queries
+- **Key Findings**: Remains ASL-2; 87.7% appropriate assistance rate on legitimate security research queries; 77.68% malicious computer use refusal rate (lowest among 4.5+ family)
 
 ### 12. Claude Opus 4.5 System Card
 
@@ -214,12 +219,18 @@
   | Benchmark | Category | Score | Methodology | Source Page/Section |
   |---|---|---|---|---|
   | Cybench | AI4Security > Offensive Capability | 82% pass@1 | pass@1, professional CTF tasks | System Card |
-  | CyberGym | AI4Security > Offensive Capability | 50.63% pass@1 | pass@1, real-world CVE detection | System Card |
+  | Cybench by category | AI4Security > Offensive Capability | Web: 12/13, Crypto: 15/18, Pwn: 3/7, Rev: 6/6, Network: 4/5 | Category-level breakdown | System Card |
+  | CyberGym | AI4Security > Offensive Capability | 51.0% pass@1 | pass@1, real-world CVE detection | System Card |
   | Network challenges | AI4Security > Offensive Capability | First unassisted solve | Multi-host network infiltration | System Card |
   | Cyber-harness network challenges | AI4Security > Offensive Capability | Evaluated | Network scenarios | System Card |
+  | Prompt injection (coding, extended thinking) | Security4AI > Model Robustness | 0.3% ASR at k=1; 10.0% at k=200 (no safeguards); 0.1% at k=1; 7.5% at k=200 (with safeguards) | Shade indirect PI in coding env | System Card |
+  | Prompt injection (coding, standard thinking) | Security4AI > Model Robustness | 0.7% ASR at k=1; 17.5% at k=200 (no safeguards); 0.2% at k=1; 7.5% at k=200 (with safeguards) | Shade indirect PI in coding env | System Card |
+  | Prompt injection (browser) | Security4AI > Model Robustness | 1.4% ASR at k=100 (with safeguards) | Browser-based evaluation | System Card |
+  | Malicious computer use | Security4AI > Misuse Risk | 88.39% refusal rate | Without mitigations | System Card |
 
 - **Agent Setup**: Agentic setup with network tools and cyber harness
-- **Key Findings**: First successful network challenge solve without human assistance; 82% Cybench pass@1; 50.63% CyberGym pass@1
+- **Key Findings**: First successful network challenge solve without human assistance; 82% Cybench pass@1; 51.0% CyberGym pass@1; prompt injection in coding: 0.3% at k=1 (extended thinking) to 0.7% at k=1 (standard thinking)
+- **Notes**: CyberGym pass@1 score also reported as 50.63% in some sources; 51.0% from cross-model comparison in Opus 4.6 system card. Cybench category breakdown from Opus 4.6 system card progression chart.
 
 ### 13. Claude Opus 4.6 System Card
 
@@ -232,14 +243,20 @@
 
   | Benchmark | Category | Score | Methodology | Source Page/Section |
   |---|---|---|---|---|
-  | Cybench | AI4Security > Offensive Capability | 93% pass@1 (37 tasks) | pass@1, 37 professional CTF tasks | System Card |
-  | CyberGym | AI4Security > Offensive Capability | Evaluated (1,507 CVEs) | Real-world CVE detection | System Card |
-  | 40 Cybersecurity Investigations | AI4Security > Defensive Capability | 38/40 blind-ranked best | Blind-ranked comparisons | System Card |
-  | Zero-day Discovery | Security4AI > Misuse Risk | 500+ zero-days | Pre-release testing | System Card |
-  | 6 new cybersecurity probes | AI4Security > Offensive Capability | Evaluated | New probe evaluations | System Card |
+  | Cybench | AI4Security > Offensive Capability | 93% pass@1 (37 tasks); ~100% pass@30 (saturated) | pass@1 and pass@30, 37 professional CTF tasks | System Card |
+  | Cybench by category | AI4Security > Offensive Capability | Web: 13/13, Crypto: 16/18, Pwn: 5/7, Rev: 6/6, Network: 5/5 | Category-level breakdown | System Card |
+  | CyberGym | AI4Security > Offensive Capability | 66.6% pass@1 (1,507 CVEs) | pass@1, real-world CVE detection, no thinking, default effort | System Card |
+  | 40 Cybersecurity Investigations | AI4Security > Defensive Capability | 38/40 blind-ranked best | Blind-ranked vs Claude 4.5 models, up to 9 subagents, 100+ tool calls | System Card |
+  | Zero-day Discovery | Security4AI > Misuse Risk | 500+ zero-days | Pre-release testing, validated by internal team and external researchers | System Card |
+  | 6 new cybersecurity probes | Security4AI > Misuse Risk | Evaluated | New probe evaluations for tracking misuse | System Card |
+  | Prompt injection (coding, extended thinking) | Security4AI > Model Robustness | 0.0% ASR at k=1; 0.0% ASR at k=200 (no safeguards); 0.0% at k=1; 0.0% at k=200 (with safeguards) | Shade indirect PI in coding env | System Card |
+  | Prompt injection (coding, standard thinking) | Security4AI > Model Robustness | 0.0% ASR at k=1; 0.0% ASR at k=200 (no safeguards); 0.0% at k=1; 0.0% at k=200 (with safeguards) | Shade indirect PI in coding env | System Card |
+  | Prompt injection (browser) | Security4AI > Model Robustness | ~2% ASR (98% defense rate) | Browser-based evaluation | System Card |
+  | Malicious computer use | Security4AI > Misuse Risk | 88.34% refusal rate | Without mitigations | System Card |
 
 - **Agent Setup**: Full agentic setup with network tools, vulnerability scanning, and investigation capabilities
-- **Key Findings**: Cybench 93% pass@1 (highest reported for any model); best in 38/40 blind-ranked cybersecurity investigations; 500+ zero-day vulnerabilities discovered in pre-release testing; 213-page system card
+- **Key Findings**: Cybench 93% pass@1 (highest reported for any model); saturated Cybench at ~100% pass@30; CyberGym 66.6% pass@1 (highest reported); best in 38/40 blind-ranked cybersecurity investigations vs Claude 4.5 models; 500+ zero-day vulnerabilities discovered in pre-release testing; 0% prompt injection success in coding environments; 213-page system card
+- **Notes**: Cybench saturated -- Anthropic states current benchmarks can no longer track capability progression. CyberGym run with no thinking, default effort, temperature, and top_p, with a "think" tool for interleaved thinking. Slightly more vulnerable to indirect prompt injection in GUI/computer use than predecessor.
 
 ### 14. Claude Sonnet 4.6 System Card
 
@@ -254,9 +271,11 @@
   |---|---|---|---|---|
   | Prompt injection (coding + extended thinking) | Security4AI > Model Robustness | 0% attack success | Coding environment with extended thinking | System Card |
   | Prompt injection (browser) | Security4AI > Model Robustness | <0.3% attack success | Browser-based evaluation | System Card |
+  | Prompt injection (overall) | Security4AI > Model Robustness | Opus-level resistance | First Sonnet-class model with Opus-level PI defense | System Card |
 
 - **Agent Setup**: Evaluated in coding and browser environments with extended thinking
-- **Key Findings**: Near-perfect prompt injection resistance: 0% in coding with extended thinking, <0.3% in browser environments
+- **Key Findings**: Near-perfect prompt injection resistance: 0% in coding with extended thinking, <0.3% in browser environments; first Sonnet-class model to achieve Opus-level prompt injection resistance; major improvement over Sonnet 4.5 in computer use PI defense
+- **Notes**: Matches Opus 4.6 prompt injection resistance -- significant for enterprise deployment at Sonnet-tier pricing
 
 ---
 
@@ -329,14 +348,17 @@
 
   | Benchmark | Category | Score | Methodology | Source Page/Section |
   |---|---|---|---|---|
-  | CyberGym (Sonnet 4) | AI4Security > Offensive Capability | Strongest on public leaderboard | Public leaderboard ranking | AI for Cyber Defenders |
+  | CyberGym (Sonnet 4) | AI4Security > Offensive Capability | Strongest on public leaderboard; ~2% novel vuln discovery (single trial) | Public leaderboard ranking | AI for Cyber Defenders |
   | CyberGym ($2 cost, Sonnet 4.5) | AI4Security > Offensive Capability | 28.9% SOTA | $2 cost limit per challenge | AI for Cyber Defenders |
   | CyberGym (30 trials, Sonnet 4.5) | AI4Security > Offensive Capability | 66.7% vuln reproduction | 30 trial attempts | AI for Cyber Defenders |
-  | CyberGym (30 trials, new vulns, Sonnet 4.5) | AI4Security > Offensive Capability | 33%+ new vuln discovery | 30 trial attempts | AI for Cyber Defenders |
+  | CyberGym (30 trials, new vulns, Sonnet 4.5) | AI4Security > Offensive Capability | 33%+ new vuln discovery; 5% single trial | 30 trial attempts (~$45/task) | AI for Cyber Defenders |
+  | CyberGym (patch generation, Sonnet 4.5) | AI4Security > Defensive Capability | 15% semantic match | Patches vs reference patches for merged PRs | AI for Cyber Defenders |
+  | Cybench (Sonnet 4.5) | AI4Security > Offensive Capability | 76.5% pass@10; 2x from Sonnet 3.7 | pass@10, 40 tasks | AI for Cyber Defenders |
+  | Cybench time comparison | AI4Security > Offensive Capability | 38 min (Claude) vs 60+ min (human est.) | Example malware analysis challenge | AI for Cyber Defenders |
 
 - **Agent Setup**: Automated vulnerability detection agent against real open-source codebases
-- **Key Findings**: Claude Sonnet 4 strongest on CyberGym public leaderboard; Sonnet 4.5 achieved SOTA 28.9% at $2 cost; 66.7% vulnerability reproduction rate; 33%+ previously unknown vulnerability discovery
-- **Notes**: CyberGym created by UC Berkeley RDI, NOT Anthropic. Contains 1,507 known CVEs.
+- **Key Findings**: Claude Sonnet 4 strongest on CyberGym public leaderboard (~2% novel vuln single trial); Sonnet 4.5 achieved SOTA 28.9% at $2 cost; 66.7% vulnerability reproduction rate; 33%+ previously unknown vulnerability discovery (5% single trial); 15% patch generation semantic match; Cybench doubled from 35.9% to 76.5% within 6 months; Claude solved example challenge in 38 min vs human estimate of 60+ min
+- **Notes**: CyberGym created by UC Berkeley RDI, NOT Anthropic. Contains 1,507 known CVEs. Patch generation: 15% of Claude-generated patches matched reference patches semantically; manual analysis confirmed functional equivalence with merged open-source patches.
 
 ### 20. Progress from Frontier Red Team
 
@@ -423,9 +445,61 @@
 | Model | Date | Cybench Score | Methodology | Source |
 |---|---|---|---|---|
 | Claude 3.7 Sonnet | 2025-02 | 35.9% | pass@5, 40 tasks | [System Card](https://anthropic.com/claude-3-7-sonnet-system-card) |
-| Claude Sonnet 4.5 | 2025-09 | 76.5% | pass@10, 40 tasks | [System Card](https://www.anthropic.com/claude-sonnet-4-5-system-card) |
-| Claude Opus 4.5 | 2025-11 | 82% | pass@1, tasks | [System Card](https://www.anthropic.com/claude-opus-4-5-system-card) |
-| Claude Opus 4.6 | 2026-02 | 93% | pass@1, 37 tasks | [System Card](https://anthropic.com/claude-opus-4-6-system-card) |
+| Claude Sonnet 4.5 | 2025-09 | 76.5% (pass@10); 60% (pass@1) | pass@10 and pass@1, 40 tasks | [System Card](https://www.anthropic.com/claude-sonnet-4-5-system-card) |
+| Claude Opus 4.5 | 2025-11 | 82% (pass@1) | pass@1, tasks | [System Card](https://www.anthropic.com/claude-opus-4-5-system-card) |
+| Claude Opus 4.6 | 2026-02 | 93% (pass@1); ~100% (pass@30, saturated) | pass@1 and pass@30, 37 tasks | [System Card](https://anthropic.com/claude-opus-4-6-system-card) |
+
+### Cybench Category Breakdown (pass@1)
+
+| Category | Sonnet 4.5 | Opus 4.5 | Opus 4.6 |
+|---|---|---|---|
+| Web | 11/13 | 12/13 | 13/13 |
+| Crypto | 14/18 | 15/18 | 16/18 |
+| Pwn | 2/7 | 3/7 | 5/7 |
+| Rev | 5/6 | 6/6 | 6/6 |
+| Network | 3/5 | 4/5 | 5/5 |
+| **Total** | **~60%** | **~79%** | **~93%** |
+
+Source: [Opus 4.6 System Card](https://anthropic.com/claude-opus-4-6-system-card) progression chart. Note: Category totals (13+18+7+6+5=49 tasks) differ from original Cybench's 40-task count, suggesting expanded or sub-task-level evaluation. The ~60%/~79%/~93% progression figures are from the system card's own reporting and may use different weighting than raw category sums.
+
+---
+
+## CyberGym Performance Progression
+
+| Model | Date | CyberGym pass@1 | Source |
+|---|---|---|---|
+| Claude Sonnet 4 | 2025-05 | Strongest on public leaderboard (exact % N/A) | [AI for Cyber Defenders](https://red.anthropic.com/2025/ai-for-cyber-defenders/) |
+| Claude Sonnet 4.5 | 2025-09 | 29.8% (also 28.9% at $2 cost limit) | [System Card](https://www.anthropic.com/claude-sonnet-4-5-system-card) |
+| Claude Opus 4.5 | 2025-11 | 51.0% | [System Card](https://www.anthropic.com/claude-opus-4-5-system-card) |
+| Claude Opus 4.6 | 2026-02 | 66.6% | [System Card](https://anthropic.com/claude-opus-4-6-system-card) |
+
+Source: [Opus 4.6 System Card](https://anthropic.com/claude-opus-4-6-system-card) cross-model comparison
+
+---
+
+## Prompt Injection Resistance (Shade Indirect PI in Coding Environments)
+
+| Model | Thinking Mode | ASR k=1 (no safeguards) | ASR k=200 (no safeguards) | ASR k=1 (with safeguards) | ASR k=200 (with safeguards) |
+|---|---|---|---|---|---|
+| Claude Opus 4.6 | Extended | 0.0% | 0.0% | 0.0% | 0.0% |
+| Claude Opus 4.6 | Standard | 0.0% | 0.0% | 0.0% | 0.0% |
+| Claude Opus 4.5 | Extended | 0.3% | 10.0% | 0.1% | 7.5% |
+| Claude Opus 4.5 | Standard | 0.7% | 17.5% | 0.2% | 7.5% |
+
+Source: [Opus 4.6 System Card](https://anthropic.com/claude-opus-4-6-system-card)
+
+---
+
+## Malicious Computer Use Refusal Rates (Without Mitigations)
+
+| Model | Refusal Rate |
+|---|---|
+| Claude Opus 4.6 | 88.34% |
+| Claude Opus 4.5 | 88.39% |
+| Claude Sonnet 4.5 | 86.08% |
+| Claude Haiku 4.5 | 77.68% |
+
+Source: [Opus 4.6 System Card](https://anthropic.com/claude-opus-4-6-system-card)
 
 ---
 
@@ -437,5 +511,7 @@
 - **First successful network challenge without human assistance**: Claude Opus 4.5 (2025-11)
 - **First real-world adversary use documented**: 2025-08 -- Chinese state-sponsored GTG-1002
 - **First 500+ zero-day discovery**: Claude Opus 4.6 (2026-02)
-- **Highest Cybench score**: Claude Opus 4.6 at 93% pass@1 (2026-02)
-- **Best prompt injection resistance**: Claude Sonnet 4.6 at 0% attack success in coding with extended thinking (2026-02)
+- **Highest Cybench score**: Claude Opus 4.6 at 93% pass@1, ~100% pass@30 (2026-02) -- benchmark saturated
+- **Highest CyberGym score**: Claude Opus 4.6 at 66.6% pass@1 (2026-02)
+- **Best prompt injection resistance**: Claude Opus 4.6 at 0.0% ASR in coding (all configurations); Claude Sonnet 4.6 matches Opus-level PI resistance (2026-02)
+- **First Sonnet-class model with Opus-level PI defense**: Claude Sonnet 4.6 (2026-02)
