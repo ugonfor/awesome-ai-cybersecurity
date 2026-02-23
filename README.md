@@ -448,19 +448,19 @@ Each company has its own framework for evaluating cybersecurity risk:
 
 ## Benchmarks
 
-> 70+ benchmarks across three categories. Vendor-specific benchmarks are mapped in [Cross-Comparison](#benchmark-mapping) above.
+> 70+ benchmarks across AI4Security and Security4AI. Vendor-specific benchmarks are mapped in [Cross-Comparison](#benchmark-mapping) above.
 
 | Category | Scope | Vendor | Academic | Full List |
 |---|---|:---:|:---:|---|
-| **Security4AI: Model Robustness** | Jailbreak, prompt injection, adversarial robustness | 6 | 14 | [`benchmarks/security4ai/model-robustness/`](benchmarks/security4ai/model-robustness/) |
 | **AI4Security** | CTF, pentest, vuln detection, threat intel knowledge | 19 | 18 | [`benchmarks/ai4security/`](benchmarks/ai4security/) |
-| **Security4AI: Misuse Risk & Alignment** | Misuse risk, dual-use, deception, alignment | 13 | 2 | [`benchmarks/security4ai/`](benchmarks/security4ai/) |
+| **Security4AI: Model Robustness** | Jailbreak, prompt injection, adversarial robustness | 6 | 14 | [`benchmarks/security4ai/model-robustness/`](benchmarks/security4ai/model-robustness/) |
+| **Security4AI: Misuse Risk** | Harmful request refusal, malicious task completion | 5 | 1 | [`benchmarks/security4ai/misuse-risk/`](benchmarks/security4ai/misuse-risk/) |
+| **Security4AI: Alignment** | Deception, sycophancy, sabotage, stealth | 8 | 1 | [`benchmarks/security4ai/alignment/`](benchmarks/security4ai/alignment/) |
 
 **Notable academic benchmarks** (not used by the 4 major vendors):
 
 | Benchmark | Category | Scale | Venue |
 |---|---|---|---|
-| [HarmBench](https://github.com/centerforaisafety/HarmBench) | Security4AI — Jailbreak | 510 behaviors, 18 attacks, 33 LLMs | ICML 2024 |
 | [CyberSecEval v1-v4](https://github.com/meta-llama/PurpleLlama) | Security4AI — Secure Code | ~1,000+ test cases | Meta |
 | [NYU CTF Bench](https://github.com/NYU-LLM-CTF/NYU_CTF_Bench) | AI4Security — CTF | 200 challenges, 6 categories | NeurIPS 2024 |
 | [SecBench](https://github.com/secbench-git/SecBench) | AI4Security — Knowledge | 47,910 questions, 9 domains | — |
@@ -475,25 +475,23 @@ Each company has its own framework for evaluating cybersecurity risk:
 
 ### Agent Performance Leaderboard
 
-| Agent | Benchmark | Score | vs Human | Source |
-|---|---|---|---|---|
-| **[XBOW](https://xbow.com/)** | [HackerOne](https://www.hackerone.com/) bug bounty | #1 leaderboard (1,060 reports) | Outperformed all humans | [Blog](https://xbow.com/blog/top-1-how-xbow-did-it) |
-| **[ARTEMIS](https://github.com/Stanford-Trinity/ARTEMIS)** | Enterprise pentest (8K hosts) | 2nd/11, 9 vulns found | Beat 9/10 humans, 1/3 cost | [Paper](https://arxiv.org/abs/2512.09882) |
-| **[D-CIPHER](https://github.com/NYU-LLM-CTF/nyuctf_agents)** | [NYU CTF](https://github.com/NYU-LLM-CTF/NYU_CTF_Bench) / [Cybench](https://cybench.github.io/) / [HTB](https://www.hackthebox.com/) | 22% / 22.5% / 44% | — | [Paper](https://arxiv.org/abs/2502.10931) |
-| **[Big Sleep](https://projectzero.google/2024/10/from-naptime-to-big-sleep.html)** | Real-world vuln discovery | First AI zero-day (SQLite) | Novel capability | [Blog](https://projectzero.google/2024/10/from-naptime-to-big-sleep.html) |
-| **[Project Ire](https://www.microsoft.com/en-us/research/blog/project-ire-autonomously-identifies-malware-at-scale/)** | Malware RE | Precision 0.98, recall 0.83 | First AI malware conviction | [Blog](https://www.microsoft.com/en-us/research/blog/project-ire-autonomously-identifies-malware-at-scale/) |
-| **[Security Copilot](https://www.microsoft.com/en-us/security/business/ai-machine-learning/microsoft-copilot-security)** | Phishing triage | 77% accuracy improvement | 40+ hrs/week saved | [Microsoft](https://www.microsoft.com/en-us/security/business/ai-machine-learning/microsoft-copilot-security) |
-| **[CAI](https://github.com/aliasrobotics/cai)** | CTF benchmarks | 3,600x human speed | — | [Paper](https://arxiv.org/abs/2504.06017) |
+| Agent | Type | Benchmark | Score | vs Human | Source |
+|---|---|---|---|---|---|
+| **[XBOW](https://xbow.com/)** | Offensive | [HackerOne](https://www.hackerone.com/) bug bounty | #1 leaderboard (1,060 reports) | Outperformed all humans | [Blog](https://xbow.com/blog/top-1-how-xbow-did-it) |
+| **[ARTEMIS](https://github.com/Stanford-Trinity/ARTEMIS)** | Offensive | Enterprise pentest (8K hosts) | 2nd/11, 9 vulns found | Beat 9/10 humans, 1/3 cost | [Paper](https://arxiv.org/abs/2512.09882) |
+| **[D-CIPHER](https://github.com/NYU-LLM-CTF/nyuctf_agents)** | Offensive | [NYU CTF](https://github.com/NYU-LLM-CTF/NYU_CTF_Bench) / [Cybench](https://cybench.github.io/) / [HTB](https://www.hackthebox.com/) | 22% / 22.5% / 44% | — | [Paper](https://arxiv.org/abs/2502.10931) |
+| **[CAI](https://github.com/aliasrobotics/cai)** | Offensive | CTF benchmarks | 3,600x human speed | — | [Paper](https://arxiv.org/abs/2504.06017) |
+| **[Big Sleep](https://projectzero.google/2024/10/from-naptime-to-big-sleep.html)** | Defensive | Real-world vuln discovery | First AI zero-day (SQLite) | Novel capability | [Blog](https://projectzero.google/2024/10/from-naptime-to-big-sleep.html) |
+| **[Security Copilot](https://www.microsoft.com/en-us/security/business/ai-machine-learning/microsoft-copilot-security)** | Defensive | Phishing triage | 77% accuracy improvement | 40+ hrs/week saved | [Microsoft](https://www.microsoft.com/en-us/security/business/ai-machine-learning/microsoft-copilot-security) |
+| **[Project Ire](https://www.microsoft.com/en-us/research/blog/project-ire-autonomously-identifies-malware-at-scale/)** | Defensive | Malware RE | Precision 0.98, recall 0.83 | First AI malware conviction | [Blog](https://www.microsoft.com/en-us/research/blog/project-ire-autonomously-identifies-malware-at-scale/) |
 
 ### Offensive — Top Picks
 
+> Agents not already shown in the Leaderboard above.
+
 | Agent | Why it matters |
 |---|---|
-| **[XBOW](https://xbow.com/)** | #1 on HackerOne leaderboard 2025 — found vulns in Amazon, Disney, PayPal |
-| **[ARTEMIS](https://github.com/Stanford-Trinity/ARTEMIS)** | Beat 9/10 human pentesters in live enterprise test at 1/3 the cost |
-| **[D-CIPHER](https://github.com/NYU-LLM-CTF/nyuctf_agents)** | SOTA on NYU CTF (22%), Cybench (22.5%), HackTheBox (44%) |
 | **[PentestGPT](https://github.com/GreyDGL/PentestGPT)** | First LLM pentest agent — USENIX Security 2024 |
-| **[CAI](https://github.com/aliasrobotics/cai)** | Open-source, 300+ models, 3,600x over human pentesters |
 
 <details>
 <summary>16 more offensive agents</summary>
@@ -521,11 +519,10 @@ Each company has its own framework for evaluating cybersecurity risk:
 
 ### Defensive — Top Picks
 
+> Agents not already shown in the Leaderboard above.
+
 | Agent | Why it matters |
 |---|---|
-| **[Big Sleep](https://projectzero.google/2024/10/from-naptime-to-big-sleep.html)** | First AI-discovered real-world zero-day (SQLite) — Google P0 + DeepMind |
-| **[Microsoft Security Copilot](https://www.microsoft.com/en-us/security/business/ai-machine-learning/microsoft-copilot-security)** | 37+ agents, Phishing Triage improves accuracy 77% |
-| **[Project Ire](https://www.microsoft.com/en-us/research/blog/project-ire-autonomously-identifies-malware-at-scale/)** | Autonomous malware RE, precision 0.98 — Black Hat 2025 |
 | **[Charlotte AI](https://www.crowdstrike.com/en-us/platform/charlotte-ai/)** | >98% triage accuracy, Agentic SOAR — CrowdStrike |
 | **[Cortex XSIAM](https://www.paloaltonetworks.com/cortex/cortex-xsiam)** | Trained on 1.2B playbooks, 98% MTTR reduction — Palo Alto |
 
