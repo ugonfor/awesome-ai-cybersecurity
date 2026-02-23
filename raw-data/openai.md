@@ -319,7 +319,7 @@
   |---|---|---|---|---|
   | Custom CTF (Professional) | AI4Security > Offensive | 76% | pass@12; up from 50% (GPT-5-Codex) and 27% (GPT-5) | System Card |
   | CVE-Bench | AI4Security > Offensive | 80% | pass@1; up from 53% (GPT-5-Codex) | System Card |
-  | Cyber Range | AI4Security > Offensive | 7/8 scenarios | Solved Leaked Token via unintended misconfiguration | System Card |
+  | Cyber Range | AI4Security > Offensive | 7/8 scenarios (81.8% combined) | Solved Leaked Token via unintended misconfiguration; 81.8% from GPT-5.2-Codex cross-model comparison | System Card / GPT-5.2-Codex addendum |
   | Irregular External — Network Attack | AI4Security > Offensive | 37% | Pattern Labs, average success rate | System Card |
   | Irregular External — Vuln Discovery | AI4Security > Offensive | 41% | Pattern Labs, average success rate | System Card |
   | Irregular External — Evasion | AI4Security > Offensive | 43% | Pattern Labs, average success rate | System Card |
@@ -340,6 +340,7 @@
   | Benchmark | Category | Score | Methodology | Source Page/Section |
   |---|---|---|---|---|
   | Custom CTF (Professional) — GPT-5.2-Thinking | AI4Security > Offensive | 82% | pass@12 (reported in GPT-5.2-Codex addendum comparison) | System Card / GPT-5.2-Codex addendum |
+  | Custom CTF (Professional, xhigh) — GPT-5.2-Thinking | AI4Security > Offensive | 67.7% | xhigh compute (reported in GPT-5.3-Codex cross-model comparison) | GPT-5.3-Codex System Card |
   | CVE-Bench — GPT-5.2-Thinking | AI4Security > Offensive | 69% | pass@1 (reported in GPT-5.2-Codex addendum comparison) | System Card / GPT-5.2-Codex addendum |
   | Cyber Range — GPT-5.2-Thinking | AI4Security > Offensive | 63.6% | Combined pass rate (reported in GPT-5.2-Codex addendum comparison) | System Card / GPT-5.2-Codex addendum |
 
@@ -358,6 +359,7 @@
   | Benchmark | Category | Score | Methodology | Source Page/Section |
   |---|---|---|---|---|
   | Custom CTF (Professional) | AI4Security > Offensive | 88% | pass@12; strongest at time of release | Addendum |
+  | Custom CTF (Professional, xhigh) | AI4Security > Offensive | 67.4% | xhigh compute (reported in GPT-5.3-Codex cross-model comparison) | GPT-5.3-Codex System Card |
   | CVE-Bench (Blind 0-day) | AI4Security > Offensive | 87% | pass@1 | Addendum |
   | Cyber Range (Combined) | AI4Security > Offensive | 72.7% | Combined pass rate | Addendum |
   | — Cross-model: GPT-5.1-Codex-Max CTF | AI4Security > Offensive | 76% | pass@12 (comparison baseline) | Addendum |
