@@ -62,7 +62,7 @@ The AI cybersecurity space is fragmented: OpenAI, Anthropic, Google, and xAI eac
 | GPT-5.2 | OpenAI | — | [82%](https://cdn.openai.com/pdf/3a4153c8-c748-4b71-8e31-aecbde944f8d/oai_5_2_system-card.pdf) | [63.6%](https://cdn.openai.com/pdf/3a4153c8-c748-4b71-8e31-aecbde944f8d/oai_5_2_system-card.pdf) | 2025.12 |
 | GPT-5-Codex | OpenAI | — | [~50%](https://cdn.openai.com/pdf/97cc5669-7a25-4e63-b15f-5fd5bdc4d149/gpt-5-codex-system-card.pdf) | — | 2025.09 |
 | Claude Opus 4.6 | Anthropic | [**93% p@1**](https://anthropic.com/claude-opus-4-6-system-card) | — | — | 2026.02 |
-| Claude Sonnet 4.6 | Anthropic | — | — | — | 2026.02 |
+| Claude Sonnet 4.6 | Anthropic | [90% p@1](https://anthropic.com/claude-sonnet-4-6-system-card) | — | — | 2026.02 |
 | Claude Opus 4.5 | Anthropic | [82% p@1](https://www.anthropic.com/claude-opus-4-5-system-card) | — | — | 2025.11 |
 | Gemini 3.1 Pro | Google | — | — | — | 2026.02 |
 | Gemini 3 Pro | Google | — | [11/12 Key Skills](https://storage.googleapis.com/deepmind-media/gemini/gemini_3_pro_fsf_report.pdf) | — | 2025.11 |
@@ -160,22 +160,17 @@ The AI cybersecurity space is fragmented: OpenAI, Anthropic, Google, and xAI eac
 
 > Prompt injection resistance, jailbreak defense, adversarial robustness.
 
-| Model | Company | Benchmark | Score | Date | Source |
-|---|---|---|---|---|---|
-| GPT-5.3-Codex | OpenAI | — | — | 2026.02 | — |
-| GPT-5.2-Codex | OpenAI | — | — | 2025.12 | — |
-| Operator (GPT-4o) | OpenAI | Prompt Injection | 99% recall | 2025.01 | [System Card](https://cdn.openai.com/operator_system_card.pdf) |
-| Claude Opus 4.6 | Anthropic | Prompt Injection (coding, ext. thinking) | **0% ASR** | 2026.02 | [System Card](https://anthropic.com/claude-opus-4-6-system-card) |
-| Claude Opus 4.6 | Anthropic | Prompt Injection (browser) | ~2% ASR | 2026.02 | [System Card](https://anthropic.com/claude-opus-4-6-system-card) |
-| Claude Sonnet 4.6 | Anthropic | Prompt Injection (coding + ext. thinking) | **0% attack success** | 2026.02 | [System Card](https://anthropic.com/claude-sonnet-4-6-system-card) |
-| Claude Sonnet 4.6 | Anthropic | Prompt Injection (browser) | <0.3% attack success | 2026.02 | [System Card](https://anthropic.com/claude-sonnet-4-6-system-card) |
-| Gemini 3.1 Pro | Google | — | — | 2026.02 | — |
-| Gemini 3 Pro | Google | — | — | 2025.11 | — |
-| Gemini 3 Flash | Google | — | — | 2025.12 | — |
-| Gemini 2.0 → 2.5 | Google | [TAP](https://arxiv.org/abs/2312.02119) Attack Success | 99.8% → 53.6% | 2025.05 | [Paper](https://arxiv.org/abs/2505.14534) |
-| Grok 4.1 | xAI | [AgentDojo](https://arxiv.org/abs/2406.13352) | 0.05 (T) / 0.01 (NT) ASR | 2025.11 | [Model Card](https://data.x.ai/2025-11-17-grok-4-1-model-card.pdf) |
-| Grok 4 Fast | xAI | [AgentDojo](https://arxiv.org/abs/2406.13352) | 0–3% attack success | 2025.09 | [Model Card](https://data.x.ai/2025-09-19-grok-4-fast-model-card.pdf) |
-| Grok 4 | xAI | [AgentDojo](https://arxiv.org/abs/2406.13352) | 0.02 ASR | 2025.08 | [Model Card](https://data.x.ai/2025-08-20-grok-4-model-card.pdf) |
+| Model | Company | PI (Coding) | PI (Browser) | [AgentDojo](https://arxiv.org/abs/2406.13352) | Date | Source |
+|---|---|---|---|---|---|---|
+| Claude Opus 4.6 | Anthropic | **0% ASR** | ~2% ASR | — | 2026.02 | [System Card](https://anthropic.com/claude-opus-4-6-system-card) |
+| Claude Sonnet 4.6 | Anthropic | **0% ASR** | <0.3% ASR | — | 2026.02 | [System Card](https://anthropic.com/claude-sonnet-4-6-system-card) |
+| Operator (GPT-4o) | OpenAI | 99% recall | — | — | 2025.01 | [System Card](https://cdn.openai.com/operator_system_card.pdf) |
+| Gemini 2.5 | Google | — | — | — | 2025.05 | [TAP](https://arxiv.org/abs/2505.14534): 99.8% → 53.6% ASR (vs 2.0) |
+| Grok 4.1 | xAI | — | — | 0.05 (T) / 0.01 (NT) | 2025.11 | [Model Card](https://data.x.ai/2025-11-17-grok-4-1-model-card.pdf) |
+| Grok 4 Fast | xAI | — | — | 0–3% ASR | 2025.09 | [Model Card](https://data.x.ai/2025-09-19-grok-4-fast-model-card.pdf) |
+| Grok 4 | xAI | — | — | 0.02 ASR | 2025.08 | [Model Card](https://data.x.ai/2025-08-20-grok-4-model-card.pdf) |
+
+> GPT-5.3-Codex, GPT-5.2-Codex, Gemini 3.1 Pro, Gemini 3 Pro, Gemini 3 Flash: no robustness benchmarks reported in system cards.
 
 ---
 
@@ -312,6 +307,7 @@ Each company has its own framework for evaluating cybersecurity risk:
 | Claude Opus 4 | Anthropic | Cybench (39 tasks) | 22/39 | 2025.05 | [System Card](https://www.anthropic.com/claude-4-system-card) |
 | Claude Sonnet 4.5 | Anthropic | Cybench (37 tasks) | 76.5% pass@10 | 2025.09 | [System Card](https://www.anthropic.com/claude-sonnet-4-5-system-card) |
 | Claude Opus 4.5 | Anthropic | Cybench | 82% pass@1 | 2025.11 | [System Card](https://www.anthropic.com/claude-opus-4-5-system-card) |
+| Claude Sonnet 4.6 | Anthropic | Cybench (37 tasks) | 90% pass@1 | 2026.02 | [System Card](https://anthropic.com/claude-sonnet-4-6-system-card) |
 | Claude Opus 4.6 | Anthropic | Cybench (37 tasks) | 93% pass@1 | 2026.02 | [System Card](https://anthropic.com/claude-opus-4-6-system-card) |
 | Gemini 2.0 Flash | Google | Pattern Labs External CTFs | 11/50 | 2025.04 | [Model Card](https://modelcards.withgoogle.com/assets/documents/gemini-2-flash.pdf) |
 | Gemini 2.5 Pro | Google | InterCode-CTF | 76/76 (saturated) | 2025.06 | [Model Card](https://modelcards.withgoogle.com/assets/documents/gemini-2.5-pro.pdf) |

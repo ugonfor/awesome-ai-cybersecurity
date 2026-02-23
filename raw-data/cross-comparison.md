@@ -56,6 +56,7 @@
 | Claude Opus 4 | Anthropic | Custom CTF (easy/med/hard) | 11/11 easy, 1/2 med, 0/2 hard | 2025.05 | [Claude 4 System Card](https://www.anthropic.com/claude-4-system-card) |
 | Claude Sonnet 4.5 | Anthropic | Cybench (40 tasks) | 76.5% (pass@10) | 2025.09 | [Claude Sonnet 4.5 System Card](https://www.anthropic.com/claude-sonnet-4-5-system-card) |
 | Claude Opus 4.5 | Anthropic | Cybench | 82% pass@1 | 2025.11 | [Claude Opus 4.5 System Card](https://www.anthropic.com/claude-opus-4-5-system-card) |
+| Claude Sonnet 4.6 | Anthropic | Cybench (37 tasks) | 90% pass@1 | 2026.02 | [Claude Sonnet 4.6 System Card](https://anthropic.com/claude-sonnet-4-6-system-card) |
 | Claude Opus 4.6 | Anthropic | Cybench (37 tasks) | 93% pass@1 | 2026.02 | [Claude Opus 4.6 System Card](https://anthropic.com/claude-opus-4-6-system-card) |
 | Gemini 2.5 Deep Think | Google | InterCode-CTF (Easy, 76 tasks) | 73/76 | 2025.08 | [Gemini 2.5 Deep Think Model Card](https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Deep-Think-Model-Card.pdf) |
 | Gemini 2.5 Deep Think | Google | In-house CTF (Medium, 13 tasks) | 13/13 | 2025.08 | [Gemini 2.5 Deep Think Model Card](https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Deep-Think-Model-Card.pdf) |
