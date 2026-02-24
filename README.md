@@ -161,19 +161,18 @@ The AI cybersecurity space is fragmented: OpenAI, Anthropic, Google, and xAI eac
 
 > Investigation, threat analysis, SOC automation.
 
-| Model | Company | Benchmark | Score | Source |
-|---|---|---|---|---|
-| GPT-5.3-Codex | OpenAI | — | — | — |
-| GPT-5.2-Codex | OpenAI | — | — | — |
-| Claude Opus 4.6 | Anthropic | 40 cyber investigations | **38/40 best** (blind-ranked) | [System Card](https://anthropic.com/claude-opus-4-6-system-card) |
-| Claude Opus 4.6 | Anthropic | CAISI Assessment (US CAISI) | Novel vulns in open & closed source | [System Card](https://anthropic.com/claude-opus-4-6-system-card) |
-| Claude Sonnet 4.6 | Anthropic | — | — | — |
-| Gemini 3.1 Pro | Google | — | — | — |
-| Gemini 3 Flash | Google | — | — | — |
-| Gemini 3 Pro | Google | — | — | — |
-| Grok 4.1 | xAI | — | — | — |
-| Grok 4.1 Fast | xAI | — | — | — |
-| Grok 4 Fast | xAI | — | — | — |
+| Model | Company | Cyber Investigations | CAISI Assessment |
+|---|---|---|---|
+| GPT-5.3-Codex | OpenAI | — | — |
+| GPT-5.2-Codex | OpenAI | — | — |
+| Claude Opus 4.6 | Anthropic | [**38/40 best** (blind-ranked)](https://anthropic.com/claude-opus-4-6-system-card) | [Novel vulns in open & closed source](https://anthropic.com/claude-opus-4-6-system-card) |
+| Claude Sonnet 4.6 | Anthropic | — | — |
+| Gemini 3.1 Pro | Google | — | — |
+| Gemini 3 Flash | Google | — | — |
+| Gemini 3 Pro | Google | — | — |
+| Grok 4.1 | xAI | — | — |
+| Grok 4.1 Fast | xAI | — | — |
+| Grok 4 Fast | xAI | — | — |
 
 ---
 
