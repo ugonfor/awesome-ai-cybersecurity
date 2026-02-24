@@ -258,15 +258,11 @@ tbody tr:hover td { background: var(--table-row-hover); }
 /* Company group row */
 tr.company-group td { border-top: 2px solid var(--border); }
 
-/* Row company background tint */
-tr.row-openai { background: #d6f5e8; }
-tr.row-anthropic { background: #fef0c7; }
-tr.row-google { background: #dbe8fd; }
-tr.row-xai { background: #e8e8ee; }
-[data-theme="dark"] tr.row-openai { background: #0f2e1e; }
-[data-theme="dark"] tr.row-anthropic { background: #2a2008; }
-[data-theme="dark"] tr.row-google { background: #0f1d30; }
-[data-theme="dark"] tr.row-xai { background: #222228; }
+/* Company cell color chip */
+tr.row-openai td:nth-child(2) { color: var(--openai); font-weight: 600; }
+tr.row-anthropic td:nth-child(2) { color: var(--anthropic); font-weight: 600; }
+tr.row-google td:nth-child(2) { color: var(--google); font-weight: 600; }
+tr.row-xai td:nth-child(2) { color: var(--xai); font-weight: 600; }
 
 /* ===== Callouts ===== */
 .callout {
