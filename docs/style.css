@@ -185,8 +185,8 @@ tbody td {
   padding: 9px 14px; border-bottom: 1px solid var(--border-light);
   color: var(--text); vertical-align: middle;
 }
-tbody tr:nth-child(even) td { background: var(--table-stripe); }
-tbody tr:hover td { background: var(--table-row-hover); }
+tbody tr:nth-child(even):not([class*="row-"]) td { background: var(--table-stripe); }
+tbody tr:hover:not([class*="row-"]) td { background: var(--table-row-hover); }
 
 /* Sticky first column */
 .sticky-col table th:first-child,
@@ -200,7 +200,7 @@ tbody tr:hover td { background: var(--table-row-hover); }
 .sticky-col table td:first-child {
   background: var(--bg);
 }
-.sticky-col table tr:nth-child(even) td:first-child {
+.sticky-col table tr:nth-child(even):not([class*="row-"]) td:first-child {
   background: var(--table-stripe);
 }
 
