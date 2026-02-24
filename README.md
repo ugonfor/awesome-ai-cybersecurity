@@ -161,7 +161,7 @@ The AI cybersecurity space is fragmented: OpenAI, Anthropic, Google, and xAI eac
 
 > Investigation, threat analysis, SOC automation.
 
-| Model | Company | Cyber Investigations | CAISI Assessment |
+| Model | Company | Cyber Investigations *(internal)* | [CAISI Assessment](https://www.nist.gov/artificial-intelligence/us-ai-safety-institute) |
 |---|---|---|---|
 | GPT-5.3-Codex | OpenAI | — | — |
 | GPT-5.2-Codex | OpenAI | — | — |
