@@ -258,6 +258,29 @@ tbody tr:hover td { background: var(--table-row-hover); }
 /* Company group row */
 tr.company-group td { border-top: 2px solid var(--border); }
 
+/* Row company accent — left border + subtle background tint */
+tr.row-openai td:first-child { border-left: 3px solid var(--openai); }
+tr.row-anthropic td:first-child { border-left: 3px solid var(--anthropic); }
+tr.row-google td:first-child { border-left: 3px solid var(--google); }
+tr.row-xai td:first-child { border-left: 3px solid var(--xai); }
+tr.row-openai { background: #f0faf6; }
+tr.row-anthropic { background: #fefbf0; }
+tr.row-google { background: #f2f6fe; }
+tr.row-xai { background: #f6f6f8; }
+[data-theme="dark"] tr.row-openai { background: #0a1f14; }
+[data-theme="dark"] tr.row-anthropic { background: #1a1508; }
+[data-theme="dark"] tr.row-google { background: #0a1420; }
+[data-theme="dark"] tr.row-xai { background: #18181a; }
+tr.row-openai:hover, tr.row-anthropic:hover, tr.row-google:hover, tr.row-xai:hover {
+  filter: brightness(0.97);
+}
+[data-theme="dark"] tr.row-openai:hover,
+[data-theme="dark"] tr.row-anthropic:hover,
+[data-theme="dark"] tr.row-google:hover,
+[data-theme="dark"] tr.row-xai:hover {
+  filter: brightness(1.15);
+}
+
 /* ===== Callouts ===== */
 .callout {
   padding: 14px 18px; border-radius: var(--radius); margin: 12px 0;
