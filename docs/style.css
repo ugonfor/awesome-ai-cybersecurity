@@ -259,14 +259,14 @@ tbody tr:hover td { background: var(--table-row-hover); }
 tr.company-group td { border-top: 2px solid var(--border); }
 
 /* Row company background tint */
-tr.row-openai { background: #edf8f3; }
-tr.row-anthropic { background: #fdf8ec; }
-tr.row-google { background: #eef3fc; }
-tr.row-xai { background: #f3f4f6; }
-[data-theme="dark"] tr.row-openai { background: #0a1f14; }
-[data-theme="dark"] tr.row-anthropic { background: #1a1508; }
-[data-theme="dark"] tr.row-google { background: #0a1420; }
-[data-theme="dark"] tr.row-xai { background: #18181a; }
+tr.row-openai { background: #d6f5e8; }
+tr.row-anthropic { background: #fef0c7; }
+tr.row-google { background: #dbe8fd; }
+tr.row-xai { background: #e8e8ee; }
+[data-theme="dark"] tr.row-openai { background: #0f2e1e; }
+[data-theme="dark"] tr.row-anthropic { background: #2a2008; }
+[data-theme="dark"] tr.row-google { background: #0f1d30; }
+[data-theme="dark"] tr.row-xai { background: #222228; }
 
 /* ===== Callouts ===== */
 .callout {
