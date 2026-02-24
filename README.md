@@ -60,22 +60,22 @@ The AI cybersecurity space is fragmented: OpenAI, Anthropic, Google, and xAI eac
 
 | Model | Company | [Cybench](https://cybench.github.io/) | CTF | Cyber Range |
 |---|---|---|---|---|
-| GPT-5.3-Codex | OpenAI | — | [88%](https://cdn.openai.com/pdf/23eca107-a9b1-4d2c-b156-7deb4fbc697c/GPT-5-3-Codex-System-Card-02.pdf) *(internal)* | [80%](https://cdn.openai.com/pdf/23eca107-a9b1-4d2c-b156-7deb4fbc697c/GPT-5-3-Codex-System-Card-02.pdf) *(internal)* |
-| GPT-5.2-Codex | OpenAI | — | [88%](https://cdn.openai.com/pdf/ac7c37ae-7f4c-4442-b741-2eabdeaf77e0/oai_5_2_Codex.pdf) *(internal)* | [72.7%](https://cdn.openai.com/pdf/ac7c37ae-7f4c-4442-b741-2eabdeaf77e0/oai_5_2_Codex.pdf) *(internal)* |
-| GPT-5.2 | OpenAI | — | [82%](https://cdn.openai.com/pdf/3a4153c8-c748-4b71-8e31-aecbde944f8d/oai_5_2_system-card.pdf) *(internal)* | [63.6%](https://cdn.openai.com/pdf/3a4153c8-c748-4b71-8e31-aecbde944f8d/oai_5_2_system-card.pdf) *(internal)* |
-| GPT-5.1-Codex-Max | OpenAI | — | [76%](https://cdn.openai.com/pdf/2a7d98b1-57e5-4147-8d0e-683894d782ae/5p1_codex_max_card_03.pdf) *(internal)* | [60%](https://cdn.openai.com/pdf/23eca107-a9b1-4d2c-b156-7deb4fbc697c/GPT-5-3-Codex-System-Card-02.pdf) *(internal)* |
-| GPT-5-Codex | OpenAI | — | [~50%](https://cdn.openai.com/pdf/97cc5669-7a25-4e63-b15f-5fd5bdc4d149/gpt-5-codex-system-card.pdf) *(internal)* | — |
+| GPT-5.3-Codex | OpenAI | — | [88%](https://cdn.openai.com/pdf/23eca107-a9b1-4d2c-b156-7deb4fbc697c/GPT-5-3-Codex-System-Card-02.pdf#page=13) *(internal)* | [80%](https://cdn.openai.com/pdf/23eca107-a9b1-4d2c-b156-7deb4fbc697c/GPT-5-3-Codex-System-Card-02.pdf#page=16) *(internal)* |
+| GPT-5.2-Codex | OpenAI | — | [88%](https://cdn.openai.com/pdf/ac7c37ae-7f4c-4442-b741-2eabdeaf77e0/oai_5_2_Codex.pdf#page=13) *(internal)* | [72.7%](https://cdn.openai.com/pdf/ac7c37ae-7f4c-4442-b741-2eabdeaf77e0/oai_5_2_Codex.pdf#page=15) *(internal)* |
+| GPT-5.2 | OpenAI | — | [82%](https://cdn.openai.com/pdf/3a4153c8-c748-4b71-8e31-aecbde944f8d/oai_5_2_system-card.pdf#page=13) *(internal)* | [63.6%](https://cdn.openai.com/pdf/3a4153c8-c748-4b71-8e31-aecbde944f8d/oai_5_2_system-card.pdf#page=15) *(internal)* |
+| GPT-5.1-Codex-Max | OpenAI | — | [76%](https://cdn.openai.com/pdf/2a7d98b1-57e5-4147-8d0e-683894d782ae/5p1_codex_max_card_03.pdf#page=15) *(internal)* | [60%](https://cdn.openai.com/pdf/23eca107-a9b1-4d2c-b156-7deb4fbc697c/GPT-5-3-Codex-System-Card-02.pdf#page=16) *(internal)* |
+| GPT-5-Codex | OpenAI | — | [~50%](https://cdn.openai.com/pdf/97cc5669-7a25-4e63-b15f-5fd5bdc4d149/gpt-5-codex-system-card.pdf#page=5) *(internal)* | — |
 | Claude Opus 4.6 | Anthropic | [**93% p@1**](https://anthropic.com/claude-opus-4-6-system-card) | — | — |
 | Claude Sonnet 4.6 | Anthropic | [90% p@1](https://anthropic.com/claude-sonnet-4-6-system-card) | — | — |
 | Claude Opus 4.5 | Anthropic | [82% p@1](https://www.anthropic.com/claude-opus-4-5-system-card) | — | — |
 | Gemini 3.1 Pro | Google | — | — | — |
 | Gemini 3 Flash | Google | — | — | — |
-| Gemini 3 Pro | Google | — | [11/12](https://storage.googleapis.com/deepmind-media/gemini/gemini_3_pro_fsf_report.pdf) *(internal)* | — |
-| Gemini 2.5 DT | Google | — | [13/13](https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Deep-Think-Model-Card.pdf) | — |
-| Grok 4.1 | xAI | [39%](https://data.x.ai/2025-11-17-grok-4-1-model-card.pdf) | — | — |
+| Gemini 3 Pro | Google | — | [11/12](https://storage.googleapis.com/deepmind-media/gemini/gemini_3_pro_fsf_report.pdf#page=5) *(internal)* | — |
+| Gemini 2.5 DT | Google | — | [13/13](https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Deep-Think-Model-Card.pdf#page=8) | — |
+| Grok 4.1 | xAI | [39%](https://data.x.ai/2025-11-17-grok-4-1-model-card.pdf#page=4) | — | — |
 | Grok 4.1 Fast | xAI | — | — | — |
-| Grok 4 Fast | xAI | [30%](https://data.x.ai/2025-09-19-grok-4-fast-model-card.pdf) | — | — |
-| Grok 4 | xAI | [43%](https://data.x.ai/2025-08-20-grok-4-model-card.pdf) | — | — |
+| Grok 4 Fast | xAI | [30%](https://data.x.ai/2025-09-19-grok-4-fast-model-card.pdf#page=6) | — | — |
+| Grok 4 | xAI | [43%](https://data.x.ai/2025-08-20-grok-4-model-card.pdf#page=6) | — | — |
 
 > *(internal)* = proprietary benchmark, not independently reproducible. Unmarked = public benchmark. GDM In-house CTF is [open-sourced](https://github.com/google-deepmind/dangerous-capability-evaluations) via UK AISI Inspect. Key Skills (Google, with Pattern Labs) is internal.
 
@@ -117,9 +117,9 @@ The AI cybersecurity space is fragmented: OpenAI, Anthropic, Google, and xAI eac
 
 | Model | Company | [CVE-Bench](benchmarks/ai4security/offensive/) | [CyberGym](https://red.anthropic.com/2025/ai-for-cyber-defenders/) | Zero-day |
 |---|---|---|---|---|
-| GPT-5.3-Codex | OpenAI | [**90%**](https://cdn.openai.com/pdf/23eca107-a9b1-4d2c-b156-7deb4fbc697c/GPT-5-3-Codex-System-Card-02.pdf) | — | — |
-| GPT-5.2-Codex | OpenAI | [87%](https://cdn.openai.com/pdf/ac7c37ae-7f4c-4442-b741-2eabdeaf77e0/oai_5_2_Codex.pdf) | — | — |
-| GPT-5.1-Codex-Max | OpenAI | [80%](https://cdn.openai.com/pdf/2a7d98b1-57e5-4147-8d0e-683894d782ae/5p1_codex_max_card_03.pdf) | — | — |
+| GPT-5.3-Codex | OpenAI | [**90%**](https://cdn.openai.com/pdf/23eca107-a9b1-4d2c-b156-7deb4fbc697c/GPT-5-3-Codex-System-Card-02.pdf#page=14) | — | — |
+| GPT-5.2-Codex | OpenAI | [87%](https://cdn.openai.com/pdf/ac7c37ae-7f4c-4442-b741-2eabdeaf77e0/oai_5_2_Codex.pdf#page=14) | — | — |
+| GPT-5.1-Codex-Max | OpenAI | [80%](https://cdn.openai.com/pdf/2a7d98b1-57e5-4147-8d0e-683894d782ae/5p1_codex_max_card_03.pdf#page=16) | — | — |
 | GPT-5-Codex | OpenAI | [53%](https://cdn.openai.com/pdf/97cc5669-7a25-4e63-b15f-5fd5bdc4d149/gpt-5-codex-system-card.pdf) | — | — |
 | GPT-5 | OpenAI | [43%](https://cdn.openai.com/gpt-5-system-card.pdf) | — | — |
 | Claude Opus 4.6 | Anthropic | — | [**66.6% p@1**](https://anthropic.com/claude-opus-4-6-system-card) | [**500+ novel**](https://anthropic.com/claude-opus-4-6-system-card) |
@@ -150,10 +150,10 @@ The AI cybersecurity space is fragmented: OpenAI, Anthropic, Google, and xAI eac
 | Gemini 3 Flash | Google | — | — | — |
 | Gemini 3 Pro | Google | — | — | — |
 | Sec-Gemini v1 | Google | — | [~86.5%](https://security.googleblog.com/2025/04/google-launches-sec-gemini-v1-new.html) (+11pp over next best) | — |
-| Grok 4.1 | xAI | [**84%**](https://data.x.ai/2025-11-17-grok-4-1-model-card.pdf) | — | — |
+| Grok 4.1 | xAI | [**84%**](https://data.x.ai/2025-11-17-grok-4-1-model-card.pdf#page=4) | — | — |
 | Grok 4.1 Fast | xAI | — | — | — |
-| Grok 4 Fast | xAI | [81.4%](https://data.x.ai/2025-09-19-grok-4-fast-model-card.pdf) | — | — |
-| Grok 4 | xAI | [79%](https://data.x.ai/2025-08-20-grok-4-model-card.pdf) | — | — |
+| Grok 4 Fast | xAI | [81.4%](https://data.x.ai/2025-09-19-grok-4-fast-model-card.pdf#page=6) | — | — |
+| Grok 4 | xAI | [79%](https://data.x.ai/2025-08-20-grok-4-model-card.pdf#page=6) | — | — |
 
 ---
 
@@ -193,10 +193,10 @@ The AI cybersecurity space is fragmented: OpenAI, Anthropic, Google, and xAI eac
 | Gemini 3 Flash | Google | — | — | — | — | — |
 | Gemini 3 Pro | Google | — | — | — | — | — |
 | Gemini 2.5 | Google | — | [TAP](https://arxiv.org/abs/2505.14534) 99.8% → 53.6% ASR | — | — | [Paper](https://arxiv.org/abs/2505.14534) |
-| Grok 4.1 | xAI | — | — | — | 0.05 (T) / 0.01 (NT) | [Model Card](https://data.x.ai/2025-11-17-grok-4-1-model-card.pdf) |
+| Grok 4.1 | xAI | — | — | — | 0.05 (T) / 0.01 (NT) | [Model Card](https://data.x.ai/2025-11-17-grok-4-1-model-card.pdf#page=2) |
 | Grok 4.1 Fast | xAI | — | — | — | — | — |
-| Grok 4 Fast | xAI | — | — | — | 0–3% ASR | [Model Card](https://data.x.ai/2025-09-19-grok-4-fast-model-card.pdf) |
-| Grok 4 | xAI | — | — | — | 0.02 ASR | [Model Card](https://data.x.ai/2025-08-20-grok-4-model-card.pdf) |
+| Grok 4 Fast | xAI | — | — | — | 0–3% ASR | [Model Card](https://data.x.ai/2025-09-19-grok-4-fast-model-card.pdf#page=3) |
+| Grok 4 | xAI | — | — | — | 0.02 ASR | [Model Card](https://data.x.ai/2025-08-20-grok-4-model-card.pdf#page=3) |
 
 > Grok 4.1 Fast has no model card yet. Operator (GPT-4o), Gemini 2.5, Grok 4 Fast, and Grok 4 are included as earlier models with robustness data.
 
@@ -215,10 +215,10 @@ The AI cybersecurity space is fragmented: OpenAI, Anthropic, Google, and xAI eac
 | Gemini 3.1 Pro | Google | — | — |
 | Gemini 3 Flash | Google | — | — |
 | Gemini 3 Pro | Google | — | — |
-| Grok 4.1 | xAI | — | [0.14](https://data.x.ai/2025-11-17-grok-4-1-model-card.pdf) |
+| Grok 4.1 | xAI | — | [0.14](https://data.x.ai/2025-11-17-grok-4-1-model-card.pdf#page=2) |
 | Grok 4.1 Fast | xAI | — | — |
-| Grok 4 Fast | xAI | — | [0.08/0.10](https://data.x.ai/2025-09-19-grok-4-fast-model-card.pdf) |
-| Grok 4 | xAI | — | [0.14](https://data.x.ai/2025-08-20-grok-4-model-card.pdf) |
+| Grok 4 Fast | xAI | — | [0.08/0.10](https://data.x.ai/2025-09-19-grok-4-fast-model-card.pdf#page=3) |
+| Grok 4 | xAI | — | [0.14](https://data.x.ai/2025-08-20-grok-4-model-card.pdf#page=3) |
 
 > **Malicious Refusal**: CU = Malicious Computer Use refusal rate (without mitigations), Code = Malicious Claude Code Use refusal rate (with mitigations). Higher is better. Source: [Sonnet 4.6 System Card](https://anthropic.com/claude-sonnet-4-6-system-card).
 
@@ -230,19 +230,19 @@ The AI cybersecurity space is fragmented: OpenAI, Anthropic, Google, and xAI eac
 
 | Model | Company | [MASK](https://arxiv.org/abs/2503.03750) | [Sycophancy](https://arxiv.org/abs/2310.13548) | [MakeMeSay](https://github.com/openai/evals) | Sabotage | Stealth / SA |
 |---|---|---|---|---|---|---|
-| GPT-5.3-Codex | OpenAI | — | — | — | [0.88](https://cdn.openai.com/pdf/23eca107-a9b1-4d2c-b156-7deb4fbc697c/GPT-5-3-Codex-System-Card-02.pdf) ^Apollo | — |
-| GPT-5.2-Codex | OpenAI | — | — | — | [0.66](https://cdn.openai.com/pdf/23eca107-a9b1-4d2c-b156-7deb4fbc697c/GPT-5-3-Codex-System-Card-02.pdf) ^Apollo | — |
+| GPT-5.3-Codex | OpenAI | — | — | — | [0.88](https://cdn.openai.com/pdf/23eca107-a9b1-4d2c-b156-7deb4fbc697c/GPT-5-3-Codex-System-Card-02.pdf#page=20) ^Apollo | — |
+| GPT-5.2-Codex | OpenAI | — | — | — | [0.66](https://cdn.openai.com/pdf/23eca107-a9b1-4d2c-b156-7deb4fbc697c/GPT-5-3-Codex-System-Card-02.pdf#page=20) ^Apollo | — |
 | Claude Opus 4.6 | Anthropic | — | — | — | — | — |
 | Claude Sonnet 4.6 | Anthropic | — | — | — | — | — |
-| Gemini 3.1 Pro | Google | — | — | — | — | [~100% on 3 SA](https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-1-Pro-Model-Card.pdf) |
+| Gemini 3.1 Pro | Google | — | — | — | — | [~100% on 3 SA](https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-1-Pro-Model-Card.pdf#page=9) |
 | Gemini 3 Flash | Google | — | — | — | — | — |
-| Gemini 3 Pro | Google | — | — | — | — | [3/11 SA, 1/4 stealth](https://storage.googleapis.com/deepmind-media/gemini/gemini_3_pro_fsf_report.pdf) |
-| Grok 4.1 | xAI | [0.49](https://data.x.ai/2025-11-17-grok-4-1-model-card.pdf) | [0.19](https://data.x.ai/2025-11-17-grok-4-1-model-card.pdf) | [0%](https://data.x.ai/2025-11-17-grok-4-1-model-card.pdf) | — | — |
+| Gemini 3 Pro | Google | — | — | — | — | [3/11 SA, 1/4 stealth](https://storage.googleapis.com/deepmind-media/gemini/gemini_3_pro_fsf_report.pdf#page=5) |
+| Grok 4.1 | xAI | [0.49](https://data.x.ai/2025-11-17-grok-4-1-model-card.pdf#page=3) | [0.19](https://data.x.ai/2025-11-17-grok-4-1-model-card.pdf#page=3) | [0%](https://data.x.ai/2025-11-17-grok-4-1-model-card.pdf#page=4) | — | — |
 | Grok 4.1 Fast | xAI | — | — | — | — | — |
-| Grok 4 Fast | xAI | [0.47/0.63](https://data.x.ai/2025-09-19-grok-4-fast-model-card.pdf) | [0.10/0.13](https://data.x.ai/2025-09-19-grok-4-fast-model-card.pdf) | [0.12](https://data.x.ai/2025-09-19-grok-4-fast-model-card.pdf) | — | — |
-| Grok 4 | xAI | [0.43](https://data.x.ai/2025-08-20-grok-4-model-card.pdf) | [0.07](https://data.x.ai/2025-08-20-grok-4-model-card.pdf) | [0.12](https://data.x.ai/2025-08-20-grok-4-model-card.pdf) | — | — |
+| Grok 4 Fast | xAI | [0.47/0.63](https://data.x.ai/2025-09-19-grok-4-fast-model-card.pdf#page=5) | [0.10/0.13](https://data.x.ai/2025-09-19-grok-4-fast-model-card.pdf#page=5) | [0.12](https://data.x.ai/2025-09-19-grok-4-fast-model-card.pdf#page=6) | — | — |
+| Grok 4 | xAI | [0.43](https://data.x.ai/2025-08-20-grok-4-model-card.pdf#page=5) | [0.07](https://data.x.ai/2025-08-20-grok-4-model-card.pdf#page=5) | [0.12](https://data.x.ai/2025-08-20-grok-4-model-card.pdf#page=6) | — | — |
 
-> **Sabotage**: ^Apollo = Apollo Research mean best-of-10 sabotage score (higher = stronger sabotage capability). **Stealth / SA**: SA = Situational Awareness challenges solved; stealth = stealth eval challenges solved. Source: [Gemini 3 Pro FSF Report](https://storage.googleapis.com/deepmind-media/gemini/gemini_3_pro_fsf_report.pdf), [Gemini 3.1 Pro Model Card](https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-1-Pro-Model-Card.pdf).
+> **Sabotage**: ^Apollo = Apollo Research mean best-of-10 sabotage score (higher = stronger sabotage capability). **Stealth / SA**: SA = Situational Awareness challenges solved; stealth = stealth eval challenges solved. Source: [Gemini 3 Pro FSF Report](https://storage.googleapis.com/deepmind-media/gemini/gemini_3_pro_fsf_report.pdf#page=5), [Gemini 3.1 Pro Model Card](https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-1-Pro-Model-Card.pdf#page=9).
 
 ---
 
@@ -351,11 +351,11 @@ Each company has its own framework for evaluating cybersecurity risk:
 | o3 | OpenAI | Custom CTF (HS/Coll/Pro) | 89% / 68% / 59% | 2025.04 | [System Card](https://cdn.openai.com/pdf/2221c875-02dc-4789-800b-e7758f3722c1/o3-and-o4-mini-system-card.pdf) |
 | o4-mini | OpenAI | Custom CTF (HS/Coll/Pro) | 80% / 55% / 41% | 2025.04 | [System Card](https://cdn.openai.com/pdf/2221c875-02dc-4789-800b-e7758f3722c1/o3-and-o4-mini-system-card.pdf) |
 | GPT-5 | OpenAI | Custom CTF (Professional, pass@12) | ~27% | 2025.08 | [System Card](https://cdn.openai.com/gpt-5-system-card.pdf) |
-| GPT-5-Codex | OpenAI | Custom CTF (Professional) | ~50% | 2025.09 | [Addendum](https://cdn.openai.com/pdf/97cc5669-7a25-4e63-b15f-5fd5bdc4d149/gpt-5-codex-system-card.pdf) |
-| GPT-5.1-Codex-Max | OpenAI | Custom CTF (Professional) | 76% | 2025.11 | [System Card](https://cdn.openai.com/pdf/2a7d98b1-57e5-4147-8d0e-683894d782ae/5p1_codex_max_card_03.pdf) |
-| GPT-5.2 | OpenAI | Custom CTF (Professional) | 82% | 2025.12 | [System Card](https://cdn.openai.com/pdf/3a4153c8-c748-4b71-8e31-aecbde944f8d/oai_5_2_system-card.pdf) |
-| GPT-5.2-Codex | OpenAI | Custom CTF (Professional) | 88% | 2025.12 | [Addendum](https://cdn.openai.com/pdf/ac7c37ae-7f4c-4442-b741-2eabdeaf77e0/oai_5_2_Codex.pdf) |
-| GPT-5.3-Codex | OpenAI | Custom CTF (Professional, pass@12) | 88% | 2026.02 | [System Card](https://cdn.openai.com/pdf/23eca107-a9b1-4d2c-b156-7deb4fbc697c/GPT-5-3-Codex-System-Card-02.pdf) |
+| GPT-5-Codex | OpenAI | Custom CTF (Professional) | ~50% | 2025.09 | [Addendum](https://cdn.openai.com/pdf/97cc5669-7a25-4e63-b15f-5fd5bdc4d149/gpt-5-codex-system-card.pdf#page=5) |
+| GPT-5.1-Codex-Max | OpenAI | Custom CTF (Professional) | 76% | 2025.11 | [System Card](https://cdn.openai.com/pdf/2a7d98b1-57e5-4147-8d0e-683894d782ae/5p1_codex_max_card_03.pdf#page=15) |
+| GPT-5.2 | OpenAI | Custom CTF (Professional) | 82% | 2025.12 | [System Card](https://cdn.openai.com/pdf/3a4153c8-c748-4b71-8e31-aecbde944f8d/oai_5_2_system-card.pdf#page=13) |
+| GPT-5.2-Codex | OpenAI | Custom CTF (Professional) | 88% | 2025.12 | [Addendum](https://cdn.openai.com/pdf/ac7c37ae-7f4c-4442-b741-2eabdeaf77e0/oai_5_2_Codex.pdf#page=13) |
+| GPT-5.3-Codex | OpenAI | Custom CTF (Professional, pass@12) | 88% | 2026.02 | [System Card](https://cdn.openai.com/pdf/23eca107-a9b1-4d2c-b156-7deb4fbc697c/GPT-5-3-Codex-System-Card-02.pdf#page=13) |
 | GPT-5.1-Thinking | OpenAI | Custom CTF (Professional) | 43% | 2025.11 | [System Card](https://cdn.openai.com/pdf/2a7d98b1-57e5-4147-8d0e-683894d782ae/5p1_codex_max_card_03.pdf) |
 | Claude 3.7 Sonnet | Anthropic | Cybench (40 tasks) | 35.9% | 2025.02 | [System Card](https://anthropic.com/claude-3-7-sonnet-system-card) |
 | Claude Opus 4 | Anthropic | Custom CTF (easy/med/hard) | 11/11, 1/2, 0/2 | 2025.05 | [System Card](https://www.anthropic.com/claude-4-system-card) |
@@ -365,22 +365,22 @@ Each company has its own framework for evaluating cybersecurity risk:
 | Claude Opus 4.6 | Anthropic | Cybench (37 tasks) | 93% pass@1 | 2026.02 | [System Card](https://anthropic.com/claude-opus-4-6-system-card) |
 | Gemini 2.0 Flash | Google | Pattern Labs External CTFs | 11/50 | 2025.04 | [Model Card](https://modelcards.withgoogle.com/assets/documents/gemini-2-flash.pdf) |
 | Gemini 2.5 Pro | Google | InterCode-CTF | 76/76 (saturated) | 2025.06 | [Model Card](https://modelcards.withgoogle.com/assets/documents/gemini-2.5-pro.pdf) |
-| Gemini 2.5 Deep Think | Google | In-house CTF (Medium, 13) | 13/13 | 2025.08 | [Model Card](https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Deep-Think-Model-Card.pdf) |
+| Gemini 2.5 Deep Think | Google | In-house CTF (Medium, 13) | 13/13 | 2025.08 | [Model Card](https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Deep-Think-Model-Card.pdf#page=8) |
 | Gemini 2.5 Deep Think | Google | Hack the Box (Hard) | 3/13 | 2025.08 | [Model Card](https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Deep-Think-Model-Card.pdf) |
-| Gemini 3 Pro | Google | Key Skills v1 (Hard) | 11/12 | 2025.11 | [FSF Report](https://storage.googleapis.com/deepmind-media/gemini/gemini_3_pro_fsf_report.pdf) |
-| Gemini 2.5 Deep Think | Google | Key Skills v1 (Hard) | 6/12 | 2025.08 | [FSF Report](https://storage.googleapis.com/deepmind-media/gemini/gemini_3_pro_fsf_report.pdf) |
-| Gemini 2.5 Pro | Google | Key Skills v1 (Hard) | 4/12 | 2025.06 | [FSF Report](https://storage.googleapis.com/deepmind-media/gemini/gemini_3_pro_fsf_report.pdf) |
-| Grok 4 | xAI | CyBench (40 tasks, unguided) | 43% | 2025.08 | [Model Card](https://data.x.ai/2025-08-20-grok-4-model-card.pdf) |
-| Grok 4 Fast | xAI | CyBench (40 tasks, unguided) | 30% | 2025.09 | [Model Card](https://data.x.ai/2025-09-19-grok-4-fast-model-card.pdf) |
-| Grok 4.1 | xAI | CyBench (40 tasks, unguided) | 39% | 2025.11 | [Model Card](https://data.x.ai/2025-11-17-grok-4-1-model-card.pdf) |
+| Gemini 3 Pro | Google | Key Skills v1 (Hard) | 11/12 | 2025.11 | [FSF Report](https://storage.googleapis.com/deepmind-media/gemini/gemini_3_pro_fsf_report.pdf#page=5) |
+| Gemini 2.5 Deep Think | Google | Key Skills v1 (Hard) | 6/12 | 2025.08 | [FSF Report](https://storage.googleapis.com/deepmind-media/gemini/gemini_3_pro_fsf_report.pdf#page=5) |
+| Gemini 2.5 Pro | Google | Key Skills v1 (Hard) | 4/12 | 2025.06 | [FSF Report](https://storage.googleapis.com/deepmind-media/gemini/gemini_3_pro_fsf_report.pdf#page=5) |
+| Grok 4 | xAI | CyBench (40 tasks, unguided) | 43% | 2025.08 | [Model Card](https://data.x.ai/2025-08-20-grok-4-model-card.pdf#page=6) |
+| Grok 4 Fast | xAI | CyBench (40 tasks, unguided) | 30% | 2025.09 | [Model Card](https://data.x.ai/2025-09-19-grok-4-fast-model-card.pdf#page=6) |
+| Grok 4.1 | xAI | CyBench (40 tasks, unguided) | 39% | 2025.11 | [Model Card](https://data.x.ai/2025-11-17-grok-4-1-model-card.pdf#page=4) |
 
 #### CVE / Vulnerability Discovery
 
 | Model | Company | Benchmark | Score | Date | Source |
 |---|---|---|---|---|---|
-| GPT-5.3-Codex | OpenAI | CVE-Bench (pass@1) | 90% | 2026.02 | [System Card](https://cdn.openai.com/pdf/23eca107-a9b1-4d2c-b156-7deb4fbc697c/GPT-5-3-Codex-System-Card-02.pdf) |
-| GPT-5.2-Codex | OpenAI | CVE-Bench (pass@1) | 87% | 2025.12 | [Addendum](https://cdn.openai.com/pdf/ac7c37ae-7f4c-4442-b741-2eabdeaf77e0/oai_5_2_Codex.pdf) |
-| GPT-5.1-Codex-Max | OpenAI | CVE-Bench (pass@1) | 80% | 2025.11 | [System Card](https://cdn.openai.com/pdf/2a7d98b1-57e5-4147-8d0e-683894d782ae/5p1_codex_max_card_03.pdf) |
+| GPT-5.3-Codex | OpenAI | CVE-Bench (pass@1) | 90% | 2026.02 | [System Card](https://cdn.openai.com/pdf/23eca107-a9b1-4d2c-b156-7deb4fbc697c/GPT-5-3-Codex-System-Card-02.pdf#page=14) |
+| GPT-5.2-Codex | OpenAI | CVE-Bench (pass@1) | 87% | 2025.12 | [Addendum](https://cdn.openai.com/pdf/ac7c37ae-7f4c-4442-b741-2eabdeaf77e0/oai_5_2_Codex.pdf#page=14) |
+| GPT-5.1-Codex-Max | OpenAI | CVE-Bench (pass@1) | 80% | 2025.11 | [System Card](https://cdn.openai.com/pdf/2a7d98b1-57e5-4147-8d0e-683894d782ae/5p1_codex_max_card_03.pdf#page=16) |
 | GPT-5-Codex | OpenAI | CVE-Bench (pass@1) | 53% | 2025.09 | [Addendum](https://cdn.openai.com/pdf/97cc5669-7a25-4e63-b15f-5fd5bdc4d149/gpt-5-codex-system-card.pdf) |
 | GPT-5 | OpenAI | CVE-Bench (pass@1) | 43% | 2025.08 | [System Card](https://cdn.openai.com/gpt-5-system-card.pdf) |
 | GPT-5.1-Thinking | OpenAI | CVE-Bench (pass@1) | 61% | 2025.11 | [System Card](https://cdn.openai.com/pdf/2a7d98b1-57e5-4147-8d0e-683894d782ae/5p1_codex_max_card_03.pdf) |
@@ -395,11 +395,11 @@ Each company has its own framework for evaluating cybersecurity risk:
 
 | Model | Company | Benchmark | Score | Date | Source |
 |---|---|---|---|---|---|
-| GPT-5.3-Codex | OpenAI | Cyber Range (15 scenarios) | 80% (12/15 pass) | 2026.02 | [System Card](https://cdn.openai.com/pdf/23eca107-a9b1-4d2c-b156-7deb4fbc697c/GPT-5-3-Codex-System-Card-02.pdf) |
+| GPT-5.3-Codex | OpenAI | Cyber Range (15 scenarios) | 80% (12/15 pass) | 2026.02 | [System Card](https://cdn.openai.com/pdf/23eca107-a9b1-4d2c-b156-7deb4fbc697c/GPT-5-3-Codex-System-Card-02.pdf#page=16) |
 | GPT-5.3-Codex | OpenAI | Irregular External (Net/Vuln/Evasion) | 86% / 72% / 53% | 2026.02 | [System Card](https://cdn.openai.com/pdf/23eca107-a9b1-4d2c-b156-7deb4fbc697c/GPT-5-3-Codex-System-Card-02.pdf) |
-| GPT-5.2-Codex | OpenAI | Cyber Range (Combined) | 72.7% | 2025.12 | [Addendum](https://cdn.openai.com/pdf/ac7c37ae-7f4c-4442-b741-2eabdeaf77e0/oai_5_2_Codex.pdf) |
-| GPT-5.2 | OpenAI | Cyber Range (Combined) | 63.6% | 2025.12 | [System Card](https://cdn.openai.com/pdf/3a4153c8-c748-4b71-8e31-aecbde944f8d/oai_5_2_system-card.pdf) |
-| GPT-5.2 | OpenAI | Cyber Range (15 scenarios) | 47% | 2025.12 | [System Card](https://cdn.openai.com/pdf/23eca107-a9b1-4d2c-b156-7deb4fbc697c/GPT-5-3-Codex-System-Card-02.pdf) |
+| GPT-5.2-Codex | OpenAI | Cyber Range (Combined) | 72.7% | 2025.12 | [Addendum](https://cdn.openai.com/pdf/ac7c37ae-7f4c-4442-b741-2eabdeaf77e0/oai_5_2_Codex.pdf#page=15) |
+| GPT-5.2 | OpenAI | Cyber Range (Combined) | 63.6% | 2025.12 | [System Card](https://cdn.openai.com/pdf/3a4153c8-c748-4b71-8e31-aecbde944f8d/oai_5_2_system-card.pdf#page=15) |
+| GPT-5.2 | OpenAI | Cyber Range (15 scenarios) | 47% | 2025.12 | [System Card](https://cdn.openai.com/pdf/23eca107-a9b1-4d2c-b156-7deb4fbc697c/GPT-5-3-Codex-System-Card-02.pdf#page=16) |
 | GPT-5.2-Codex | OpenAI | Irregular External (Net/VRE/Evasion) | 68% / 75% / 52% | 2025.12 | [System Card](https://cdn.openai.com/pdf/23eca107-a9b1-4d2c-b156-7deb4fbc697c/GPT-5-3-Codex-System-Card-02.pdf) |
 | GPT-5.1-Codex-Max | OpenAI | Cyber Range (10 scenarios) | 7/10 (60% on 15-scenario re-eval) | 2025.11 | [System Card](https://cdn.openai.com/pdf/2a7d98b1-57e5-4147-8d0e-683894d782ae/5p1_codex_max_card_03.pdf) |
 | GPT-5.1-Codex-Max | OpenAI | Irregular External (Net/Vuln/Evasion) | 37% / 41% / 43% | 2025.11 | [System Card](https://cdn.openai.com/pdf/2a7d98b1-57e5-4147-8d0e-683894d782ae/5p1_codex_max_card_03.pdf) |
