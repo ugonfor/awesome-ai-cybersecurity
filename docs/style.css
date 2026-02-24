@@ -258,11 +258,18 @@ tbody tr:hover td { background: var(--table-row-hover); }
 /* Company group row */
 tr.company-group td { border-top: 2px solid var(--border); }
 
-/* Company cell color chip */
-tr.row-openai td:nth-child(2) { color: var(--openai); font-weight: 600; }
-tr.row-anthropic td:nth-child(2) { color: var(--anthropic); font-weight: 600; }
-tr.row-google td:nth-child(2) { color: var(--google); font-weight: 600; }
-tr.row-xai td:nth-child(2) { color: var(--xai); font-weight: 600; }
+/* Row company background tint (subtle) */
+tr.row-openai { background: #f0faf6; }
+tr.row-anthropic { background: #fefbf0; }
+tr.row-google { background: #f0f4fd; }
+tr.row-xai { background: #f4f4f7; }
+[data-theme="dark"] tr.row-openai { background: #0a1a12; }
+[data-theme="dark"] tr.row-anthropic { background: #1a1408; }
+[data-theme="dark"] tr.row-google { background: #0a1220; }
+[data-theme="dark"] tr.row-xai { background: #1a1a1e; }
+
+/* First row of each company group — bold + top border */
+tr.row-first td { font-weight: 700; border-top: 2px solid var(--border); }
 
 /* ===== Callouts ===== */
 .callout {
