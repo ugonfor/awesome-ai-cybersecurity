@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Cybersecurity Benchmark Comparison</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #0d1117;
+    color: #e6edf3;
+    font-family: 'JetBrains Mono', monospace;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 0;
+  }
+
+  .card {
+    width: 1280px;
+    background: #0d1117;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .card::before {
+    content: '';
+    position: absolute;
+    top: -200px; left: -200px;
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(16,163,127,0.06) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .card::after {
+    content: '';
+    position: absolute;
+    bottom: -200px; right: -200px;
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(66,133,244,0.06) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .header { padding: 24px 28px 4px; position: relative; }
+
+  .title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 24px; font-weight: 800;
+    letter-spacing: -0.03em; color: #fff;
+    display: flex; align-items: center; gap: 10px;
+  }
+
+  .subtitle { font-size: 10.5px; font-weight: 300; color: #6e7681; margin-top: 3px; }
+
+  .legend { display: flex; gap: 18px; margin-top: 8px; padding-bottom: 8px; }
+  .legend-item { display: flex; align-items: center; gap: 5px; font-size: 9px; color: #8b949e; }
+  .legend-dot { width: 7px; height: 7px; border-radius: 2px; }
+
+  .table-wrap { padding: 0 16px 6px; position: relative; z-index: 1; }
+
+  table { width: 100%; border-collapse: collapse; font-size: 10px; table-layout: fixed; }
+
+  col.cat { width: 72px; }
+  col.bench { width: 108px; }
+  col.model { width: 72px; }
+
+  .company-header {
+    text-align: center;
+    font-family: 'Outfit', sans-serif;
+    font-size: 10.5px; font-weight: 700;
+    letter-spacing: 0.06em; text-transform: uppercase;
+    padding: 7px 3px; border-bottom: 2px solid;
+  }
+  .company-header.openai { color: #10a37f; border-color: #10a37f; background: rgba(16,163,127,0.08); }
+  .company-header.anthropic { color: #d97706; border-color: #d97706; background: rgba(217,119,6,0.08); }
+  .company-header.google { color: #4285f4; border-color: #4285f4; background: rgba(66,133,244,0.08); }
+  .company-header.xai { color: #9ca3af; border-color: #6b7280; background: rgba(107,114,128,0.08); }
+
+  .model-header {
+    text-align: center; font-size: 8.5px; font-weight: 500; color: #8b949e;
+    padding: 5px 1px; border-bottom: 1px solid #21262d;
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  }
+
+  .cat-group td {
+    font-family: 'Outfit', sans-serif;
+    font-size: 9.5px; font-weight: 700;
+    letter-spacing: 0.05em; text-transform: uppercase;
+    color: #58a6ff; padding: 8px 6px 3px;
+    border-bottom: 1px solid rgba(88,166,255,0.15);
+  }
+  .cat-group.s4ai td { color: #f0883e; border-color: rgba(240,136,62,0.15); }
+
+  tbody tr:not(.cat-group) { border-bottom: 1px solid #161b22; }
+
+  td { padding: 4px 3px; vertical-align: middle; }
+
+  .bench-cell {
+    font-size: 9.5px; font-weight: 500; color: #c9d1d9;
+    padding-left: 6px; white-space: nowrap;
+  }
+  .bench-cell .internal { font-size: 7.5px; font-weight: 400; color: #484f58; font-style: italic; }
+
+  .score { text-align: center; font-size: 9.5px; font-weight: 500; color: #e6edf3; font-variant-numeric: tabular-nums; }
+  .score.empty { color: #1c2128; font-weight: 300; }
+  .score.best { font-weight: 700; color: #fff; text-shadow: 0 0 10px rgba(255,255,255,0.15); position: relative; }
+  .score.best::after { content: '★'; font-size: 6px; position: absolute; top: 1px; margin-left: 1px; color: #f0c040; text-shadow: none; }
+
+  .score.text-score { font-size: 8px; font-weight: 600; letter-spacing: 0.02em; }
+  .score.rating-high { color: #f85149; }
+  .score.rating-med { color: #d29922; }
+  .score.rating-low { color: #8b949e; }
+  .score.rating-none { color: #484f58; }
+  .score.small { font-size: 8px; }
+
+  .spacer td { height: 1px; border: none; }
+
+  .corner-top {
+    font-family: 'Outfit', sans-serif;
+    font-size: 8.5px; font-weight: 600; color: #30363d;
+    padding: 5px 6px; vertical-align: bottom;
+    border-bottom: 1px solid #21262d;
+  }
+
+  .footer {
+    padding: 8px 28px 16px;
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 9px; color: #30363d; position: relative; z-index: 1;
+  }
+  .footer .star { color: #f0c040; font-size: 7px; }
+  .footer-note { font-size: 8px; color: #21262d; }
+</style>
+</head>
+<body>
+
+<div class="card">
+  <div class="header">
+    <div class="title"><span>🛡️</span> AI Cybersecurity Benchmark Comparison</div>
+    <div class="subtitle">Cross-company comparison — all scores from official system cards · Feb 2026</div>
+    <div class="legend">
+      <div class="legend-item"><div class="legend-dot" style="background:#10a37f"></div>OpenAI</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#d97706"></div>Anthropic</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#4285f4"></div>Google</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#6b7280"></div>xAI</div>
+      <div class="legend-item"><span class="star">★</span> Best in row</div>
+      <div class="legend-item" style="color:#1c2128">— No data</div>
+    </div>
+  </div>
+
+  <div class="table-wrap">
+    <table>
+      <colgroup>
+        <col class="cat"><col class="bench">
+        <col class="model"><col class="model"><col class="model">
+        <col class="model"><col class="model"><col class="model">
+        <col class="model"><col class="model"><col class="model"><col class="model">
+        <col class="model"><col class="model"><col class="model">
+      </colgroup>
+
+      <thead>
+        <tr>
+          <td class="corner-top"></td>
+          <td class="corner-top"></td>
+          <td class="company-header openai" colspan="3">OpenAI</td>
+          <td class="company-header anthropic" colspan="3">Anthropic</td>
+          <td class="company-header google" colspan="4">Google</td>
+          <td class="company-header xai" colspan="3">xAI</td>
+        </tr>
+        <tr>
+          <td class="corner-top">Category</td>
+          <td class="corner-top">Benchmark</td>
+          <td class="model-header">5.3-Codex</td>
+          <td class="model-header">5.2-Codex</td>
+          <td class="model-header">5.2</td>
+          <td class="model-header">Opus 4.6</td>
+          <td class="model-header">Sonnet 4.6</td>
+          <td class="model-header">Opus 4.5</td>
+          <td class="model-header">3.1 Pro</td>
+          <td class="model-header">3 Flash</td>
+          <td class="model-header">3 Pro</td>
+          <td class="model-header">2.5 DT</td>
+          <td class="model-header">Grok 4.1</td>
+          <td class="model-header">Grok 4</td>
+          <td class="model-header">Grok 4 F</td>
+        </tr>
+      </thead>
+
+      <tbody>
+        <!-- ===== AI4Security — Offensive ===== -->
+        <tr class="cat-group"><td colspan="15">AI4Security — Offensive Capability</td></tr>
+        <tr>
+          <td></td>
+          <td class="bench-cell">Cybench</td>
+          <td class="score empty">—</td><td class="score empty">—</td><td class="score empty">—</td>
+          <td class="score best">93%</td><td class="score">90%</td><td class="score">82%</td>
+          <td class="score empty">—</td><td class="score empty">—</td><td class="score empty">—</td><td class="score empty">—</td>
+          <td class="score">39%</td><td class="score">43%</td><td class="score">30%</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td class="bench-cell">CTF <span class="internal">(internal)</span></td>
+          <td class="score best">88%</td><td class="score best">88%</td><td class="score">82%</td>
+          <td class="score empty">—</td><td class="score empty">—</td><td class="score empty">—</td>
+          <td class="score empty">—</td><td class="score empty">—</td><td class="score">11/12</td><td class="score">13/13</td>
+          <td class="score empty">—</td><td class="score empty">—</td><td class="score empty">—</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td class="bench-cell">Cyber Range</td>
+          <td class="score best">80%</td><td class="score">72.7%</td><td class="score">63.6%</td>
+          <td class="score empty">—</td><td class="score empty">—</td><td class="score empty">—</td>
+          <td class="score empty">—</td><td class="score empty">—</td><td class="score empty">—</td><td class="score empty">—</td>
+          <td class="score empty">—</td><td class="score empty">—</td><td class="score empty">—</td>
+        </tr>
+
+        <tr class="spacer"><td colspan="15"></td></tr>
+
+        <!-- ===== AI4Security — Vulnerability Discovery ===== -->
+        <tr class="cat-group"><td colspan="15">AI4Security — Vulnerability Discovery</td></tr>
+        <tr>
+          <td></td>
+          <td class="bench-cell">CVE-Bench</td>
+          <td class="score best">90%</td><td class="score">87%</td><td class="score">69%</td>
+          <td class="score empty">—</td><td class="score empty">—</td><td class="score empty">—</td>
+          <td class="score empty">—</td><td class="score empty">—</td><td class="score empty">—</td><td class="score empty">—</td>
+          <td class="score empty">—</td><td class="score empty">—</td><td class="score empty">—</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td class="bench-cell">CyberGym</td>
+          <td class="score empty">—</td><td class="score empty">—</td><td class="score empty">—</td>
+          <td class="score best">66.6%</td><td class="score">65.2%</td><td class="score">51.0%</td>
+          <td class="score empty">—</td><td class="score empty">—</td><td class="score empty">—</td><td class="score empty">—</td>
+          <td class="score empty">—</td><td class="score empty">—</td><td class="score empty">—</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td class="bench-cell">Zero-day</td>
+          <td class="score empty">—</td><td class="score empty">—</td><td class="score empty">—</td>
+          <td class="score best small">500+ novel</td><td class="score empty">—</td><td class="score empty">—</td>
+          <td class="score empty">—</td><td class="score empty">—</td><td class="score empty">—</td><td class="score empty">—</td>
+          <td class="score empty">—</td><td class="score empty">—</td><td class="score empty">—</td>
+        </tr>
+
+        <tr class="spacer"><td colspan="15"></td></tr>
+
+        <!-- ===== AI4Security — Cyber Knowledge ===== -->
+        <tr class="cat-group"><td colspan="15">AI4Security — Cyber Knowledge</td></tr>
+        <tr>
+          <td></td>
+          <td class="bench-cell">WMDP-Cyber</td>
+          <td class="score empty">—</td><td class="score empty">—</td><td class="score empty">—</td>
+          <td class="score empty">—</td><td class="score empty">—</td><td class="score empty">—</td>
+          <td class="score empty">—</td><td class="score empty">—</td><td class="score empty">—</td><td class="score empty">—</td>
+          <td class="score best">84%</td><td class="score">79%</td><td class="score">81.4%</td>
+        </tr>
+
+        <tr class="spacer"><td colspan="15"></td></tr>
+
+        <!-- ===== AI4Security — Defensive ===== -->
+        <tr class="cat-group"><td colspan="15">AI4Security — Defensive Capability</td></tr>
+        <tr>
+          <td></td>
+          <td class="bench-cell">Investigations <span class="internal">(int.)</span></td>
+          <td class="score empty">—</td><td class="score empty">—</td><td class="score empty">—</td>
+          <td class="score best small">38/40</td><td class="score empty">—</td><td class="score empty">—</td>
+          <td class="score empty">—</td><td class="score empty">—</td><td class="score empty">—</td><td class="score empty">—</td>
+          <td class="score empty">—</td><td class="score empty">—</td><td class="score empty">—</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td class="bench-cell">CAISI Assessment</td>
+          <td class="score empty">—</td><td class="score empty">—</td><td class="score empty">—</td>
+          <td class="score best small">novel vulns</td><td class="score empty">—</td><td class="score empty">—</td>
+          <td class="score empty">—</td><td class="score empty">—</td><td class="score empty">—</td><td class="score empty">—</td>
+          <td class="score empty">—</td><td class="score empty">—</td><td class="score empty">—</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td class="bench-cell">OpenRCA</td>
+          <td class="score empty">—</td><td class="score empty">—</td><td class="score">19.4%</td>
+          <td class="score best">34.9%</td><td class="score">27.9%</td><td class="score">26.9%</td>
+          <td class="score empty">—</td><td class="score empty">—</td><td class="score">12.5%</td><td class="score empty">—</td>
+          <td class="score empty">—</td><td class="score empty">—</td><td class="score empty">—</td>
+        </tr>
+
+        <tr class="spacer"><td colspan="15"></td></tr>
+
+        <!-- ===== Security4AI — Model Robustness ===== -->
+        <tr class="cat-group s4ai"><td colspan="15">Security4AI — Model Robustness</td></tr>
+        <tr>
+          <td></td>
+          <td class="bench-cell">PI: Coding ASR</td>
+          <td class="score empty">—</td><td class="score empty">—</td><td class="score empty">—</td>
+          <td class="score best">0%</td><td class="score">0.1%</td><td class="score empty">—</td>
+          <td class="score empty">—</td><td class="score empty">—</td><td class="score empty">—</td><td class="score empty">—</td>
+          <td class="score empty">—</td><td class="score empty">—</td><td class="score empty">—</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td class="bench-cell">PI: Browser ASR</td>
+          <td class="score empty">—</td><td class="score empty">—</td><td class="score empty">—</td>
+          <td class="score">~2%</td><td class="score best">&lt;0.3%</td><td class="score empty">—</td>
+          <td class="score empty">—</td><td class="score empty">—</td><td class="score empty">—</td><td class="score empty">—</td>
+          <td class="score empty">—</td><td class="score empty">—</td><td class="score empty">—</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td class="bench-cell">PI: Computer Use</td>
+          <td class="score empty">—</td><td class="score empty">—</td><td class="score empty">—</td>
+          <td class="score">17.8%</td><td class="score best">12.0%</td><td class="score empty">—</td>
+          <td class="score empty">—</td><td class="score empty">—</td><td class="score empty">—</td><td class="score empty">—</td>
+          <td class="score empty">—</td><td class="score empty">—</td><td class="score empty">—</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td class="bench-cell">AgentDojo</td>
+          <td class="score empty">—</td><td class="score empty">—</td><td class="score empty">—</td>
+          <td class="score empty">—</td><td class="score empty">—</td><td class="score empty">—</td>
+          <td class="score empty">—</td><td class="score empty">—</td><td class="score empty">—</td><td class="score empty">—</td>
+          <td class="score">0.05</td><td class="score best">0.02</td><td class="score">0–3%</td>
+        </tr>
+
+        <tr class="spacer"><td colspan="15"></td></tr>
+
+        <!-- ===== Security4AI — Misuse Risk ===== -->
+        <tr class="cat-group s4ai"><td colspan="15">Security4AI — Misuse Risk</td></tr>
+        <tr>
+          <td></td>
+          <td class="bench-cell">Malicious Refusal</td>
+          <td class="score empty">—</td><td class="score empty">—</td><td class="score empty">—</td>
+          <td class="score">88.3%</td><td class="score best">99.4%</td><td class="score empty">—</td>
+          <td class="score empty">—</td><td class="score empty">—</td><td class="score empty">—</td><td class="score empty">—</td>
+          <td class="score empty">—</td><td class="score empty">—</td><td class="score empty">—</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td class="bench-cell">AgentHarm</td>
+          <td class="score empty">—</td><td class="score empty">—</td><td class="score empty">—</td>
+          <td class="score empty">—</td><td class="score empty">—</td><td class="score empty">—</td>
+          <td class="score empty">—</td><td class="score empty">—</td><td class="score empty">—</td><td class="score empty">—</td>
+          <td class="score">0.14</td><td class="score">0.14</td><td class="score best">0.08</td>
+        </tr>
+
+        <tr class="spacer"><td colspan="15"></td></tr>
+
+        <!-- ===== Security4AI — Alignment ===== -->
+        <tr class="cat-group s4ai"><td colspan="15">Security4AI — Alignment</td></tr>
+        <tr>
+          <td></td>
+          <td class="bench-cell">MASK</td>
+          <td class="score empty">—</td><td class="score empty">—</td><td class="score empty">—</td>
+          <td class="score empty">—</td><td class="score empty">—</td><td class="score empty">—</td>
+          <td class="score empty">—</td><td class="score empty">—</td><td class="score empty">—</td><td class="score empty">—</td>
+          <td class="score">0.49</td><td class="score best">0.43</td><td class="score">0.47</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td class="bench-cell">Sycophancy</td>
+          <td class="score empty">—</td><td class="score empty">—</td><td class="score empty">—</td>
+          <td class="score empty">—</td><td class="score empty">—</td><td class="score empty">—</td>
+          <td class="score empty">—</td><td class="score empty">—</td><td class="score empty">—</td><td class="score empty">—</td>
+          <td class="score">0.19</td><td class="score best">0.07</td><td class="score">0.10</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td class="bench-cell">MakeMeSay</td>
+          <td class="score empty">—</td><td class="score empty">—</td><td class="score empty">—</td>
+          <td class="score empty">—</td><td class="score empty">—</td><td class="score empty">—</td>
+          <td class="score empty">—</td><td class="score empty">—</td><td class="score empty">—</td><td class="score empty">—</td>
+          <td class="score best">0%</td><td class="score">0.12</td><td class="score">0.12</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td class="bench-cell">Sabotage <span class="internal">(Apollo)</span></td>
+          <td class="score">0.88</td><td class="score best">0.66</td><td class="score">0.75</td>
+          <td class="score empty">—</td><td class="score empty">—</td><td class="score empty">—</td>
+          <td class="score empty">—</td><td class="score empty">—</td><td class="score empty">—</td><td class="score empty">—</td>
+          <td class="score empty">—</td><td class="score empty">—</td><td class="score empty">—</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td class="bench-cell">Stealth / SA</td>
+          <td class="score empty">—</td><td class="score empty">—</td><td class="score empty">—</td>
+          <td class="score empty">—</td><td class="score empty">—</td><td class="score empty">—</td>
+          <td class="score best small">~100% 3SA</td><td class="score empty">—</td><td class="score small">3/11 SA</td><td class="score empty">—</td>
+          <td class="score empty">—</td><td class="score empty">—</td><td class="score empty">—</td>
+        </tr>
+
+        <tr class="spacer"><td colspan="15"></td></tr>
+
+        <!-- ===== Risk Assessment ===== -->
+        <tr class="cat-group" style="border-top:1px solid #21262d"><td colspan="15" style="color:#8b949e; border-color:rgba(139,148,158,0.15);">Risk Assessment</td></tr>
+        <tr>
+          <td></td>
+          <td class="bench-cell">Framework</td>
+          <td class="score text-score" colspan="3" style="color:#10a37f">Preparedness v2</td>
+          <td class="score text-score" colspan="3" style="color:#d97706">RSP v2.2</td>
+          <td class="score text-score" colspan="4" style="color:#4285f4">FSF v3.0</td>
+          <td class="score text-score" colspan="3" style="color:#6b7280">Risk Mgmt</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td class="bench-cell">Current Rating</td>
+          <td class="score text-score rating-high" colspan="3">HIGH (prec.)</td>
+          <td class="score text-score rating-med" colspan="3">ASL-3</td>
+          <td class="score text-score rating-low" colspan="4">CCL alert</td>
+          <td class="score text-score rating-none" colspan="3">—</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="footer">
+    <div>github.com/ugonfor/awesome-ai-cybersecurity</div>
+    <div class="footer-note"><span class="star">★</span> Best in row · — Not evaluated · <em>(internal)</em> Proprietary · ASR = lower is better · Sabotage/MASK/Sycophancy = lower is better</div>
+  </div>
+</div>
+
+</body>
+</html>
