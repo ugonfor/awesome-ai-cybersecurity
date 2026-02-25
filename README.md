@@ -119,6 +119,7 @@ The AI cybersecurity space is fragmented: OpenAI, Anthropic, Google, and xAI eac
 |---|---|---|---|---|
 | GPT-5.3-Codex | OpenAI | [**90%**](https://cdn.openai.com/pdf/23eca107-a9b1-4d2c-b156-7deb4fbc697c/GPT-5-3-Codex-System-Card-02.pdf#page=14) | — | — |
 | GPT-5.2-Codex | OpenAI | [87%](https://cdn.openai.com/pdf/ac7c37ae-7f4c-4442-b741-2eabdeaf77e0/oai_5_2_Codex.pdf#page=14) | — | — |
+| GPT-5.2 | OpenAI | [69%](https://cdn.openai.com/pdf/23eca107-a9b1-4d2c-b156-7deb4fbc697c/GPT-5-3-Codex-System-Card-02.pdf#page=14) | — | — |
 | GPT-5.1-Codex-Max | OpenAI | [80%](https://cdn.openai.com/pdf/2a7d98b1-57e5-4147-8d0e-683894d782ae/5p1_codex_max_card_03.pdf#page=16) | — | — |
 | GPT-5-Codex | OpenAI | [53%](https://cdn.openai.com/pdf/97cc5669-7a25-4e63-b15f-5fd5bdc4d149/gpt-5-codex-system-card.pdf) | — | — |
 | GPT-5 | OpenAI | [43%](https://cdn.openai.com/gpt-5-system-card.pdf) | — | — |
@@ -161,18 +162,20 @@ The AI cybersecurity space is fragmented: OpenAI, Anthropic, Google, and xAI eac
 
 > Investigation, threat analysis, SOC automation.
 
-| Model | Company | Cyber Investigations *(internal)* | [CAISI Assessment](https://www.nist.gov/artificial-intelligence/us-ai-safety-institute) |
-|---|---|---|---|
-| GPT-5.3-Codex | OpenAI | — | — |
-| GPT-5.2-Codex | OpenAI | — | — |
-| Claude Opus 4.6 | Anthropic | [**38/40 best** (blind-ranked)](https://anthropic.com/claude-opus-4-6-system-card) | [Novel vulns in open & closed source](https://anthropic.com/claude-opus-4-6-system-card) |
-| Claude Sonnet 4.6 | Anthropic | — | — |
-| Gemini 3.1 Pro | Google | — | — |
-| Gemini 3 Flash | Google | — | — |
-| Gemini 3 Pro | Google | — | — |
-| Grok 4.1 | xAI | — | — |
-| Grok 4.1 Fast | xAI | — | — |
-| Grok 4 Fast | xAI | — | — |
+| Model | Company | Cyber Investigations *(internal)* | [CAISI Assessment](https://www.nist.gov/artificial-intelligence/us-ai-safety-institute) | [OpenRCA](https://github.com/microsoft/OpenRCA) |
+|---|---|---|---|---|
+| GPT-5.3-Codex | OpenAI | — | — | — |
+| GPT-5.2-Codex | OpenAI | — | — | — |
+| GPT-5.2 | OpenAI | — | — | [19.4%](https://anthropic.com/claude-sonnet-4-6-system-card) |
+| Claude Opus 4.6 | Anthropic | [**38/40 best** (blind-ranked)](https://anthropic.com/claude-opus-4-6-system-card) | [Novel vulns in open & closed source](https://anthropic.com/claude-opus-4-6-system-card) | [**34.9%**](https://anthropic.com/claude-opus-4-6-system-card) |
+| Claude Sonnet 4.6 | Anthropic | — | — | [27.9%](https://anthropic.com/claude-sonnet-4-6-system-card) |
+| Claude Opus 4.5 | Anthropic | — | — | [26.9%](https://anthropic.com/claude-sonnet-4-6-system-card) |
+| Gemini 3.1 Pro | Google | — | — | — |
+| Gemini 3 Flash | Google | — | — | — |
+| Gemini 3 Pro | Google | — | — | [12.5%](https://anthropic.com/claude-sonnet-4-6-system-card) |
+| Grok 4.1 | xAI | — | — | — |
+| Grok 4.1 Fast | xAI | — | — | — |
+| Grok 4 Fast | xAI | — | — | — |
 
 ---
 
@@ -232,6 +235,7 @@ The AI cybersecurity space is fragmented: OpenAI, Anthropic, Google, and xAI eac
 |---|---|---|---|---|---|---|
 | GPT-5.3-Codex | OpenAI | — | — | — | [0.88](https://cdn.openai.com/pdf/23eca107-a9b1-4d2c-b156-7deb4fbc697c/GPT-5-3-Codex-System-Card-02.pdf#page=20) ^Apollo | — |
 | GPT-5.2-Codex | OpenAI | — | — | — | [0.66](https://cdn.openai.com/pdf/23eca107-a9b1-4d2c-b156-7deb4fbc697c/GPT-5-3-Codex-System-Card-02.pdf#page=20) ^Apollo | — |
+| GPT-5.2 | OpenAI | — | — | — | [0.75](https://cdn.openai.com/pdf/23eca107-a9b1-4d2c-b156-7deb4fbc697c/GPT-5-3-Codex-System-Card-02.pdf#page=20) ^Apollo | — |
 | Claude Opus 4.6 | Anthropic | — | — | — | — | — |
 | Claude Sonnet 4.6 | Anthropic | — | — | — | — | — |
 | Gemini 3.1 Pro | Google | — | — | — | — | [~100% on 3 SA](https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-1-Pro-Model-Card.pdf#page=9) |
