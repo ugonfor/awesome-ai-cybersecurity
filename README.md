@@ -494,6 +494,7 @@ Each company has its own framework for evaluating cybersecurity risk:
 
 | Agent | Why it matters |
 |---|---|
+| **[Darkmoon](https://github.com/ASCIT31/Dark-Moon)** | Open source (GPL-3.0) autonomous AI penetration testing platform covering web, API, Active Directory and Kubernetes |
 | **[PentestGPT](https://github.com/GreyDGL/PentestGPT)** | First LLM pentest agent — USENIX Security 2024 |
 
 <details>
